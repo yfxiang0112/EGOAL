@@ -14,7 +14,7 @@
 !Series_contact_institute	"Tokyo University of Pharmacy and Life Sciences"
 !Series_contact_address	"1432-1 Horinouchi"
 !Series_contact_city	"Hachioji"
-!Series_contact_state	"Tokyo"
+!Series_contact_state	"Tokyo"../
 !Series_contact_zip/postal_code	"192-0392"
 !Series_contact_country	"Japan"
 !Series_supplementary_file	"ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE102nnn/GSE102264/suppl/GSE102264_RAW.tar"
