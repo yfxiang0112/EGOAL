@@ -4,6 +4,7 @@ import numpy as np
 from pandas.io.formats.style import Subset
 import os
 from tqdm import tqdm
+import re
 
 accessions = pd.read_csv("data_SOneidensis/accessions")
 
