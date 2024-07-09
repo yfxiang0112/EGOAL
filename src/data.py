@@ -9,6 +9,10 @@ accessions = pd.read_csv("data_SOneidensis/accessions")
 #for accession in tqdm(accessions['accession'], 'Processing GSEs:'):
 for accession in accessions['accession']:
 
+    '''
+    if os.path.exists("data_SOneidensis/matrix/" + accession + "_expr_mat.csv"):
+        continue
+    '''
 
     gse = GEOparse.get_GEO(geo=accession, destdir="data_SOneidensis/GSE", silent=True)
     gse_path = "data_SOneidensis/GSE/" + accession + "_family.soft.gz"
