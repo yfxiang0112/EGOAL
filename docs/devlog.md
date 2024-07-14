@@ -18,6 +18,10 @@ A dataset of gene expression in Shewanella Oneidensis is constructed
 
 ## Part II: Ontology Embedding
 
-## Part III: Learning Model with and without Embedding
+## Part III: Knowledge Graph Preprocessing: Remembering
 
-## Part IV: 
+## Part IV: Abductive Learning: Building Learner
+
+## Part V: Abductive Learning: Building Reasoner
+
+## Part VI: Abductive Learning: Bridging Learner and Reasoner
