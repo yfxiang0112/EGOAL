@@ -3,3 +3,7 @@ dataset/misc
 tools/*
 refs/*
 dataset/embeddings_preprocess_modified.txt
+
+rules/KG_RDF.csv
+rules/go.owl
+rules/go-plus.owl
