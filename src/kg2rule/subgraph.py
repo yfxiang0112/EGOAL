@@ -13,6 +13,11 @@ def findID(s):
     if len(res) == 1:
         return res[0]
 
+    res = re.findall(r'RO_\d*', s)
+    if len(res) == 1:
+        return res[0]
+
+    res = re.findall(r'N\w{32}', s)
     res = re.findall(r'N\w{32}', s)
     if len(res) == 1:
         return np.NaN
@@ -26,7 +31,7 @@ RDF = pd.DataFrame()
 
 if not os.path.exists(rdfFile):
     g = Graph()
-    g.parse('./rules/go.owl')
+    g.parse('./rules/go-plus.owl')
     
     lst_s = []
     lst_p = []
@@ -45,11 +50,14 @@ if not os.path.exists(rdfFile):
     RDF.to_csv(rdfFile, index=False)
 
 else:
-    pattern = r'GO_\d*'
+    GO_pattern = r'GO_\d+'
+    RO_pattern = r'RO_\d+'
 
     RDF = pd.read_csv(rdfFile)
 
-    mask = RDF['subject'].str.contains(pattern) | RDF['object'].str.contains(pattern)
+    mask = RDF['subject'].str.contains(GO_pattern) | RDF['object'].str.contains(GO_pattern)
+    RDF = RDF[mask]
+    mask = RDF['predicate'].str.contains(RO_pattern)
     RDF = RDF[mask]
     
     RDF.reset_index(drop=True, inplace=True)
@@ -57,6 +65,7 @@ else:
     
     RDF['subject'] = RDF['subject'].apply(findID)
     RDF['object'] = RDF['object'].apply(findID)
+    RDF['predicate'] = RDF['predicate'].apply(findID)
     RDF.dropna(subset=['subject', 'object'], inplace=True)
 
     print(RDF)
