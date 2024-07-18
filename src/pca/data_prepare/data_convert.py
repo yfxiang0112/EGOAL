@@ -6,7 +6,7 @@ concept_column = df['CONCEPTS']
 
 # print(concept_column[0])
 
-with open('../../../dataset/all_gene_name.txt', 'r') as file:
+with open('../../../dataset/all_concept_name.txt', 'r') as file:
     valid_concepts = set(line.strip() for line in file)
 
 def process_concepts(concepts):

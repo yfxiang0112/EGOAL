@@ -3,7 +3,7 @@ import re
 pattern = re.compile(r'GO:\d{7}')
 
 input_file_path = '../../../dataset/embeddings_preprocess_modified.txt'
-output_file_path = '../../../dataset/all_gene_name.txt'
+output_file_path = '../../../dataset/all_concept_name.txt'
 
 with open(input_file_path, 'r') as input_file:
     lines = input_file.readlines()
