@@ -1,9 +1,9 @@
 import pandas as pd
 
-processed_df = pd.read_csv('../../dataset/processed_dataset.csv')
+processed_df = pd.read_csv('../../../dataset/processed_dataset.csv')
 processed_concepts = processed_df['CONCEPTS']
 
-reduced_df = pd.read_csv('../../dataset/reduced_dataset.csv')
+reduced_df = pd.read_csv('../../../dataset/reduced_dataset.csv')
 reduced_concepts = reduced_df['CONCEPTS']
 
 print(len(processed_concepts),len(reduced_concepts))

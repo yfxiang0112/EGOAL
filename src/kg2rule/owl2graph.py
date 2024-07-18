@@ -41,8 +41,9 @@ RDF = pd.DataFrame()
 RDF_filtered = pd.DataFrame()
 
 if not os.path.exists(rdfFile):
+    # parse owl file as rdf graph
     g = Graph()
-    g.parse('./rules/go.rdf')
+    g.parse('./rules/go.owl')
     
     lst_s = []
     lst_p = []
@@ -66,9 +67,10 @@ GO_pattern = r'[GBFR]{1,2}O_\d+'
 
 RDF = pd.read_csv(rdfFile)
 
-mask = RDF['subject'].str.contains(GO_pattern) |\
-        RDF['object'].str.contains(GO_pattern) | RDF['predicate'].str.contains(GO_pattern)
-RDF = RDF[mask]
+#mask = RDF['subject'].str.contains(GO_pattern) |\
+#        RDF['object'].str.contains(GO_pattern) | RDF['predicate'].str.contains(GO_pattern)
+#RDF = RDF[mask]
+
 #mask = RDF['predicate'].str.contains(RO_pattern)
 #RDF = RDF[mask]
 
