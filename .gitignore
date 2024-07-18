@@ -6,4 +6,6 @@ dataset/embeddings_preprocess_modified.txt
 
 rules/KG_RDF.csv
 rules/go.owl
+rules/go.obo
+rules/go.rdf
 rules/go-plus.owl
