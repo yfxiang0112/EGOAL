@@ -44,6 +44,19 @@ class KG2Rule():
         con_spec = list(pd.read_csv(con_spec_pth)['0'])
         exclude_prdc = list(pd.read_csv(exclude_prdc_pth)['0'])
 
+        self.rdf = self.rdf[not self.rdf.predicate.isin(exclude_prdc)]
+
+        node_expand = con_spec
+        node_succ   = []
+        for i in range(d):
+            for node in node_expand:
+                for edge in self.rdf[node]:
+                    if not edge in node_expand:
+                        node_succ.append(edge)
+                node_expand = node_succ
+                node_succ = []
+
+
 
         
 
