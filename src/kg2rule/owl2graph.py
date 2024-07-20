@@ -57,7 +57,7 @@ class KG2Rule():
 
 
 
-    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, d :int):
+    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, out_pth:str, d :int):
         '''
         Exclude Unused Predicates, and
         Extract Subgraph from parsed RDF (ABL-KG chap 4.3)
@@ -103,6 +103,7 @@ class KG2Rule():
 
         print('----- Statics of Subgraph Predicates -----')
         print(self.rdf.groupby(by='predicate').count(), '\n')
+        self.rdf.to_csv(out_pth, index=False)
 
 ##################################################
 
@@ -128,14 +129,15 @@ if __name__ == '__main__':
     owl_pth         = './rules/go.owl'
     rdf_pth         = './rules/KG_RDF.csv'
 
-    filteredRdfPth  = './rules/KG_RDF_filter.csv'
-    prdcPth         = 'rules/predicates.csv'
+    prdcLstPth         = 'rules/predicates.csv'
     exclPrdcPth     = 'rules/predicates_exclude.csv'
     conSpecPth      = 'dataset/concept_domain.csv'
+    #filteredRdfPth  = './rules/KG_RDF_filter.csv'
+    subGraphPth     = 'rules/KG_RDF_subgraph.csv'
 
     graph = KG2Rule(rdf_pth, owl_pth)
 
-    graph.subGraph(conSpecPth, exclPrdcPth, 5)
+    graph.subGraph(conSpecPth, exclPrdcPth, subGraphPth, 5)
 
 #def prdcFilter(s):
 #    s = str(s)
