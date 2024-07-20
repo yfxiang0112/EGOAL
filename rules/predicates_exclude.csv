@@ -26,3 +26,5 @@ IAO_0000589
 22-rdf-syntax-ns#type
 oboInOwl#hasNarrowSynonym
 oboInOwl#hasRelatedSynonym
+oboInOwl#hasBroadSynonym
+oboInOwl#hasOBONamespace

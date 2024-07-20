@@ -20,5 +20,5 @@ con_dom.sort()
 
 df = pd.DataFrame({'0':con_dom})
 print(df)
-df.to_csv('dataset/concept_domain.csv', index=False)
+df.to_csv('dataset/concept_domain.csv', index=False, header=False)
 
