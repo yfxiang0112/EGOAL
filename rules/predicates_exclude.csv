@@ -1,4 +1,3 @@
-0
 oboInOwl#hasDbXref
 rdf-schema#label
 IAO_0000233
@@ -24,3 +23,6 @@ oboInOwl#created_by
 oboInOwl#hasOBOFormatVersion
 oboInOwl#hasSynonymType
 IAO_0000589
+22-rdf-syntax-ns#type
+oboInOwl#hasNarrowSynonym
+oboInOwl#hasRelatedSynonym

@@ -5,6 +5,19 @@ import re
 import numpy as np
 from tqdm import tqdm
 
+def extrID(s):
+    s = str(s)
+
+    idx = 0
+    for i in range(len(s)):
+        if s[i] == '/':
+            idx = i+1
+    s = s[idx:]
+
+    return s
+
+##################################################
+
 class KG2Rule():
 
     def __init__(self, rdf_pth, owl_pth = '', ) -> None:
@@ -12,13 +25,17 @@ class KG2Rule():
             if owl_pth=='':
                 raise Exception('Need specify path to OWL file when owl is not parsed.')
 
-            self.readOWL(owl_pth, rdf_pth)
+            self.__readOWL(owl_pth, rdf_pth)
 
         self.rdf = pd.read_csv(rdf_pth)
 
+        self.rdf['subject'] = self.rdf['subject'].apply(extrID)
+        self.rdf['predicate'] = self.rdf['predicate'].apply(extrID)
+        self.rdf['object'] = self.rdf['object'].apply(extrID)
 
 
-    def readOWL(self, owl_pth :str, out_pth :str):
+
+    def __readOWL(self, owl_pth :str, out_pth :str):
     # read owl file as rdf graph
 
         g = Graph()
@@ -41,11 +58,23 @@ class KG2Rule():
     # Extract Subgraph from parsed RDF (ABL-KG chap 4.3)
     # exclude unused predicates
 
-        con_spec = list(pd.read_csv(con_spec_pth)['0'])
-        exclude_prdc = list(pd.read_csv(exclude_prdc_pth)['0'])
+        con_spec = list(pd.read_csv(con_spec_pth, header=None)[0])
+        exclude_prdc = list(pd.read_csv(exclude_prdc_pth, header=None)[0])
+        print(exclude_prdc)
 
-        self.rdf = self.rdf[not self.rdf.predicate.isin(exclude_prdc)]
+        mask = ~ self.rdf['predicate'].isin(exclude_prdc)
+        self.rdf = self.rdf[mask]
+        self.rdf.reset_index(drop=True, inplace=True)
 
+        print(self.rdf)
+
+        # NOTE: tmp view of whole rdf
+        #self.rdf.to_csv('tmp_rdf.csv', index=False)
+
+        # NOTE: pring predicate statics
+        #print(self.rdf.groupby(by='predicate').count())
+
+        '''
         node_expand = con_spec
         node_succ   = []
         for i in range(d):
@@ -55,22 +84,12 @@ class KG2Rule():
                         node_succ.append(edge)
                 node_expand = node_succ
                 node_succ = []
+                '''
 
-
+##################################################
 
         
 
-def findID(s):
-    #TODO: process r'N\w{32}'
-
-    s = str(s)
-
-    idx = 0
-    for i in range(len(s)):
-        if s[i] == '/':
-            idx = i+1
-    s = s[idx:]
-    return s
 
 
     '''
@@ -87,13 +106,17 @@ def findID(s):
         return np.NaN
     '''
 
-    return s
 
-if __name__ == 'main':
+if __name__ == '__main__':
+
     rdfFile_filtered = './rules/KG_RDF_filter.csv'
-    prdcFile = './rules/predicates.csv'
+    prdcFile         = 'rules/predicates.csv'
+    exclPrdcPth      = 'rules/predicates_exclude.csv'
+    conSpecPth       = 'dataset/concept_domain.csv'
 
     graph = KG2Rule(rdf_pth='./rules/KG_RDF.csv', owl_pth='./rules/go.owl')
+
+    graph.subGraph(conSpecPth, exclPrdcPth, 5)
 
 '''
 def prdcFilter(s):
@@ -136,7 +159,7 @@ RDF.dropna(subset=['subject', 'object'], inplace=True)
 
 predicates = list(set(RDF['predicate']))
 predicates = pd.Series(predicates)
-predicates.to_csv(prdcFile, index=False)
+predicates.to_csv(prdcFile, index=False, header=False)
 
 print(RDF)
 RDF.to_csv(rdfFile_filtered, index=False)
