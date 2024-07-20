@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.manifold import TSNE
 
-df = pd.read_csv('../../../dataset/processed_dataset_with_inserted_columns.csv')
+df = pd.read_csv('./dataset/processed_dataset_with_inserted_columns.csv')
 
 num_columns = df.shape[1]
 
@@ -20,7 +20,7 @@ pca = PCA(n_components=10)
 pca_result = pca.fit_transform(df_subset_imputed)
 df_subset_pca = pd.DataFrame(pca_result, columns=[f'PC{i+1}' for i in range(10)])
 df_new = pd.concat([df.iloc[:, :start_index], df_subset_pca], axis=1)
-df_new.to_csv('../../../dataset/processed_dataset_with_10_components.csv', index=False)
+df_new.to_csv('./dataset/processed_dataset_with_10_components.csv', index=False)
 
 print("Yes!")
 
