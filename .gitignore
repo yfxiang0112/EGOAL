@@ -9,3 +9,6 @@ rules/go.owl
 rules/go.obo
 rules/go.rdf
 rules/go-plus.owl
+
+# tmp
+rules/KG_RDF_filter-large.csv
