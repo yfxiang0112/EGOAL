@@ -173,7 +173,6 @@ GO_0016043,oboInOwl#inSubset,go#goslim_plant_ribbon
 GO_0006091,oboInOwl#inSubset,go#goslim_pir
 GO_0006457,oboInOwl#inSubset,go#goslim_euk_cellular_processes_ribbon
 GO_0051649,rdf-schema#subClassOf,N46ed647f9a584f72865d8d9fae1c0835
-GO_0045798,IAO_0000231,IAO_0000227
 N83540f3462ed40109688454335e0a1cb,owl#onProperty,BFO_0000050
 Naca35cd8e7b446afa02cfc988da2d10c,22-rdf-syntax-ns#first,GO_0065007
 Nf8b59f5c1e4049528662c9020bd0d425,owl#someValuesFrom,GO_0160185
@@ -602,7 +601,6 @@ GO_0046879,rdf-schema#subClassOf,GO_0023061
 N1807bb161a9f4a4583d48ddb80ff34e4,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N09232fce8b2a4512ada9421eefc5189c,22-rdf-syntax-ns#rest,N52846d0e2c764771b1e5ad7fed2c9542
 GO_0002118,rdf-schema#subClassOf,GO_0007610
-GO_0030434,IAO_0000231,IAO_0000227
 GO_0032948,rdf-schema#subClassOf,N8214eaff979344b78cab69da2d9853eb
 Ne22ed2d35ba94e3a8ba78cb3aa10577b,owl#onProperty,RO_0002211
 GO_0034309,rdf-schema#subClassOf,GO_0046165
@@ -961,12 +959,10 @@ N2dbf26281dfd4a73b81f3d2958e527f4,22-rdf-syntax-ns#rest,Nd85255e4108f4a05bc46d44
 GO_0007165,oboInOwl#hasAlternativeId,GO:0023045
 N9d681eb60bc14449b88d664f8d1b23b9,owl#someValuesFrom,GO_0005764
 N846765bad27e45cbb1fe9687f4a10045,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
-GO_0043141,IAO_0000231,IAO_0000227
 GO_0001968,rdf-schema#subClassOf,GO_0005515
 Nfcac220f1edb45fa922b28c7fef8fbda,owl#someValuesFrom,GO_0060541
 GO_0048195,rdf-schema#subClassOf,GO_0065003
 GO_0030334,rdf-schema#subClassOf,GO_2000145
-GO_0016030,IAO_0000231,IAO_0000227
 GO_0010522,owl#equivalentClass,Nabd9bb6021a44d898eea89770924238f
 N9c6a3eaba3d5466b8a371e8260ec9a3e,owl#intersectionOf,Na520fc7863b24104ad4c5c9a7d91cba1
 GO_0043603,oboInOwl#inSubset,go#goslim_pir
@@ -1299,7 +1295,6 @@ GO_0047130,oboInOwl#hasAlternativeId,GO:0010010
 GO_0042126,rdf-schema#subClassOf,GO_2001057
 N10df1fc226d14784a223bc4bbdf8cf2a,22-rdf-syntax-ns#first,GO_0065007
 GO_0072009,rdf-schema#subClassOf,GO_0072073
-GO_0120018,IAO_0000231,IAO_0000227
 Nb8e8613117eb499ea8ed50b73105c249,owl#onProperty,BFO_0000050
 N7d1113c5d9934f67ae442e247a129c0d,owl#someValuesFrom,GO_0005634
 GO_0006260,oboInOwl#inSubset,go#goslim_prokaryote
@@ -1340,7 +1335,6 @@ GO_0045184,rdf-schema#subClassOf,GO_0051234
 N2a68461368f7405cb189775c0a6864f6,owl#someValuesFrom,GO_0031667
 N11d1409221764d4e91f6fa4b1d2e77df,owl#someValuesFrom,GO_0006811
 Nb0ff4bca6dd942559934ab57c2ae2390,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
-GO_0008632,IAO_0000231,IAO_0000227
 N3020347ad76c43b28c9f0846ae41d0d4,22-rdf-syntax-ns#first,GO_0065007
 GO_0044003,oboInOwl#hasAlternativeId,GO:0044004
 GO_0004386,oboInOwl#inSubset,go#goslim_chembl
@@ -1468,7 +1462,6 @@ Nfaf9ef971f6249c689f0869b758d3c24,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 Ne4d9d7d6ee564df7b0760f31ddb37b3f,22-rdf-syntax-ns#first,N590f42a0cbdb48e98a829cce067ab9e4
 Ne2b5fdf9f9414fe08b23e0649c60e869,owl#onProperty,RO_0002211
 N5a1ebb10634346b49703fea2e02a33cc,owl#intersectionOf,Ne7b3115c73bf42478a04a17f756db51b
-RO_0002092,oboInOwl#shorthand,happens_during
 GO_0045651,rdf-schema#subClassOf,N6a3396988f3d4aff8a04c667cf93e0be
 Nf1c1670b0992426e901a348692ba713f,22-rdf-syntax-ns#rest,N0df8d8ff712a4955ae8fda78309242f5
 GO_0043589,rdf-schema#subClassOf,GO_0009887
@@ -1972,7 +1965,6 @@ GO_0019683,rdf-schema#subClassOf,GO_0046434
 N08f0fd55f0854dd88251f16378d73e53,22-rdf-syntax-ns#first,Ncd79f4ff095a4bf2bd3695e02b6953d8
 Nf19859e74567408bb76fea31bbb9f34f,owl#intersectionOf,Nd208d61cbe214024962ad9ad14cf35d4
 GO_0046473,rdf-schema#subClassOf,GO_0006650
-GO_0001071,IAO_0000231,IAO_0000227
 GO_0089722,rdf-schema#subClassOf,GO_1905039
 GO_0005942,oboInOwl#inSubset,go#goslim_pir
 GO_0052544,rdf-schema#subClassOf,Ncd79c188231b47bab5e6396a3997f5d1
@@ -2231,7 +2223,6 @@ N86edbde504a644a58fa780f034257d5e,owl#onProperty,RO_0002213
 GO_1901293,rdf-schema#subClassOf,GO_0006753
 GO_0045434,rdf-schema#subClassOf,GO_0007621
 N896771c13a554c1eafb1eebd26c5e105,22-rdf-syntax-ns#rest,N0fc3e4076ac447d8802fb4fa7ff45be2
-GO_1990774,IAO_0000231,IAO_0000227
 GO_0030214,rdf-schema#subClassOf,GO_0030212
 GO_0007015,rdf-schema#subClassOf,Nacb11fe9be824781b201a9eb136c8015
 GO_0018901,rdf-schema#subClassOf,GO_0018904
@@ -2338,7 +2329,6 @@ GO_0030874,rdf-schema#subClassOf,Nbe39d2769bb242eb9b5512fafc5bee3e
 GO_0070884,oboInOwl#hasAlternativeId,GO:0051532
 N2dc135c63d3049358abcbd3a2b6a2f0a,owl#intersectionOf,Ncc53c08594104e5faa112983a4630df0
 GO_0006520,oboInOwl#inSubset,go#goslim_generic
-GO_0050880,IAO_0000231,IAO_0000227
 Nf918db8954f543b98d02521a0e90c929,owl#onProperty,RO_0002213
 GO_0010628,rdf-schema#subClassOf,GO_0010557
 GO_0044410,oboInOwl#hasAlternativeId,GO:0051829
@@ -2456,7 +2446,6 @@ N4f29e189af6c4b28b2d9f3a886d0d892,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 Nd3fa40372cee47fba326e88e32b8188d,owl#intersectionOf,N16f3f9a9710e4fe1b18a1d2aabbc5c7a
 GO_1902076,owl#equivalentClass,N8e4c2967ca324ee4a31d34c0c58d4bda
 GO_0006396,rdf-schema#subClassOf,N5c229f402acb4f5d90d9fd4fb2f95cd7
-GO_0030358,IAO_0000231,IAO_0000227
 Nb5ad8073980b450eb98315a9aebc9922,22-rdf-syntax-ns#first,N82336921b2b048448ca4287c4731d236
 N9238d5aaacf64fff9dd87f1b69017472,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0051000,owl#equivalentClass,N220fb96b6e8b42df8aa7c5c79647718f
@@ -2525,7 +2514,6 @@ GO_0090575,rdf-schema#subClassOf,GO_0005667
 GO_0018945,rdf-schema#subClassOf,GO_0006805
 N1803404c3c774c3b9ede2b10eda504f1,owl#intersectionOf,N0b4bb0af751942ac9b420f38fbfebc80
 N22fefbdc59a14b7f981ec73d8a3483f6,22-rdf-syntax-ns#first,GO_0065007
-GO_0001104,IAO_0000231,IAO_0000227
 GO_0009066,rdf-schema#subClassOf,GO_0170039
 GO_0051955,owl#equivalentClass,Nefb339ff3f64489ba756d2cd7d13d05e
 Ndf552f592b4f4e409f3a9b0dccc53484,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
@@ -2731,7 +2719,6 @@ N20aef97d9f474baf81b2939317ce059d,22-rdf-syntax-ns#first,GO_0065007
 GO_0007189,oboInOwl#hasAlternativeId,GO:0010579
 N274a8dd2ef664720abbe38e673d8cd2e,owl#someValuesFrom,GO_0043133
 GO_0001750,rdf-schema#subClassOf,GO_0110165
-GO_0044710,IAO_0000231,IAO_0000227
 GO_0072359,oboInOwl#hasAlternativeId,GO:0072358
 GO_0048522,rdf-schema#subClassOf,GO_0048518
 GO_0009453,rdf-schema#subClassOf,GO_0042330
@@ -2870,7 +2857,6 @@ GO_0004722,oboInOwl#hasAlternativeId,GO:0000163
 GO_0003676,oboInOwl#inSubset,go#goslim_chembl
 GO_0050893,rdf-schema#subClassOf,N123f5acb953344bba2f413267a869b40
 N84c606b953fc479398e31b5973ed8da6,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
-RO_0002211,oboInOwl#shorthand,regulates
 GO_0098531,rdf-schema#subClassOf,GO_0003700
 GO_0051783,rdf-schema#subClassOf,GO_0033043
 GO_0070374,rdf-schema#subClassOf,Nd084205783bf4880a4f9ae807a12c866
@@ -3178,7 +3164,6 @@ Nda2d42fd9b83446282b0e8be95276e18,22-rdf-syntax-ns#first,Ne6599113c8aa4323bd1dfa
 GO_1902107,rdf-schema#subClassOf,GO_1903708
 N88140e2e69ec41a381524b157d658a66,22-rdf-syntax-ns#rest,N90305aa6daf244178485468abfbc3a1f
 GO_0016032,oboInOwl#inSubset,go#goslim_pir
-GO_0042830,IAO_0000231,IAO_0000227
 N614f4765555046beaabb48b43093951d,owl#onProperty,BFO_0000051
 Ne43748f5d43746eda5fae8a4bd120f70,owl#someValuesFrom,GO_0044085
 N81f5ecb4788d47de8ee30fac70f8414e,22-rdf-syntax-ns#rest,N81938d1b9ea04162ba9ee2d762c202e9
@@ -3324,7 +3309,6 @@ GO_1903712,rdf-schema#subClassOf,GO_0042883
 N55b02d3bf0ab4f468b495a2385546668,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0036230,rdf-schema#subClassOf,GO_0002274
 N9b0f83f00f16430baef75901bb9f37c8,owl#someValuesFrom,GO_0072270
-GO_0001199,IAO_0000231,IAO_0000227
 GO_1901403,rdf-schema#subClassOf,GO_1901401
 GO_0030135,oboInOwl#hasAlternativeId,GO:0005909
 Nb1b7a5312cdb446abf6a7bdb3d63939d,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
@@ -3403,7 +3387,6 @@ GO_0072329,rdf-schema#subClassOf,GO_0046395
 BFO_0000050,owl#inverseOf,BFO_0000051
 N738d997cbd274cb5814ac0d72466ada0,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0006644,rdf-schema#subClassOf,GO_0006796
-GO_1990142,IAO_0000231,IAO_0000227
 GO_0005198,oboInOwl#inSubset,go#goslim_flybase_ribbon
 GO_0000313,rdf-schema#subClassOf,N05f851293ce4401586809c4d83f39e2f
 N2ae2427fc1f54ba8a80ce12feb6c8c8b,owl#onProperty,BFO_0000051
@@ -3497,7 +3480,6 @@ N6db61466e91b4fe7914a63b749d1750b,22-rdf-syntax-ns#rest,N50890c6e2beb43fab582f4c
 GO_0045861,rdf-schema#subClassOf,GO_0051248
 Ne88181df9cc64672bd89056fa765279c,owl#someValuesFrom,GO_0009535
 GO_0071276,rdf-schema#subClassOf,GO_0071248
-GO_0090466,IAO_0000231,IAO_0000227
 N12370f5c74a644c3864ae20426e40c74,22-rdf-syntax-ns#rest,N27c008f5ab764c2bbe10ad0ef351844a
 GO_0005615,oboInOwl#inSubset,go#goslim_drosophila
 N499af7ebca7541f19c091f82f8ce123f,owl#someValuesFrom,GO_0051329
@@ -4003,7 +3985,6 @@ GO_0035869,rdf-schema#subClassOf,GO_0110165
 GO_0022008,rdf-schema#subClassOf,GO_0030154
 N3e84114e0b3b4729b320793dabaa9d0f,owl#someValuesFrom,GO_0033554
 N2e01c0688295420caedf41724a7c6e59,22-rdf-syntax-ns#rest,N2b2d79eb2a24454490f68aa3f62d77a8
-GO_0015696,IAO_0000231,IAO_0000227
 GO_1903523,rdf-schema#subClassOf,N1541be2d3a304687bfc23f6387a5f8ff
 GO_0034246,rdf-schema#subClassOf,N95297e8c532d4cbb83f8d6bbd80c2506
 GO_0005021,oboInOwl#hasAlternativeId,GO:0036327
@@ -4015,7 +3996,6 @@ N6a3396988f3d4aff8a04c667cf93e0be,owl#onProperty,RO_0002213
 GO_0110095,rdf-schema#subClassOf,GO_1990748
 GO_0170035,rdf-schema#subClassOf,GO_0170033
 GO_0042462,rdf-schema#subClassOf,N7c3f5c51f0444f54b7de8d258f007a2d
-GO_0072434,IAO_0000231,IAO_0000227
 Nd369220f21164ac8831152c889c3d234,owl#onProperty,RO_0002211
 N32bd0bc362dd4118a849faa208c9cb03,owl#someValuesFrom,GO_0019915
 GO_0045058,rdf-schema#subClassOf,GO_0002376
@@ -4026,7 +4006,6 @@ GO_0045861,rdf-schema#subClassOf,N43c6587758814f359c5a7108a975bdb1
 Nd8d8bdb1f833408e833e1f7720eff1cd,owl#someValuesFrom,GO_0016043
 GO_0098797,rdf-schema#subClassOf,Nb0927900777b435b9f7de82256dd9a40
 GO_0004722,oboInOwl#hasAlternativeId,GO:0000158
-GO_0090467,IAO_0000231,IAO_0000227
 N96f7f00553fc4c6b9c2a2ace8fb6b1ab,owl#onProperty,RO_0002211
 N5d6bbcbdfc6243908c952ea6ff169e63,owl#someValuesFrom,GO_1990716
 GO_0005829,oboInOwl#inSubset,go#goslim_agr
@@ -4431,7 +4410,6 @@ GO_0009615,rdf-schema#subClassOf,GO_0051707
 GO_0086001,rdf-schema#subClassOf,GO_0001508
 GO_0044238,rdf-schema#subClassOf,GO_0008152
 GO_0007420,rdf-schema#subClassOf,Nc476c3a4440f41fd90cc1895a07386f1
-GO_0042089,IAO_0000231,IAO_0000227
 Nd33ac9090adb47e0831d225f961058f0,owl#someValuesFrom,GO_0019538
 GO_0090426,rdf-schema#subClassOf,GO_0070650
 N7fbe3b7677074081907e86da9e099d44,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
@@ -4441,7 +4419,6 @@ GO_0051495,owl#equivalentClass,Ndf6bd7522bc04103b32dbbf78c7fde8a
 GO_0098712,oboInOwl#hasAlternativeId,GO:1903802
 GO_0006869,oboInOwl#inSubset,go#goslim_pir
 GO_0097746,rdf-schema#subClassOf,GO_0035296
-GO_0098587,IAO_0000231,IAO_0000227
 Nbfd9270267f34438bb9cb01f1e46e4f8,owl#someValuesFrom,GO_0040007
 GO_0030811,rdf-schema#subClassOf,N478ed3e9509f4669996f91b4dbed17e4
 GO_0006950,oboInOwl#inSubset,go#goslim_metagenomics
@@ -4611,7 +4588,6 @@ GO_0098581,rdf-schema#subClassOf,GO_0043207
 GO_0003823,oboInOwl#inSubset,go#goslim_chembl
 Nb8d38861e83647129d77bcd7c8314452,owl#someValuesFrom,GO_0005576
 GO_0006457,oboInOwl#inSubset,go#goslim_yeast
-GO_0016666,IAO_0000231,IAO_0000227
 N0d98741760994ab5baacca1594d9a804,22-rdf-syntax-ns#first,GO_0065007
 GO_0043520,rdf-schema#subClassOf,N49ef61c229c740dea548180f1ceae59d
 GO_0000900,rdf-schema#subClassOf,GO_0090079
@@ -4704,7 +4680,6 @@ Nada1cce35cf14237a9b02a401be966d3,owl#onProperty,BFO_0000050
 GO_0048066,rdf-schema#subClassOf,GO_0043473
 GO_0007275,rdf-schema#subClassOf,GO_0032501
 Nc71368848f2a47d0bb8bbb1f80407eb8,owl#someValuesFrom,GO_0000731
-GO_0032519,IAO_0000231,IAO_0000227
 GO_0046161,rdf-schema#subClassOf,GO_0042167
 GO_0061580,rdf-schema#subClassOf,GO_0061582
 GO_0072523,rdf-schema#subClassOf,GO_1901565
@@ -4959,7 +4934,6 @@ GO_0050794,oboInOwl#hasAlternativeId,GO:0051244
 GO_0033599,rdf-schema#subClassOf,Nae4d779cdbac491eab5f6c347c330ca9
 GO_0046361,rdf-schema#subClassOf,GO_0046459
 Nc0508b9644314766a46cf53c33e70e07,owl#someValuesFrom,GO_0038023
-GO_0046698,IAO_0000231,IAO_0000227
 N256c7270c4b843d9b369f2678a50e0c1,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0006575,oboInOwl#inSubset,go#goslim_prokaryote
 GO_0030010,oboInOwl#hasAlternativeId,GO:0000283
@@ -5314,7 +5288,6 @@ N9075c7d0e9af49759e7c87746f365002,owl#intersectionOf,N04f108e4089243189b04ecb5a8
 GO_0006791,rdf-schema#subClassOf,GO_0031667
 GO_0007186,oboInOwl#inSubset,go#goslim_drosophila
 GO_0036276,oboInOwl#inSubset,go#gocheck_do_not_annotate
-GO_0090003,IAO_0000231,IAO_0000227
 GO_0046883,rdf-schema#subClassOf,GO_1903530
 GO_0002034,rdf-schema#subClassOf,GO_0097746
 Nf3ea05cacf2b4749b980c7dcdf193e13,owl#someValuesFrom,GO_0000226
@@ -5459,7 +5432,6 @@ N8ae91898c4e84491bc8f7bc4ccf626c2,owl#someValuesFrom,GO_0034220
 N4d2bcaab5f0c415da88d46194a7f7d7d,owl#onProperty,BFO_0000050
 Ne84b7b74eb514020a296ab13c914ef94,22-rdf-syntax-ns#first,GO_0005938
 Nd51e1bf09ef2413185194ed0e8bcfa0d,owl#intersectionOf,N4eed0f3addd5481ca273e2f51a21088f
-GO_0065006,IAO_0000231,IAO_0000227
 N406d830b807c48ceba8a9a6c2c94f4f1,owl#someValuesFrom,GO_0001913
 Na2b1a6f4c0624cd8bcd3f6b21c4734a1,owl#someValuesFrom,GO_0015707
 N39263b7aee5d43d2ae31ecc906153d9f,owl#intersectionOf,N46b3da2fb7dc46bcae76af003aead1a6
@@ -5709,7 +5681,6 @@ GO_0030141,rdf-schema#subClassOf,GO_0099503
 GO_0033108,rdf-schema#subClassOf,GO_0065003
 GO_0098813,rdf-schema#subClassOf,GO_0007059
 N5de5a6d96c8e4d79884bca6dacc173b6,owl#intersectionOf,N6ccd121c08284b798ee5e16b690c062a
-GO_0097319,IAO_0000231,IAO_0000227
 GO_0005681,rdf-schema#subClassOf,GO_0140513
 Ne7b78b87ace640398623d500a572a3c4,22-rdf-syntax-ns#first,GO_0065007
 GO_0000270,rdf-schema#subClassOf,GO_0030203
@@ -5745,7 +5716,6 @@ GO_0046136,rdf-schema#subClassOf,GO_0030656
 N89e8d12f728b41cda57d04651631d797,owl#someValuesFrom,GO_0097649
 GO_0043535,owl#equivalentClass,N2e70b5f142e04edfb30aeee707fad4fb
 GO_0005768,oboInOwl#inSubset,go#goslim_euk_cellular_processes_ribbon
-GO_0051243,IAO_0000231,IAO_0000227
 GO_0030072,rdf-schema#subClassOf,GO_0046879
 N12fd7eff619140a2bbe19cde880ee742,owl#onProperty,BFO_0000050
 N469f473369b34be38ae13118fc3aae58,owl#someValuesFrom,GO_0042098
@@ -5988,7 +5958,6 @@ Nfe5a63edada546d38cc75bc045cdafeb,owl#someValuesFrom,GO_0010057
 GO_0043087,oboInOwl#hasAlternativeId,GO:0032317
 GO_0044036,rdf-schema#subClassOf,N746d3df4d64b48a68d0cf48923143f61
 GO_0044429,oboInOwl#consider,GO:0005739
-GO_0045449,IAO_0000231,IAO_0000227
 GO_0010970,rdf-schema#subClassOf,GO_0099111
 Nf87285948a344683b538c527416353be,22-rdf-syntax-ns#first,N888b085d6d904243b9248f37ec8283c0
 Ne783f22f5d774058b5513d4164f97579,owl#intersectionOf,Na931949188f441fba919ae6405a81aff
@@ -6090,7 +6059,6 @@ GO_0006417,rdf-schema#subClassOf,N53e11e5bcc1048a989cf8bdb3fa5c486
 GO_0003010,rdf-schema#subClassOf,GO_0003009
 N22268968c4df43b0be04357f5e1689dc,22-rdf-syntax-ns#rest,N4c8f683f3b3543198408dc1f314066a4
 GO_0010324,oboInOwl#inSubset,go#goslim_yeast
-GO_0000982,IAO_0000231,IAO_0000227
 GO_0030265,owl#equivalentClass,N8ff304242f124e88b2d913a9b360b7d4
 N55a27115d3324c529a4fa5b82e831c51,owl#someValuesFrom,GO_0032501
 GO_0043086,rdf-schema#subClassOf,GO_0050790
@@ -6153,7 +6121,6 @@ Nd9874969e6e9424e8325e85caaf65102,22-rdf-syntax-ns#first,Na49fed319e2a40c3bc27e9
 N4818086bdd0e48e3bde72e2cd375064a,22-rdf-syntax-ns#first,GO_0065007
 N9ef834e66c3b412f8388768c8c99c4fc,owl#someValuesFrom,GO_0002443
 GO_0051745,rdf-schema#subClassOf,GO_0052592
-GO_0071845,IAO_0000231,IAO_0000227
 GO_0072175,rdf-schema#subClassOf,GO_0035148
 GO_0009783,rdf-schema#subClassOf,GO_0098796
 N454f7d78dc4a4a8cbdadf64483c63c87,owl#someValuesFrom,GO_0110096
@@ -6554,7 +6521,6 @@ GO_0000776,rdf-schema#subClassOf,GO_0099080
 GO_0003682,oboInOwl#inSubset,go#goslim_pir
 N40dee10bb28d4ca485508f03aca10ae4,owl#someValuesFrom,GO_0034178
 Nd22e500f3bac47cd91b8c60ab055c4f5,22-rdf-syntax-ns#first,GO_0065007
-GO_0036326,IAO_0000231,IAO_0000227
 Nc883cb9fdf1446d0b68a4018911df2de,owl#onProperty,RO_0002211
 GO_0051050,rdf-schema#subClassOf,GO_0051049
 N59753f6b469446e0b45ceb2795993561,owl#someValuesFrom,GO_0007049
@@ -6800,7 +6766,6 @@ Nb61a25320bcd4fff9065a006aeeae3c6,owl#onProperty,BFO_0000050
 GO_0098803,rdf-schema#subClassOf,GO_0098796
 N28d25cf7c634462c88197c458e02b62b,22-rdf-syntax-ns#first,GO_0065007
 N1b74e2962dc94582912202937669fb5a,22-rdf-syntax-ns#first,N309970166eff4c3a839af55e06947168
-GO_0048637,IAO_0000231,IAO_0000227
 N4e079778caf9459c9aefc3dd386bb90d,22-rdf-syntax-ns#first,GO_0065007
 N499b157481b0484e8f2bac5f037c9118,owl#intersectionOf,Nc2cc2923e7bb40cd910f8ae5f01d2ebb
 GO_0030990,rdf-schema#subClassOf,GO_0032991
@@ -6861,7 +6826,6 @@ GO_0009566,rdf-schema#subClassOf,GO_0022414
 GO_0071286,rdf-schema#subClassOf,GO_0032026
 GO_0099098,rdf-schema#subClassOf,GO_0007018
 GO_0042822,rdf-schema#subClassOf,GO_0042816
-GO_0016021,IAO_0000231,IAO_0000227
 N8b86f930f7984f7eaf063d1ad6b903fe,owl#onProperty,RO_0002213
 GO_0003700,oboInOwl#inSubset,go#goslim_chembl
 GO_0030155,rdf-schema#subClassOf,GO_0050794
@@ -7040,7 +7004,6 @@ GO_0009536,oboInOwl#inSubset,go#goslim_plant_ribbon
 GO_0006427,rdf-schema#subClassOf,GO_0006418
 GO_0009617,oboInOwl#hasAlternativeId,GO:0009618
 Nf4f81e12c9914a528b43a0a07ea222c1,22-rdf-syntax-ns#first,GO_0065007
-GO_0023033,IAO_0000231,IAO_0000227
 GO_0009607,oboInOwl#inSubset,go#goslim_plant
 N87c7999d11cb4c68bf6498d852122f37,22-rdf-syntax-ns#first,GO_0065007
 N2d0b5309f00b484b9381e9aff285e547,owl#onProperty,RO_0002213
@@ -7096,7 +7059,6 @@ GO_1902893,rdf-schema#subClassOf,Nb96b2b9d76194c8f85c7c617b0c334bb
 Nce12a75dc251480fa4299036a1556056,owl#someValuesFrom,GO_0040007
 GO_0003823,rdf-schema#subClassOf,GO_0005488
 GO_0032279,owl#disjointWith,GO_0032280
-GO_0042493,IAO_0000231,IAO_0000227
 GO_0000724,oboInOwl#hasAlternativeId,GO:0016924
 GO_0031012,rdf-schema#subClassOf,GO_0030312
 N9f500766e9cb46f7bfec4423b62424fd,owl#intersectionOf,N6e38b95569474aae881fe3fa50b7426c
@@ -7382,7 +7344,6 @@ N62b38d19eab742769ca64818379f392e,owl#onProperty,RO_0002211
 GO_0042698,rdf-schema#subClassOf,GO_0048609
 GO_0009996,owl#equivalentClass,N83fbbb0ad2414f3696e6db3c683f41dd
 GO_0071600,rdf-schema#subClassOf,Nc9c35ab23fd048b2a329c4a81a00ed06
-GO_0007325,IAO_0000231,IAO_0000227
 Ne996baed677c4fb09dedc25e219a1935,owl#someValuesFrom,GO_0009101
 GO_2000629,rdf-schema#subClassOf,N01da5c9102af440491d31e9f2c292a89
 N70ab581e9f9148699b0c23887a4d325a,owl#onProperty,RO_0002213
@@ -7578,7 +7539,6 @@ N70bd6411fb0c460ebbb6cfd1403388e1,owl#onProperty,BFO_0000050
 Nb3038b8d634c4fb3b2db0bfcf3207f58,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N598f5dd9ed48400b83925df09f2d56e5,owl#onProperty,BFO_0000050
 GO_0006457,rdf-schema#subClassOf,GO_0009987
-GO_0050827,IAO_0000231,IAO_0000227
 GO_0044181,rdf-schema#subClassOf,GO_0060560
 N03887cc2fa464a28ac9a1d55897fbe4b,22-rdf-syntax-ns#first,GO_0032502
 Ndc9fdf23455d49c28430d76fa5d406fb,owl#onProperty,RO_0002213
@@ -8363,7 +8323,6 @@ N4ca9dc3aad2148098184d30149b7ec0c,owl#onProperty,RO_0002212
 N6e7b91d928ea42ff91fc51054e6f23dd,owl#onProperty,BFO_0000051
 GO_0042325,oboInOwl#inSubset,go#gocheck_do_not_annotate
 GO_0090175,rdf-schema#subClassOf,Nd8dc39a18e97489b9c710a02026fecf5
-GO_0050881,RO_0002175,NCBITaxon_7227
 GO_0051438,owl#equivalentClass,N216cc9d7c259439c80fef5a86b4780f8
 GO_0042461,rdf-schema#subClassOf,N9da4ac4c72654308a58891efb8077169
 GO_0018429,oboInOwl#inSubset,go#gocheck_do_not_annotate
@@ -8419,7 +8378,6 @@ GO_0031012,oboInOwl#inSubset,go#goslim_generic
 Nd7e018649e104dc58540d327a87ccf2d,22-rdf-syntax-ns#first,N4eb38de878ff434ea84cc2461adc58f5
 GO_0046686,rdf-schema#subClassOf,GO_0010038
 GO_0031850,rdf-schema#subClassOf,GO_0031628
-GO_0017144,IAO_0000231,IAO_0000227
 N1a36b8539a9a4bc191eaac765fd3fd8e,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N3f1ac4c22ea741ec8937536aa5985de7,owl#someValuesFrom,GO_0035264
 N982c6a8d941549d2bf2b6578b5dd7167,22-rdf-syntax-ns#first,GO_0065007
@@ -8563,7 +8521,6 @@ GO_0098900,rdf-schema#subClassOf,GO_0042391
 N31e3eb99bab4418e968e0f35372f7d30,22-rdf-syntax-ns#rest,Nfb87c3e3c4b249d08215d771f6faa701
 GO_0009767,rdf-schema#subClassOf,N02ec929a83a645dea41b126e89795499
 GO_0030031,rdf-schema#subClassOf,GO_0030030
-GO_0016983,IAO_0000231,IAO_0000227
 GO_0035686,rdf-schema#subClassOf,GO_0110165
 N33ce578a524340dfa1bb4c7e1740ad97,22-rdf-syntax-ns#first,GO_0065007
 Neacd4b1afd0a4c669c7ce60cb72876f9,owl#someValuesFrom,GO_0007275
@@ -8800,14 +8757,12 @@ GO_0061572,rdf-schema#subClassOf,GO_0007015
 Nebbd67d82c4e411f8762a4e28b934bdc,owl#onProperty,RO_0002211
 GO_0110145,rdf-schema#subClassOf,GO_0070013
 Na962efbe7a2d4888be88be889a76985c,owl#onProperty,BFO_0000050
-GO_0004872,IAO_0000231,IAO_0000227
 GO_0044207,rdf-schema#subClassOf,N995e4f9019314001ab4b4489467b352e
 Ne6599113c8aa4323bd1dfaa18f00bc1c,owl#onProperty,RO_0002213
 GO_0097475,rdf-schema#subClassOf,GO_0001764
 GO_0007017,rdf-schema#subClassOf,GO_0009987
 N8f1550d193734431a455a9b10cfe0ec4,22-rdf-syntax-ns#first,GO_0065007
 GO_0031503,oboInOwl#hasAlternativeId,GO:0034629
-GO_0044712,IAO_0000231,IAO_0000227
 GO_1905954,owl#equivalentClass,N3e75cc47fd1a478ead62f7297e6da478
 GO_0031334,rdf-schema#subClassOf,N7c0c3fa42fa44eef9b0474d583283c78
 GO_1903664,owl#equivalentClass,Nce9e1a07e5614725a35c436509976b71
@@ -9329,7 +9284,6 @@ GO_0098754,oboInOwl#inSubset,go#goslim_prokaryote
 N86ea8c77c5464f90ba485904a7d90441,owl#someValuesFrom,GO_0038145
 N098c5c3708bc448f828a1e0e171f8f73,22-rdf-syntax-ns#rest,N3191674f9f854c0d889e22ab77495a0b
 N3871a637a99f4817ad4de582d5d12fed,22-rdf-syntax-ns#first,Nec6d95228d5649f5a887de0cebacc6f4
-GO_0043283,IAO_0000231,IAO_0000227
 GO_0072414,oboInOwl#hasAlternativeId,GO:0072455
 GO_0030057,rdf-schema#subClassOf,GO_0005911
 GO_0045097,IAO_0100001,GO:0045095
@@ -9467,7 +9421,6 @@ N661475d6a9d94cd792baa4fff87abfa1,22-rdf-syntax-ns#first,GO_0065007
 GO_0002759,rdf-schema#subClassOf,GO_0031347
 GO_0031252,rdf-schema#subClassOf,GO_0110165
 N6b32e05cfae84eea88a34629a656e283,owl#someValuesFrom,GO_0045132
-GO_0043234,IAO_0000231,IAO_0000227
 GO_0042255,rdf-schema#subClassOf,GO_0140694
 N5fd654def49c42c284d440f21a412547,22-rdf-syntax-ns#rest,N2431ae1674c1470baec74e094e624b19
 GO_0031664,owl#equivalentClass,Nbff8895b644e4fc3a0a4adaba68ec648
@@ -9623,7 +9576,6 @@ N4ff96bcd3f884d24b9b3a48e093b5055,owl#intersectionOf,N44f52b18eb7d49228df877188f
 GO_0097684,rdf-schema#subClassOf,GO_0110165
 GO_0042753,owl#equivalentClass,N104a905cf914494abefe131a7911b8fa
 GO_0045229,rdf-schema#subClassOf,GO_0016043
-RO_0002093,oboInOwl#shorthand,ends_during
 GO_0052548,oboInOwl#inSubset,go#gocheck_do_not_annotate
 GO_0001738,rdf-schema#subClassOf,GO_0002009
 GO_0072659,oboInOwl#inSubset,go#goslim_pombe
@@ -9632,7 +9584,6 @@ GO_0000909,rdf-schema#subClassOf,N3a4b3d46d97e45c1b61bc1c38eed8253
 N572c289bc0d14fb9aec9e99e75ab4542,owl#intersectionOf,Nca9b2584fb25447886db953f56a1e2cd
 N0c9afea88f6c4071b4c6078d8d68b1d9,owl#onProperty,BFO_0000050
 GO_0005768,oboInOwl#inSubset,go#goslim_chembl
-GO_0004696,IAO_0000231,IAO_0000227
 Na1844bc2023e4c55a717c1831f6c2eab,owl#someValuesFrom,GO_0005694
 N1422562d32d143e8ba1542b8b8e801b0,owl#onProperty,BFO_0000050
 GO_0010670,oboInOwl#consider,GO:2000376
@@ -9745,7 +9696,6 @@ N683131b4ac1b4120b6b0f42259959475,owl#intersectionOf,Nc4878de151294522ad5984a708
 Nba3682e2bacd45198bb2c51aa9377424,owl#intersectionOf,N52ad41d2eeb34126a64ba90db943159c
 GO_0010055,rdf-schema#subClassOf,GO_0010053
 Nda96ae39c61349aebeb38ba6e1838aca,22-rdf-syntax-ns#first,N6e920c7608fe4fcc8f30a46e9f92866b
-GO_0018409,IAO_0000231,IAO_0000227
 GO_0097078,rdf-schema#subClassOf,GO_0032991
 N527ab9a63547497bb5a5c15a68fa86d4,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0008645,oboInOwl#hasAlternativeId,GO:0035428
@@ -9929,7 +9879,6 @@ GO_0034357,rdf-schema#subClassOf,Naf1512b290204e9fb59a8fca661dcbe8
 Na81e39d1c41f4c4d9ac6351954e9cd4a,owl#someValuesFrom,GO_0036006
 GO_0070794,rdf-schema#subClassOf,GO_0075262
 N37d81b50e5484d60b4c6bc8c9097efb8,22-rdf-syntax-ns#rest,N32ab83dfc2b34e49b20549d649be6372
-GO_0044699,IAO_0000231,IAO_0000227
 GO_0051176,rdf-schema#subClassOf,GO_0042762
 Nf65dfec854674126b5dcec4e3fdaa31e,22-rdf-syntax-ns#first,GO_0008608
 GO_0051481,rdf-schema#subClassOf,GO_0065008
@@ -9980,7 +9929,6 @@ GO_0019826,rdf-schema#subClassOf,GO_0140299
 N0ea26d4d475f49d081ab909932c500d8,owl#intersectionOf,Nc586ca3e6d4e4fcaad350d1f5adfb8af
 GO_0072683,rdf-schema#subClassOf,GO_0045123
 N434229cf98204a2689a5558084cfeef4,owl#someValuesFrom,GO_0019722
-GO_0008151,IAO_0000231,IAO_0000227
 N5f21364d757040f8a9f7c90efffd1593,owl#onProperty,BFO_0000050
 N4e817d9a190f43b6bf0c5eb870f82003,22-rdf-syntax-ns#first,GO_0065007
 GO_0002376,oboInOwl#inSubset,go#goslim_generic
@@ -10037,7 +9985,6 @@ GO_0008086,rdf-schema#subClassOf,N434229cf98204a2689a5558084cfeef4
 GO_0035858,rdf-schema#subClassOf,GO_0001709
 GO_0033121,rdf-schema#subClassOf,GO_0030811
 GO_0032501,oboInOwl#hasAlternativeId,GO:0050874
-GO_0010010,IAO_0000231,IAO_0000227
 GO_0007167,rdf-schema#subClassOf,GO_0007166
 GO_0004197,rdf-schema#subClassOf,GO_0008234
 N6bfa4339f4224f888fbbfbebdebda13b,22-rdf-syntax-ns#first,Ne3d2ec538e994e9e9479bea71767543c
@@ -10064,7 +10011,6 @@ Ne232fae8473a42f382252f607cc685dc,owl#onProperty,RO_0002212
 GO_0001906,oboInOwl#inSubset,go#goslim_pir
 GO_0072063,rdf-schema#subClassOf,N9ef721e0e8bf4cd096cadbd906d1bbf7
 GO_0042539,rdf-schema#subClassOf,GO_0009651
-GO_0090197,IAO_0000231,IAO_0000227
 GO_0051309,rdf-schema#subClassOf,GO_0016321
 GO_0006403,oboInOwl#inSubset,go#goslim_drosophila
 N343c17775d2a4e428e1012bd2e02d20b,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
@@ -10326,7 +10272,6 @@ GO_0097108,rdf-schema#subClassOf,GO_0005515
 N07408512059d45339addd3792fbee58b,22-rdf-syntax-ns#rest,Ne971f2f9aec645178b0e8e1e96c7a045
 N530aaaf1a8984e729285fc509ede79b0,owl#onProperty,RO_0002211
 GO_1903018,rdf-schema#subClassOf,N1785c3caabcd43ab9c232cff4590fc85
-GO_0044415,IAO_0000231,IAO_0000227
 N98a2f6e479e5496995341582a06d4b26,owl#onProperty,BFO_0000050
 GO_1901876,oboInOwl#inSubset,go#gocheck_do_not_annotate
 GO_0000082,rdf-schema#subClassOf,GO_0044843
@@ -10551,7 +10496,6 @@ N9b063b94b51140d4a28eb51dfc36f81b,owl#intersectionOf,N3942eabe4bb84ef1b3742c0e22
 GO_0032956,rdf-schema#subClassOf,GO_0032970
 N64b9536ea3b849238f835a6bba258cd6,22-rdf-syntax-ns#rest,Nca8705262a854666ba5e81fae3878e01
 Na8e4556b9ee44c84bd56457e911e098e,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
-GO_0042570,IAO_0000231,IAO_0000227
 N746fe0f2e2814ae79d5365de10b3cd9e,22-rdf-syntax-ns#first,GO_0065007
 GO_0005794,oboInOwl#inSubset,go#goslim_plant
 N74e828be0f444c288d2844f5b63c3a94,owl#someValuesFrom,GO_0007409
@@ -10565,7 +10509,6 @@ Ne2a2dda5be384c6b9e9608566d5da41d,owl#someValuesFrom,GO_0043891
 GO_0051147,rdf-schema#subClassOf,GO_0045595
 GO_0043101,rdf-schema#subClassOf,GO_0043094
 GO_0019035,rdf-schema#subClassOf,Nb01f4b255fe6499b81f64706ea3a27ad
-GO_0042616,IAO_0000231,IAO_0000227
 GO_0060219,rdf-schema#subClassOf,GO_0001754
 N83d689d5861d438f8ed06723e57bfe99,owl#onProperty,RO_0002211
 GO_0042273,rdf-schema#subClassOf,GO_0022613
@@ -10634,7 +10577,6 @@ GO_2001234,owl#equivalentClass,Na82b763f246144edbb29d439ca0b3407
 N1022e0a180be4a74b4ff5badf30b171c,owl#onProperty,RO_0002213
 N66dec88222bc4610aded3f2d2b8b3a1b,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0052170,rdf-schema#subClassOf,GO_0044414
-GO_0007582,IAO_0000231,IAO_0000227
 GO_0043065,rdf-schema#subClassOf,GO_0043068
 GO_0055086,oboInOwl#inSubset,go#goslim_drosophila
 N135bc73b75084518a1e0c9dcff9021ae,owl#onProperty,BFO_0000050
@@ -10755,7 +10697,6 @@ Nc941105ef96e4bc3b2d62fd45fe5d0f5,22-rdf-syntax-ns#rest,N30201c0218ce46f2af4126c
 N89a420bce6394a71bc63055a037747c0,owl#someValuesFrom,GO_0016485
 Nb34cb353cf2a4a7cb8db043c89152365,22-rdf-syntax-ns#first,N4376f97726774e70b647f82d42109305
 GO_0000182,rdf-schema#subClassOf,GO_1990837
-GO_0030646,IAO_0000231,IAO_0000227
 Ne9bbee6071bd4398b9116833cf7f0786,owl#onProperty,BFO_0000050
 GO_0044283,rdf-schema#subClassOf,GO_0009058
 N523e66b4d0c542b295757ad4ad783701,22-rdf-syntax-ns#first,N0aa9d099d0414732bbdf24334d2b47f1
@@ -10980,7 +10921,6 @@ GO_0044091,rdf-schema#subClassOf,GO_0044085
 GO_0000280,oboInOwl#inSubset,go#goslim_pir
 GO_0051946,rdf-schema#subClassOf,N6d501be053d24e82a5e7b9ea3cde065b
 GO_0039531,rdf-schema#subClassOf,GO_1902531
-GO_0042524,IAO_0000231,IAO_0000227
 GO_0016028,rdf-schema#subClassOf,GO_0120025
 GO_0050896,oboInOwl#inSubset,go#goslim_prokaryote_ribbon
 GO_0045951,rdf-schema#subClassOf,GO_0000019
@@ -11112,7 +11052,6 @@ GO_0051049,rdf-schema#subClassOf,N0bebd3de98054355aa8366bc15136869
 N8b0d9a6d6e2d4d66b8545b6a79c98e6d,owl#someValuesFrom,GO_0097496
 Ned25001fa5084f72ad121da0e5c20a0b,owl#onProperty,RO_0002212
 Na53eb33ab6cb4c0aad28acb02d973b40,22-rdf-syntax-ns#rest,N1ef6497a0c804ebbae43fd8623a820a9
-GO_0015992,IAO_0000231,IAO_0000227
 N8fbf777512d147bf9837319cdf8bffcf,owl#someValuesFrom,GO_0033687
 GO_0019363,rdf-schema#subClassOf,GO_0019362
 N6f5fbcceb7b3429096957d1ff0130771,owl#intersectionOf,N696b0725884f48dfb9dc4744dfa9a2e7
@@ -11844,7 +11783,6 @@ Nf2dd05b03d3c45e79c0d4a6a1139e2fb,owl#someValuesFrom,GO_0000278
 GO_0044419,oboInOwl#inSubset,go#goslim_pir
 GO_0051767,rdf-schema#subClassOf,GO_0009059
 GO_0016859,rdf-schema#subClassOf,GO_0016853
-GO_0007243,IAO_0000231,IAO_0000227
 GO_0045761,owl#equivalentClass,N5bdec740ab034caf907fed696bc9c178
 N6617101898bb4c7f88d23cabfcb2083a,owl#onProperty,BFO_0000050
 GO_0006140,rdf-schema#subClassOf,GO_0019219
@@ -12117,7 +12055,6 @@ GO_0106020,rdf-schema#subClassOf,N95e56162ad8148c6b53a324095a50344
 GO_0030964,rdf-schema#subClassOf,GO_0098796
 GO_0009262,rdf-schema#subClassOf,GO_0009117
 N24e4511abbd94dbfa7daf8f4b12445b8,22-rdf-syntax-ns#first,Nd5b51ef4adb14c62a9e34b3a460ba17d
-GO_0043432,IAO_0000231,IAO_0000227
 N602b77a0ce8c4ae89ab5a09e9807c9a1,owl#someValuesFrom,GO_0097014
 GO_0060538,rdf-schema#subClassOf,GO_0007517
 Nb21ad5d3a21149dcbcfad278fb658b3b,owl#onProperty,BFO_0000050
@@ -12146,7 +12083,6 @@ Nd067939dccec4624b9141685cd8592a8,22-rdf-syntax-ns#rest,N83beaf5d80e349a8857c175
 GO_0060071,rdf-schema#subClassOf,GO_0035567
 GO_0061622,owl#equivalentClass,Nce3d3c2e59d84d28a242fd3db8c1db68
 N02a6d22bdf6e48478c17a38c2a8f48b8,owl#intersectionOf,N57c57929edae42b8828088fe0a5cddc9
-GO_0006993,IAO_0000231,IAO_0000227
 N96f6d90527264e319c66a031b372f950,22-rdf-syntax-ns#first,Nfe5feea8d2624182afc64c99e3537752
 GO_1902680,rdf-schema#subClassOf,GO_2001141
 GO_0003824,rdf-schema#subClassOf,GO_0003674
@@ -12453,7 +12389,6 @@ GO_0010634,rdf-schema#subClassOf,GO_0030335
 N213f37f4c2cb4b91b55ca49aa975cac9,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N4778df8b0a89428fbb8a8c3e6ffae020,22-rdf-syntax-ns#first,GO_0065007
 Nd4c191dd4ac24851a70a7dd0877fa57d,22-rdf-syntax-ns#rest,Nee14e5c5031041f8935191c44afb3540
-GO_0022891,IAO_0000231,IAO_0000227
 GO_0043456,owl#equivalentClass,N254be7972a6d4bd98bf0f46d10fe3908
 GO_0005748,IAO_0100001,GO_0005747
 Nddc465f861214f6db280e92018620c3e,owl#intersectionOf,N7d758e0651b94f38bd728b799da41b0f
@@ -12514,7 +12449,6 @@ Ndbbbffb0d98b4c558059f0fddc135606,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_1900737,owl#equivalentClass,N9f7479776d0d49609f3ce7d13b6d2dcb
 N334cfe42091544349a319c19c4f0981f,22-rdf-syntax-ns#first,Naa698933eb6f461aacffda3aaa0a88e7
 GO_0006650,oboInOwl#hasAlternativeId,GO:0006652
-BFO_0000066,oboInOwl#shorthand,occurs_in
 N309970166eff4c3a839af55e06947168,owl#onProperty,RO_0002211
 GO_0000731,rdf-schema#subClassOf,GO_0071897
 GO_0033802,rdf-schema#subClassOf,GO_0008757
@@ -12662,7 +12596,6 @@ N33ce578a524340dfa1bb4c7e1740ad97,22-rdf-syntax-ns#rest,N4dd35dd835744672a3d54f3
 GO_0009638,rdf-schema#subClassOf,GO_0009606
 N81971b692ba1432d8523defb8562e0f0,owl#intersectionOf,Ncb64317f8a4d4637bdee4c34a19d7a17
 GO_0042559,oboInOwl#inSubset,go#goslim_pombe
-GO_0016047,IAO_0000231,IAO_0000227
 Nbb5baf090c4d49d8a3783d2f0d24b8d6,owl#someValuesFrom,GO_0015849
 GO_0010042,rdf-schema#subClassOf,GO_0010038
 N887b9ae8ea2742878c11ec9fe6b1b4d4,owl#someValuesFrom,GO_0042025
@@ -12692,7 +12625,6 @@ Nb65a8393a6cf47e79df7013f7d222557,owl#someValuesFrom,GO_0048568
 Nc2276c74d19d41e38e7e73e4f699ddb1,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0007189,owl#equivalentClass,N72bfa83003aa4ed0a08d0118397bd2ec
 GO_0010907,owl#equivalentClass,Nf59f3a29ec6043e298275675b337c0e1
-GO_0030529,IAO_0000231,IAO_0000227
 GO_1900140,owl#equivalentClass,Nea12cb3171264dc5a06db564953aa29b
 GO_0072091,rdf-schema#subClassOf,N16109ab63712491985f8647060571197
 N4e7b0392c0574d20b0a2490a71651cfe,owl#someValuesFrom,GO_0006766
@@ -12739,7 +12671,6 @@ N1dab7c644108462c9dbff9fabd1f17e1,owl#onProperty,BFO_0000066
 GO_0005783,oboInOwl#inSubset,go#goslim_plant
 N56b5282df8814fdfbc173bbfc2bf3203,owl#someValuesFrom,GO_0007049
 GO_0043010,rdf-schema#subClassOf,GO_0001654
-GO_0043346,IAO_0000231,IAO_0000227
 Nf0927527cb374786a25aed77aa49baec,owl#intersectionOf,N355b2742a5ca4c7a8016a5a03773e964
 N59d9abcc462049dba199ced3102e7a71,22-rdf-syntax-ns#rest,N22cc477c75c7469f8563b1c70082ebd8
 GO_0043520,rdf-schema#subClassOf,GO_0043254
@@ -12848,7 +12779,6 @@ GO_0048469,rdf-schema#subClassOf,GO_0048869
 GO_0019724,rdf-schema#subClassOf,GO_0002460
 GO_0048519,oboInOwl#hasAlternativeId,GO:0043118
 Nd9d8827a7c5440ab909f370a4ea73ab5,22-rdf-syntax-ns#rest,N8a056a66867143a0b0a33fb16f3c8258
-GO_0007507,RO_0002175,NCBITaxon_7227
 GO_0015318,rdf-schema#subClassOf,GO_0022857
 GO_0046395,rdf-schema#subClassOf,GO_0016054
 N0e2565588c5646c39d3bdd8c171c0573,owl#intersectionOf,N33022f35dd2d4826be746ce30b8cf845
@@ -12858,7 +12788,6 @@ N8fc72cc47b5b4997b1b6217daf762715,22-rdf-syntax-ns#rest,N69af31dcca28416388c15b4
 GO_0140657,rdf-schema#subClassOf,N866e15385747462aae65f9d53ff541ab
 GO_0008053,oboInOwl#hasAlternativeId,GO:1990613
 N527477e6055d46a2a71ab45a00f7ca1a,owl#onProperty,RO_0002211
-GO_0042737,IAO_0000231,IAO_0000227
 N3fdcadcff3f84b7199d729dbb1257499,owl#onProperty,RO_0002211
 N9f0723905db54943a133689c7e6df27c,22-rdf-syntax-ns#rest,Nde4c5dc60a444b10b1bac45051e6eab8
 GO_0002700,rdf-schema#subClassOf,Nfa42d809c833479ab1353dd67937500a
@@ -12924,7 +12853,6 @@ Ndae54ffc988e44ac9eb2a27891850d52,owl#someValuesFrom,GO_0007268
 N4787f4b538ab474cb1af251511e96c58,owl#intersectionOf,N1967945cdea14122b80466e894d297d8
 GO_0016197,rdf-schema#subClassOf,GO_0016192
 Ne7b78b87ace640398623d500a572a3c4,22-rdf-syntax-ns#rest,Nd1e40013c82b43bea96ef09a824c7939
-GO_0097405,IAO_0000231,IAO_0000227
 GO_0000747,oboInOwl#inSubset,go#goslim_pir
 N78a183b79ea144408ca5b9d9cfb22b83,owl#onProperty,BFO_0000051
 GO_0031640,oboInOwl#hasAlternativeId,GO:0001908
@@ -13128,7 +13056,6 @@ GO_0097597,rdf-schema#subClassOf,GO_0043232
 N806f0a672840436281d3b41f1438343e,owl#onProperty,BFO_0000050
 GO_1903810,oboInOwl#hasAlternativeId,GO:0061460
 GO_0031225,IAO_0100001,GO:0016020
-BFO_0000051,oboInOwl#shorthand,has_part
 GO_0032262,rdf-schema#subClassOf,GO_0008655
 N43c6587758814f359c5a7108a975bdb1,owl#onProperty,RO_0002212
 GO_0052200,rdf-schema#subClassOf,GO_0075136
@@ -13241,7 +13168,6 @@ N7e663aade6294d6da102e67cf78a3ee8,22-rdf-syntax-ns#first,N8f1a0640b4f44ce982eb38
 GO_0045144,rdf-schema#subClassOf,GO_0000819
 GO_1902659,owl#equivalentClass,N9af1fbcc2fc4419d81136292daae4e8c
 GO_0051147,rdf-schema#subClassOf,N2adabb1aa4bf430697fe648ed1484832
-GO_0044117,IAO_0000231,IAO_0000227
 GO_0097604,rdf-schema#subClassOf,GO_0005261
 GO_0042221,rdf-schema#subClassOf,GO_0050896
 GO_0008528,rdf-schema#subClassOf,GO_0001653
@@ -13537,7 +13463,6 @@ Nb7a90392bb8b401bb40f3a48c1165150,owl#onProperty,BFO_0000051
 GO_0065010,rdf-schema#subClassOf,GO_0043230
 GO_0034103,rdf-schema#subClassOf,N304ac1e187a546fe92037de1d4a4676e
 N4974a8f1bcea450ba5b4bcfa59482339,22-rdf-syntax-ns#first,GO_0065007
-GO_0015978,IAO_0000231,IAO_0000227
 N7380d3a2eab249239ee231418fd7c564,owl#onProperty,RO_0002213
 GO_0003700,rdf-schema#subClassOf,GO_0140110
 GO_0004659,rdf-schema#subClassOf,GO_0016765
@@ -13616,7 +13541,6 @@ GO_0004407,rdf-schema#subClassOf,GO_0033558
 GO_0032388,rdf-schema#subClassOf,GO_0048522
 GO_0019740,rdf-schema#subClassOf,N3235d72834e24bb6886f4679eb11d33d
 Ne467c7013d314104ae1720d9bc89059d,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
-GO_0061636,IAO_0000231,IAO_0000227
 GO_0051318,rdf-schema#subClassOf,N204f08fa2c2146f786d5be944a28217e
 N167788683cb84fd19aa91970409b7b0d,owl#onProperty,RO_0002211
 N79937fd93a794c3fa76ca6b41e5e6049,owl#someValuesFrom,GO_1905039
@@ -13676,7 +13600,6 @@ GO_0072338,rdf-schema#subClassOf,GO_0043603
 N2e01c0688295420caedf41724a7c6e59,22-rdf-syntax-ns#first,GO_0065007
 N2d1dbbf31cc645ac8873255077187a1b,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0006520,oboInOwl#inSubset,go#goslim_chembl
-GO_0001023,IAO_0000231,IAO_0000227
 GO_0051382,rdf-schema#subClassOf,GO_0140694
 GO_0001818,rdf-schema#subClassOf,GO_0051241
 Nee14e5c5031041f8935191c44afb3540,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
@@ -14323,7 +14246,6 @@ GO_0046365,rdf-schema#subClassOf,GO_0005996
 GO_0005654,rdf-schema#subClassOf,GO_0110165
 GO_0051336,owl#equivalentClass,N40ab48ba9b5e4df0b2ec25ff548c9bfc
 N8f6ec5bb6c63493aadd2de3144b97fe1,22-rdf-syntax-ns#first,N4f4d5d608d284cf2ad3164942ec81288
-GO_0051242,IAO_0000231,IAO_0000227
 Nc7b69aa4829148708f99a8c8eb891031,22-rdf-syntax-ns#rest,N3ab6292ecd1f4526b7fbb6f47ba33272
 GO_0002698,rdf-schema#subClassOf,GO_0002683
 GO_1904961,rdf-schema#subClassOf,GO_0048532
@@ -14364,7 +14286,6 @@ GO_0097328,rdf-schema#subClassOf,GO_0042221
 GO_0016709,rdf-schema#subClassOf,GO_0016705
 GO_0016779,rdf-schema#subClassOf,GO_0016772
 N4dcb97613c9f421c8b138fddcec692f0,owl#someValuesFrom,GO_0006298
-GO_0044236,IAO_0000231,IAO_0000227
 GO_0032116,rdf-schema#subClassOf,GO_0140513
 GO_0045165,rdf-schema#subClassOf,N600dad7fcd7e4fd096ef4f45d0114714
 GO_0071692,rdf-schema#subClassOf,GO_0008104
@@ -14498,7 +14419,6 @@ GO_0045087,oboInOwl#hasAlternativeId,GO:0002226
 Nfc72be49a2fc47baa96a40a842eb4ce0,22-rdf-syntax-ns#first,GO_0065007
 GO_0051293,rdf-schema#subClassOf,GO_0000226
 GO_0034762,rdf-schema#subClassOf,Ncd836da0b3b7453a9f133183b81512cc
-GO_0070839,IAO_0000231,IAO_0000227
 Nd1475bddaa734aaea3e5a0c52f4844e2,owl#onProperty,RO_0002213
 N286a68fe0fbd412fa3a1df12390c69eb,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0031113,rdf-schema#subClassOf,Ncb88f9619d974190b8913570317137c4
@@ -14562,7 +14482,6 @@ GO_0045002,rdf-schema#subClassOf,GO_0006302
 GO_0005654,rdf-schema#subClassOf,N9672387f013d4d08be848003a61a39d1
 N0bb5ef2a46b24befbe991b006a47574f,22-rdf-syntax-ns#first,GO_0065007
 N890d0054f61e4489b054ebff38441a34,22-rdf-syntax-ns#rest,N0afdf6d8a15148e4ac78a21ed5ed7837
-GO_0045279,IAO_0000231,IAO_0000227
 Nf87faa12c52546649a8dbfa88e644639,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0045922,rdf-schema#subClassOf,GO_0031324
 GO_0000747,oboInOwl#hasAlternativeId,GO:0030461
@@ -14817,12 +14736,10 @@ Ne1ea421f8ff64aaab4747211e46ce8e0,owl#onProperty,RO_0002211
 N5b6dae1867524332aaaef523a08a6c41,owl#someValuesFrom,GO_0004347
 GO_0061620,rdf-schema#subClassOf,N5b6dae1867524332aaaef523a08a6c41
 GO_0098739,rdf-schema#subClassOf,GO_0098657
-GO_0034622,IAO_0000231,IAO_0000227
 GO_0007188,rdf-schema#subClassOf,Nb0eea21b63ff44078026a32f9403ffb6
 GO_0006412,oboInOwl#inSubset,go#goslim_euk_cellular_processes_ribbon
 GO_0030674,rdf-schema#subClassOf,N65c85fa755e5473f9378d7fd4dee0d07
 GO_0097729,rdf-schema#subClassOf,GO_0031514
-GO_0006331,IAO_0000231,IAO_0000227
 GO_0006873,rdf-schema#subClassOf,GO_0050801
 GO_0002043,rdf-schema#subClassOf,N662ff4872cc2416d82a701502191da3f
 GO_0042532,owl#equivalentClass,N3750dcc01d5d4b35a4d2810ca429e916
@@ -14835,7 +14752,6 @@ GO_0051338,rdf-schema#subClassOf,GO_0050790
 N11d1409221764d4e91f6fa4b1d2e77df,owl#onProperty,RO_0002212
 GO_0006022,rdf-schema#subClassOf,GO_0043170
 N5442757c65004ec68d605a88b79c4df6,owl#onProperty,RO_0002211
-GO_0072473,IAO_0000231,IAO_0000227
 Nd836aa57e9ca440aadc22a834499d8e2,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N8103d8dfcba84fa59879cfcf61e89c54,owl#someValuesFrom,GO_0099504
 GO_0052572,oboInOwl#hasAlternativeId,GO:0052564
@@ -15061,7 +14977,6 @@ GO_0042451,rdf-schema#subClassOf,GO_0072522
 N9fa3378e26e946d58d9842fd156c4b3e,22-rdf-syntax-ns#rest,Na989349159ea4dc1860f64f9b1b52eef
 N6a6a55fd3c1a4c28af9106a8f333217c,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0006261,oboInOwl#hasAlternativeId,GO:0006262
-GO_0044670,IAO_0000231,IAO_0000227
 GO_0046434,rdf-schema#subClassOf,GO_0019637
 N344ebe457b02441f9bff6e028ec83d04,22-rdf-syntax-ns#first,GO_0065007
 N4a6b07c35b8942f48f0eac1d617114e9,owl#onProperty,BFO_0000050
@@ -15116,7 +15031,6 @@ N779bdd3348dc4bd0b1792040a77675b4,22-rdf-syntax-ns#first,GO_0071897
 N4688c2d446394bc4aedea2dcc8d50466,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N4293efcb6152492c8354c4bc5841e743,22-rdf-syntax-ns#first,Nee8d164b0cad427b95d121d4a1bb983e
 GO_0043758,rdf-schema#subClassOf,GO_0016878
-RO_0002212,oboInOwl#shorthand,negatively_regulates
 BFO_0000066,owl#propertyChainAxiom,N60c426fbbe8b49a7a3b66f0b988a622c
 Nb278fe69c1da40babb98263fe45faa9c,owl#intersectionOf,N546787fddaed4741923000731ad7102e
 GO_0044093,oboInOwl#inSubset,go#gocheck_do_not_annotate
@@ -15247,7 +15161,6 @@ Na6b2ec62e762482693195ed4fd2d6bad,owl#onProperty,BFO_0000051
 GO_0005615,rdf-schema#subClassOf,Ndba8207b160c41e7a9a01e0f801b561c
 GO_0000959,rdf-schema#subClassOf,N0f7a7cc8b2ad4328a85e0a9fbc724de9
 GO_0016046,oboInOwl#hasAlternativeId,GO:0009599
-GO_0090247,IAO_0000231,IAO_0000227
 GO_0048507,rdf-schema#subClassOf,GO_0009888
 GO_0005245,oboInOwl#hasAlternativeId,GO:0015270
 GO_0009297,rdf-schema#subClassOf,GO_0043711
@@ -15358,7 +15271,6 @@ GO_1903046,oboInOwl#inSubset,go#goslim_pombe
 GO_0014834,rdf-schema#subClassOf,N50a4fa1261f8419eb8431dd034d8b1a8
 GO_0051254,rdf-schema#subClassOf,N78a0dafc0a5744bda6020a0176337104
 GO_0033059,rdf-schema#subClassOf,GO_0009987
-GO_0030013,IAO_0000231,IAO_0000227
 GO_0030095,owl#equivalentClass,N1fdc0394b6f547e7adedf675e135ed1a
 GO_0023053,oboInOwl#consider,GO:0007165
 GO_0000118,rdf-schema#subClassOf,GO_0140513
@@ -15602,7 +15514,6 @@ GO_0007517,rdf-schema#subClassOf,GO_0061061
 Nc0508b9644314766a46cf53c33e70e07,owl#onProperty,RO_0002211
 GO_0045893,rdf-schema#subClassOf,GO_0006355
 GO_0051129,rdf-schema#subClassOf,GO_0051128
-GO_0005748,IAO_0000231,IAO_0000227
 GO_0043320,rdf-schema#subClassOf,Naf730112d89b4ccda97f3186f92a74b4
 N65886469693041dcaf99333527d13f4a,owl#intersectionOf,N82246c42a1d64cc58a8fa47c91db657c
 GO_0010720,owl#equivalentClass,Nff95f777773e4f5bbdb93361dc695c80
@@ -15752,7 +15663,6 @@ Nf843b5e79bbd4d4abc3eff730a8c770e,owl#someValuesFrom,GO_0009790
 GO_0005942,rdf-schema#subClassOf,N01f985ec5be94310bd1a589ec92d29b7
 GO_0009733,rdf-schema#subClassOf,GO_0009725
 Nad55aceec81444298e43a8aadc113639,owl#onProperty,BFO_0000050
-GO_0043762,IAO_0000231,IAO_0000227
 GO_0003073,rdf-schema#subClassOf,GO_0008217
 GO_0071476,rdf-schema#subClassOf,GO_0006971
 GO_0016620,rdf-schema#subClassOf,GO_0016903
@@ -15928,7 +15838,6 @@ GO_0005773,oboInOwl#inSubset,go#goslim_chembl
 GO_0060453,rdf-schema#subClassOf,GO_0051046
 GO_0006081,oboInOwl#inSubset,go#goslim_pir
 N6dc3336b90764471a7da277aa5b80149,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
-GO_0044106,IAO_0000231,IAO_0000227
 Nc6aefed7fbb04ee2ab61bae77285fe73,22-rdf-syntax-ns#rest,N50298fe4f54c4dd79186011c915df5d9
 GO_0140014,rdf-schema#subClassOf,GO_1903047
 GO_0031514,oboInOwl#hasAlternativeId,GO:0031512
@@ -16045,7 +15954,6 @@ Nd1e40013c82b43bea96ef09a824c7939,22-rdf-syntax-ns#first,N63e67181792d47f2849148
 GO_0002683,rdf-schema#subClassOf,GO_0048519
 GO_0003006,rdf-schema#subClassOf,GO_0032502
 GO_0099068,rdf-schema#subClassOf,GO_0099173
-RO_0002213,oboInOwl#shorthand,positively_regulates
 N652ebe4a3e6044708fc2d940efc3906d,22-rdf-syntax-ns#first,N1bf3c9d0bb4048e28beedb86389bd323
 GO_0006729,rdf-schema#subClassOf,GO_0034312
 GO_0097236,oboInOwl#consider,GO:0045944
@@ -16132,7 +16040,6 @@ GO_0070650,rdf-schema#subClassOf,GO_0061572
 Ndba8207b160c41e7a9a01e0f801b561c,owl#onProperty,BFO_0000050
 N5ae20cba6ff940a4a108f9d1f839be46,owl#intersectionOf,N69362f2f340e4c268df2852e7ff95b9f
 Nf4143d03c3a54475826bee6a776769f3,owl#someValuesFrom,GO_0046879
-GO_0004003,IAO_0000231,IAO_0000227
 N352eb78163644a99a82a731f37980805,owl#someValuesFrom,GO_0006412
 N7f419f3c13074db491bb3887a0a9f0e7,owl#onProperty,RO_0002211
 N2fba0b8a533e41e3bb1f192b35c3042b,owl#intersectionOf,Nab9ba59c04ca44caaee802382b6126eb
@@ -16464,7 +16371,6 @@ Nde0f014d73d74ce8bdd539d4a5f81d28,22-rdf-syntax-ns#rest,N91bfe290991e41eb940889f
 N9bb8a6de26144583b6dcf17ea792afe4,owl#someValuesFrom,GO_0016485
 N627377310cb049b3948b98b71e6e0b6d,owl#someValuesFrom,GO_0006836
 GO_0015669,oboInOwl#inSubset,go#goslim_pir
-GO_0043389,IAO_0000231,IAO_0000227
 GO_0071941,oboInOwl#inSubset,go#goslim_prokaryote
 GO_0098700,oboInOwl#inSubset,go#goslim_synapse
 Nfb0964dd18284cb1b5f67959bcc52fb3,owl#someValuesFrom,GO_0006811
@@ -16701,7 +16607,6 @@ N546787fddaed4741923000731ad7102e,22-rdf-syntax-ns#first,GO_0065007
 N07bf36d8c1b74167be613b0dcf1e3a47,owl#onProperty,BFO_0000050
 GO_0043047,rdf-schema#subClassOf,GO_0042162
 N614b7d23d9ae455588c81340296b4606,owl#onProperty,RO_0002211
-GO_0098602,IAO_0000231,IAO_0000227
 N568e544e358a47e0a68d9547a785567a,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 Ne8454005e1a0406d977469bdf64ac0ae,owl#someValuesFrom,GO_0010056
 GO_1903532,owl#equivalentClass,N91c204cbb409443684e01d7ff1a7bc27
@@ -16722,7 +16627,6 @@ GO_0051783,rdf-schema#subClassOf,N84ae7360ccd4458dae25196bf73b9a8b
 N16415cea89b54e358b26890c9b67a8e7,owl#onProperty,RO_0002211
 GO_0098763,oboInOwl#inSubset,go#gocheck_do_not_annotate
 GO_0006312,rdf-schema#subClassOf,GO_0006310
-BFO_0000050,oboInOwl#shorthand,part_of
 GO_0006713,rdf-schema#subClassOf,GO_0006706
 GO_0032388,owl#equivalentClass,N5be9093da9414c63a275291ff0010a0f
 GO_0099578,rdf-schema#subClassOf,GO_0099170
@@ -17008,7 +16912,6 @@ N253caf301638490ca2294cf6018c1344,22-rdf-syntax-ns#first,N3fbb9570d7e94069bd759e
 GO_0032273,rdf-schema#subClassOf,GO_0032271
 GO_0002703,owl#equivalentClass,N338b928e5e8740e2bc11b22152089e69
 Na1920f9f60b84efcaf4f288758daca46,owl#onProperty,BFO_0000050
-GO_0007037,IAO_0000231,IAO_0000227
 N1fd52c61a6374298a7b3b3977b51616e,owl#someValuesFrom,GO_0110143
 N0971a44156494f048552d719727487ba,owl#intersectionOf,Naf843869f8fc4019af1bc9a40338ae54
 GO_0032553,rdf-schema#subClassOf,GO_0097367
@@ -17119,7 +17022,6 @@ N74e828be0f444c288d2844f5b63c3a94,owl#onProperty,BFO_0000050
 N14b750cd91bd4fc9b54852cda24d109b,22-rdf-syntax-ns#rest,N708751590af14338b1e33e8205845304
 GO_0071329,rdf-schema#subClassOf,GO_0009744
 N3681093439b043b89dc79140e85932cd,owl#someValuesFrom,GO_0005488
-GO_0015590,IAO_0000231,IAO_0000227
 GO_0006384,rdf-schema#subClassOf,Nbec1c33b3daa4c30bc1ba74175a0741a
 GO_0098700,rdf-schema#subClassOf,GO_0051649
 N226ab564c5994b46a604b4084e522fc7,owl#onProperty,RO_0002212
@@ -17161,7 +17063,6 @@ GO_0010559,rdf-schema#subClassOf,GO_0010556
 GO_0097364,rdf-schema#subClassOf,GO_0015275
 GO_0043151,owl#equivalentClass,N8a478b5b230c41e4aa392e8bf9b1d7df
 GO_0030202,rdf-schema#subClassOf,GO_0006790
-GO_0042035,IAO_0000231,IAO_0000227
 N465e1b81d29d44728aa6d9d3fec70436,owl#onProperty,BFO_0000050
 GO_0098656,rdf-schema#subClassOf,GO_0034220
 GO_0032368,rdf-schema#subClassOf,GO_1905952
@@ -17507,7 +17408,6 @@ GO_0043447,rdf-schema#subClassOf,GO_0120251
 N81f5ecb4788d47de8ee30fac70f8414e,22-rdf-syntax-ns#first,GO_0065007
 GO_2000516,rdf-schema#subClassOf,GO_0046635
 GO_0006862,rdf-schema#subClassOf,GO_0015931
-GO_0070812,IAO_0000231,IAO_0000227
 Na388bd0802ee4b6da8b9f67016262364,owl#someValuesFrom,GO_0006955
 N161bf6b273f24781927b2fed58f5b163,22-rdf-syntax-ns#rest,Neb0175d2156e4472bf3e07d0769f58b0
 GO_0061623,rdf-schema#subClassOf,GO_0019388
@@ -17528,7 +17428,6 @@ Nf4a3453998d3463295f2beb9abcb2267,owl#someValuesFrom,GO_0045202
 GO_0042168,rdf-schema#subClassOf,GO_0042440
 Nf54eab4183fe4a80b1c39e67b04a6f02,owl#intersectionOf,Ndda84a355e6a49cabe0df450f5a9b784
 N542b1743b0c446ec9e0a5a29d4dfdd96,owl#someValuesFrom,GO_0012505
-GO_0032439,IAO_0000231,IAO_0000227
 Nd3b97bf372684b9fa037cb8c7bd3e493,22-rdf-syntax-ns#first,N1a0b7bed710e4c4b8ae38f601327b193
 N7b724572302c4f51bdf5ef7ff856a5bc,owl#someValuesFrom,GO_0003872
 N007ede09875e40229a047d45f84ce404,owl#someValuesFrom,GO_0072337
@@ -17694,7 +17593,6 @@ Nb53bccf3fec445d0b74e11ddbd12dd77,owl#someValuesFrom,GO_0045211
 GO_0052173,rdf-schema#subClassOf,GO_0051707
 N8361cd877eb64913a56572cdb90bed54,22-rdf-syntax-ns#first,GO_0000729
 GO_0032510,rdf-schema#subClassOf,GO_0008333
-GO_0043390,IAO_0000231,IAO_0000227
 GO_0007093,oboInOwl#hasAlternativeId,GO:0031575
 GO_1904365,rdf-schema#subClassOf,N0cf308355863441aa23656699a5d751f
 GO_0019693,rdf-schema#subClassOf,GO_0019637
@@ -18007,7 +17905,6 @@ GO_0021912,oboInOwl#consider,GO:0006357
 Nc1bcd27313ac4066a6f38c06d2fca6bf,owl#onProperty,BFO_0000050
 GO_0071458,IAO_0100001,GO:0098554
 Nbe2b7732ba4f42b2877630226e327570,owl#someValuesFrom,GO_0009605
-GO_0043019,IAO_0000231,IAO_0000227
 GO_0043085,rdf-schema#subClassOf,GO_0044093
 GO_0050805,rdf-schema#subClassOf,GO_0023057
 GO_0097478,rdf-schema#subClassOf,N0cbfbf080ee34ed285d6af7e06cf8d32
@@ -18219,7 +18116,6 @@ Nbefd5b406bf0402ca4a1ab0d67553944,owl#someValuesFrom,GO_0032502
 N33d39142fa4349db9c5116eb02b097dc,owl#someValuesFrom,GO_0006631
 N404220e60574421da015f7a79189df86,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0022853,rdf-schema#subClassOf,GO_0022804
-GO_0044624,IAO_0000231,IAO_0000227
 N31be83d3df684e1e8c0ac1e2639f6364,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_1903522,rdf-schema#subClassOf,GO_0044057
 GO_0051539,rdf-schema#subClassOf,GO_0051536
@@ -18245,7 +18141,6 @@ GO_0042178,rdf-schema#subClassOf,GO_0006805
 N2ae2427fc1f54ba8a80ce12feb6c8c8b,owl#someValuesFrom,GO_1990101
 N91ddb29a78da4561b37c568c24ccedc8,owl#intersectionOf,N725cffced3d8418699a7ca18da0044f7
 GO_0016747,rdf-schema#subClassOf,GO_0016746
-GO_0000383,IAO_0000231,IAO_0000227
 GO_0050804,owl#equivalentClass,N0a6211af71b9428193ea3fc9243f94a1
 N35833ad46cee4eb198f6c4e4d669c527,22-rdf-syntax-ns#first,GO_0065007
 GO_0000956,rdf-schema#subClassOf,GO_0006402
@@ -18283,7 +18178,6 @@ N0ad3f202d73c4542860c5729e48c1705,22-rdf-syntax-ns#first,GO_0065007
 GO_0070127,rdf-schema#subClassOf,Nb63fec9f28024367b2b79d37fae4674a
 Ncb64317f8a4d4637bdee4c34a19d7a17,22-rdf-syntax-ns#rest,Nf1a316ccb0bb4a47852b6894cc0f5aea
 GO_0018202,rdf-schema#subClassOf,GO_0018193
-GO_0009434,IAO_0000231,IAO_0000227
 Na031a1c9325b488190e848d07ebad53e,owl#onProperty,BFO_0000050
 N194e983accc64e37ba008811bc6c6ef5,owl#intersectionOf,Ncbfeba6d15b34139aed1d97f95528c8e
 N99518d7fa7f54d94955e62bf3bca5070,owl#onProperty,BFO_0000050
@@ -18316,7 +18210,6 @@ GO_0009450,rdf-schema#subClassOf,GO_0009063
 GO_1905156,rdf-schema#subClassOf,N5c85d5ea4a9c466fb3eefa2e625f4cda
 GO_0007554,rdf-schema#subClassOf,GO_0090030
 GO_1903320,rdf-schema#subClassOf,N2ba4c60ad8f041349459818ab8287ec3
-GO_0044244,IAO_0000231,IAO_0000227
 N101c19b963a54f688b66bdb1e68d36f5,owl#intersectionOf,N2bd84df5953f4876a0c42865bfa3a5b6
 GO_0170039,rdf-schema#subClassOf,GO_0006520
 N3f2b8ff29fad481cb6991f3381c50569,22-rdf-syntax-ns#first,GO_0065007
@@ -18501,7 +18394,6 @@ Nea287b73efe642058036313073bb6ce5,owl#someValuesFrom,GO_0004629
 GO_0072593,rdf-schema#subClassOf,GO_0044237
 N8118242e304c4f129bd4bdcd11cf8323,owl#intersectionOf,Nad6e6fd69cff45ae8e94f99b0cf0b7be
 GO_0034644,rdf-schema#subClassOf,GO_0071482
-GO_0030914,IAO_0000231,IAO_0000227
 N6b29a48faa70403db031ecfd82893fc7,owl#onProperty,RO_0002213
 N1171bfc876134e6b89084face832d4d2,owl#onProperty,BFO_0000050
 GO_0071248,rdf-schema#subClassOf,GO_0010038
@@ -18606,7 +18498,6 @@ GO_0045717,rdf-schema#subClassOf,GO_0051055
 GO_0072271,rdf-schema#subClassOf,N9b0f83f00f16430baef75901bb9f37c8
 GO_0043949,rdf-schema#subClassOf,N9063cf95c55140baa6506829782c8ec6
 GO_0034660,IAO_0100001,GO:0016070
-GO_0016478,IAO_0000231,IAO_0000227
 Nc725bd21887445e4bd6a92003bb3a2c2,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 N854b58e1b55546a3a6239596864572a1,22-rdf-syntax-ns#rest,22-rdf-syntax-ns#nil
 GO_0070884,rdf-schema#subClassOf,GO_0106056
@@ -18788,7 +18679,6 @@ Nc02b271f8074485980e87ff42089f7fd,owl#onProperty,RO_0002212
 GO_0043229,oboInOwl#inSubset,go#goslim_pir
 N4515a58e9d9247309ea7a5750cbfdc1b,22-rdf-syntax-ns#rest,Nadab69ad98f04ef68d991184340da907
 GO_0042509,rdf-schema#subClassOf,GO_0050730
-GO_0045789,IAO_0000231,IAO_0000227
 GO_0015979,rdf-schema#subClassOf,GO_0044237
 GO_0090101,rdf-schema#subClassOf,GO_0090092
 Na41cd5c1d1344f6fb6e5fa4c5116d5b9,22-rdf-syntax-ns#first,GO_0065007
@@ -18801,7 +18691,6 @@ GO_0042822,rdf-schema#subClassOf,GO_1901615
 Ncbc5b7e224934f589f5cf124ea331e18,owl#someValuesFrom,GO_0040007
 GO_0055074,rdf-schema#subClassOf,GO_0098771
 N71a5d0b6e3c44f8e8feef0d4a7581950,owl#intersectionOf,Nc941105ef96e4bc3b2d62fd45fe5d0f5
-GO_0001085,IAO_0000231,IAO_0000227
 GO_0008104,oboInOwl#hasAlternativeId,GO:0008105
 GO_0034605,rdf-schema#subClassOf,GO_0009408
 N254be7972a6d4bd98bf0f46d10fe3908,owl#intersectionOf,N1c25055d7eab46eda2df748abe158a63
@@ -18873,7 +18762,6 @@ GO_0001712,rdf-schema#subClassOf,GO_0060795
 N047175e450934326969683042a33d3f5,22-rdf-syntax-ns#first,N423bbdb6d5f3482fa324ca09ae8dc423
 GO_0009059,rdf-schema#subClassOf,GO_0044249
 Nd5c6e22bb4d04e0baa5f0455270c379f,owl#someValuesFrom,GO_0050931
-GO_0044768,IAO_0000231,IAO_0000227
 N07dc6a9f42cf4530ae21716f9b9456db,22-rdf-syntax-ns#first,GO_0004197
 GO_1901962,rdf-schema#subClassOf,GO_0055085
 GO_0170038,rdf-schema#subClassOf,GO_0170039
@@ -18944,7 +18832,6 @@ GO_0003677,oboInOwl#inSubset,go#goslim_flybase_ribbon
 Nec1227fa49b043658817a19dbcd6ee8d,owl#onProperty,RO_0002213
 GO_0035120,rdf-schema#subClassOf,GO_0035107
 GO_0044068,owl#equivalentClass,N24e8d8e35230462897cb94e3dae74b53
-GO_0044413,IAO_0000231,IAO_0000227
 GO_0019730,rdf-schema#subClassOf,GO_0006959
 GO_0050778,owl#equivalentClass,N7dd643faf11b4c19b9982094b2545908
 Nea54727fc732451eb3967a46816b5513,22-rdf-syntax-ns#first,GO_0065007
@@ -19148,7 +19035,6 @@ GO_0030437,oboInOwl#hasAlternativeId,GO:0007151
 GO_0033865,rdf-schema#subClassOf,GO_0006753
 GO_0008348,oboInOwl#hasAlternativeId,GO:0042155
 GO_0005618,oboInOwl#inSubset,go#goslim_euk_cellular_processes_ribbon
-GO_0017167,IAO_0000231,IAO_0000227
 Nac697b129c0e4dd3a517eda04b9ecadc,22-rdf-syntax-ns#rest,N56dfeffec2554bf5940854751904cc98
 GO_0019787,oboInOwl#hasAlternativeId,GO:0008639
 N5f0561f99936481e86f58ff743f0fcc0,owl#someValuesFrom,GO_0050852
@@ -19502,11 +19388,9 @@ GO_0043065,rdf-schema#subClassOf,Neac540b3cc174ee886c1c94c52a4fe3d
 N404220e60574421da015f7a79189df86,22-rdf-syntax-ns#first,N012e95614e7443ddb710243c954294ad
 GO_0016829,oboInOwl#inSubset,go#goslim_generic
 GO_0045732,owl#equivalentClass,N6861b43584924de18f8441feda5e2d50
-GO_0030012,IAO_0000231,IAO_0000227
 Nd1bd3f6b0b19468bb0c2076a4299bed6,owl#someValuesFrom,GO_0050886
 Nf5cb8142bf4844df865f6d181a68dc91,22-rdf-syntax-ns#first,GO_0065007
 GO_2001056,rdf-schema#subClassOf,N2a44055e49d74fd9aa4d25b2d4b35f4d
-GO_0071149,IAO_0000231,IAO_0000227
 GO_1902373,rdf-schema#subClassOf,Nf3e3c455b13349e3a0980e127525e497
 GO_0019898,oboInOwl#hasAlternativeId,GO:0030396
 GO_0019538,oboInOwl#inSubset,go#gocheck_do_not_annotate
@@ -19597,7 +19481,6 @@ GO_0071006,rdf-schema#subClassOf,N78a183b79ea144408ca5b9d9cfb22b83
 N6e98b822173342a4a8cf89e9fafc6e87,owl#intersectionOf,Nd45ccfed67b043d7b94f2c14b07cae1e
 N754bf1c94a404e5892d3097c79b7e781,owl#intersectionOf,N82982b7ef0394634af3b929592c863aa
 GO_0045455,rdf-schema#subClassOf,GO_0042180
-GO_0097617,IAO_0000231,IAO_0000227
 GO_0050789,oboInOwl#inSubset,go#gocheck_do_not_annotate
 GO_0000124,oboInOwl#hasAlternativeId,GO:0030914
 GO_0050789,oboInOwl#hasAlternativeId,GO:0050791
@@ -19808,7 +19691,6 @@ GO_0044403,oboInOwl#hasAlternativeId,GO:0085031
 N8407eef345714f9ea2b8e380552a45dc,owl#intersectionOf,N66270fb25bf14cceaa19e46f8065c5b9
 GO_0070793,owl#equivalentClass,N3e527d89f3564f56956eab1976f11911
 GO_0019080,oboInOwl#inSubset,go#goslim_virus
-GO_0007153,IAO_0000231,IAO_0000227
 Nd43d1d47bf954a248349b04bf4438213,owl#onProperty,RO_0002212
 GO_0010469,rdf-schema#subClassOf,GO_0065009
 Ndb248ba667be4f558ae51188b0d57db7,22-rdf-syntax-ns#first,N23ecebd29a124d8b9c0d332afb22361e
@@ -20191,7 +20073,6 @@ GO_0048364,rdf-schema#subClassOf,N53a4a70625874a9ba7e75f3deb4b87a1
 GO_0009404,oboInOwl#inSubset,go#goslim_pir
 N5eeb9bd5f0b74bdc8c059cd485d0701f,22-rdf-syntax-ns#first,GO_0065007
 N8763b258b2e3404b8a59835b06d75204,22-rdf-syntax-ns#rest,N34be068ca26449b98e88b36c12ab210c
-GO_0000734,IAO_0000231,IAO_0000227
 GO_0019152,rdf-schema#subClassOf,GO_0016616
 N895cd2cc85b245979429aef9ef370ad2,owl#onProperty,RO_0002212
 GO_0009570,rdf-schema#subClassOf,N7a9c77a348c9441bac9653692e7845f8
@@ -20243,7 +20124,6 @@ GO_0006955,rdf-schema#subClassOf,GO_0002376
 Nac3f5b69d8184a56872902c65a12c071,owl#intersectionOf,Ne128843006db45f3bb213d4d7d048742
 GO_0046517,rdf-schema#subClassOf,GO_0046518
 GO_0031048,oboInOwl#hasAlternativeId,GO:0070924
-GO_0090526,IAO_0000231,IAO_0000227
 Nb8a9e5eb03f54e3a96beec061f2501b9,owl#intersectionOf,N2db66cbe64044b10935886fade5d79bc
 GO_0042206,rdf-schema#subClassOf,GO_0042197
 GO_0002456,rdf-schema#subClassOf,GO_0002449

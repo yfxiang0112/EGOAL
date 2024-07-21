@@ -131,4 +131,7 @@ def ruleTranslate(s: str, p:str, o:str):
             subgraph count: 22 '''
             flags = [(False, True)]
 
-    return [(f[0], s, f[1], o) for f in flags]
+    if s < o:
+        return [(f[0], s, f[1], o) for f in flags]
+    else:
+        return [(f[1], o, f[0], s) for f in flags]

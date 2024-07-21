@@ -1,3 +1,4 @@
+from operator import index
 from rdflib import Graph
 import pandas as pd
 import os
@@ -36,6 +37,8 @@ class KG2Rule():
         self.rdf['predicate'] = self.rdf['predicate'].apply(extrID)
         self.rdf['object'] = self.rdf['object'].apply(extrID)
 
+        self.ruleSet = None
+
 
 
     def __readOWL(self, owl_pth :str, out_pth :str):
@@ -54,12 +57,13 @@ class KG2Rule():
             df['object'].append(o)
         
         df = pd.DataFrame(df)
-        
         df.to_csv(out_pth, index=False)
 
+    
+    ##################################################
 
 
-    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, out_pth:str, d :int) -> pd.DataFrame:
+    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, d :int) -> pd.DataFrame:
         '''
         Exclude Unused Predicates, and
         Extract Subgraph from parsed RDF (ABL-KG chap 4.3)
@@ -74,9 +78,7 @@ class KG2Rule():
 
         print('----- Statics of Filtered Predicates -----')
         print(self.rdf.groupby(by='predicate').count(), '\n')
-
         # TODO: handle most fraquent predicates: owl#annotatedProperty & owl#annotatedSource
-
 
 
         print('----- Extracting Subgraph -----')
@@ -95,9 +97,9 @@ class KG2Rule():
                 #    node_succ.append(row['subject'])
                 #    mask[idx] = True
 
-
             node_expand = node_succ
             node_succ = []
+
 
         self.rdf = self.rdf[mask]
         self.rdf.reset_index(drop=True, inplace=True)
@@ -105,20 +107,34 @@ class KG2Rule():
 
         print('----- Statics of Subgraph Predicates -----')
         print(self.rdf.groupby(by='predicate').count(), '\n')
-        self.rdf.to_csv(out_pth, index=False)
 
         return self.rdf
 
-    def ruleMining(self):
+
+
+    def mineRule(self, rdf = pd.DataFrame()) -> pd.DataFrame:
         '''
         Call rule translation to convert all RDF predicates to Horn Clauses,
         according to natural semantic of predicates.
         '''
-        for idx, row in self.rdf:
-            ruleTranslate(row['subject'], row['predicate'], row['object'])
+        if not rdf.empty:
+            self.rdf = rdf
 
-            #TODO
-            
+        rule_lst = set()
+        for idx, row in self.rdf.iterrows():
+            for r in ruleTranslate(row['subject'], row['predicate'], row['object']):
+                rule_lst.add(r)
+
+        rule_lst = list(rule_lst)
+        self.ruleSet = pd.DataFrame({'RULE': rule_lst})
+        
+        return self.ruleSet
+
+
+
+    def remember(self):
+        pass
+
 
 ##################################################
 
@@ -149,10 +165,15 @@ if __name__ == '__main__':
     conSpecPth      = 'dataset/concept_domain.csv'
     #filteredRdfPth  = './rules/KG_RDF_filter.csv'
     subGraphPth     = 'rules/KG_RDF_subgraph.csv'
+    rulePth         = 'rules/ruleMined.csv'
 
     graph = KG2Rule(rdf_pth, owl_pth)
 
-    graph.subGraph(conSpecPth, exclPrdcPth, subGraphPth, 5)
+    #subGraphDf = graph.subGraph(conSpecPth, exclPrdcPth, 5)
+    #subGraphDf.to_csv(subGraphPth, index=False)
+
+    ruleDf = graph.mineRule(rdf = pd.read_csv(subGraphPth))
+    ruleDf.to_csv(rulePth, index=False, header=False)
 
 #def prdcFilter(s):
 #    s = str(s)
