@@ -1,7 +1,9 @@
 oboInOwl#hasDbXref
 rdf-schema#label
+IAO_0000231
 IAO_0000233
 RO_0002161
+RO_0002175
 oboInOwl#default-namespace
 description
 IAO_0000115
@@ -28,3 +30,4 @@ oboInOwl#hasNarrowSynonym
 oboInOwl#hasRelatedSynonym
 oboInOwl#hasBroadSynonym
 oboInOwl#hasOBONamespace
+oboInOwl#shorthand

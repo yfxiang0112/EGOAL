@@ -6,6 +6,8 @@ import numpy as np
 from scipy.integrate._ivp.radau import P
 from tqdm import tqdm
 
+from mining import ruleTranslate
+
 def extrID(s):
     s = str(s)
 
@@ -57,7 +59,7 @@ class KG2Rule():
 
 
 
-    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, out_pth:str, d :int):
+    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, out_pth:str, d :int) -> pd.DataFrame:
         '''
         Exclude Unused Predicates, and
         Extract Subgraph from parsed RDF (ABL-KG chap 4.3)
@@ -104,6 +106,19 @@ class KG2Rule():
         print('----- Statics of Subgraph Predicates -----')
         print(self.rdf.groupby(by='predicate').count(), '\n')
         self.rdf.to_csv(out_pth, index=False)
+
+        return self.rdf
+
+    def ruleMining(self):
+        '''
+        Call rule translation to convert all RDF predicates to Horn Clauses,
+        according to natural semantic of predicates.
+        '''
+        for idx, row in self.rdf:
+            ruleTranslate(row['subject'], row['predicate'], row['object'])
+
+            #TODO
+            
 
 ##################################################
 
