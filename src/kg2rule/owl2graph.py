@@ -8,6 +8,7 @@ from scipy.integrate._ivp.radau import P
 from tqdm import tqdm
 
 from mining import ruleTranslate
+from remember import resolve
 
 def extrID(s):
     s = str(s)
@@ -24,7 +25,7 @@ def extrID(s):
 
 class KG2Rule():
 
-    def __init__(self, rdf_pth, owl_pth = '', ) -> None:
+    def __init__(self, rdf_pth, con_spec_pth :str, owl_pth = '') -> None:
         if not os.path.exists(rdf_pth):
             if owl_pth=='':
                 raise Exception('Need specify path to OWL file when owl is not parsed.')
@@ -37,7 +38,8 @@ class KG2Rule():
         self.rdf['predicate'] = self.rdf['predicate'].apply(extrID)
         self.rdf['object'] = self.rdf['object'].apply(extrID)
 
-        self.ruleSet = None
+        self.rule_set = None
+        self.con_spec = list(pd.read_csv(con_spec_pth, header=None)[0])
 
 
 
@@ -63,13 +65,12 @@ class KG2Rule():
     ##################################################
 
 
-    def subGraph(self, con_spec_pth :str, exclude_prdc_pth: str, d :int) -> pd.DataFrame:
+    def subGraph(self, exclude_prdc_pth: str, d :int) -> pd.DataFrame:
         '''
         Exclude Unused Predicates, and
         Extract Subgraph from parsed RDF (ABL-KG chap 4.3)
         '''
 
-        con_spec = list(pd.read_csv(con_spec_pth, header=None)[0])
         exclude_prdc = list(pd.read_csv(exclude_prdc_pth, header=None)[0])
 
         mask = ~ self.rdf['predicate'].isin(exclude_prdc)
@@ -82,7 +83,7 @@ class KG2Rule():
 
 
         print('----- Extracting Subgraph -----')
-        node_expand = con_spec
+        node_expand = self.con_spec
         node_succ   = []
         mask = [False]*len(self.rdf)
         for i in range(d):
@@ -120,20 +121,51 @@ class KG2Rule():
         if not rdf.empty:
             self.rdf = rdf
 
-        rule_lst = set()
+        print('----- Rule mining with translation rules -----')
+
+        self.rule_set = set()
         for idx, row in self.rdf.iterrows():
             for r in ruleTranslate(row['subject'], row['predicate'], row['object']):
-                rule_lst.add(r)
+                self.rule_set.add(r)
 
-        rule_lst = list(rule_lst)
-        self.ruleSet = pd.DataFrame({'RULE': rule_lst})
-        
-        return self.ruleSet
+        return pd.DataFrame({0: list(self.rule_set)})
 
 
 
-    def remember(self):
-        pass
+    def remember(self, T:int, rule= []) -> pd.DataFrame:
+
+        print('----- Forgetting unused rules -----')
+
+        R_new = []
+        if len(rule) > 0:
+            self.rule_set = rule
+            
+        if self.rule_set == None:
+            raise Exception('Need to specify rule set')
+
+
+        for r in self.rule_set:
+            if r[1] in self.con_spec or r[3] in self.con_spec:
+                R_new.append(r)
+
+        for t in range(T):
+            R_res = []
+
+            for r_new in tqdm(R_new, 'Round '+str(t+1)):
+                for r in self.rule_set:
+                    res = resolve(r_new, r, self.con_spec)
+                    if res != None and res not in self.rule_set:
+                        R_res.append(res)
+                
+            R_new = R_res
+            for r in R_res:
+                self.rule_set.add(r)
+
+        rule_rem = [r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec)]
+        self.rule_set = set(rule_rem)
+
+        return pd.DataFrame({0: rule_rem})
+
 
 
 ##################################################
@@ -157,8 +189,8 @@ class KG2Rule():
 
 if __name__ == '__main__':
 
-    owl_pth         = './rules/go.owl'
-    rdf_pth         = './rules/KG_RDF.csv'
+    owlPth         = './rules/go.owl'
+    rdfPth         = './rules/KG_RDF.csv'
 
     prdcLstPth         = 'rules/predicates.csv'
     exclPrdcPth     = 'rules/predicates_exclude.csv'
@@ -166,14 +198,19 @@ if __name__ == '__main__':
     #filteredRdfPth  = './rules/KG_RDF_filter.csv'
     subGraphPth     = 'rules/KG_RDF_subgraph.csv'
     rulePth         = 'rules/ruleMined.csv'
+    ruleRemPth      = 'rules/ruleRem.csv'
 
-    graph = KG2Rule(rdf_pth, owl_pth)
+    graph = KG2Rule(rdfPth, conSpecPth, owlPth)
 
-    #subGraphDf = graph.subGraph(conSpecPth, exclPrdcPth, 5)
+    #subGraphDf = graph.subGraph(exclPrdcPth, 5)
     #subGraphDf.to_csv(subGraphPth, index=False)
 
     ruleDf = graph.mineRule(rdf = pd.read_csv(subGraphPth))
     ruleDf.to_csv(rulePth, index=False, header=False)
+
+    ruleDf = graph.remember(T=3)
+    ruleDf.to_csv(ruleRemPth, index=False, header=False)
+
 
 #def prdcFilter(s):
 #    s = str(s)
