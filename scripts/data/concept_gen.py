@@ -8,7 +8,7 @@ accessions = pd.read_csv("dataset/accessions")
 
 gsm_df = pd.DataFrame()
 gsm_names = []
-description = []
+descriptions = []
 openai_ans = []
 
 os.environ["http_proxy"] = "http://127.0.0.1:7890"
@@ -28,20 +28,20 @@ for accession in tqdm(accessions['accession'], 'Parsing GSE file:'):
     for gsm_name, gsm in gse.gsms.items():
         gsm_names.append(gsm_name)
 
-        str = ''
+        description = ''
         if('characteristics_ch1' in gsm.metadata):
             for s in gsm.metadata['characteristics_ch1']:
-                str = str + s + '\n'
+                description = description + s + '\n'
         if('treatment_protocol_ch1' in gsm.metadata):
             for s in gsm.metadata['treatment_protocol_ch1']:
-                str = str + s + '\n'
+                description = description + s + '\n'
         if('growth_protocol_ch1' in gsm.metadata):
             for s in gsm.metadata['growth_protocol_ch1']:
-                str = str + s + '\n'
-        description.append(str)
+                description = description + s + '\n'
+        descriptions.append(description)
 
 gsm_df['SAMPLES'] = pd.Series(gsm_names)
-gsm_df['DESCRIP'] = pd.Series(description)
+gsm_df['DESCRIP'] = pd.Series(descriptions)
 print(gsm_df)
 
 cnt = 0
