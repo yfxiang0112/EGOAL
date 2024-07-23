@@ -127,9 +127,11 @@ def ruleTranslate(s: str, p:str, o:str):
     
         case 'rdf-schema#subPropertyOf':
             '''
+            NOTE: temporarilt do NOTHING
             logic expr: ~x|y
             subgraph count: 22 '''
-            flags = [(False, True)]
+            pass
+            #flags = [(False, True)]
 
     if s < o:
         return [(f[0], s, f[1], o) for f in flags]
