@@ -19,9 +19,21 @@ collected from Gene Expression Onimbus (GEO) database.
 
 ### Extracting Concept from Natural Language Description
 
+Large Language Models (LLMs) are employed in the preliminary implement.
+In detail, we used `OpenAI`\`s API of `GPT 3.5-Turbo` to understand natural
+language-based description of `GEO` experiment datasets, and summerize
+them to corresponding concept IDs in `GO`.
+
+A fundamental risk underlies in the method above: great ambiguity and uninterpretability
+of LLMs is introduced to the dataset. Therefore, we are exploring better solutions.
+
 ### Unifying Expression Level Data and Integrating Samples as Dataset
 
 **TODO**: Ratio and Signal intensity?
+
+### Unify Expression Data with Importance Metric
+
+TODO: **non-supervised importance** and **top 20 relative expression with DEG**
 
 ---
 
@@ -46,6 +58,12 @@ the concept embeddings.
 ---
 
 ## Part III: Knowledge Graph Preprocessing: Remembering
+
+### Subgraph Extraction
+
+### Rule Mining
+
+### Remember Algorithm
 
 ---
 
