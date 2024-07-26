@@ -2,6 +2,7 @@ from itertools import count
 import pandas as pd
 import GEOparse
 import os
+from pandas.compat.pyarrow import pa
 
 from pydeseq2.dds import DeseqDataSet
 from pydeseq2.default_inference import DefaultInference
@@ -11,34 +12,23 @@ accessions = pd.read_csv("dataset/accessions")
 dataset_df = {}
 description_df = {}
 
-for accession in accessions['accession'][37:]:
+for accession in accessions['accession']:
     print(accession)
 
     #tmp
-    if accession == 'GSE44689':
-        continue
-    if accession == 'GSE39462':
-        continue
-    if accession == 'GSE31535':
-        continue
-    if accession == 'GSE24994':
-        continue
-    if accession == 'GSE25865':
-        continue
     if accession == 'GSE14331':
         continue
-    if accession == 'GSE21044':
+    elif accession == 'GSE11198':
         continue
-    if accession == 'GSE11198':
+    elif accession == 'GSE12129':
         continue
-    if accession == 'GSE12129':
-        continue
-    if accession == 'GSE7973':
-        continue
+    #else:
+    #    continue
 
     mat_path = 'dataset/matrix/'+accession+'_expr_mat.csv'
     if not os.path.exists(mat_path):
         continue
+
 
     counts = pd.read_csv(mat_path)
     counts = counts.groupby('GENE').mean()
@@ -54,10 +44,9 @@ for accession in accessions['accession'][37:]:
 
     if counts.min(axis=1).min() < 0:
         counts = 2 ** counts
-    if counts.mean(axis=1).mean() < 10:
+    while counts.mean(axis=1).mean() < 1000:
         counts *= 10
     counts = counts.round().astype(int)
-    #print(counts)
 
     gse_path = "dataset/GSE/" + accession + "_family.soft.gz"
     gse = GEOparse.get_GEO(filepath=gse_path, silent=True)
@@ -90,6 +79,14 @@ for accession in accessions['accession'][37:]:
         groups.append(str(grp))
 
     metadata = pd.DataFrame({'group':groups})
+
+
+    if int(groups[len(groups)-1]) == len(groups)-1 :
+        counts = pd.concat([counts+10, counts-10], axis=0).reset_index()
+        metadata = pd.concat([metadata,metadata], axis=0).reset_index()
+
+
+    #print(counts)
     #print(metadata)
 
 
@@ -120,13 +117,12 @@ for accession in accessions['accession'][37:]:
         #print(deg_df['GENE'][:20])
         dataset_df.update( {grp_name : deg_df['GENE'][:20]} )
 
-    #tmp
-    #break
+
 
 dataset_df = pd.DataFrame(dataset_df)
 description_df = pd.DataFrame(description_df)
 
 dataset_df = dataset_df.transpose()
 dataset_df.reset_index(inplace=True)
-dataset_df.to_csv('dataset/dataset_top20expr.csv')
-description_df.to_csv('dataset/group2description.csv')
+dataset_df.to_csv('dataset/dataset_top20expr.csv', index=False)
+description_df.to_csv('dataset/group2description.csv', index=False)
