@@ -6,18 +6,18 @@ import os
 from tqdm import tqdm
 import re
 
-accessions = pd.read_csv("dataset/accessions")
+accessions = pd.read_csv("dataset/raw/accessions")
 
 ORF_pattern = r'SO_*A*\d+'
 
 #for accession in tqdm(accessions['accession'], 'Processing GSEs:'):
 for accession in accessions['accession']:
 
-    if os.path.exists("dataset/matrix/" + accession + "_expr_mat.csv"):
+    if os.path.exists("dataset/raw/matrix/" + accession + "_expr_mat.csv"):
         continue
 
-    gse = GEOparse.get_GEO(geo=accession, destdir="dataset/GSE", silent=True)
-    gse_path = "dataset/GSE/" + accession + "_family.soft.gz"
+    gse = GEOparse.get_GEO(geo=accession, destdir="dataset/raw/GSE", silent=True)
+    gse_path = "dataset/raw/GSE/" + accession + "_family.soft.gz"
     gse = GEOparse.get_GEO(filepath=gse_path, silent=True)
 
     '''
@@ -167,7 +167,7 @@ for accession in accessions['accession']:
     '''
     gse_df = pd.read_csv(gse_path)
     '''
-    gse_df.to_csv("dataset/matrix/" + accession + "_expr_mat.csv")
+    gse_df.to_csv("dataset/raw/matrix/" + accession + "_expr_mat.csv")
     #print(gse_df)
 
     '''

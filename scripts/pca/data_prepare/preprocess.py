@@ -20,8 +20,8 @@ def process_file(input_file_path, output_file_path):
             if url and values:
                 output_file.write(f"{url} {' '.join(values)}\n")
 
-input_file_path = './dataset/ontology.embeddings.txt'  
-output_file_path = './dataset/embeddings_preprocess.txt'  
+input_file_path = 'dataset/ontology.embeddings.txt'  
+output_file_path = 'dataset/embeddings_preprocess.txt'  
 process_file(input_file_path, output_file_path)
 
 # Check the dataset
@@ -42,8 +42,8 @@ def count_data_values(file_path):
 
 
 # Change it
-file_path = './dataset/embeddings_preprocess.txt'
-output_file_path = './dataset/embeddings_preprocess_modified.txt'
+file_path = 'dataset/embeddings_preprocess.txt'
+output_file_path = '.ataset/embeddings_preprocess_modified.txt'
 
 with open(file_path, 'r') as file, open(output_file_path, 'w') as output_file:
     for line in file:

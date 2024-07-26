@@ -1,7 +1,7 @@
 import pandas as pd
 
-con_df = pd.read_csv('dataset/GSE_concepts.csv')
-all_con = pd.read_csv('dataset/all_concept_name.txt', header=None)
+con_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
+all_con = pd.read_csv('dataset/concepts/all_concept_name.txt', header=None)
 all_con = list(all_con[0])
 #print(all_con)
 #print(con_df['CONCEPTS'])
@@ -20,5 +20,5 @@ con_dom.sort()
 
 df = pd.DataFrame({'0':con_dom})
 print(df)
-df.to_csv('dataset/concept_domain.csv', index=False, header=False)
+df.to_csv('dataset/concepts/concept_domain.csv', index=False, header=False)
 

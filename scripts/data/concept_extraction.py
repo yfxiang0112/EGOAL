@@ -12,7 +12,7 @@ def GOID_regu(s):
     return res
 
 
-gsm_df = pd.read_csv('dataset/GSE_concepts.csv')
+gsm_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
 concepts = []
 #gsm_df.drop(['Unnamed: 0', 'Unnamed: 0.1'], axis=1, inplace=True)
 #gsm_df.rename(columns={'description':'DESCRIP', 'openai_ans':'OPENAI_ANS', 'concepts':'CONCEPTS'}, inplace=True)
@@ -54,4 +54,4 @@ print(gsm_df['CONCEPTS'])
 gsm_df.set_index('SAMPLES', inplace=True)
 gsm_df.sort_index(inplace=True)
 print(gsm_df)
-gsm_df.to_csv('dataset/GSE_concepts.csv')
+gsm_df.to_csv('dataset/concepts/GSE_concepts.csv')

@@ -8,7 +8,7 @@ from pydeseq2.dds import DeseqDataSet
 from pydeseq2.default_inference import DefaultInference
 from pydeseq2.ds import DeseqStats
 
-accessions = pd.read_csv("dataset/accessions")
+accessions = pd.read_csv("dataset/raw/accessions")
 dataset_df = {}
 description_df = {}
 
@@ -25,7 +25,7 @@ for accession in accessions['accession']:
     #else:
     #    continue
 
-    mat_path = 'dataset/matrix/'+accession+'_expr_mat.csv'
+    mat_path = 'dataset/raw/matrix/'+accession+'_expr_mat.csv'
     if not os.path.exists(mat_path):
         continue
 
@@ -48,7 +48,7 @@ for accession in accessions['accession']:
         counts *= 10
     counts = counts.round().astype(int)
 
-    gse_path = "dataset/GSE/" + accession + "_family.soft.gz"
+    gse_path = "dataset/raw/GSE/" + accession + "_family.soft.gz"
     gse = GEOparse.get_GEO(filepath=gse_path, silent=True)
 
     
@@ -111,7 +111,7 @@ for accession in accessions['accession']:
         deg_df.reset_index(inplace=True)
 
         #print(deg_df)
-        deg_path = 'dataset/deg_result/'+ grp_name +'.csv'
+        deg_path = 'dataset/deg/deg_result/'+ grp_name +'.csv'
         deg_df.to_csv(deg_path, index=False)
 
         #print(deg_df['GENE'][:20])
@@ -124,5 +124,5 @@ description_df = pd.DataFrame(description_df)
 
 dataset_df = dataset_df.transpose()
 dataset_df.reset_index(inplace=True)
-dataset_df.to_csv('dataset/dataset_top20expr.csv', index=False)
-description_df.to_csv('dataset/group2description.csv', index=False)
+dataset_df.to_csv('dataset/deg/dataset.csv', index=False)
+description_df.to_csv('dataset/deg/group2description.csv', index=False)

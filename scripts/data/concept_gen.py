@@ -4,7 +4,7 @@ from openai import OpenAI
 import os
 from tqdm import tqdm
 
-accessions = pd.read_csv("dataset/accessions")
+accessions = pd.read_csv("dataset/raw/accessions")
 
 gsm_df = pd.DataFrame()
 gsm_names = []
@@ -20,8 +20,8 @@ client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 for accession in tqdm(accessions['accession'], 'Parsing GSE file:'):
 #for accession in accessions['accession']:
     
-    gse = GEOparse.get_GEO(geo=accession, destdir="dataset/GSE", silent=True)
-    gse_path = "dataset/GSE/" + accession + "_family.soft.gz"
+    gse = GEOparse.get_GEO(geo=accession, destdir="dataset/raw/GSE", silent=True)
+    gse_path = "dataset/raw/GSE/" + accession + "_family.soft.gz"
     gse = GEOparse.get_GEO(filepath=gse_path, silent=True)
 
 
@@ -69,4 +69,4 @@ for d in tqdm(gsm_df['description'], 'Translating GO concept with OpenAI:'):
 gsm_df['OPENAI_ANS'] = pd.Series(openai_ans)
 
 gsm_df.sort_values(by=['SAMPLES'])
-gsm_df.to_csv("dataset/GSE_concepts.csv")
+gsm_df.to_csv("dataset/concepts/GSE_concepts.csv")
