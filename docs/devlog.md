@@ -1,3 +1,8 @@
+---
+header-includes:
+  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+---
+
 # GOABL Development Log
 
 ## Introduction
@@ -33,7 +38,15 @@ of LLMs is introduced to the dataset. Therefore, we are exploring better solutio
 
 ### Unify Expression Data with Importance Metric
 
-TODO: **non-supervised importance** and **top 20 relative expression with DEG**
+**non-supervised importance** and **top 20 relative expression with DEG**
+
+A differential expression gene (DEG) analysis is applied to the origin dataset
+(obtained in last section) to construct a dataset with relative expression level.
+The DEG was performed with python package [PyDESeq2](https://github.com/owkin/PyDESeq2).
+
+Values of first GSM sample in each GSE series is setted as the reference, and relative
+expression in other GSM samples are measured. In the final dataset, the top 20 most
+expressed genes (ranked by `p-value`) of each GSM sample is selected as data labels.
 
 ---
 
@@ -59,11 +72,34 @@ the concept embeddings.
 
 ## Part III: Knowledge Graph Preprocessing: Remembering
 
+Knowledge graphs (KGs) like `GO` are often in large scale, containing much information
+that is irrelevant to specific learning task and a certain degree of noise.
+To perform tractable reasoning and abductive learning on such large-scale KG, we
+adopted a method, `ABL-KG` (Huang et al. 2023) to mine logic rules and filter out
+irrelevant information from large-scale KGs.
+
+### Structure of `OWL` Knowledge Graph File
+
 ### Subgraph Extraction
 
 ### Rule Mining
 
 ### Remember Algorithm
+
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwResult{Write here the result}
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{Write here the input}
+\Output{Write here the output}
+\BlankLine
+$R_{new} \leftarrow \{r \in \mathcal{KB}\ |\ \mathrm{Sig}(r) \cap \Sigma^\prime \neq \emptyset\}$\;
+\While{$t<T\ \mathrm{ and }\ r_{new}\neq\emptyset$}{
+    $R_{res} \leftarrow \emptyset$\;
+}
+\caption{Remembering}
+\end{algorithm}
 
 ---
 

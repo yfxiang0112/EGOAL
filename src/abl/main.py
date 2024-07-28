@@ -34,6 +34,10 @@ def main():
     )
     # TODO() Add other argument we need:
     args = parser.parse_args()
+    #TODO: added to argparse
+    rule_path = 'rules/ruleRem.csv'
+    annotation_path = 'rules/goa_mapping.csv'
+    reasoner_depth = 5
 
     # Build logger
     print_log("Abductive Learning on the GO example.", logger="current")
@@ -65,7 +69,7 @@ def main():
     print_log("Building the Reasoning Part.", logger="current")
 
     # Build knowledge base
-    kb = GO()
+    kb = GO(rule_path, annotation_path, reasoner_depth)
     
     # Create reasoner(need to complete the consistency function)
     reasoner = Reasoner(kb, dist_func=consitency)

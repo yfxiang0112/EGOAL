@@ -42,9 +42,11 @@ class GO(KBBase):
         (current: intersection of pseudo label and rule results)
         '''
 
+        violated = 0 # count of violated rules
         expr = set()
 
         concept_expand = x
+        # TODO: expand rule on each x and count violated num
         for d in self.max_depth:
             concept_new = []
             for idx,row in self.rule_set:
@@ -66,7 +68,8 @@ class GO(KBBase):
             if c in expr:
                 res.append(c)
 
-        return res
+        return violated
+        # expected to be 0 when consisitent
 
 
         # Steps as follow:
