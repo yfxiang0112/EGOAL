@@ -11,6 +11,7 @@ from pydeseq2.ds import DeseqStats
 accessions = pd.read_csv("dataset/raw/accessions")
 dataset_df = {}
 description_df = {}
+gsms = []
 
 for accession in accessions['accession']:
     print(accession)
@@ -76,6 +77,7 @@ for accession in accessions['accession']:
             cur_idx = i
             grp += 1
             description_df.update( {accession+'_group'+str(grp) : [descriptions[i]]} )
+            gsms.append(gsm_name)
         groups.append(str(grp))
 
     metadata = pd.DataFrame({'group':groups})
@@ -118,11 +120,15 @@ for accession in accessions['accession']:
         dataset_df.update( {grp_name : deg_df['GENE'][:20]} )
 
 
+    #break
+
+
 
 dataset_df = pd.DataFrame(dataset_df)
 description_df = pd.DataFrame(description_df)
 
 dataset_df = dataset_df.transpose()
 dataset_df.reset_index(inplace=True)
-dataset_df.to_csv('dataset/deg/dataset.csv', index=False)
+dataset_df['GSM'] = gsms
+dataset_df.to_csv('dataset/deg/deg_top20_expr.csv', index=False)
 description_df.to_csv('dataset/deg/group2description.csv', index=False)
