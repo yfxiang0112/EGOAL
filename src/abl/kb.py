@@ -1,4 +1,4 @@
-from z3 import If, Implies, Int, Not, Solver, Sum, sat  
+from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat  
 from ablkit.reasoning import KBBase
 import pandas as pd
 
@@ -43,38 +43,56 @@ class GO(KBBase):
         '''
 
         violated = 0 # count of violated rules
-        expr = set()
+        #expr = set()
 
+        gene_pred = pseudo_label
         concept_expand = x
-        # TODO: expand rule on each x and count violated num
-        for d in self.max_depth:
-            concept_new = []
-            for idx,row in self.rule_set:
-                for c in concept_expand:
-                    if row[0][1] == c:
-                        concept_new.append(row[0][3])
-                    if row[0][3] == c:
-                        concept_new.append(row[0][1])
+        concept_pred = []
+        concept_abd  = []
 
-            for idx,row in self.annotation:
-                if row[0] in concept_expand:
-                    for id in row[1]:
-                        expr.add(id)
+        for idx,row in self.annotation:
+            if gene_pred in row[1]:
+                concept_pred.append(row[0])
+            #if row[0] in concept_expand:
+            #    for id in row[1]:
+            #        expr.add(id)
 
-            concept_expand = concept_new
+        ''' expand rule on each x and count violated num '''
+        #for d in self.max_depth:
 
-        res = []
-        for c in pseudo_label:
-            if c in expr:
-                res.append(c)
+        #concept_new = []
+        for idx,row in self.rule_set:
+            for c in concept_expand:
+                if row[0][1] == c:
+                    #concept_new.append(row[0][3])
+                    concept_abd.append(row[0][3])
+                if row[0][3] == c:
+                    #concept_new.append(row[0][1])
+                    concept_abd.append(row[0][1])
+
+        for c in concept_abd:
+            if not c in concept_expand:
+                violated += 1
 
         return violated
+
+        #concept_expand = concept_new
+
+        #res = []
+        #for c in pseudo_label:
+        #    if c in expr:
+        #        res.append(c)
+
+
+
+
+
         # expected to be 0 when consisitent
 
 
         # Steps as follow:
         # 1.Initial the variable 
-        
+
         # 2.Reset the solver
 
         # 3.Add the attribute restrictions
@@ -83,4 +101,3 @@ class GO(KBBase):
 
         # 5.Check the state of solver
 
-        return 
