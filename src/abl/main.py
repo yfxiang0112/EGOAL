@@ -15,16 +15,11 @@ from kb import GO
 
 # From example Zoo, maybe help.
 def consitency(data_example, candidates, candidate_idxs, reasoning_results):
-    # TODO()
-    return 
-'''
-def consitency(data_example, candidates, candidate_idxs, reasoning_results):
     pred_prob = data_example.pred_prob
     model_scores = avg_confidence_dist(pred_prob, candidate_idxs)
     rule_scores = np.array(reasoning_results)
     scores = model_scores + rule_scores
     return scores
-'''
 
 def main():
     parser = argparse.ArgumentParser(description="GO example")
@@ -35,8 +30,8 @@ def main():
     # TODO() Add other argument we need:
     args = parser.parse_args()
     #TODO: added to argparse
-    rule_path = 'rules/ruleRem.csv'
-    annotation_path = 'rules/goa_mapping.csv'
+    rule_path = '../../rules/ruleRem.csv'
+    annotation_path = '../../rules/goa_mapping.csv'
     reasoner_depth = 5
 
     # Build logger
@@ -47,12 +42,10 @@ def main():
 
     X, y = load_and_process_dataset()
     # TODO() need to complete the function
-    # X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
-    # label_data = tab_data_to_tuple(X_label, y_label)
-    # test_data = tab_data_to_tuple(X_test, y_test)
-    # train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
-
-
+    X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
+    label_data = tab_data_to_tuple(X_label, y_label)
+    test_data = tab_data_to_tuple(X_test, y_test)
+    train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
 
     # -- Building the Learning Part ---------------------
     print_log("Building the Learning Part.", logger="current")
@@ -92,13 +85,12 @@ def main():
     print_log("------- Test the initial model -----------", logger="current")
     # bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
-    # bridge.train(
-    #    train_data=train_data,
-    #    label_data=label_data,
-    #    loops=args.loops,
-    #    segment_size=len(X_unlabel),
-    #    save_dir=weights_dir,
-    # )
+    bridge.train(
+        train_data=train_data,
+        label_data=label_data,
+        loops=args.loops,
+        segment_size=len(X_unlabel),
+    )
     print_log("------- Test the final model -----------", logger="current")
     # bridge.test(test_data)
 
