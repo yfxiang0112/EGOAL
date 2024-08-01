@@ -81,9 +81,9 @@ def main():
     # Performing training and testing
     # Need to complete
     print_log("------- Use labeled data to pretrain the model -----------", logger="current")
-    # base_model.fit(X_label, y_label)
+    base_model.fit(X_label, y_label)
     print_log("------- Test the initial model -----------", logger="current")
-    # bridge.test(test_data)
+    bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(
         train_data=train_data,

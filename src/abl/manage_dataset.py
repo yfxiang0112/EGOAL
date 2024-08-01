@@ -10,8 +10,8 @@ def load_and_process_dataset():
         None
 
     Output:
-        X: features after process, list
-        y: labels after process, list
+        X: features after process, numpy array 
+        y: labels after process, numpy array 
     '''
     # Read all datasets
     df_1 = pd.read_csv('../../dataset/importance/processed_dataset_with_importance.csv')
@@ -23,14 +23,18 @@ def load_and_process_dataset():
     # Extract the importance values (20 columns starting from the 103rd column)
     y_init = df_1.iloc[:, 102:122].values
     
+    # need to change the X into One-hot matrix
+    X = 0 
+    y = 0
+
     # Change X and y form
-    X = [eval(item[0]) for item in X_init]
-    y = [[eval(item) for item in sublist] for sublist in y_init]
+    # X = [eval(item[0]) for item in X_init]
+    # y = [[eval(item) for item in sublist] for sublist in y_init]
 
     # Add ramdom 20 concepts as pseudo label
-    selected_concepts = df_2.sample(n=20, replace=False).values.flatten().tolist()
-    selected_concepts_formatted = [[concept] for concept in selected_concepts]
-    X.extend(selected_concepts_formatted)
+    # selected_concepts = df_2.sample(n=20, replace=False).values.flatten().tolist()
+    # selected_concepts_formatted = [[concept] for concept in selected_concepts]
+    # X.extend(selected_concepts_formatted)
 
     # print(type(X), type(y))
     # X = np.array(X)
@@ -39,17 +43,17 @@ def load_and_process_dataset():
 def split_dataset(X, y, test_size=0.2):
     '''
     Input:
-        X: features, list
-        y: labels, list of tuples
+        X: features, numpy array 
+        y: labels, numpy array 
         test_size: float
 
     Output:
-        X_label: features with label, list
-        y_label: labels with label, list
-        X_unlabel: features without label, list
-        y_unlabel: labels without label, list
-        X_test: test features with label, list
-        y_test: test labels with label, list
+        X_label: features with label, numpy array 
+        y_label: labels with label, numpy array 
+        X_unlabel: features without label, numpy array 
+        y_unlabel: labels without label, numpy array 
+        X_test: test features with label, numpy array 
+        y_test: test labels with label, numpy array 
     '''
     # 1. Initialize label_indices, unlabel_indices, test_indices.
     label_indices, unlabel_indices, test_indices = [], [], []
