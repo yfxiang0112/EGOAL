@@ -8,7 +8,7 @@ def remove_nan(df_subset):
             df_subset = df_subset.drop(column_name, axis=1)
     return df_subset
 
-df = pd.read_csv('dataset/pca/processed_dataset_with_inserted_columns.csv')
+df = pd.read_csv('../../dataset/pca/processed_dataset_with_inserted_columns.csv')
 
 packed_data = []
 
@@ -17,8 +17,17 @@ for i in tqdm(range(len(df)), desc="Processing rows"):
     new_df = remove_nan(df_subset)
     column_labels = new_df.columns.tolist()
     new_df_list = new_df.values.flatten().tolist()
+    new_df_list = [x for x in new_df_list if np.isfinite(x)]
+    
+    if len(new_df_list) == 0:
+        print(f"Row {i} has no valid data after removing NaN and non-finite values.")
+        continue
+    
     mean = sum(new_df_list) / len(new_df_list)
     variance = sum((x - mean) ** 2 for x in new_df_list) / len(new_df_list)
+
+    # print(f'{i}', mean, variance)
+    
     importance = [(x - mean) ** 2 for x in new_df_list]
     element_importance_pairs = list(zip(column_labels, new_df_list, importance))
     sorted_element_importance_pairs = sorted(element_importance_pairs, key=lambda x: x[2], reverse=True)
@@ -34,4 +43,4 @@ packed_df = pd.DataFrame(packed_data)
 df.iloc[:, 102:122] = packed_df.values
 df = df.iloc[:, :122]
 
-df.to_csv('dataset/importance/processed_dataset_with_importance.csv', index=False)
+df.to_csv('../../dataset/importance/processed_dataset_with_importance.csv', index=False)
