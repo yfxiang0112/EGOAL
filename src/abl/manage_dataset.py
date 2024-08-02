@@ -61,6 +61,7 @@ def split_dataset(X, y, test_size=0.3):
     # print(X_label, y_label)
     # assert(0)
     X_unlabel, y_unlabel = X[unlabel_indices], y[unlabel_indices]
+    # X_unlabel, y_unlabel = [0], [0]
     # print(X_unlabel, y_unlabel)
     # print(X_unlabel)
     X_test, y_test = X[test_indices], y[test_indices]
@@ -68,10 +69,10 @@ def split_dataset(X, y, test_size=0.3):
     return X_label, y_label, X_unlabel, y_unlabel, X_test, y_test
 
 
-X, y = load_and_process_dataset()
+# X, y = load_and_process_dataset()
 # print(X)
 # print(y)
-X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
+# X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
 # label_data = tab_data_to_tuple(X_label, y_label)
 # test_data = tab_data_to_tuple(X_test, y_test)
 # train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
