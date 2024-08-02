@@ -14,33 +14,19 @@ def load_and_process_dataset():
         y: labels after process, numpy array 
     '''
     # Read all datasets
-    df_1 = pd.read_csv('../../dataset/importance/processed_dataset_with_importance.csv')
-    df_2 = pd.read_csv('../../dataset/concepts/concept_domain.csv')
+    df_1 = pd.read_csv('../../dataset/one-hot/one_hot_pro_y.csv')
 
     # Change into numpy
     # Extract the features
-    X_init = df_1.iloc[:, 1:2].values
-    # Extract the importance values (20 columns starting from the 103rd column)
-    y_init = df_1.iloc[:, 102:122].values
-    
-    # need to change the X into One-hot matrix
-    X = 0 
-    y = 0
+    X_init = df_1.iloc[:, 3: 1695]
+    y_init = df_1.iloc[:, 1696:]
 
-    # Change X and y form
-    # X = [eval(item[0]) for item in X_init]
-    # y = [[eval(item) for item in sublist] for sublist in y_init]
-
-    # Add ramdom 20 concepts as pseudo label
-    # selected_concepts = df_2.sample(n=20, replace=False).values.flatten().tolist()
-    # selected_concepts_formatted = [[concept] for concept in selected_concepts]
-    # X.extend(selected_concepts_formatted)
-
-    # print(type(X), type(y))
-    # X = np.array(X)
+    X, y = X_init.to_numpy(), y_init.to_numpy()
+    # print(X_init)
+    # print(y_init)
     return X, y
 
-def split_dataset(X, y, test_size=0.2):
+def split_dataset(X, y, test_size=0.3):
     '''
     Input:
         X: features, numpy array 
@@ -55,35 +41,40 @@ def split_dataset(X, y, test_size=0.2):
         X_test: test features with label, numpy array 
         y_test: test labels with label, numpy array 
     '''
-    # 1. Initialize label_indices, unlabel_indices, test_indices.
+    X = X.astype(np.int8)
+    y = y.astype(np.int8)
+
     label_indices, unlabel_indices, test_indices = [], [], []
-    
-    # 2. Convert tuples to hashable strings
-    labels = [str(item) for item in y]
-    
-    # 3. Compute the labels, unlabels, and test indices for each class
-    unique_labels = list(set(labels))
-    for class_label in unique_labels:
-        idxs = [i for i, label in enumerate(labels) if label == class_label]
-        random.shuffle(idxs)
+    for class_label in np.unique(y):
+        idxs = np.where(y == class_label)[0]
+        # print(np.unique(y))
+        # print(idxs)
+        np.random.shuffle(idxs)
         n_train_unlabel = int((1 - test_size) * (len(idxs) - 1))
+        # print(n_train_unlabel, len(idxs))
         label_indices.append(idxs[0])
         unlabel_indices.extend(idxs[1 : 1 + n_train_unlabel])
+       #  print(unlabel_indices)
         test_indices.extend(idxs[1 + n_train_unlabel :])
-    
-    # 4. Extract the corresponding features and labels
-    X_label = [X[i] for i in label_indices]
-    y_label = [y[i] for i in label_indices]
-    X_unlabel = [X[i] for i in unlabel_indices]
-    y_unlabel = [y[i] for i in unlabel_indices]
-    X_test = [X[i] for i in test_indices]
-    y_test = [y[i] for i in test_indices]
-    
+        # assert(0)
+    X_label, y_label = X[label_indices], y[label_indices]
+    # print(X_label, y_label)
+    # assert(0)
+    X_unlabel, y_unlabel = X[unlabel_indices], y[unlabel_indices]
+    # print(X_unlabel, y_unlabel)
+    # print(X_unlabel)
+    X_test, y_test = X[test_indices], y[test_indices]
+    # print(X_test, y_test)
     return X_label, y_label, X_unlabel, y_unlabel, X_test, y_test
 
 
-# X, y = load_and_process_dataset()
-# X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
+X, y = load_and_process_dataset()
+# print(X)
+# print(y)
+X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
 # label_data = tab_data_to_tuple(X_label, y_label)
 # test_data = tab_data_to_tuple(X_test, y_test)
 # train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
+# print(label_data)
+# print(test_data)
+# print(train_data)
