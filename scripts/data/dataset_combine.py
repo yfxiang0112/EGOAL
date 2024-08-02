@@ -35,7 +35,7 @@ for f in os.listdir('dataset/raw/matrix'):
 df = pd.concat(matrix, axis=1)
 df = df.transpose()
 
-con_df = pd.read_csv('dataset/raw/GSE_concepts.csv')
+con_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
 con_df.set_index('SAMPLES', inplace=True)
 print(con_df)
 

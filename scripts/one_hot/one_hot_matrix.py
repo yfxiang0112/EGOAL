@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-df_1 = pd.read_csv('../../dataset/concepts/concept_domain.csv', header= None)
-df_2 = pd.read_csv('../../dataset/importance/processed_dataset_with_importance.csv')
+df_1 = pd.read_csv('dataset/concepts/concept_domain.csv', header= None)
+df_2 = pd.read_csv('dataset/importance/processed_dataset_with_importance.csv')
 
 # drop out the embedding part 
 start_col = 2  
@@ -18,7 +18,9 @@ one_hot_df = pd.DataFrame(columns=unique_elements)
 for i in range(len(df_2)):
     row = df_2.iloc[i]
     element = row.iloc[1] 
+
     one_hot_row = np.zeros(len(unique_elements))
+    print(element, type(element))
     for elem in eval(element):
         # print(elem)
         if elem in unique_elements:
@@ -35,4 +37,4 @@ df_2 = df_2.reindex(columns=new_columns)
 
 print(df_2)
 
-df_2.to_csv('../../dataset/one-hot/one_hot.csv', index=False)
+df_2.to_csv('dataset/one-hot/one_hot.csv', index=False)

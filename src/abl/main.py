@@ -30,8 +30,8 @@ def main():
     # TODO() Add other argument we need:
     args = parser.parse_args()
     #TODO: added to argparse
-    rule_path = '../../rules/ruleRem.csv'
-    annotation_path = '../../rules/goa_mapping.csv'
+    rule_path = 'rules/ruleRem.csv'
+    annotation_path = 'rules/goa_mapping.csv'
     reasoner_depth = 5
 
     # Build logger
@@ -81,6 +81,7 @@ def main():
     # Performing training and testing
     # Need to complete
     print_log("------- Use labeled data to pretrain the model -----------", logger="current")
+    print('\n\n', X_label, '\n', y_label)
     base_model.fit(X_label, y_label)
     print_log("------- Test the initial model -----------", logger="current")
     bridge.test(test_data)
@@ -92,7 +93,7 @@ def main():
         segment_size=len(X_unlabel),
     )
     print_log("------- Test the final model -----------", logger="current")
-    # bridge.test(test_data)
+    bridge.test(test_data)
 
 if __name__ == "__main__":
     main()

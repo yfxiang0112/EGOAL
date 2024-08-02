@@ -43,10 +43,10 @@ class GO(KBBase):
         violated = 0  # count of violated rules
         # expr = set()
 
-        gene_pred = pseudo_label
-        concept_expand = x
+        gene_pred       = ['SO_' + str(round(st)) for st in pseudo_label]
+        concept_expand  = ['GO_' + str(round(st)) for st in x]
         concept_pred = []
-        concept_abd = []
+        concept_abd  = []
 
         for idx, row in self.annotation.iterrows():
             if gene_pred in row[1]:
