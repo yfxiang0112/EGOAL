@@ -14,7 +14,7 @@ def load_and_process_dataset():
         y: labels after process, numpy array 
     '''
     # Read all datasets
-    df_1 = pd.read_csv('../../dataset/one-hot/one_hot_pro_y.csv')
+    df_1 = pd.read_csv('/dataset/one-hot/one_hot_pro_y.csv')
 
     # Change into numpy
     # Extract the features
