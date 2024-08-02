@@ -25,7 +25,7 @@ def main():
     parser = argparse.ArgumentParser(description="GO example")
     # Add argument loops of the test, here is 10
     parser.add_argument(
-        "--loops", type=int, default=10, help="number of loop iterations (default : 3)"
+        "--loops", type=int, default=1, help="number of loop iterations (default : 3)"
     )
     # TODO() Add other argument we need:
     args = parser.parse_args()
@@ -65,7 +65,7 @@ def main():
     kb = GO(rule_path, annotation_path, reasoner_depth)
     
     # Create reasoner(need to complete the consistency function)
-    reasoner = Reasoner(kb, dist_func=consitency)
+    reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)
 
 
 
@@ -84,7 +84,7 @@ def main():
     print('\n\n', X_label, '\n', y_label)
     base_model.fit(X_label, y_label)
     print_log("------- Test the initial model -----------", logger="current")
-    bridge.test(test_data)
+    #bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(
         train_data=train_data,
@@ -93,7 +93,7 @@ def main():
         segment_size=len(X_unlabel),
     )
     print_log("------- Test the final model -----------", logger="current")
-    bridge.test(test_data)
+    #bridge.test(test_data)
 
 if __name__ == "__main__":
     main()

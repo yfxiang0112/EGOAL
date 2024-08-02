@@ -5,7 +5,7 @@ import pandas as pd
 class GO(KBBase):
     def __init__(self, rule_path, annotation_path, max_depth):
         # here the 0 is not the categories of the GO, need to change it
-        super().__init__(pseudo_label_list=list(range(0)), use_cache=False)
+        super().__init__(pseudo_label_list=list(range(1,4593)), use_cache=False)
 
         self.solver = Solver()
 
@@ -39,18 +39,25 @@ class GO(KBBase):
         **use pseudo label?**
         (current: intersection of pseudo label and rule results)
         '''
+        return 0
 
         violated = 0  # count of violated rules
         # expr = set()
 
-        gene_pred       = ['SO_' + str(round(st)) for st in pseudo_label]
-        concept_expand  = ['GO_' + str(round(st)) for st in x]
+        #print('pseudo_label', pseudo_label)
+        #print('x', x)
+        gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
+        concept_expand  = [f'GO_{st:07}' for st in x[0]]
         concept_pred = []
         concept_abd  = []
 
+        #print(gene_pred)
+        #print(concept_expand)
+
         for idx, row in self.annotation.iterrows():
-            if gene_pred in row[1]:
-                concept_pred.append(row[0])
+            for g in gene_pred:
+                if g in row[1]:
+                    concept_pred.append(row[0])
             # if row[0] in concept_expand:
             #    for id in row[1]:
             #        expr.add(id)
