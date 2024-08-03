@@ -4,6 +4,36 @@ from ablkit.utils import ABLLogger, avg_confidence_dist, print_log, tab_data_to_
 import random
 import re
 
+from geneset2idx import label2idx
+
+MAX_GENE_NUM = 4807
+
+#class GeneSet():
+#    def __init__(self, lst) -> None:
+#        self.lst = list(lst)
+#        self.idx = -1
+#
+#    def __hash__(self) -> int:
+#        s = ''
+#        for i in self.lst:
+#            s += str(i)
+#        return hash(s)
+#
+#    def __iter__(self):
+#        return self
+#
+#    def __getitem__(self, index):
+#        return self.lst[index]
+#
+#    def __next__(self):
+#        self.idx += 1
+#        if self.idx >= len(self.lst):
+#            raise StopIteration
+#        return self.lst[self.idx]
+#
+#    def __lt__(self, other):
+#        return hash(self) < hash(other)
+
 # Function to load and process the dataset
 def filter_id_lst(lst):
     res = []
@@ -45,7 +75,7 @@ def load_and_process_dataset():
     #X, y = X_init.to_numpy(), y_init.to_numpy()
     X = np.array(list(X_init))
     y = y_init.to_numpy()
-    #y = np.array([set(row) for row in y])
+    y = np.array([label2idx(row) for row in y])
     print('X_init=\n', X)
     print('y_init=\n', y)
     print(X.shape, y.shape)

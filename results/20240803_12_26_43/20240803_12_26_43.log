@@ -1,0 +1,9 @@
+2024/08/03 12:26:43 - abl - INFO - Abductive Learning on the GO example.
+2024/08/03 12:26:43 - abl - INFO - Working with Data.
+2024/08/03 12:26:43 - abl - INFO - Building the Learning Part.
+2024/08/03 12:26:43 - abl - INFO - Building the Reasoning Part.
+2024/08/03 12:26:43 - abl - INFO - Building Evaluation Metrics.
+2024/08/03 12:26:43 - abl - INFO - Bridge Learning and Reasoning.
+2024/08/03 12:26:43 - abl - INFO - ------- Use labeled data to pretrain the model -----------
+2024/08/03 12:26:43 - abl - INFO - ------- Test the initial model -----------
+2024/08/03 12:26:43 - abl - INFO - Test start:

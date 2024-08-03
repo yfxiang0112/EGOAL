@@ -2,10 +2,12 @@ from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat, Bool
 from ablkit.reasoning import KBBase
 import pandas as pd
 
+from geneset2idx import idx2label, MAX_LABEL_IDX
+
 class GO(KBBase):
     def __init__(self, rule_path, annotation_path, max_depth):
         # here the 0 is not the categories of the GO, need to change it
-        super().__init__(pseudo_label_list=list(range(1,4808)), use_cache=False)
+        super().__init__(pseudo_label_list=list(range(MAX_LABEL_IDX)), use_cache=False)
 
         self.solver = Solver()
 
@@ -46,7 +48,8 @@ class GO(KBBase):
 
         #print('pseudo_label', pseudo_label)
         #print('x', x)
-        gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
+        gene_id = [str(idx2label(st)) for st in pseudo_label]
+        gene_pred       = [f'SO_{st:04}' for st in gene_id]
         concept_expand  = [f'GO_{st:07}' for st in x[0]]
         concept_pred = []
         concept_abd  = []
