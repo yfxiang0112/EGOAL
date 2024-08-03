@@ -39,13 +39,22 @@ def load_and_process_dataset():
     print(df_1.iloc[:, 1:2])
     #X_init = df_1.iloc[:, 1: 2].map(eval).map(filter_id_lst)
     X_init = df_1.iloc[:,1].apply(eval).apply(filter_id_lst)
-    y_init = df_1.iloc[:, 102:].map(lambda x:eval(x)[0]).map(filter_id)
+    #y_init = df_1.iloc[:, 102:].map(lambda x:eval(x)[0]).map(filter_id)
+    y_init = df_1.iloc[:, 102:104].map(lambda x:eval(x)[0]).map(filter_id)
 
     #X, y = X_init.to_numpy(), y_init.to_numpy()
     X = np.array(list(X_init))
     y = y_init.to_numpy()
+    #y = np.array([set(row) for row in y])
     print('X_init=\n', X)
     print('y_init=\n', y)
+    print(X.shape, y.shape)
+    for row in X:
+        for elem in row:
+            assert(type(elem) == np.int64)
+    #for row in y:
+    #    for elem in row:
+    #        assert(type(elem) == np.int64)
     return X, y
 
 def split_dataset(X, y, test_size=0.3):
@@ -83,7 +92,7 @@ def split_dataset(X, y, test_size=0.3):
     #print('label', X_label, y_label)
     # assert(0)
     X_unlabel, y_unlabel = X[unlabel_indices], y[unlabel_indices]
-    #print('unlabel', X_unlabel, y_unlabel)
+    print('unlabel', X_unlabel, y_unlabel, X_unlabel.shape, y_unlabel.shape)
     # X_unlabel, y_unlabel = [0], [0]
     # print(X_unlabel, y_unlabel)
     # print(X_unlabel)
@@ -92,23 +101,24 @@ def split_dataset(X, y, test_size=0.3):
     return X_label, y_label, X_unlabel, y_unlabel, X_test, y_test
 
 
-# X, y = load_and_process_dataset()
-# print(X)
-# print(y)
-#X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
-#label_data = tab_data_to_tuple(X_label, y_label)
-#test_data = tab_data_to_tuple(X_test, y_test)
-#train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
-#print(label_data)
-#print(test_data)
-#print(X_test)
-#print(y_test)
-#print(type(X_test), type(X_test[0]))
-#print(train_data)
-# X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
-# label_data = tab_data_to_tuple(X_label, y_label)
-# test_data = tab_data_to_tuple(X_test, y_test)
-# train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
-# print(label_data)
-# print(test_data)
-# print(train_data)
+if __name__ == '__main__':
+    X, y = load_and_process_dataset()
+    # print(X)
+    # print(y)
+    X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
+    label_data = tab_data_to_tuple(X_label, y_label)
+    test_data = tab_data_to_tuple(X_test, y_test)
+    train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
+    #print(label_data)
+    #print(test_data)
+    #print(X_test)
+    #print(y_test)
+    #print(type(X_test), type(X_test[0]))
+    #print(train_data)
+    # X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
+    # label_data = tab_data_to_tuple(X_label, y_label)
+    # test_data = tab_data_to_tuple(X_test, y_test)
+    # train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
+    # print(label_data)
+    # print(test_data)
+    # print(train_data)

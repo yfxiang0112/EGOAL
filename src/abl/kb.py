@@ -5,7 +5,7 @@ import pandas as pd
 class GO(KBBase):
     def __init__(self, rule_path, annotation_path, max_depth):
         # here the 0 is not the categories of the GO, need to change it
-        super().__init__(pseudo_label_list=list(range(1,4593)), use_cache=False)
+        super().__init__(pseudo_label_list=list(range(1,4808)), use_cache=False)
 
         self.solver = Solver()
 
@@ -39,7 +39,7 @@ class GO(KBBase):
         **use pseudo label?**
         (current: intersection of pseudo label and rule results)
         '''
-        return 0
+        #return 0
 
         violated = 0  # count of violated rules
         # expr = set()
