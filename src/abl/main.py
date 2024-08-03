@@ -46,6 +46,8 @@ def main():
     label_data = tab_data_to_tuple(X_label, y_label)
     test_data = tab_data_to_tuple(X_test, y_test)
     train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
+    # print(type(label_data), type(test_data), type(train_data))
+    # assert(0)
 
     # -- Building the Learning Part ---------------------
     print_log("Building the Learning Part.", logger="current")
@@ -84,6 +86,9 @@ def main():
     # print('\n\n', X_label, '\n', y_label)
     base_model.fit(X_label, y_label)
     print_log("------- Test the initial model -----------", logger="current")
+    # print(type(test_data))
+    # print(test_data)
+    # test_data = np.array(list(test_data))
     bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(
