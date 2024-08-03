@@ -23,9 +23,9 @@ def consitency(data_example, candidates, candidate_idxs, reasoning_results):
 
 def main():
     parser = argparse.ArgumentParser(description="GO example")
-    # Add argument loops of the test, here is 10
+    # Add argument loops of the test, here is 3
     parser.add_argument(
-        "--loops", type=int, default=1, help="number of loop iterations (default : 3)"
+        "--loops", type=int, default=3, help="number of loop iterations (default : 3)"
     )
     # TODO() Add other argument we need:
     args = parser.parse_args()
@@ -81,10 +81,10 @@ def main():
     # Performing training and testing
     # Need to complete
     print_log("------- Use labeled data to pretrain the model -----------", logger="current")
-    print('\n\n', X_label, '\n', y_label)
+    # print('\n\n', X_label, '\n', y_label)
     base_model.fit(X_label, y_label)
     print_log("------- Test the initial model -----------", logger="current")
-    #bridge.test(test_data)
+    bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(
         train_data=train_data,
@@ -93,7 +93,7 @@ def main():
         segment_size=len(X_unlabel),
     )
     print_log("------- Test the final model -----------", logger="current")
-    #bridge.test(test_data)
+    bridge.test(test_data)
 
 if __name__ == "__main__":
     main()
