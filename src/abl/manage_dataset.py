@@ -40,12 +40,13 @@ def load_and_process_dataset():
     #X_init = df_1.iloc[:, 1: 2].map(eval).map(filter_id_lst)
     X_init = df_1.iloc[:,1].apply(eval).apply(filter_id_lst)
     #y_init = df_1.iloc[:, 102:].map(lambda x:eval(x)[0]).map(filter_id)
-    y_init = df_1.iloc[:, 102:104].map(lambda x:eval(x)[0]).map(filter_id)
+    y_init = df_1.iloc[:, 102:].map(lambda x:eval(x)[0]).map(filter_id)
 
     #X, y = X_init.to_numpy(), y_init.to_numpy()
     X = np.array(list(X_init))
     y = y_init.to_numpy()
-    y = y[:,0]
+    y = y[:,0] # 0-19
+    #print(y)
     #y = np.array([set(row) for row in y])
     #print('X_init=\n', X)
     #print('y_init=\n', y)
