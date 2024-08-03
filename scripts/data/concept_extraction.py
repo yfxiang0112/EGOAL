@@ -4,15 +4,24 @@ import re
 
 def GOID_regu(s):
     res = []
-    for goid in s:
+    pattern = r'GO:* *_*\d+'
+    for goid in re.findall(pattern, s):
+    #for goid in s:
         d = re.findall(r'\d+', goid)
-        d = 'GO:'+d[0]
-        res.append(d)
-    res.sort()
+        d = 'GO_'+d[0]
+        if d not in res:
+            res.append(d)
+    #res.sort()
+    while len(res) < 10:
+        res.append('0')
+    if len(res) > 10:
+        res = res[:10]
+    assert(len(res) == 10)
+
     return res
 
 
-gsm_df = pd.read_csv('dataset/GSE_concepts.csv')
+gsm_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
 concepts = []
 #gsm_df.drop(['Unnamed: 0', 'Unnamed: 0.1'], axis=1, inplace=True)
 #gsm_df.rename(columns={'description':'DESCRIP', 'openai_ans':'OPENAI_ANS', 'concepts':'CONCEPTS'}, inplace=True)
@@ -40,18 +49,19 @@ for d in tqdm(gsm_df['description'], 'test'):
     pass
 '''
 
-for ans in gsm_df['OPENAI_ANS'] :
-    pattern = r'GO:* *_*\d+'
-    res = re.findall(pattern, ans) 
-    res = set(res)
-    #print(res)
+#for ans in gsm_df['OPENAI_ANS'] :
+#    pattern = r'GO:* *_*\d+'
+#    res = re.findall(pattern, ans) 
+#    res = set(res)
+#    #print(res)
+#
+#    concepts.append(res)
 
-    concepts.append(res)
-
-gsm_df['CONCEPTS'] = pd.Series(concepts).apply(GOID_regu)
+gsm_df['CONCEPTS'] = gsm_df['OPENAI_ANS'].apply(GOID_regu)
+#gsm_df['CONCEPTS'] = pd.Series(concepts).apply(GOID_regu)
 print(gsm_df['CONCEPTS'])
 
 gsm_df.set_index('SAMPLES', inplace=True)
 gsm_df.sort_index(inplace=True)
 print(gsm_df)
-gsm_df.to_csv('dataset/GSE_concepts.csv')
+gsm_df.to_csv('dataset/concepts/GSE_concepts.csv')

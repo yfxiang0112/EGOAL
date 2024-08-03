@@ -1,0 +1,692 @@
+GSE220284_group1,GSE142643_group1,GSE142643_group2,GSE142643_group3,GSE142642_group1,GSE142641_group1,GSE102264_group1,GSE102264_group2,GSE102264_group3,GSE97220_group1,GSE50443_group1,GSE42479_group1,GSE44689_group1,GSE31053_group1,GSE39462_group1,GSE39462_group2,GSE39462_group3,GSE39462_group4,GSE39462_group5,GSE39462_group6,GSE39462_group7,GSE39462_group8,GSE39462_group9,GSE39462_group10,GSE39462_group11,GSE39462_group12,GSE39462_group13,GSE39462_group14,GSE39462_group15,GSE39462_group16,GSE39462_group17,GSE39462_group18,GSE39462_group19,GSE39462_group20,GSE39462_group21,GSE39462_group22,GSE39462_group23,GSE39462_group24,GSE39462_group25,GSE39462_group26,GSE39462_group27,GSE39462_group28,GSE39462_group29,GSE39462_group30,GSE39462_group31,GSE39462_group32,GSE39462_group33,GSE39462_group34,GSE39462_group35,GSE25821_group1,GSE25821_group2,GSE25821_group3,GSE25821_group4,GSE25821_group5,GSE25821_group6,GSE25821_group7,GSE25821_group8,GSE25821_group9,GSE25821_group10,GSE25821_group11,GSE25821_group12,GSE25821_group13,GSE25821_group14,GSE25821_group15,GSE25821_group16,GSE25821_group17,GSE25821_group18,GSE25821_group19,GSE25821_group20,GSE25821_group21,GSE25821_group22,GSE25821_group23,GSE25821_group24,GSE25821_group25,GSE25821_group26,GSE25821_group27,GSE25821_group28,GSE25821_group29,GSE25821_group30,GSE25821_group31,GSE25821_group32,GSE25821_group33,GSE25821_group34,GSE25821_group35,GSE25821_group36,GSE25821_group37,GSE25821_group38,GSE25821_group39,GSE25821_group40,GSE25821_group41,GSE31535_group1,GSE31535_group2,GSE20379_group1,GSE20379_group2,GSE20379_group3,GSE20379_group4,GSE20379_group5,GSE26935_group1,GSE24994_group1,GSE25865_group1,GSE25865_group2,GSE25865_group3,GSE20343_group1,GSE20343_group2,GSE21044_group1,GSE15334_group1,GSE15334_group2,GSE15334_group3,GSE15334_group4,GSE15334_group5,GSE15334_group6,GSE15334_group7,GSE15334_group8,GSE15334_group9,GSE15334_group10,GSE15334_group11,GSE15334_group12,GSE15657_group1,GSE15657_group2,GSE7973_group1,GSE4489_group1,GSE4489_group2,GSE4489_group3,GSE4489_group4,GSE4489_group5,GSE4489_group6,GSE4489_group7,GSE4489_group8,GSE4489_group9,GSE4489_group10,GSE4489_group11,GSE4489_group12,GSE3876_group1,GSE3876_group2,GSE3876_group3,GSE3876_group4,GSE3876_group5,GSE3876_group6,GSE3876_group7,GSE3876_group8,GSE3876_group9,GSE3876_group10,GSE3876_group11,GSE3876_group12,GSE3876_group13,GSE3876_group14,GSE3876_group15,GSE3876_group16,GSE3876_group17,GSE3876_group18
+"strain: MR-1(pBBR-glk-galP)
+treatment: grown in the absence of electron acceptors
+The cell suspension was centrifuged at 13,000 rpm for 1 min to precipitate the cells.
+MR-1(pBBR-glk-galP) was grown in GMM supplemented with fumarate (40 mM) as an electron acceptor, and cells were harvested at the logarithmic growth phase (OD600 0.2–0.3). These cells were incubated for 3 h in the presence (the fumarate-respiring condition) or absence (the fermentative condition) of fumarate.
+","strain: AFP-expressing MR-1
+genotype: WT
+growth protocol: grown under an electrolyte-flow condition
+Cells associated with the WE were suspended in LMM with vigorous pipetting. After vortex-mixing, the cell suspension was centrifuged at 15,000 g for 5 min to precipitate the cells.
+An electrochemical flow cell (EFC) was filled with lactate minimal medium (LMM) containing gentamicin (Gm) and was purged with pure nitrogen gas (99.999%) for anaerobic operation. After inoculation with AFP-expressing MR-1 pregrown in LB medium supplemented with Gm, the electrodes were connected to a potentiostat (VMP3; Bio-Logic Science Instruments, Seyssinet-Pariset, France), and the potential of the working electrode (WE) was poised at +0.2 V (versus the standard hydrogen electrode). After inoculation, medium (electrolyte) was not supplied to the EFC for approximately 1 h, to allow MR-1 cells to attach to the WE. For operation under the electrolyte-flow conditions, LMM containing Gm was supplied to the EFC at a constant linear velocity of 5.5 mm min-1. The EFC was operated for 48 h (for the flow condition) or 78 h (for the non-flow condition) until the WE-associated cells reached the early stationary growth phase.
+","strain: AFP-expressing MR-1
+genotype: WT
+growth protocol: grown under an electrolyte-flow condition
+Cells associated with the WE were suspended in LMM with vigorous pipetting. After vortex-mixing, the cell suspension was centrifuged at 15,000 g for 5 min to precipitate the cells.
+An electrochemical flow cell (EFC) was filled with lactate minimal medium (LMM) containing gentamicin (Gm) and was purged with pure nitrogen gas (99.999%) for anaerobic operation. After inoculation with AFP-expressing MR-1 or SO_3096 pregrown in LB medium supplemented with Gm, the electrodes were connected to a potentiostat (VMP3; Bio-Logic Science Instruments, Seyssinet-Pariset, France), and the potential of the working electrode (WE) was poised at +0.2 V (versus the standard hydrogen electrode). After inoculation, medium (electrolyte) was not supplied to the EFC for approximately 1 h, to allow S. oneidensis cells to attach to the WE. After inoculation, LMM containing Gm was supplied to the EFC at a constant linear velocity of 5.5 mm min-1. The EFC was operated for 48 h until the WE-associated cells reached the early stationary growth phase.
+","strain: AFP-expressing ∆SO_3096
+genotype: deltaSO
+growth protocol: grown under an electrolyte-flow condition
+Cells associated with the WE were suspended in LMM with vigorous pipetting. After vortex-mixing, the cell suspension was centrifuged at 15,000 g for 5 min to precipitate the cells.
+An electrochemical flow cell (EFC) was filled with lactate minimal medium (LMM) containing gentamicin (Gm) and was purged with pure nitrogen gas (99.999%) for anaerobic operation. After inoculation with AFP-expressing MR-1 or SO_3096 pregrown in LB medium supplemented with Gm, the electrodes were connected to a potentiostat (VMP3; Bio-Logic Science Instruments, Seyssinet-Pariset, France), and the potential of the working electrode (WE) was poised at +0.2 V (versus the standard hydrogen electrode). After inoculation, medium (electrolyte) was not supplied to the EFC for approximately 1 h, to allow S. oneidensis cells to attach to the WE. After inoculation, LMM containing Gm was supplied to the EFC at a constant linear velocity of 5.5 mm min-1. The EFC was operated for 48 h until the WE-associated cells reached the early stationary growth phase.
+","strain: AFP-expressing ∆SO_3096
+genotype: deltaSO
+growth protocol: grown under an electrolyte-flow condition
+Cells associated with the WE were suspended in LMM with vigorous pipetting. After vortex-mixing, the cell suspension was centrifuged at 15,000 g for 5 min to precipitate the cells.
+An electrochemical flow cell (EFC) was filled with lactate minimal medium (LMM) containing gentamicin (Gm) and was purged with pure nitrogen gas (99.999%) for anaerobic operation. After inoculation with AFP-expressing MR-1 or SO_3096 pregrown in LB medium supplemented with Gm, the electrodes were connected to a potentiostat (VMP3; Bio-Logic Science Instruments, Seyssinet-Pariset, France), and the potential of the working electrode (WE) was poised at +0.2 V (versus the standard hydrogen electrode). After inoculation, medium (electrolyte) was not supplied to the EFC for approximately 1 h, to allow S. oneidensis cells to attach to the WE. After inoculation, LMM containing Gm was supplied to the EFC at a constant linear velocity of 5.5 mm min-1. The EFC was operated for 48 h until the WE-associated cells reached the early stationary growth phase.
+","strain: AFP-expressing MR-1
+genotype: WT
+growth protocol: grown under an electrolyte-flow condition
+Cells associated with the WE were suspended in LMM with vigorous pipetting. After vortex-mixing, the cell suspension was centrifuged at 15,000 g for 5 min to precipitate the cells.
+An electrochemical flow cell (EFC) was filled with lactate minimal medium (LMM) containing gentamicin (Gm) and was purged with pure nitrogen gas (99.999%) for anaerobic operation. After inoculation with AFP-expressing MR-1 pregrown in LB medium supplemented with Gm, the electrodes were connected to a potentiostat (VMP3; Bio-Logic Science Instruments, Seyssinet-Pariset, France), and the potential of the working electrode (WE) was poised at +0.2 V (versus the standard hydrogen electrode). After inoculation, medium (electrolyte) was not supplied to the EFC for approximately 1 h, to allow MR-1 cells to attach to the WE. For operation under the electrolyte-flow conditions, LMM containing Gm was supplied to the EFC at a constant linear velocity of 5.5 mm min-1. The EFC was operated for 48 h (for the flow condition) or 78 h (for the non-flow condition) until the WE-associated cells reached the early stationary growth phase.
+","strain: wild-type MR-1
+potential: LP
+After further cultivation in the ECs for 2 h, the bacterial cells attached to the working electrode were collected and subjected to RNA extraction.
+A single-chambered EC (electrochemical cell) was used for analyzing transcriptomes of WT and ∆arcS strains. The working electrode was poised at +0.2 V until the electric current became stable (for approximately 15 h), and then the potential was changed to +0.5 V (high potential; HP) or –0.1 V (low potential; LP).
+","strain: delta_arcS
+potential: HP
+After further cultivation in the ECs for 2 h, the bacterial cells attached to the working electrode were collected and subjected to RNA extraction.
+A single-chambered EC (electrochemical cell) was used for analyzing transcriptomes of WT and ∆arcS strains. The working electrode was poised at +0.2 V until the electric current became stable (for approximately 15 h), and then the potential was changed to +0.5 V (high potential; HP) or –0.1 V (low potential; LP).
+","strain: delta_arcS
+potential: LP
+After further cultivation in the ECs for 2 h, the bacterial cells attached to the working electrode were collected and subjected to RNA extraction.
+A single-chambered EC (electrochemical cell) was used for analyzing transcriptomes of WT and ∆arcS strains. The working electrode was poised at +0.2 V until the electric current became stable (for approximately 15 h), and then the potential was changed to +0.5 V (high potential; HP) or –0.1 V (low potential; LP).
+","strain: delta cpdA
+Cells were harvested by centrifugation at 7,000 g for 10 min and stored at -80°C
+Shewanella cells were aerobically grown in lactate minimal medium until logrithmic growth phase.
+","strain: EC-2
+Cells were harvested by centrifugation at 7,000 g for 10 min and stored at -80°C
+Shewanella cells were grown anaerobically in LMM (containing 15 mM lactate) supplemented with 20 mM fumarate as the electron acceptor, and cells were harvested at early stationary growth phase (optical density at 600 nm of 0.16-0.18).
+","strain: Wild type
+time: 5 day
+A library of mutants were inoculated
+Grow in M1 for 24 h and then transfer 1% to fresh M1 media for 24 h. Repeat 5 times
+","genotype/variation: del_hnoC
+n.a.
+Growth in MM mineral medium, 29ºC, anaerobic, stationary, in 12-well microtiter plates, 3mL cultures, 15hrs
+","genotype: arcA mutant
+treatment: H2O2
+200uM H2O2 (final concentration) was added to cultures
+Grow in LB to Mid-log phase
+","carbon source: Tween-20
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Pyruvate
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Inosine
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: CAS
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Gelatin
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Acetate
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: fumarate
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: N-acetylglucosamine
+electron acceptor: fumarate
+stressor: none
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: copper_chloride
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: nalidixic
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: sodium_nitrite
+growth_phase: Mid-exponential
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 20 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 60 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 16 hr
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 17 hr
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 20 hr
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 25 hr
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: D,L-Lactate
+electron acceptor: oxygen
+stressor: none
+growth_phase: 27 hr
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=0.1 (lag)
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=0.22
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=0.413
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=0.76
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=1.168
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=1.62
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: OD=2.0
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 20 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 60 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 120 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 150 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 250 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 360 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","carbon source: Luria-Bertani broth
+electron acceptor: oxygen
+stressor: none
+growth_phase: 540 minutes
+Varying the carbon source, or the electron acceptor, or adding inhibitory compounds, or growing in LB instead of a defined medium.
+We collected expression data for 15 conditions: aerobic growth in Luria-Bertani broth; aerobic growth in defined minimal media with 8 different carbon sources (20 mM D,L-lactate, 20 mM pyruvate, 10 mM acetate, 20 mM N-acetylglucosamine (NAG), 5 mg/mL mixed amino acids (CAS), 1 mg/mL gelatin, 0.5% Tween-20, or 7.5 mM inosine); aerobic growth in defined lactate medium with four different stresses (70 micromolar copper(II) chloride; 1 mM sodium nitrite; 1.5 micromolar nalidixic acid, an inhibitor of DNA gyrase; or acid stress at pH 6); and anaerobic growth in a defined medium with 20 mM D,L-lactate or 20 mM NAG as the carbon source and 30 mM fumarate as the electron acceptor. Our defined medium contained 30 mM PIPES buffer, salts (1.5 g/L NH4Cl, 0.1 g/L KCl, 1.75 g/L NaCl, 0.61 g/L MgCl2.6H20, 0.6 g/L NaH2PO4), Wolfe's vitamins, and Wolfe's minerals, at pH 7. For the stress experiments, the carbon source was 20 mM D,L-lactate. For growth at pH 6, we used 30 mM MES buffer instead of PIPES. All samples were grown at 30C with shaking at 200 rpm. For three conditions, we also measured gene expression during batch growth. We collected cells at varying times after inoculation of batch aerobic growth at OD600 of 0.1 on minimal lactate medium, minimal NAG medium, or LB.
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 16hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 18hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 20hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 22hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 24hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 26hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 27hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 28hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 29hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 30hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 31hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 32hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 33hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 34hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 35hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 36hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 48hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: lactate minimal medium
+growth time: 50hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 1.5hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 2hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 2.5hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 3hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 3.5hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 4hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 4.5hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 5hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 5.5hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 6hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 7hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 9hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 12hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 15hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 18hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 21hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 24hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 28hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 30hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 32hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 47hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 50hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","strain: Wild type strain
+growth medium: nutritionally rich LB medium
+growth time: 55hr
+Culture samples different time intevals were centrifuged at 10,000 x g for 10 min (4oC), treated with RNA protect solution (Qiagen) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC at close to 20% dissolved O2 in Bioflo110 bioreactor (New Brunswick Scientific, Edison, NJ) containing 1.2 L of growth medium (pH 7.2). Lactate minimal medium was supplemented with 50 mM D,L-lactate
+","growth condition: biofilm on graphite disk anode  control
+S. oneidensis MR-1 was grown aerobically using a medium containing 30 g/L Trypticase Soy Broth at 30°C. Cells in early stationary growth phase (optical density of 1.5-1.6 at 600nm) were washed two times then injected into the chamber of the MEC for current production. Trypticase Soy Broth medium with 30 mM sodium lactate as electron donor was used in MECS. Phosphate buffer (100mM) was used to maintain the solution pH 7 and solution conductivity at 15 mS/cm
+","growth condition: biofilm on graphite disk anode control
+S. oneidensis MR-1 was grown aerobically using a medium containing 30 g/L Trypticase Soy Broth at 30°C. Cells in early stationary growth phase (optical density of 1.5-1.6 at 600nm) were washed two times then injected into the chamber of the MEC for current production. Trypticase Soy Broth medium with 30 mM sodium lactate as electron donor was used in MECS. Phosphate buffer (100mM) was used to maintain the solution pH 7 and solution conductivity at 15 mS/cm
+","genotype: wild type
+culture type: contiuous BES anode culture in modified M4 medium with glucose as carbon source and homolactic fermenter Lactococcus lactis LM 0230
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown anaerobically at 30°C in a contiuous bioelectrochemical system (BES) with defined medium (modified M4) and 10 mM glucose. The BES anode was the only electron acceptor. S. oneidensis grew as anode biofilm, while planktonic L.lactis converted glucose to lactate.
+","genotype: wild type
+culture type: 10 mL batch culture (20 hours) in defined medium (modified M4) with 20 mM lactate, 50 mM Fe(III)citrate, no glycero-phosphate in medium
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown anaerobically at 30°C for 20 hours with defined medium (modified M4), 20 mM lactate and 50 mM Fe(III)citrate; no glycero-phosphate in medium.
+","genotype: wild type
+culture type: 10 mL batch culture (20 hours) in defined medium (modified M4) with 20 mM lactate, 50 mM Fe(III)citrate; 5 g/L glycero-phosphate in medium
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown anaerobically at 30°C for 20 hours with defined medium (modified M4), 20 mM lactate and 50 mM Fe(III)citrate; 5 g/L glycero-phosphate in medium.
+","genotype: wild type
+culture type: 10 mL batch culture (20 hours) in defined medium (modified M4) with 20 mM lactate, 50 mM Fe(III)citrate; 5 g/L glycero-phosphate in medium.
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown anaerobically at 30°C for 20 hours with defined medium (modified M4), 20 mM lactate and 50 mM Fe(III)citrate; 5 g/L glycero-phosphate in medium.
+","genotype: wild type
+culture type: 10 mL batch culture (20 hours) in defined medium (modified M4) with 20 mM lactate, aerobic; 5 g/L glycero-phosphate in medium
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown aerobically at 30°C for 20 hours with defined medium (modified M4), 20 mM lactate.
+","genotype: etrA deletion strain
+Cultures were incubated at 30ºC without shaking.
+Cultures were grown in 250 ml serum bottles containing 100 ml of HEPES minimal medium prepared anaerobically and supplemented with 2 mM KNO3 and 20 mM lactate.
+","growth stage: logarithmic aerobic growing cells
+genotype: uvrY null
+no treatment
+cells were grown aerobically in LB to stationary phase (OD600nm=4.0)
+","surface: glass beads
+time period of attachment: 0.25 h
+no treatment
+Cells were grown on beads in a hydrodynamic cell harvesting sytem consisting of syringe columns filled with glass or oxidized iron beads (5 mm diameter), providing a large surface without creating void space. Medium flow is maintained by a peristaltic pump at a medium turnover rate of 6-8 min. This system was shown to maintain aerobic conditions (> 5 mg O2/ml) for longer than 4 h.
+","surface: glass beads
+time period of attachment: 1 h
+no treatment
+Cells were grown on beads in a hydrodynamic cell harvesting sytem consisting of syringe columns filled with glass or oxidized iron beads (5 mm diameter), providing a large surface without creating void space. Medium flow is maintained by a peristaltic pump at a medium turnover rate of 6-8 min. This system was shown to maintain aerobic conditions (> 5 mg O2/ml) for longer than 4 h.
+","surface: oxidized iron beads
+time period of attachment: 0.25 h
+no treatment
+Cells were grown on beads in a hydrodynamic cell harvesting sytem consisting of syringe columns filled with glass or oxidized iron beads (5 mm diameter), providing a large surface without creating void space. Medium flow is maintained by a peristaltic pump at a medium turnover rate of 6-8 min. This system was shown to maintain aerobic conditions (> 5 mg O2/ml) for longer than 4 h.
+","genotype: wild type
+culture type: contiuous BES anode culture in modified M4 medium
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown anaerobically at 30°C in a contiuous bioelectrochemical system (BES) with defined medium (modified M4) and 20 mM lactate. The BES anode was the only electron acceptor.
+","genotype: wild type
+culture type: contiuous BES anode culture in modified M4 medium with glucose as carbon source and homolactic fermenter Lactococcus lactis LM 0230
+BES carbon paper electrodes from continuous BES operation were dipped in Qiagen RNA-protect and frozen at -80°C until total RNA extraction.
+Cells were grown anaerobically at 30°C in a contiuous bioelectrochemical system (BES) with defined medium (modified M4) and 10 mM glucose. The BES anode was the only electron acceptor. S. oneidensis grew as anode biofilm, while planktonic L.lactis converted glucose to lactate.
+","cell type: logarithmic aerobic growing cells
+genotype: delta-arcS
+no treatment
+cells were grown aerobically in LB to logarithmic phase (OD600nm=0.6)
+","strain: MR-1
+agent: iron chelator
+time: 1 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: iron chelator
+time: 5 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: iron chelator
+time: 10 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: iron chelator
+time: 20 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: iron chelator
+time: 40 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: iron chelator
+time: 60 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: ferrous sulfate
+time: 1 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: ferrous sulfate
+time: 5 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: ferrous sulfate
+time: 10 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: ferrous sulfate
+time: 20 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: ferrous sulfate
+time: 40 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","strain: MR-1
+agent: ferrous sulfate
+time: 60 minutes
+strain: MR-1
+MR-1 were grown in 100 ml LB medium in 500 ml shake flasks with vigorous shaking at 250–300 rpm
+","genotype: Δcrp deletion mutant
+50-ml aliquots from oxygen-limited chemostats were centrifuged at 10,000 x g for 5 min (4oC) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC under O2-limited conditions in chemostats using 6-l Bioflow 3000 (New Brunswick Scientific, Edison, NJ) bioreactors containing 3 l of minimal medium (pH 7.0) supplemented with 90 mM D,L-lactate
+","genotype: ΔcyaC deletion mutant
+50-ml aliquots from oxygen-limited chemostats were centrifuged at 10,000 x g for 5 min (4oC) and flash frozen in liquid nitrogen prior to total RNA extraction.
+Cells were at 30oC under O2-limited conditions in chemostats using 6-l Bioflow 3000 (New Brunswick Scientific, Edison, NJ) bioreactors containing 3 l of minimal medium (pH 7.0) supplemented with 90 mM D,L-lactate
+","ArcA mutant grown anaerobically to exponential phase in M1 medium
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 8C for 40min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 8C for 80min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 8C for 40min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 8C for 160min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 5min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 10min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 20min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 40min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 80min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 160min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 15C for 80min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (sample)
+Grown to mid-log phase then coldshock to 8C for 80min.
+Grown in LB medium to ~0.6 of OD600
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 5 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 5 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 5 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 5 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 5 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","stran: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 20 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strai: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 60 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 60 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 60 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 60 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (sample)
+Irradiated with 40Gy of gamma ray on ice, then return to shaker for 60 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+","strain: MR-1 (control)
+Sit on ice for the same time as the IR-irradiated sample, then return to shaker for 60 min. (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+
+Grown in Davis medium to 0.2 of OD600 (J. Bacteriol. vol 188, No. 3. Transcriptome analysis applied to survival of shewanella oneidensis MR-1 exposed to ionizing radiation).
+"

@@ -17,8 +17,8 @@ def id_regu(s):
     return res[0]
 
 
-for f in os.listdir('dataset/matrix'):
-    df = pd.read_csv('dataset/matrix/'+f)
+for f in os.listdir('dataset/raw/matrix'):
+    df = pd.read_csv('dataset/raw/matrix/'+f)
 
     df = df.drop('Unnamed: 0', axis=1)
     df['GENE'] = df['GENE'].apply(id_regu)
@@ -35,7 +35,7 @@ for f in os.listdir('dataset/matrix'):
 df = pd.concat(matrix, axis=1)
 df = df.transpose()
 
-con_df = pd.read_csv('dataset/GSE_concepts.csv')
+con_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
 con_df.set_index('SAMPLES', inplace=True)
 print(con_df)
 
@@ -48,4 +48,4 @@ con_df.drop_duplicates(inplace=True)
 df.insert(0, 'CONCEPTS', con_df['CONCEPTS'], allow_duplicates=True)
 
 print(df)
-df.to_csv('dataset/dataset.csv')
+df.to_csv('dataset/raw/dataset.csv')

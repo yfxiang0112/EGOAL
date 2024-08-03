@@ -38,7 +38,7 @@ models = [
 ]
 
 def load_data():
-    df = pd.read_csv("processed_dataset_with_10_components.csv", encoding="utf-8")
+    df = pd.read_csv("dataset/pca/processed_dataset_with_10_components.csv", encoding="utf-8")
 
     # Print the dataframe to see the data structure
     print(f"Loading Dataframe:\n{df}\n")

@@ -191,7 +191,7 @@ if __name__ == '__main__':
 
     prdcLstPth         = 'rules/predicates.csv'
     exclPrdcPth     = 'rules/predicates_exclude.csv'
-    conSpecPth      = 'dataset/concept_domain.csv'
+    conSpecPth      = 'dataset/concepts/concept_domain.csv'
     #filteredRdfPth  = './rules/KG_RDF_filter.csv'
     subGraphPth     = 'rules/KG_RDF_subgraph.csv'
     rulePth         = 'rules/ruleMined.csv'
