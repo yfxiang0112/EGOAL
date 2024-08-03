@@ -23,9 +23,9 @@ def consitency(data_example, candidates, candidate_idxs, reasoning_results):
 
 def main():
     parser = argparse.ArgumentParser(description="GO example")
-    # Add argument loops of the test, here is 10
+    # Add argument loops of the test, here is 3
     parser.add_argument(
-        "--loops", type=int, default=1, help="number of loop iterations (default : 3)"
+        "--loops", type=int, default=3, help="number of loop iterations (default : 3)"
     )
     # TODO() Add other argument we need:
     args = parser.parse_args()
@@ -46,6 +46,8 @@ def main():
     label_data = tab_data_to_tuple(X_label, y_label)
     test_data = tab_data_to_tuple(X_test, y_test)
     train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
+    # print(type(label_data), type(test_data), type(train_data))
+    # assert(0)
 
     # -- Building the Learning Part ---------------------
     print_log("Building the Learning Part.", logger="current")
@@ -90,6 +92,9 @@ def main():
     #for arr in prob:
     #    print(arr.shape, arr[0].shape)
     print_log("------- Test the initial model -----------", logger="current")
+    # print(type(test_data))
+    # print(test_data)
+    # test_data = np.array(list(test_data))
     bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(

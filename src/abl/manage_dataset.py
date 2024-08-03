@@ -32,11 +32,11 @@ def load_and_process_dataset():
     # Read all datasets
     #df_1 = pd.read_csv('dataset/one-hot/one_hot_pro_y.csv')
     df_1 = pd.read_csv('dataset/importance/processed_dataset_with_importance.csv')
-    print(df_1)
+    # print(df_1)
 
     # Change into numpy
     # Extract the features
-    print(df_1.iloc[:, 1:2])
+    # print(df_1.iloc[:, 1:2])
     #X_init = df_1.iloc[:, 1: 2].map(eval).map(filter_id_lst)
     X_init = df_1.iloc[:,1].apply(eval).apply(filter_id_lst)
     #y_init = df_1.iloc[:, 102:].map(lambda x:eval(x)[0]).map(filter_id)
@@ -72,9 +72,9 @@ def split_dataset(X, y, test_size=0.3):
         X_test: test features with label, numpy array 
         y_test: test labels with label, numpy array 
     '''
-    #X = X.astype(np.int8)
-    #y = y.astype(np.int8)
-
+    # X = X.astype(np.int8)
+    # y = y.astype(np.int8)
+    # print(type(X),type(y)) <class 'numpy.ndarray'> <class 'numpy.ndarray'>
     label_indices, unlabel_indices, test_indices = [], [], []
     for class_label in np.unique(y):
         idxs = np.where(y == class_label)[0]

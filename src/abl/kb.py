@@ -79,6 +79,7 @@ class GO(KBBase):
             if c not in concept_expand:
                 violated += 1
 
+        # print("violated", violated)
         return violated
 
         # concept_expand = concept_new
