@@ -15,22 +15,17 @@ from kb import GO
 
 # From example Zoo, maybe help.
 def consitency(data_example, candidates, candidate_idxs, reasoning_results):
-    # TODO()
-    return 
-'''
-def consitency(data_example, candidates, candidate_idxs, reasoning_results):
     pred_prob = data_example.pred_prob
     model_scores = avg_confidence_dist(pred_prob, candidate_idxs)
     rule_scores = np.array(reasoning_results)
     scores = model_scores + rule_scores
     return scores
-'''
 
 def main():
     parser = argparse.ArgumentParser(description="GO example")
-    # Add argument loops of the test, here is 10
+    # Add argument loops of the test, here is 3
     parser.add_argument(
-        "--loops", type=int, default=10, help="number of loop iterations (default : 3)"
+        "--loops", type=int, default=3, help="number of loop iterations (default : 3)"
     )
     # TODO() Add other argument we need:
     args = parser.parse_args()
@@ -47,12 +42,12 @@ def main():
 
     X, y = load_and_process_dataset()
     # TODO() need to complete the function
-    # X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
-    # label_data = tab_data_to_tuple(X_label, y_label)
-    # test_data = tab_data_to_tuple(X_test, y_test)
-    # train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
-
-
+    X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
+    label_data = tab_data_to_tuple(X_label, y_label)
+    test_data = tab_data_to_tuple(X_test, y_test)
+    train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
+    # print(type(label_data), type(test_data), type(train_data))
+    # assert(0)
 
     # -- Building the Learning Part ---------------------
     print_log("Building the Learning Part.", logger="current")
@@ -72,7 +67,7 @@ def main():
     kb = GO(rule_path, annotation_path, reasoner_depth)
     
     # Create reasoner(need to complete the consistency function)
-    reasoner = Reasoner(kb, dist_func=consitency)
+    reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)
 
 
 
@@ -88,19 +83,28 @@ def main():
     # Performing training and testing
     # Need to complete
     print_log("------- Use labeled data to pretrain the model -----------", logger="current")
-    # base_model.fit(X_label, y_label)
+    #print('\n\n', X_label, '\n', y_label)
+    base_model.fit(X_label, y_label)
+    #res = base_model.predict(X_unlabel)
+    #print(res.shape)
+    #prob = base_model.predict_proba(X_unlabel)
+    #print(prob, type(prob))
+    #for arr in prob:
+    #    print(arr.shape, arr[0].shape)
     print_log("------- Test the initial model -----------", logger="current")
-    # bridge.test(test_data)
+    # print(type(test_data))
+    # print(test_data)
+    # test_data = np.array(list(test_data))
+    bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
-    # bridge.train(
-    #    train_data=train_data,
-    #    label_data=label_data,
-    #    loops=args.loops,
-    #    segment_size=len(X_unlabel),
-    #    save_dir=weights_dir,
-    # )
+    bridge.train(
+        train_data=train_data,
+        label_data=label_data,
+        loops=args.loops,
+        segment_size=len(X_unlabel),
+    )
     print_log("------- Test the final model -----------", logger="current")
-    # bridge.test(test_data)
+    bridge.test(test_data)
 
 if __name__ == "__main__":
     main()

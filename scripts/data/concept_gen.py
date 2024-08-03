@@ -11,13 +11,13 @@ gsm_names = []
 descriptions = []
 openai_ans = []
 
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
+#os.environ["http_proxy"] = "http://127.0.0.1:7890"
+#os.environ["https_proxy"] = "http://127.0.0.1:7890"
 
 mdl = 'gpt-3.5-turbo'
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
-for accession in tqdm(accessions['accession'], 'Parsing GSE file:'):
+for accession in tqdm(accessions['accession'], 'Parsing GSE file'):
 #for accession in accessions['accession']:
     
     gse = GEOparse.get_GEO(geo=accession, destdir="dataset/raw/GSE", silent=True)
@@ -40,31 +40,31 @@ for accession in tqdm(accessions['accession'], 'Parsing GSE file:'):
                 description = description + s + '\n'
         descriptions.append(description)
 
+    #break
+
 gsm_df['SAMPLES'] = pd.Series(gsm_names)
 gsm_df['DESCRIP'] = pd.Series(descriptions)
 print(gsm_df)
 
 cnt = 0
 
-for d in tqdm(gsm_df['description'], 'Translating GO concept with OpenAI:'):
-#for d in gsm_df['description']:
+for d in tqdm(gsm_df['DESCRIP'], 'Extracting GO concept with OpenAI'):
+#for d in gsm_df['DESCRIP']:
     completion = client.chat.completions.create(
             model=mdl,
             messages=[
                 {'role': 'system', 'content': 'You are a helpful assistant.'},
-                {'role': 'user', 'content': "Please summmerise conditions of the experiment from the following descriptions, and translate it to concept names in gene ontology (https://purl.obolibrary.org/obo/go.owl) and tell me their gene ontology ID:" + d}
+                {'role': 'user', 'content': "Please summmerise conditions of the experiment from the following descriptions, and select 10 terms from gene ontology (https://purl.obolibrary.org/obo/go.owl) that can best describe the experiment conditions, then tell me their gene ontology ID. You should format the GO term as 'GO_xxxx - name'.\n" + d}
             ]
     )
 
     ans = completion.choices[0].message.content
     openai_ans.append(ans)
 
-    '''
-    print(ans)
-    if(cnt > 5):
-        break
-    cnt += 1
-    '''
+    #print(ans)
+    #if(cnt >= 4):
+    #    break
+    #cnt += 1
     
 gsm_df['OPENAI_ANS'] = pd.Series(openai_ans)
 

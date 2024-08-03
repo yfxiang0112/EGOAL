@@ -35,9 +35,10 @@ for f in os.listdir('dataset/raw/matrix'):
 df = pd.concat(matrix, axis=1)
 df = df.transpose()
 
-df.dropna(axis=1, inplace=True)
+nan_ratio = df.isna().mean()
+df.drop(nan_ratio[nan_ratio > 0.3].index, axis=1, inplace=True)
 
-con_df = pd.read_csv('dataset/raw/GSE_concepts.csv')
+con_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
 con_df.set_index('SAMPLES', inplace=True)
 print(con_df)
 
