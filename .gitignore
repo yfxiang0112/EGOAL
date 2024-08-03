@@ -1,5 +1,6 @@
-dataset/GSE
+dataset/raw/GSE
 dataset/misc
+dataset/embedding
 tools/*
 refs/*
 dataset/embeddings_preprocess_modified.txt
