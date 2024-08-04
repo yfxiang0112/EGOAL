@@ -100,9 +100,10 @@ def split_dataset(X, y, test_size=0.3):
     # print(X_unlabel)
     X_test, y_test = X[test_indices], y[test_indices]
     #print('test', X_test, y_test)
+    #print(y_test)
     return X_label, y_label, X_unlabel, y_unlabel, X_test, y_test
 
-
+# X, y = load_and_process_dataset()
 # if __name__ == '__main__':
     # X, y = load_and_process_dataset()
     # print(X)

@@ -5,7 +5,7 @@ import pandas as pd
 class GO(KBBase):
     def __init__(self, rule_path, annotation_path, max_depth):
         # here the 0 is not the categories of the GO, need to change it
-        super().__init__(pseudo_label_list=list(range(1,4808)), use_cache=False)
+        super().__init__(pseudo_label_list=list(range(0,4807)), use_cache=False)
 
         self.solver = Solver()
 
