@@ -31,7 +31,7 @@ def main():
     # TODO() Add other argument we need:
     args = parser.parse_args()
     #TODO: added to argparse
-    rule_path = 'rules/ruleRem.csv'
+    rule_path = 'rules/ruleConFree.csv'
     annotation_path = 'rules/goa_mapping.csv'
     reasoner_depth = 5
 

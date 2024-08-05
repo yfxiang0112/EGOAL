@@ -11,7 +11,7 @@ class GO(KBBase):
         self.solver = Solver()
 
         ''' Load the information of GO kb '''
-        rule_df = pd.read_csv(rule_path, header=None)
+        rule_df = pd.read_csv(rule_path)
         self.annotation = pd.read_csv(annotation_path, header=None)
         self.concept_dom = set()
 
@@ -20,7 +20,8 @@ class GO(KBBase):
 
 
         for idx, row in rule_df.iterrows():
-            rule = eval(row[0])
+            #rule = eval(row[0])
+            rule = row
 
             self.concept_dom.add(rule[1])
             self.concept_dom.add(rule[3])

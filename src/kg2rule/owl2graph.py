@@ -192,10 +192,10 @@ class KG2Rule():
                 if i1 == i2:
                     continue
 
-                if type(rule_1)==str:
-                    rule_1 = eval(rule_1)
-                if type(rule_2)==str:
-                    rule_2 = eval(rule_2)
+                #if type(rule_1)==str:
+                #    rule_1 = eval(rule_1)
+                #if type(rule_2)==str:
+                #    rule_2 = eval(rule_2)
 
                 if rule_1[1] == rule_2[1] and\
                         rule_1[3] == rule_2[3]:
@@ -211,7 +211,7 @@ class KG2Rule():
         #print(contra_idx)
 
         for r in contra_idx:
-            self.rule_set.remove(str(r))
+            self.rule_set.remove(r)
 
         pred_flag = [r[0] for r in self.rule_set]
         pred = [r[1] for r in self.rule_set]
@@ -263,7 +263,7 @@ if __name__ == '__main__':
     #ruleDf = graph.remember(T=3)
     #ruleDf.to_csv(ruleRemPth, index=False, header=False)
 
-    rule_set = list(pd.read_csv(ruleRemPth, header=None)[0])
+    rule_set = list(pd.read_csv(ruleRemPth, header=None)[0].apply(eval))
     contr_df = graph.contradict_elim(rule_set)
     contr_df.to_csv(contrElimPth, index=False, header=False)
 
