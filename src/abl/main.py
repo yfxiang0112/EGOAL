@@ -19,6 +19,7 @@ def consitency(data_example, candidates, candidate_idxs, reasoning_results):
     model_scores = avg_confidence_dist(pred_prob, candidate_idxs)
     rule_scores = np.array(reasoning_results)
     scores = model_scores + rule_scores
+    # print(scores)
     return scores
 
 def main():

@@ -3,9 +3,9 @@ import numpy as np
 
 df = pd.read_csv('dataset/raw/dataset.csv')
 concept_column = df['CONCEPTS']
-
+print(concept_column)
 # print(concept_column[0])
-
+# assert(0)
 with open('dataset/concepts/all_concept_name.txt', 'r') as file:
     valid_concepts = set(line.strip() for line in file)
 
