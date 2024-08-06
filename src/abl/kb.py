@@ -4,7 +4,7 @@ from ablkit.reasoning import KBBase
 import pandas as pd
 
 class GO(KBBase):
-    def __init__(self, rule_path, annotation_path, max_depth):
+    def __init__(self, rule_path, annotation_path, dom_path, max_depth):
 
         super().__init__(pseudo_label_list=list(range(0,4807)), use_cache=False)
 
@@ -17,6 +17,11 @@ class GO(KBBase):
 
         ''' Define the variables and rule '''
         rules = []
+
+        dom_set = pd.read_csv(dom_path, header=None)[0]
+        for c in dom_set:
+            globals().update( {c : bool(c)} )
+        
 
 
         for idx, row in rule_df.iterrows():
@@ -35,6 +40,7 @@ class GO(KBBase):
 
             rules.append(Or( eval(rule[1])==rule[0], eval(rule[3])==rule[2] ))
 
+        print('rules=', rules)
         # Define the weights and violated weights
         self.weights = {rule: 1 for rule in rules}  # Assuming the first column is the rule
         self.total_violation_weight = Sum(
@@ -94,10 +100,14 @@ class GO(KBBase):
         #            concept_abd.append(row[0][1])
 
         for c in concept_expand:
-            solver.add( c == True )
+            if c not in globals().keys():#NOTE:temp
+                continue
+            solver.add( eval(c) == True )
 
         for c in concept_pred:
-            solver.add( c == True )
+            if c not in globals().keys():#NOTE:temp
+                continue
+            solver.add( eval(c) == True )
 
         #for c in concept_abd:
         #for c in self.concept_dom:
@@ -107,16 +117,16 @@ class GO(KBBase):
 
         # print("violated", violated)
         #return violated
-        print('test')
+        #print('test')
         if solver.check() == sat:
             model = solver.model()
-            print(model)
+            #print(x, pseudo_label)
+            #print(model)
             total_weight = model.evaluate(total_violation_weight)
-            print(total_weight)
+            #print(total_weight)
             return total_weight.as_long()
         else:
             # No solution found
-            print('unsat')
             return 1e10
 
         # concept_expand = concept_new

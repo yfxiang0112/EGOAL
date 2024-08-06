@@ -7,7 +7,7 @@ import re
 # Function to load and process the dataset
 def filter_id_lst(lst):
     res = []
-    for s in lst:
+    for s in lst[:2]:
         res.append(filter_id(s))
     return np.array(res)
 

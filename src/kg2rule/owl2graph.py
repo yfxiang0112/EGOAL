@@ -254,17 +254,17 @@ if __name__ == '__main__':
 
     graph = KG2Rule(rdfPth, conSpecPth, owlPth)
 
-    #subGraphDf = graph.subGraph(exclPrdcPth, 5)
-    #subGraphDf.to_csv(subGraphPth, index=False)
+    subGraphDf = graph.subGraph(exclPrdcPth, 5)
+    subGraphDf.to_csv(subGraphPth, index=False)
 
-    #ruleDf = graph.mineRule(rdf = pd.read_csv(subGraphPth))
-    #ruleDf.to_csv(rulePth, index=False, header=False)
+    ruleDf = graph.mineRule(rdf = pd.read_csv(subGraphPth))
+    ruleDf.to_csv(rulePth, index=False, header=False)
 
-    #ruleDf = graph.remember(T=3)
-    #ruleDf.to_csv(ruleRemPth, index=False, header=False)
+    ruleDf = graph.remember(T=3)
+    ruleDf.to_csv(ruleRemPth, index=False, header=False)
 
-    rule_set = list(pd.read_csv(ruleRemPth, header=None)[0].apply(eval))
-    contr_df = graph.contradict_elim(rule_set)
+    #rule_set = list(pd.read_csv(ruleRemPth, header=None)[0].apply(eval))
+    contr_df = graph.contradict_elim()
     contr_df.to_csv(contrElimPth, index=False, header=False)
 
 
