@@ -12,7 +12,11 @@ class GO(KBBase):
 
         ''' Load the information of GO kb '''
         rule_df = pd.read_csv(rule_path)
-        self.annotation = pd.read_csv(annotation_path, header=None)
+
+        self.annotation = pd.read_csv(annotation_path, header=None, index_col=0)
+        print(self.annotation)
+        #self.annotation[1] = self.annotation[1].apply(eval)
+
         self.concept_dom = set()
 
         ''' Define the variables and rule '''
@@ -40,7 +44,7 @@ class GO(KBBase):
 
             rules.append(Or( eval(rule[1])==rule[0], eval(rule[3])==rule[2] ))
 
-        print('rules=', rules)
+        #print('rules=', rules)
         # Define the weights and violated weights
         self.weights = {rule: 1 for rule in rules}  # Assuming the first column is the rule
         self.total_violation_weight = Sum(
@@ -70,14 +74,20 @@ class GO(KBBase):
         #print('pseudo_label', pseudo_label)
         #print('x', x)
         gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
-        concept_expand  = [f'GO_{st:07}' for st in x[0]]
-        concept_pred = []
-        concept_abd  = []
+        concept_expand  = set(f'GO_{st:07}' for st in x[0])
+        concept_pred = set()
+        concept_abd  = set()
 
-        for idx, row in self.annotation.iterrows():
-            for g in gene_pred:
-                if g in row[1]:
-                    concept_pred.append(row[0])
+        #for idx, row in self.annotation.iterrows():
+        #    for g in gene_pred:
+        #        if g in row[1]:
+        #            concept_pred.append(row[0])
+        for g in gene_pred:
+            if g not in self.annotation.index:
+                continue
+
+            for c in self.annotation.loc[g]:
+                concept_pred.add(c)
 
         #print(gene_pred)
         #print(concept_expand)

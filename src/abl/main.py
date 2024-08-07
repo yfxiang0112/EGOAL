@@ -32,7 +32,7 @@ def main():
     args = parser.parse_args()
     #TODO: added to argparse
     rule_path = 'rules/ruleConFree.csv'
-    annotation_path = 'rules/goa_mapping.csv'
+    annotation_path = 'rules/goa_gene2go.csv'
     domain_path = 'dataset/concepts/concept_domain.csv'
     reasoner_depth = 5
 
