@@ -33,7 +33,7 @@ def main():
     args = parser.parse_args()
     #TODO: added to argparse
     rule_path = 'rules/ruleConFree.csv'
-    annotation_path = 'rules/goa_mapping.csv'
+    annotation_path = 'rules/goa_gene2go.csv'
     domain_path = 'dataset/concepts/concept_domain.csv'
     reasoner_depth = 5
 
@@ -98,6 +98,8 @@ def main():
     # print(type(test_data))
     # print(test_data)
     # test_data = np.array(list(test_data))
+    print(test_data)
+    assert(0)
     bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(
