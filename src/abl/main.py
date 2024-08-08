@@ -98,8 +98,6 @@ def main():
     # print(type(test_data))
     # print(test_data)
     # test_data = np.array(list(test_data))
-    print(test_data)
-    assert(0)
     bridge.test(test_data)
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(

@@ -24,7 +24,7 @@ class GO(KBBase):
 
         dom_set = pd.read_csv(dom_path, header=None)[0]
         for c in dom_set:
-            globals().update( {c : bool(c)} )
+            globals().update( {c : Bool(c)} )
         
 
 
@@ -32,21 +32,34 @@ class GO(KBBase):
             #rule = eval(row[0])
             rule = row
 
-            self.concept_dom.add(rule[1])
-            self.concept_dom.add(rule[3])
+            self.concept_dom.add(rule.iloc[1])
+            self.concept_dom.add(rule.iloc[3])
 
-            globals().update( { rule[1] : bool(rule[1]) } )
-            globals().update( { rule[3] : bool(rule[3]) } )
+            globals().update( { rule.iloc[1] : Bool(rule.iloc[1]) } )
+            globals().update( { rule.iloc[3] : Bool(rule.iloc[3]) } )
             #exec(
             #    f"globals().update({Bool('{row[1]}')"
             #    f"globals()['{row[3]}'] = Bool('{row[3]}')"
             #)  # or use dict to create var and modify rules
 
-            rules.append(Or( eval(rule[1])==rule[0], eval(rule[3])==rule[2] ))
+            #print(rule.iloc[1], type(rule.iloc[1]), globals()[rule.iloc[1]], rule.iloc[3])
+           
+            if rule.iloc[0] == True:
+                r1 = eval(rule.iloc[1])
+            else:
+                r1 = Not(eval(rule.iloc[1]))
+            if rule.iloc[2] == True:
+                r2 = eval(rule.iloc[3])
+            else:
+                r2 = Not(eval(rule.iloc[3]))
+            rules.append(Or( r1, r2 ))
 
         #print('rules=', rules)
         # Define the weights and violated weights
         self.weights = {rule: 1 for rule in rules}  # Assuming the first column is the rule
+        #print(rules)
+        #print(self.weights)
+        #assert(0)
         self.total_violation_weight = Sum(
             [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
         )
@@ -65,6 +78,7 @@ class GO(KBBase):
         (current: intersection of pseudo label and rule results)
         '''
         #return 0
+        #print(pseudo_label,x)
         solver = self.solver
         total_violation_weight = self.total_violation_weight
 
@@ -109,15 +123,26 @@ class GO(KBBase):
         #            # concept_new.append(row[0][1])
         #            concept_abd.append(row[0][1])
 
-        for c in concept_expand:
-            if c not in globals().keys():#NOTE:temp
-                continue
-            solver.add( eval(c) == True )
+        self.solver.reset()
+        #for c in concept_expand:
+        #    if c not in globals().keys():#NOTE:temp
+        #        continue
+        #    #globals().update({c:True})
+        #    print(eval(c))
+        #    solver.add( eval(c) == True )
 
-        for c in concept_pred:
-            if c not in globals().keys():#NOTE:temp
-                continue
-            solver.add( eval(c) == True )
+        #for c in concept_pred:
+        #    if c not in globals().keys():#NOTE:temp
+        #        continue
+        #    #globals().update({c:True})
+        #    print(eval(c))
+        #    solver.add( eval(c) == True )
+
+        for c in self.concept_dom:
+            if c in concept_expand or c in concept_pred:
+                solver.add( eval(c) == True )
+            else:
+                solver.add( eval(c) == False )
 
         #for c in concept_abd:
         #for c in self.concept_dom:
@@ -132,7 +157,11 @@ class GO(KBBase):
             model = solver.model()
             #print(x, pseudo_label)
             #print(model)
+            #print('total_violation_weight', type(total_violation_weight))
+            #print(total_violation_weight)
             total_weight = model.evaluate(total_violation_weight)
+            #print('total_weight',type(total_weight))
+            #total_weight = model.evaluate(Sum([If(Not(rule), self.weights[rule], 0) for rule in self.weights]))
             #print(total_weight)
             return total_weight.as_long()
         else:

@@ -89,7 +89,7 @@ def split_dataset(X, y, test_size=0.3):
         # print(n_train_unlabel, len(idxs))
         label_indices.append(idxs[0])
         unlabel_indices.extend(idxs[1 : 1 + n_train_unlabel])
-       #  print(unlabel_indices)
+        # print(unlabel_indices)
         test_indices.extend(idxs[1 + n_train_unlabel :])
         # assert(0)
 
