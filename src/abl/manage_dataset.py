@@ -7,7 +7,7 @@ import re
 # Function to load and process the dataset
 def filter_id_lst(lst):
     res = []
-    for s in lst[:2]:
+    for s in lst[:10]:
         res.append(filter_id(s))
     return np.array(res)
 
@@ -83,6 +83,8 @@ def split_dataset(X, y, test_size=0.3):
         # print(np.unique(y))
         # print(idxs)
         np.random.shuffle(idxs)
+        if len(idxs) < 15:
+            continue
         n_train_unlabel = int((1 - test_size) * (len(idxs) - 1))
         # print(n_train_unlabel, len(idxs))
         label_indices.append(idxs[0])
@@ -90,6 +92,7 @@ def split_dataset(X, y, test_size=0.3):
        #  print(unlabel_indices)
         test_indices.extend(idxs[1 + n_train_unlabel :])
         # assert(0)
+
     X_label, y_label = X[label_indices], y[label_indices]
     #print('label', X_label, y_label)
     # assert(0)
@@ -101,6 +104,28 @@ def split_dataset(X, y, test_size=0.3):
     X_test, y_test = X[test_indices], y[test_indices]
     #print('test', X_test, y_test)
     #print(y_test)
+    
+    label_to_index = {label: index for index, label in enumerate(y_label)}
+
+    for i in range(len(y_unlabel)):
+        if y_unlabel[i] in label_to_index:
+            y_unlabel[i] = label_to_index[y_unlabel[i]]
+
+    for i in range(len(y_test)):
+        if y_test[i] in label_to_index:
+            y_test[i] = label_to_index[y_test[i]]
+
+    for i in range(len(y_label)):
+        if y_label[i] in label_to_index:
+            y_label[i] = label_to_index[y_label[i]]
+    # print(len(X_label),len(y_label))
+    print('----------------------------------------------------')
+    print(len(y_label), y_label)
+    print('----------------------------------------------------')
+    print(len(y_unlabel),y_unlabel)
+    print('----------------------------------------------------')
+    print(len(y_test), y_test)
+    print('----------------------------------------------------')
     return X_label, y_label, X_unlabel, y_unlabel, X_test, y_test
 
 # X, y = load_and_process_dataset()

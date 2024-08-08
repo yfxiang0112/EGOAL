@@ -40,7 +40,7 @@ class GO(KBBase):
 
             rules.append(Or( eval(rule[1])==rule[0], eval(rule[3])==rule[2] ))
 
-        print('rules=', rules)
+        # print('rules=', rules)
         # Define the weights and violated weights
         self.weights = {rule: 1 for rule in rules}  # Assuming the first column is the rule
         self.total_violation_weight = Sum(

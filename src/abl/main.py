@@ -12,6 +12,7 @@ from ablkit.utils import ABLLogger, avg_confidence_dist, print_log, tab_data_to_
 
 from manage_dataset import load_and_process_dataset,split_dataset
 from kb import GO
+import tqdm
 
 # From example Zoo, maybe help.
 def consitency(data_example, candidates, candidate_idxs, reasoning_results):
