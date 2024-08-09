@@ -35,7 +35,6 @@ def main():
     rule_path = 'rules/ruleConFree.csv'
     annotation_path = 'rules/goa_gene2go.csv'
     domain_path = 'dataset/concepts/concept_domain.csv'
-    reasoner_depth = 5
 
     # Build logger
     print_log("Abductive Learning on the GO example.", logger="current")
@@ -67,7 +66,7 @@ def main():
     print_log("Building the Reasoning Part.", logger="current")
 
     # Build knowledge base
-    kb = GO(rule_path, annotation_path, domain_path ,reasoner_depth)
+    kb = GO(rule_path, annotation_path, domain_path)
     
     # Create reasoner(need to complete the consistency function)
     reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)
