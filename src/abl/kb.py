@@ -2,6 +2,7 @@ from numpy import percentile
 from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat, Bool
 from ablkit.reasoning import KBBase
 import pandas as pd
+import time
 
 class GO(KBBase):
     def __init__(self, rule_path, annotation_path, dom_path, max_depth):
@@ -64,6 +65,8 @@ class GO(KBBase):
             [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
         )
 
+        self.init_solver = set(eval(c)==False for c in self.concept_dom)
+
         #self.max_depth = max_depth
 
     def logic_forward(self, pseudo_label, x):
@@ -81,6 +84,9 @@ class GO(KBBase):
         #print(pseudo_label,x)
         solver = self.solver
         total_violation_weight = self.total_violation_weight
+
+        t_start = time.time()
+        t_last = t_start
 
         violated = 0  # count of violated rules
         # expr = set()
@@ -103,6 +109,11 @@ class GO(KBBase):
             for c in self.annotation.loc[g]:
                 concept_pred.add(c)
 
+        t_now = time.time()
+        print('computing concept_pred: ', t_now-t_start, t_now-t_last)
+        t_last = time.time()
+
+
         #print(gene_pred)
         #print(concept_expand)
 
@@ -123,26 +134,37 @@ class GO(KBBase):
         #            # concept_new.append(row[0][1])
         #            concept_abd.append(row[0][1])
 
+        true_cons = set(eval(c)==False for c in concept_expand.union(concept_pred))
         self.solver.reset()
-        #for c in concept_expand:
-        #    if c not in globals().keys():#NOTE:temp
-        #        continue
-        #    #globals().update({c:True})
-        #    print(eval(c))
-        #    solver.add( eval(c) == True )
 
-        #for c in concept_pred:
-        #    if c not in globals().keys():#NOTE:temp
-        #        continue
-        #    #globals().update({c:True})
-        #    print(eval(c))
-        #    solver.add( eval(c) == True )
+        solver.add(self.init_solver - true_cons)
 
-        for c in self.concept_dom:
-            if c in concept_expand or c in concept_pred:
-                solver.add( eval(c) == True )
-            else:
-                solver.add( eval(c) == False )
+        t_now = time.time()
+        print('initializing solver: ', t_now-t_start, t_now-t_last)
+        t_last = time.time()
+
+        #print(solver)
+        for c in concept_expand:
+            if c not in globals().keys():#NOTE:temp
+                continue
+            #print(eval(c))
+            solver.add( eval(c) == True )
+
+        for c in concept_pred:
+            if c not in globals().keys():#NOTE:temp
+                continue
+            #print(eval(c))
+            solver.add( eval(c) == True )
+
+        t_now = time.time()
+        print('adding constraints: ', t_now-t_start, t_now-t_last)
+        t_last = time.time()
+
+        #for c in self.concept_dom:
+        #    if c in concept_expand or c in concept_pred:
+        #        solver.add( eval(c) == True )
+        #    else:
+        #        solver.add( eval(c) == False )
 
         #for c in concept_abd:
         #for c in self.concept_dom:
@@ -152,20 +174,35 @@ class GO(KBBase):
 
         # print("violated", violated)
         #return violated
+        #print(solver)
         #print('test')
         if solver.check() == sat:
+
+            t_now = time.time()
+            print('checking solver: ', t_now-t_start, t_now-t_last)
+            t_last = time.time()
+
             model = solver.model()
             #print(x, pseudo_label)
             #print(model)
             #print('total_violation_weight', type(total_violation_weight))
             #print(total_violation_weight)
             total_weight = model.evaluate(total_violation_weight)
+
+            t_now = time.time()
+            print('solving rules: ', t_now-t_start, t_now-t_last)
+            t_last = time.time()
             #print('total_weight',type(total_weight))
             #total_weight = model.evaluate(Sum([If(Not(rule), self.weights[rule], 0) for rule in self.weights]))
             #print(total_weight)
+            assert 0
+
             return total_weight.as_long()
         else:
             # No solution found
+            print('unsat')
+
+            assert 0
             return 1e10
 
         # concept_expand = concept_new
