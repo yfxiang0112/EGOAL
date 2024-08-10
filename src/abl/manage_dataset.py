@@ -83,7 +83,7 @@ def split_dataset(X, y, test_size=0.3):
         # print(np.unique(y))
         # print(idxs)
         np.random.shuffle(idxs)
-        if len(idxs) < 15:
+        if len(idxs) < 12:
             continue
         n_train_unlabel = int((1 - test_size) * (len(idxs) - 1))
         # print(n_train_unlabel, len(idxs))

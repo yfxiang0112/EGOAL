@@ -103,6 +103,7 @@ class GO(KBBase):
 
             model = solver.model()
             total_weight = model.evaluate(total_violation_weight)
+            # print(total_weight.as_long())
             return total_weight.as_long()
 
         else:

@@ -3,6 +3,7 @@ import os.path as osp
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 
 from ablkit.bridge import SimpleBridge
 from ablkit.data.evaluation import ReasoningMetric, SymbolAccuracy
@@ -55,7 +56,8 @@ def main():
     print_log("Building the Learning Part.", logger="current")
     
     # Build base model(Here we could change the basic model we use)
-    base_model = RandomForestClassifier()
+    # base_model = RandomForestClassifier()
+    base_model = SVC()
     
     # Build ABLModel
     model = ABLModel(base_model)
