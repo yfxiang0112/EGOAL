@@ -2,6 +2,9 @@ import argparse
 import os.path as osp
 
 import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
@@ -11,7 +14,7 @@ from ablkit.learning import ABLModel
 from ablkit.reasoning import Reasoner
 from ablkit.utils import ABLLogger, avg_confidence_dist, print_log, tab_data_to_tuple
 
-from manage_dataset import load_and_process_dataset,split_dataset
+from manage_dataset import load_and_process_dataset, split_dataset
 from kb import GO
 import tqdm
 
@@ -23,6 +26,45 @@ def consitency(data_example, candidates, candidate_idxs, reasoning_results):
     scores = model_scores + rule_scores
     # print(scores)
     return scores
+
+# Define a simple neural network model
+class SimpleNN(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super(SimpleNN, self).__init__()
+        self.fc1 = nn.Linear(input_dim, hidden_dim)
+        self.relu = nn.ReLU()
+        self.fc2 = nn.Linear(hidden_dim, output_dim)
+    
+    def forward(self, x):
+        out = self.fc1(x)
+        out = self.relu(out)
+        out = self.fc2(out)
+        return out
+    
+    def fit(self, X, y, epochs=10, batch_size=32, lr=0.001):
+        optimizer = optim.Adam(self.parameters(), lr=lr)
+        criterion = nn.CrossEntropyLoss()
+        
+        X_tensor = torch.tensor(X, dtype=torch.float32)
+        y_tensor = torch.tensor(y, dtype=torch.long)
+        
+        for epoch in range(epochs):
+            for i in range(0, len(X), batch_size):
+                X_batch = X_tensor[i:i+batch_size]
+                y_batch = y_tensor[i:i+batch_size]
+                
+                optimizer.zero_grad()
+                outputs = self(X_batch)
+                loss = criterion(outputs, y_batch)
+                loss.backward()
+                optimizer.step()
+    
+    def predict(self, X):
+        X_tensor = torch.tensor(X, dtype=torch.float32)
+        with torch.no_grad():
+            outputs = self(X_tensor)
+            _, predicted = torch.max(outputs, 1)
+        return predicted.numpy()
 
 def main():
     parser = argparse.ArgumentParser(description="GO example")
@@ -56,13 +98,13 @@ def main():
     print_log("Building the Learning Part.", logger="current")
     
     # Build base model(Here we could change the basic model we use)
-    base_model = RandomForestClassifier()
-    # base_model = SVC()
+    input_dim = X_label.shape[1]
+    hidden_dim = 128
+    output_dim = len(np.unique(y_label))
+    base_model = SimpleNN(input_dim, hidden_dim, output_dim)
     
     # Build ABLModel
     model = ABLModel(base_model)
-
-
 
     # -- Building the Reasoning Part --------------------
     print_log("Building the Reasoning Part.", logger="current")
@@ -73,8 +115,6 @@ def main():
     # Create reasoner(need to complete the consistency function)
     reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)
 
-
-
     # -- Building Evaluation Metrics --------------------
     print_log("Building Evaluation Metrics.", logger="current")
     metric_list = [SymbolAccuracy(prefix="GO"), ReasoningMetric(kb=kb, prefix="GO")]
@@ -83,23 +123,38 @@ def main():
     print_log("Bridge Learning and Reasoning.", logger="current")
     bridge = SimpleBridge(model, reasoner, metric_list)
 
-
     # Performing training and testing
     # Need to complete
     print_log("------- Use labeled data to pretrain the model -----------", logger="current")
-    #print('\n\n', X_label, '\n', y_label)
-    base_model.fit(X_label, y_label)
-    #res = base_model.predict(X_unlabel)
-    #print(res.shape)
-    #prob = base_model.predict_proba(X_unlabel)
-    #print(prob, type(prob))
-    #for arr in prob:
-    #    print(arr.shape, arr[0].shape)
+    # Convert data to torch tensors
+    X_label_tensor = torch.tensor(X_label, dtype=torch.float32)
+    y_label_tensor = torch.tensor(y_label, dtype=torch.long)
+    X_unlabel_tensor = torch.tensor(X_unlabel, dtype=torch.float32)
+    y_unlabel_tensor = torch.tensor(y_unlabel, dtype=torch.long)
+    X_test_tensor = torch.tensor(X_test, dtype=torch.float32)
+    y_test_tensor = torch.tensor(y_test, dtype=torch.long)
+
+    # Define optimizer and loss function
+    optimizer = optim.Adam(base_model.parameters(), lr=0.001)
+    criterion = nn.CrossEntropyLoss()
+
+    # Pretrain the model
+    base_model.train()
+    for epoch in range(10):  # Number of epochs for pretraining
+        optimizer.zero_grad()
+        outputs = base_model(X_label_tensor)
+        loss = criterion(outputs, y_label_tensor)
+        loss.backward()
+        optimizer.step()
+
     print_log("------- Test the initial model -----------", logger="current")
-    # print(type(test_data))
-    # print(test_data)
-    # test_data = np.array(list(test_data))
-    bridge.test(test_data)
+    base_model.eval()
+    with torch.no_grad():
+        test_outputs = base_model(X_test_tensor)
+        _, predicted = torch.max(test_outputs, 1)
+        accuracy = (predicted == y_test_tensor).sum().item() / y_test_tensor.size(0)
+        print_log(f"Initial test accuracy: {accuracy}", logger="current")
+
     print_log("------- Use ABL to train the model -----------", logger="current")
     bridge.train(
         train_data=train_data,
@@ -107,8 +162,14 @@ def main():
         loops=args.loops,
         segment_size=len(X_unlabel),
     )
+
     print_log("------- Test the final model -----------", logger="current")
-    bridge.test(test_data)
+    base_model.eval()
+    with torch.no_grad():
+        test_outputs = base_model(X_test_tensor)
+        _, predicted = torch.max(test_outputs, 1)
+        accuracy = (predicted == y_test_tensor).sum().item() / y_test_tensor.size(0)
+        print_log(f"Final test accuracy: {accuracy}", logger="current")
 
 if __name__ == "__main__":
     main()
