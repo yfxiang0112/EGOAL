@@ -40,7 +40,9 @@ def ruleTranslate(s: str, p:str, o:str):
             '''
             logic expr: x<->y  =  (~x|y)&(x|~y)
             subgraph count: 1015 '''
-            flags = [(False, True), (True, False)]
+            #flags = [(False, True), (True, False)]
+            #NOTE: temp inactivated
+            pass
 
         case 'oboInOwl#inSubset': 
             #TODO
@@ -59,7 +61,8 @@ def ruleTranslate(s: str, p:str, o:str):
             '''
             logic expr: x<->y  =  (~x|y)&(x|~y)
             subgraph count: 983 '''
-            flags = [(False, True), (True, False)]
+            #flags = [(False, True), (True, False)]
+            #NOTE: temp inactivated
 
         case 'owl#intersectionOf': 
             #TODO
@@ -79,31 +82,33 @@ def ruleTranslate(s: str, p:str, o:str):
             '''
             subgraph count: 1884 '''
 
-            match o:
+            flags = [(False, True)]
 
-                case 'BFO_0000050':
-                    pass
+            #match o:
 
-                case 'BFO_0000051':
-                    pass
+            #    case 'BFO_0000050':
+            #        pass
 
-                case 'BFO_0000066':
-                    pass
+            #    case 'BFO_0000051':
+            #        pass
 
-                case 'RO_0002092':
-                    pass
+            #    case 'BFO_0000066':
+            #        pass
 
-                case 'RO_0002211':
-                    pass
+            #    case 'RO_0002092':
+            #        pass
 
-                case 'RO_0002212':
-                    pass
+            #    case 'RO_0002211':
+            #        pass
 
-                case 'RO_0002213':
-                    pass
+            #    case 'RO_0002212':
+            #        pass
 
-                case _:
-                    pass
+            #    case 'RO_0002213':
+            #        pass
+
+            #    case _:
+            #        pass
 
         case 'owl#propertyChainAxiom':
             #TODO
@@ -117,6 +122,8 @@ def ruleTranslate(s: str, p:str, o:str):
             '''
             counts 1884 in extracted subgraph
             '''
+            #NOTE: temp
+            flags = [(False, True)]
             pass
 
         case 'rdf-schema#subClassOf':

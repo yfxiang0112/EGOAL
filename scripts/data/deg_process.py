@@ -5,8 +5,11 @@ import numpy as np
 def id_reg(s):
     pattern = r'SO_*A*\d+'
     res = re.findall(pattern, s) 
-    if len(res) != 1:
-        return np.NaN
+
+    assert len(res)!=0
+    #if len(res) != 1:
+    #    return np.NaN
+    #NOTE: temp
 
     if res[0].find('_') == -1:
         res[0] = 'SO_'+res[0][2:]
@@ -55,7 +58,7 @@ for idx, row in deg_df.iterrows():
     vec_list.append(vec)
 
 #deg_df['VEC'] = vec_list
-deg_df.insert(0, 'vector', vec_list)
+#NOTE:Temp #deg_df.insert(0, 'vector', vec_list)
 for i in range(20):
     deg_df.rename(columns={str(i):'gene_'+str(i+1)}, inplace=True)
 deg_df.drop('GSM', axis=1, inplace=True)

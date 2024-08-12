@@ -3,6 +3,7 @@ import os.path as osp
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 
 from ablkit.bridge import SimpleBridge
 from ablkit.data.evaluation import ReasoningMetric, SymbolAccuracy
@@ -12,6 +13,7 @@ from ablkit.utils import ABLLogger, avg_confidence_dist, print_log, tab_data_to_
 
 from manage_dataset import load_and_process_dataset,split_dataset
 from kb import GO
+import tqdm
 
 # From example Zoo, maybe help.
 def consitency(data_example, candidates, candidate_idxs, reasoning_results):
@@ -19,6 +21,7 @@ def consitency(data_example, candidates, candidate_idxs, reasoning_results):
     model_scores = avg_confidence_dist(pred_prob, candidate_idxs)
     rule_scores = np.array(reasoning_results)
     scores = model_scores + rule_scores
+    # print(scores)
     return scores
 
 def main():
@@ -30,9 +33,9 @@ def main():
     # TODO() Add other argument we need:
     args = parser.parse_args()
     #TODO: added to argparse
-    rule_path = 'rules/ruleRem.csv'
-    annotation_path = 'rules/goa_mapping.csv'
-    reasoner_depth = 5
+    rule_path = 'rules/ruleConFree.csv'
+    annotation_path = 'rules/goa_gene2go.csv'
+    domain_path = 'dataset/concepts/concept_domain.csv'
 
     # Build logger
     print_log("Abductive Learning on the GO example.", logger="current")
@@ -54,6 +57,7 @@ def main():
     
     # Build base model(Here we could change the basic model we use)
     base_model = RandomForestClassifier()
+    # base_model = SVC()
     
     # Build ABLModel
     model = ABLModel(base_model)
@@ -64,7 +68,7 @@ def main():
     print_log("Building the Reasoning Part.", logger="current")
 
     # Build knowledge base
-    kb = GO(rule_path, annotation_path, reasoner_depth)
+    kb = GO(rule_path, annotation_path, domain_path)
     
     # Create reasoner(need to complete the consistency function)
     reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)
