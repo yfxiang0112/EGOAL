@@ -1,5 +1,6 @@
 dataset/raw/GSE
 dataset/misc
+dataset/embedding
 tools/*
 refs/*
 dataset/embeddings_preprocess_modified.txt
@@ -12,3 +13,4 @@ rules/go-plus.owl
 
 # tmp
 rules/KG_RDF_filter-large.csv
+results
