@@ -113,7 +113,7 @@ class KG2Rule():
 
 
 
-    def mineRule(self, rdf = pd.DataFrame()) -> pd.DataFrame:
+    def mineRule(self, rdf = pd.DataFrame()) -> set:
         '''
         Call rule translation to convert all RDF predicates to Horn Clauses,
         according to natural semantic of predicates.
@@ -128,6 +128,7 @@ class KG2Rule():
             for r in ruleTranslate(row['subject'], row['predicate'], row['object']):
                 self.rule_set.add(r)
 
+        return self.rule_set
         pred_flag = [r[0] for r in self.rule_set]
         pred = [r[1] for r in self.rule_set]
         succ_flag = [r[2] for r in self.rule_set]
@@ -137,7 +138,7 @@ class KG2Rule():
 
 
 
-    def remember(self, T:int, rule= []) -> pd.DataFrame:
+    def remember(self, T:int, rule= []) -> set:
 
         print('----- Forgetting unused rules -----')
 
@@ -166,9 +167,10 @@ class KG2Rule():
             for r in R_res:
                 self.rule_set.add(r)
 
-        rule_rem = [r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec)]
+        rule_rem = set(r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec))
         self.rule_set = set(rule_rem)
 
+        return self.rule_set
         #return pd.DataFrame({0: rule_rem})
         pred_flag = [r[0] for r in self.rule_set]
         pred = [r[1] for r in self.rule_set]
@@ -178,7 +180,7 @@ class KG2Rule():
         return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
 
 
-    def contradict_elim(self, rule= []):
+    def contradict_elim(self, rule= []) -> set:
         contra_idx = set()
 
         if len(rule) > 0:
@@ -213,12 +215,31 @@ class KG2Rule():
         for r in contra_idx:
             self.rule_set.remove(r)
 
+        return self.rule_set
         pred_flag = [r[0] for r in self.rule_set]
         pred = [r[1] for r in self.rule_set]
         succ_flag = [r[2] for r in self.rule_set]
         succ = [r[3] for r in self.rule_set]
 
         return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+
+    def rule2df(self, rule_set = None):
+        if rule_set != None:
+            assert type(rule_set) == set or list
+            for r in rule_set:
+                assert type(r) == tuple or list
+                assert len(r) == 4
+        else:
+            rule_set = self.rule_set
+
+        pred_flag = [r[0] for r in rule_set]
+        pred = [r[1] for r in rule_set]
+        succ_flag = [r[2] for r in rule_set]
+        succ = [r[3] for r in rule_set]
+
+        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+
+
 
 
 
