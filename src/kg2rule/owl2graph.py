@@ -180,10 +180,10 @@ class KG2Rule():
         return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
 
 
-    def contradict_elim(self, rule= []) -> set:
+    def contradict_elim(self, rule= None) -> set:
         contra_idx = set()
 
-        if len(rule) > 0:
+        if rule != None:
             self.rule_set = rule
         if self.rule_set == None:
             raise Exception('Need to specify rule set')
@@ -238,6 +238,12 @@ class KG2Rule():
         succ = [r[3] for r in rule_set]
 
         return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+    
+
+    def get_rule(self) -> set:
+        return self.rule_set
+
+    #def df2rule(self, df : pd.DataFrame, )
 
 
 

@@ -1,6 +1,7 @@
 import pandas as pd
 
 from owl2graph import KG2Rule
+from sg_spec import sg_con_filter
 
 
 if __name__ == '__main__':
@@ -16,6 +17,9 @@ if __name__ == '__main__':
     ruleRemPth      = 'rules/ruleRem.csv'
     contrElimPth    = 'rules/ruleConFree.csv'
 
+    goaPth          = 'rules/goa_gene2go.csv'
+    sgRulePth       = 'rules/single_genes'
+
     graph = KG2Rule(rdfPth, conSpecPth, owlPth)
 
     subGraphDf = graph.subGraph(exclPrdcPth, 5)
@@ -27,3 +31,10 @@ if __name__ == '__main__':
 
     rule_df = graph.rule2df() 
     rule_df.to_csv(contrElimPth, index=False, header=False)
+
+    gene2go = pd.read_csv(goaPth, header=None, index_col=0)
+    for g in gene2go.index:
+        rule_filtered = sg_con_filter(g, graph.get_rule(), gene2go)
+        pth = sgRulePth + '/' + g + '_sg_rule.csv'
+        graph.rule2df(rule_filtered).to_csv(pth, index=False, header=False)
+
