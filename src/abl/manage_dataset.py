@@ -46,7 +46,7 @@ def load_and_process_dataset(sg_col : int):
 
     ''' get single gene label column of current gene id ''' 
     y = y[:,sg_col]
-    
+
     return X, y
 
 
@@ -102,19 +102,3 @@ def split_dataset(X, y, test_size=0.3):
     #print(len(y_test), y_test)
     #print('----------------------------------------------------')
     return X_label, y_label, X_unlabel, y_unlabel, X_test, y_test
-
-if __name__ == '__main__':
-    X, y = load_and_process_dataset(1)
-    print(X)
-    print(y)
-    X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
-    label_data = tab_data_to_tuple(X_label, y_label)
-    test_data = tab_data_to_tuple(X_test, y_test)
-    train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
-    X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
-    label_data = tab_data_to_tuple(X_label, y_label)
-    test_data = tab_data_to_tuple(X_test, y_test)
-    train_data = tab_data_to_tuple(X_unlabel, y_unlabel)
-    print(label_data)
-    print(test_data)
-    print(train_data)
