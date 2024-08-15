@@ -25,6 +25,9 @@ def consitency(data_example, candidates, candidate_idxs, reasoning_results):
     return scores
 
 def main():
+    # TODO: specify gene name of each round
+    gene = 'SO_0001'
+
     parser = argparse.ArgumentParser(description="GO example")
     # Add argument loops of the test, here is 3
     parser.add_argument(
@@ -33,9 +36,11 @@ def main():
     # TODO() Add other argument we need:
     args = parser.parse_args()
     #TODO: added to argparse
-    rule_path = 'rules/ruleConFree.csv'
     annotation_path = 'rules/goa_gene2go.csv'
-    domain_path = 'dataset/concepts/concept_domain.csv'
+
+    rule_path = 'rules/single_genes/' + gene + '_sg_rule.csv'
+    #rule_path = 'rules/ruleConFree.csv'
+    #domain_path = 'dataset/concepts/concept_domain.csv'
 
     # Build logger
     print_log("Abductive Learning on the GO example.", logger="current")
@@ -68,7 +73,7 @@ def main():
     print_log("Building the Reasoning Part.", logger="current")
 
     # Build knowledge base
-    kb = GO(rule_path, annotation_path, domain_path)
+    kb = GO(gene, rule_path, annotation_path)
     
     # Create reasoner(need to complete the consistency function)
     reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)

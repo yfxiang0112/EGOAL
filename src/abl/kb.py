@@ -5,26 +5,24 @@ import pandas as pd
 import time
 
 class GO(KBBase):
-    def __init__(self, rule_path, annotation_path, dom_path):
+    def __init__(self, single_gene : str, rule_path : str, annotation_path : str):
 
         ''' Define pseudo label convertion list & z3 solver '''
-        super().__init__(pseudo_label_list=list(range(0,4807)), use_cache=False)
+        super().__init__(pseudo_label_list=[0,1], use_cache=False)
         self.solver = Solver()
 
-        ''' Load GO rules and annotations '''
+        ''' Load GO rules and annotations
+            Define set of concepts related to current single gene '''
         rule_df = pd.read_csv(rule_path)
 
-        self.annotation = pd.read_csv(annotation_path, header=None, index_col=0)
-        print(self.annotation)
+        annotation = pd.read_csv(annotation_path, header=None, index_col=0)
+        sg_row = annotation.loc[single_gene]
+        self.goa_con_set = eval(sg_row[1])
 
-
-        ''' Define disjunction rules 
+        ''' Define disjunction rules,
+            concept domain,
             and z3 constraint variables used in rules '''
         rules = []
-
-        dom_set = pd.read_csv(dom_path, header=None)[0]
-        for c in dom_set:
-            globals().update( {c : Bool(c)} )
 
         self.concept_dom = set()
         for idx, row in rule_df.iterrows():
@@ -32,6 +30,7 @@ class GO(KBBase):
 
             self.concept_dom.add(rule.iloc[1])
             self.concept_dom.add(rule.iloc[3])
+            ''' Define concept domain '''
 
             globals().update( { rule.iloc[1] : Bool(rule.iloc[1]) } )
             globals().update( { rule.iloc[3] : Bool(rule.iloc[3]) } )
@@ -39,6 +38,10 @@ class GO(KBBase):
 
             rules.append(Or( eval(rule.iloc[1]) == rule.iloc[0], eval(rule.iloc[3]) == rule.iloc[2] ))
             ''' Translate disjunction rule '''
+
+        #print(self.goa_con_set)
+        #print(rules)
+        #print(len(self.concept_dom))
 
         self.cwa_constraints = set(eval(c)==False for c in self.concept_dom)
 
@@ -70,32 +73,39 @@ class GO(KBBase):
 
 
         ''' definie pseudo label and input concept set '''
-        gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
-        concept_expand  = set(f'GO_{st:07}' for st in x[0])
-        concept_pred = set()
+        #gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
+        concept_input = set(f'GO_{st:07}' for st in x[0])
+        #concept_pred = set()
+        pred_flag = pseudo_label[0]
 
 
-        ''' convert pseudo label genes to GO concepts '''
-        for g in gene_pred:
-            if g not in self.annotation.index:
-                continue
+        ''' Convert pseudo label genes to GO concepts
+            Set concepts in input and (converted) pseudo label as True '''
+        true_contrains = concept_input if pred_flag==0\
+                        else concept_input.union(self.goa_con_set)
 
-            for c in self.annotation.loc[g]:
-                concept_pred.add(c)
-
-
-        ''' Set unmentioned concepts as False (CWA) '''
-        #spec_constraints = set(eval(c)==False for c in concept_expand.union(concept_pred))
-        spec_constraints = set(eval(c)==False for c in concept_expand.union(concept_pred) if c in globals().keys()) #NOTE: temp
-
-        solver.add(self.cwa_constraints - spec_constraints)
-
-
-        ''' Set concepts in input and (converted) pseudo label as True '''
-        for c in concept_expand.union(concept_pred):
+        for c in true_contrains:
             if c not in globals().keys():#NOTE:temp
                 continue
             solver.add( eval(c) == True )
+        #for g in gene_pred:
+        #    if g not in self.annotation.index:
+        #        continue
+
+        #    for c in self.annotation.loc[g]:
+        #        concept_pred.add(c)
+
+
+        ''' Set unmentioned concepts as False (CWA)
+            Exclude constraints of True from CWA constraints '''
+        false_excluded = set(eval(c)==False for c in true_contrains if c in globals().keys())
+        solver.add(self.cwa_constraints - false_excluded)
+
+
+        #for c in concept_expand.union(concept_pred):
+        #    if c not in globals().keys():#NOTE:temp
+        #        continue
+        #    solver.add( eval(c) == True )
 
 
         if solver.check() == sat:
