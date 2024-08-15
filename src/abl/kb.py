@@ -85,12 +85,9 @@ class GO(KBBase):
                         else concept_input.union(self.goa_con_set)
 
         for c in true_contrains:
-            if c not in globals().keys():#NOTE:temp
+            if c not in globals().keys():
                 continue
             solver.add( eval(c) == True )
-        #for g in gene_pred:
-        #    if g not in self.annotation.index:
-        #        continue
 
         #    for c in self.annotation.loc[g]:
         #        concept_pred.add(c)
@@ -102,15 +99,8 @@ class GO(KBBase):
         solver.add(self.cwa_constraints - false_excluded)
 
 
-        #for c in concept_expand.union(concept_pred):
-        #    if c not in globals().keys():#NOTE:temp
-        #        continue
-        #    solver.add( eval(c) == True )
-
-
         if solver.check() == sat:
             ''' Satisfiable '''
-
             model = solver.model()
             total_weight = model.evaluate(total_violation_weight)
             # print(total_weight.as_long())
@@ -118,5 +108,4 @@ class GO(KBBase):
 
         else:
             ''' No solutions found '''
-
             return 1e10
