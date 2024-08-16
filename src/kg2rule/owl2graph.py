@@ -113,7 +113,7 @@ class KG2Rule():
 
 
 
-    def mineRule(self, rdf = pd.DataFrame()) -> pd.DataFrame:
+    def mineRule(self, rdf = pd.DataFrame()) -> set:
         '''
         Call rule translation to convert all RDF predicates to Horn Clauses,
         according to natural semantic of predicates.
@@ -128,11 +128,17 @@ class KG2Rule():
             for r in ruleTranslate(row['subject'], row['predicate'], row['object']):
                 self.rule_set.add(r)
 
-        return pd.DataFrame({0: list(self.rule_set)})
+        return self.rule_set
+        pred_flag = [r[0] for r in self.rule_set]
+        pred = [r[1] for r in self.rule_set]
+        succ_flag = [r[2] for r in self.rule_set]
+        succ = [r[3] for r in self.rule_set]
+
+        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
 
 
 
-    def remember(self, T:int, rule= []) -> pd.DataFrame:
+    def remember(self, T:int, rule= []) -> set:
 
         print('----- Forgetting unused rules -----')
 
@@ -161,10 +167,85 @@ class KG2Rule():
             for r in R_res:
                 self.rule_set.add(r)
 
-        rule_rem = [r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec)]
+        rule_rem = set(r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec))
         self.rule_set = set(rule_rem)
 
-        return pd.DataFrame({0: rule_rem})
+        return self.rule_set
+        #return pd.DataFrame({0: rule_rem})
+        pred_flag = [r[0] for r in self.rule_set]
+        pred = [r[1] for r in self.rule_set]
+        succ_flag = [r[2] for r in self.rule_set]
+        succ = [r[3] for r in self.rule_set]
+
+        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+
+
+    def contradict_elim(self, rule= None) -> set:
+        contra_idx = set()
+
+        if rule != None:
+            self.rule_set = rule
+        if self.rule_set == None:
+            raise Exception('Need to specify rule set')
+
+        for i1, rule_1 in tqdm(enumerate(self.rule_set)):
+            for i2, rule_2 in enumerate(self.rule_set):
+
+                if i1 == i2:
+                    continue
+
+                #if type(rule_1)==str:
+                #    rule_1 = eval(rule_1)
+                #if type(rule_2)==str:
+                #    rule_2 = eval(rule_2)
+
+                if rule_1[1] == rule_2[1] and\
+                        rule_1[3] == rule_2[3]:
+                    
+                    #print('test', i1, i2, rule_1, rule_2)
+                    
+                    if not (rule_1[0] == rule_2[0] and\
+                            rule_1[2] == rule_2[2]):
+
+                        contra_idx.add(rule_1)
+                        contra_idx.add(rule_2)
+
+        #print(contra_idx)
+
+        for r in contra_idx:
+            self.rule_set.remove(r)
+
+        return self.rule_set
+        pred_flag = [r[0] for r in self.rule_set]
+        pred = [r[1] for r in self.rule_set]
+        succ_flag = [r[2] for r in self.rule_set]
+        succ = [r[3] for r in self.rule_set]
+
+        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+
+    def rule2df(self, rule_set = None):
+        if rule_set != None:
+            assert type(rule_set) == set or list
+            for r in rule_set:
+                assert type(r) == tuple or list
+                assert len(r) == 4
+        else:
+            rule_set = self.rule_set
+
+        pred_flag = [r[0] for r in rule_set]
+        pred = [r[1] for r in rule_set]
+        succ_flag = [r[2] for r in rule_set]
+        succ = [r[3] for r in rule_set]
+
+        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+    
+
+    def get_rule(self) -> set:
+        return self.rule_set
+
+    #def df2rule(self, df : pd.DataFrame, )
+
+
 
 
 
@@ -196,17 +277,22 @@ if __name__ == '__main__':
     subGraphPth     = 'rules/KG_RDF_subgraph.csv'
     rulePth         = 'rules/ruleMined.csv'
     ruleRemPth      = 'rules/ruleRem.csv'
+    contrElimPth    = 'rules/ruleConFree.csv'
 
     graph = KG2Rule(rdfPth, conSpecPth, owlPth)
 
-    #subGraphDf = graph.subGraph(exclPrdcPth, 5)
-    #subGraphDf.to_csv(subGraphPth, index=False)
+    subGraphDf = graph.subGraph(exclPrdcPth, 5)
+    subGraphDf.to_csv(subGraphPth, index=False)
 
     ruleDf = graph.mineRule(rdf = pd.read_csv(subGraphPth))
     ruleDf.to_csv(rulePth, index=False, header=False)
 
     ruleDf = graph.remember(T=3)
     ruleDf.to_csv(ruleRemPth, index=False, header=False)
+
+    #rule_set = list(pd.read_csv(ruleRemPth, header=None)[0].apply(eval))
+    contr_df = graph.contradict_elim()
+    contr_df.to_csv(contrElimPth, index=False, header=False)
 
 
 #def prdcFilter(s):

@@ -7,7 +7,7 @@ for i in range(len(concept_column)):
     concepts.append(eval(concept_column[i]))
 
 go_dict = {}
-with open('./dataset/embeddings_preprocess_modified.txt', 'r') as file:
+with open('dataset/embeddings_preprocess_modified.txt', 'r') as file:
     for line in file:
         parts = line.strip().split() 
         if len(parts) > 1:

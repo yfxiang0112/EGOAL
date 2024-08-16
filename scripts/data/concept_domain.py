@@ -1,6 +1,7 @@
 import pandas as pd
 
 con_df = pd.read_csv('dataset/concepts/GSE_concepts.csv')
+goa_df = pd.read_csv('rules/goa_mapping.csv', header=None)
 all_con = pd.read_csv('dataset/concepts/all_concept_name.txt', header=None)
 all_con = list(all_con[0])
 #print(all_con)
@@ -14,6 +15,9 @@ for con_lst in con_df['CONCEPTS']:
         #NOTE: tmp operation, transfer GO:xxxx to GO_xxxx
         if s in all_con:
             con_dom.add('GO_'+s[3:])
+
+for con in goa_df[0]:
+    con_dom.add(con)
 
 con_dom = list(con_dom)
 con_dom.sort()

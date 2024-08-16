@@ -1,103 +1,111 @@
+from numpy import percentile
 from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat, Bool
 from ablkit.reasoning import KBBase
 import pandas as pd
+import time
 
 class GO(KBBase):
-    def __init__(self, rule_path, annotation_path, max_depth):
-        # here the 0 is not the categories of the GO, need to change it
-        super().__init__(pseudo_label_list=list(range(1,4808)), use_cache=False)
+    def __init__(self, single_gene : str, rule_path : str, annotation_path : str):
 
+        ''' Define pseudo label convertion list & z3 solver '''
+        super().__init__(pseudo_label_list=[0,1], use_cache=False)
         self.solver = Solver()
 
-        # Load the information of GO dataset
-        # TODO()
+        ''' Load GO rules and annotations
+            Define set of concepts related to current single gene '''
+        rule_df = pd.read_csv(rule_path)
 
-        # Define the variables and rule
+        annotation = pd.read_csv(annotation_path, header=None, index_col=0)
+        sg_row = annotation.loc[single_gene]
+        self.goa_con_set = eval(sg_row[1])
+
+        ''' Define disjunction rules,
+            concept domain,
+            and z3 constraint variables used in rules '''
         rules = []
-        # TODO()
 
-        self.rule_set = pd.read_csv(rule_path, header=None)
-        self.annotation = pd.read_csv(annotation_path, header=None)
+        self.concept_dom = set()
+        for idx, row in rule_df.iterrows():
+            rule = row
 
-        # Define the weights and violated weights
-        self.weights = {rule: 1 for rule in self.rule_set[0]}  # Assuming the first column is the rule
+            self.concept_dom.add(rule.iloc[1])
+            self.concept_dom.add(rule.iloc[3])
+            ''' Define concept domain '''
+
+            globals().update( { rule.iloc[1] : Bool(rule.iloc[1]) } )
+            globals().update( { rule.iloc[3] : Bool(rule.iloc[3]) } )
+            ''' Define z3 variables '''
+
+            rules.append(Or( eval(rule.iloc[1]) == rule.iloc[0], eval(rule.iloc[3]) == rule.iloc[2] ))
+            ''' Translate disjunction rule '''
+
+        #print(self.goa_con_set)
+        #print(rules)
+        #print(len(self.concept_dom))
+
+        self.cwa_constraints = set(eval(c)==False for c in self.concept_dom)
+
+
+        ''' Define violated weights '''
+        self.weights = {rule: 1 for rule in rules} 
+
         self.total_violation_weight = Sum(
-            [If(Not(Bool(rule)), self.weights[rule], 0) for rule in self.weights]
+            [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
         )
-        # TODO()
 
-        self.max_depth = max_depth
+
 
     def logic_forward(self, pseudo_label, x):
-        # Define the logical rules
-        # TODO()
+        # 
         '''
-        expand through rule graph with x as start point, for d iterations.
-        record all concepts on the expandition path, and map to gene id with annotation.
-        return gene id as logic result.
+        Define the logical rules.
 
-        **use pseudo label?**
-        (current: intersection of pseudo label and rule results)
+        List related concepts of pseudo labels, by GO annotations.
+        Check if input concepts and pseudo label concepts (converted from annotation)
+        conform with rules (in disjunction form, mined from GO).
+
+        NOTE: Truth values are interpreted under CWA (i.e. False if not in pseudo_label).
         '''
-        #return 0
 
-        violated = 0  # count of violated rules
-        # expr = set()
+        solver = self.solver
+        total_violation_weight = self.total_violation_weight
+        self.solver.reset()
 
-        #print('pseudo_label', pseudo_label)
-        #print('x', x)
-        gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
-        concept_expand  = [f'GO_{st:07}' for st in x[0]]
-        concept_pred = []
-        concept_abd  = []
 
-        #print(gene_pred)
-        #print(concept_expand)
+        ''' definie pseudo label and input concept set '''
+        #gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
+        concept_input = set(f'GO_{st:07}' for st in x[0])
+        #concept_pred = set()
+        pred_flag = pseudo_label[0]
 
-        for idx, row in self.annotation.iterrows():
-            for g in gene_pred:
-                if g in row[1]:
-                    concept_pred.append(row[0])
-            # if row[0] in concept_expand:
-            #    for id in row[1]:
-            #        expr.add(id)
 
-        ''' expand rule on each x and count violated num '''
-        # for d in self.max_depth:
+        ''' Convert pseudo label genes to GO concepts
+            Set concepts in input and (converted) pseudo label as True '''
+        true_contrains = concept_input if pred_flag==0\
+                        else concept_input.union(self.goa_con_set)
 
-        # concept_new = []
-        for idx, row in self.rule_set.iterrows():
-            for c in concept_expand:
-                if row[0][1] == c:
-                    # concept_new.append(row[0][3])
-                    concept_abd.append(row[0][3])
-                if row[0][3] == c:
-                    # concept_new.append(row[0][1])
-                    concept_abd.append(row[0][1])
+        for c in true_contrains:
+            if c not in globals().keys():
+                continue
+            solver.add( eval(c) == True )
 
-        for c in concept_abd:
-            if c not in concept_expand:
-                violated += 1
+        #    for c in self.annotation.loc[g]:
+        #        concept_pred.add(c)
 
-        # print("violated", violated)
-        return violated
 
-        # concept_expand = concept_new
+        ''' Set unmentioned concepts as False (CWA)
+            Exclude constraints of True from CWA constraints '''
+        false_excluded = set(eval(c)==False for c in true_contrains if c in globals().keys())
+        solver.add(self.cwa_constraints - false_excluded)
 
-        # res = []
-        # for c in pseudo_label:
-        #    if c in expr:
-        #        res.append(c)
 
-        # expected to be 0 when consistent
+        if solver.check() == sat:
+            ''' Satisfiable '''
+            model = solver.model()
+            total_weight = model.evaluate(total_violation_weight)
+            # print(total_weight.as_long())
+            return total_weight.as_long()
 
-        # Steps as follow:
-        # 1.Initial the variable
-
-        # 2.Reset the solver
-
-        # 3.Add the attribute restrictions
-
-        # 4.Add the aim restrictions
-
-        # 5.Check the state of solver
+        else:
+            ''' No solutions found '''
+            return 1e10
