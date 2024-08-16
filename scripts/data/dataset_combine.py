@@ -40,14 +40,17 @@ df.drop(nan_ratio[nan_ratio > 0.3].index, axis=1, inplace=True)
 
 con_df = pd.read_csv('dataset/concepts/GSE_concepts.csv', index_col='SAMPLES')
 #con_df.set_index('SAMPLES', inplace=True)
+con_df.sort_index(inplace=True)
+con_df = con_df.reindex()
 print(con_df)
 
-df = df.reindex()
 df.sort_index(inplace=True)
+df = df.reindex()
 #df.set_index('SAMPLES', inplace=True)
 
 con_df = con_df.loc[df.index]
-con_df.drop_duplicates(inplace=True)
+print(con_df)
+#con_df.drop_duplicates(inplace=True)
 df.insert(0, 'CONCEPTS', con_df['CONCEPTS'], allow_duplicates=True)
 
 print(df)

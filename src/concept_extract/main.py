@@ -6,28 +6,39 @@ from tqdm import tqdm
 from txt2con import EmbeddingConverter
 
 TOP_CNT = 10
+''' get 10 most related concepts '''
 
 acc_pth = 'dataset/raw/accessions'
 owl_pth = 'rules/go.owl'
 out_pth = 'dataset/concepts/GSE_concepts.csv'
 
+
+''' initialize accession list and text embedding converter '''
 accessions = pd.read_csv(acc_pth)
 embd = EmbeddingConverter(owl_pth, use_vpn=True)
 
+''' initialize data lists '''
 gsm_names = []
 concepts = []
 gsm_descps = []
 con_descps = [[] for _ in range(TOP_CNT)]
 
-for accession in tqdm(accessions['accession'], 'Converting GSE descriptions'):
 
+''' iterate all gsms '''
+for accession in tqdm(accessions['accession'], 'Converting GSE descriptions'):
     gse = GEOparse.get_GEO(geo=accession, destdir="dataset/raw/GSE", silent=True)
     gse_path = f"dataset/raw/GSE/{accession}_family.soft.gz"
     gse = GEOparse.get_GEO(filepath=gse_path, silent=True)
 
     for gsm_name, gsm in gse.gsms.items():
+        if gsm_name in gsm_names:
+            continue
+
         gsm_names.append(gsm_name)
 
+
+        
+        ''' generate GSM description '''
         description = ''
         if('characteristics_ch1' in gsm.metadata):
             for s in gsm.metadata['characteristics_ch1']:
@@ -40,19 +51,21 @@ for accession in tqdm(accessions['accession'], 'Converting GSE descriptions'):
                 description = description + s + '\n'
 
 
+        ''' compute similarity matrix & most similar concept list '''
         sim = embd.similar_matrix(description)
         sorted_sim = embd.max_sim(TOP_CNT)
 
         concepts.append(list(sorted_sim))
 
 
-
+        ''' record descriptions '''
         gsm_descps.append(description)
 
         for i,c in enumerate(sorted_sim):
             d = embd.get_con_desc(c)
             con_descps[i].append(d)
 
+''' save as dataframe '''
 df = {'SAMPLES':gsm_names, 'CONCEPTS':concepts}
 
 df = pd.DataFrame(df)
