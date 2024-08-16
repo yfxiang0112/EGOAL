@@ -69,4 +69,4 @@ for d in tqdm(gsm_df['DESCRIP'], 'Extracting GO concept with OpenAI'):
 gsm_df['OPENAI_ANS'] = pd.Series(openai_ans)
 
 gsm_df.sort_values(by=['SAMPLES'])
-gsm_df.to_csv("dataset/concepts/GSE_concepts.csv")
+gsm_df.to_csv("dataset/concepts/GSE_concepts.csv", index=False)
