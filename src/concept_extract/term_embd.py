@@ -16,7 +16,7 @@ def graph_parse(g : Graph, label_predicates = None) -> dict:
         'http://purl.obolibrary.org/obo/IAO_0000115']
 
     concept_dscrp = {}
-    for s,p,o in g, 'parsing owl':
+    for s,p,o in g:
         
         if str(p) in label_prdcs:
             p = r'GO_\d+'
