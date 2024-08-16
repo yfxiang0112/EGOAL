@@ -30,32 +30,32 @@ print(embedding_df)
 print(description_df)
 print(concept_df)
 
-vec_list = []
+#vec_list = []
 for idx, row in deg_df.iterrows():
     description = description_df[idx][0]
-    vec = []
+    #vec = []
     concepts = []
     #print(description)
-    #for _,concept_row in concept_df.iterrows():
-    #    if concept_row['DESCRIP'] == description:
-    #        concepts = concept_row['CONCEPTS']
-    #        concepts = eval(concepts)
+    for _,concept_row in concept_df.iterrows():
+        if concept_row['DESCRIP'] == description:
+            concepts = concept_row['CONCEPTS']
+            concepts = eval(concepts)
     #        concepts.sort()
 
-    for vec_idx,vec_row in embedding_df.iterrows():
-        #print(vec_idx, row['GSM'])
-        if vec_idx == row['GSM']:
-        #vec_concepts = eval(vec_row['CONCEPTS'])
-        #vec_concepts.sort()
-        #if vec_concepts == concepts:
-            vec = list(vec_row[1:101])
-            break
-        #break
+    #for vec_idx,vec_row in embedding_df.iterrows():
+    #    #print(vec_idx, row['GSM'])
+    #    if vec_idx == row['GSM']:
+    #    #vec_concepts = eval(vec_row['CONCEPTS'])
+    #    #vec_concepts.sort()
+    #    #if vec_concepts == concepts:
+    #        vec = list(vec_row[1:101])
+    #        break
+    #    #break
 
-    if vec==[]:
-        print('vector not found:', idx, description, concepts)
+    #if vec==[]:
+    #    print('vector not found:', idx, description, concepts)
                 
-    vec_list.append(vec)
+    #vec_list.append(vec)
 
 #deg_df['VEC'] = vec_list
 #NOTE:Temp #deg_df.insert(0, 'vector', vec_list)

@@ -54,6 +54,9 @@ class EmbeddingConverter():
         #max_con = [(list(self.term_dict.keys())[i], list(self.term_dict.values())[i]) for i in max_idx]
         #print(max_con)
 
+    def get_con_desc(self, c : str):
+        return self.term_dict[c]
+
     def get_unlabel(self):
         # TODO: unlabel instances?
         pass
