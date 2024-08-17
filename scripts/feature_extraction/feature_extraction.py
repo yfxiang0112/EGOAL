@@ -31,16 +31,17 @@ for i in tqdm(range(len(df)), desc="Processing rows"):
     importance = [(x - mean) ** 2 for x in new_df_list]
     element_importance_pairs = list(zip(column_labels, new_df_list, importance))
     sorted_element_importance_pairs = sorted(element_importance_pairs, key=lambda x: x[2], reverse=True)
-    top_20_elements = sorted_element_importance_pairs[:20]
+    # print(len(sorted_element_importance_pairs))
+    top_20_elements = sorted_element_importance_pairs[:1427]
     importance_list = []
     for label, element, imp in top_20_elements:
         importance_list.append((label, imp))
-    labeled_importance_series = pd.Series([(label, imp) for (label, imp) in importance_list], index=[f'importance_{j+1}' for j in range(20)])
+    labeled_importance_series = pd.Series([(label, imp) for (label, imp) in importance_list], index=[f'importance_{j+1}' for j in range(1427)])
     packed_data.append(labeled_importance_series)
 
 packed_df = pd.DataFrame(packed_data)
 
-df.iloc[:, 102:122] = packed_df.values
-df = df.iloc[:, :122]
+df.iloc[:, 102:1529] = packed_df.values
+df = df.iloc[:, :1529]
 
 df.to_csv('dataset/importance/processed_dataset_with_importance.csv', index=False)

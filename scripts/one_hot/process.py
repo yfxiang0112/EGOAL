@@ -8,9 +8,9 @@ df_2 = pd.read_csv('dataset/one-hot/one_hot_pro.csv')
 # print(df_1)
 # print(df_2)
 
-df_1_subset = df_1.iloc[:,-20:]
+df_1_subset = df_1.iloc[:,-1427:]
 pattern = re.compile(r"\('([^']+)', ([^)]+)\)")
-weights = list(range(20, 0, -1))
+weights = list(range(1427, 0, -1))
 
 for index, row in df_1_subset.iterrows():
     for i, elem in enumerate(row):

@@ -3,6 +3,7 @@ import pandas as pd
 from ablkit.utils import ABLLogger, avg_confidence_dist, print_log, tab_data_to_tuple
 import random
 import re
+import ast
 
 ''' ID preprocess utils '''
 def filter_id_lst(lst):
@@ -20,14 +21,13 @@ def filter_id(s):
         raise Exception('invalid ID')
     return int(res[0])
 
-
 ##########################################################
 
 
 def load_and_process_dataset(sg_col : int):
     '''
     Input:
-        None
+        sg_col, int 
 
     Output:
         X: features after process, numpy array 
@@ -65,12 +65,11 @@ def split_dataset(X, y, test_size=0.3):
         X_test: test features with label, numpy array 
         y_test: test labels with label, numpy array 
     '''
+    ''' Seperate the dataset into label, unlabel, test dataset '''
     label_indices, unlabel_indices, test_indices = [], [], []
     for class_label in np.unique(y):
         idxs = np.where(y == class_label)[0]
         np.random.shuffle(idxs)
-        # if len(idxs) < 12:
-        #     continue
         n_train_unlabel = int((1 - test_size) * (len(idxs) - 1))
         label_indices.append(idxs[0])
         unlabel_indices.extend(idxs[1 : 1 + n_train_unlabel])
@@ -80,6 +79,7 @@ def split_dataset(X, y, test_size=0.3):
     X_unlabel, y_unlabel = X[unlabel_indices], y[unlabel_indices]
     X_test, y_test = X[test_indices], y[test_indices]
 
+    ''' Convert their label into the abl form '''
     label_to_index = {label: index for index, label in enumerate(y_label)}
 
     for i in range(len(y_unlabel)):

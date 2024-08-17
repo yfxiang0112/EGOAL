@@ -8,7 +8,7 @@ df_2 = pd.read_csv('dataset/raw/dataset.csv')
 # print(df_2)
 
 labels = df_2.columns[2:]
-start_col = df_1.shape[1] - 20
+start_col = df_1.shape[1] - 1427
 
 if start_col + len(labels) > df_1.shape[1]:
     new_columns = df_1.columns.tolist() + [f'new_col_{i}' for i in range(df_1.shape[1], start_col + len(labels))]
