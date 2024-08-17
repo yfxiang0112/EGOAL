@@ -85,7 +85,12 @@ def train(id: int):
     ''' Build KB & reasoner based on defined GO rules '''
     print_log("Building the Reasoning Part.", logger="current")
 
-    kb = GO(sg_name, rule_path, annotation_path)
+    try:
+        kb = GO(sg_name, rule_path, annotation_path)
+    except FileNotFoundError:
+        print(f"Rule file not found: {rule_path}. Skipping...")
+        return 
+
     reasoner = Reasoner(kb, dist_func=consitency, idx_to_label=None)
 
 

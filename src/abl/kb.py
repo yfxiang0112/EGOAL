@@ -14,7 +14,6 @@ class GO(KBBase):
         ''' Load GO rules and annotations
             Define set of concepts related to current single gene '''
         rule_df = pd.read_csv(rule_path)
-
         annotation = pd.read_csv(annotation_path, header=None, index_col=0)
         sg_row = annotation.loc[single_gene]
         self.goa_con_set = eval(sg_row[1])
