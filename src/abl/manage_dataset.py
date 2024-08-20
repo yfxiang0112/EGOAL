@@ -24,7 +24,7 @@ def filter_id(s):
 ##########################################################
 
 
-def load_and_process_dataset(sg_col : int):
+def load_and_process_dataset(sg_col : str):
     '''
     Input:
         sg_col, int 
@@ -38,14 +38,19 @@ def load_and_process_dataset(sg_col : int):
     # df_1 = pd.read_csv('dataset/importance/processed_dataset_with_importance.csv')
     df_1 = pd.read_csv('dataset/one-hot/one_hot_pro_y_allone.csv')
 
+    ''' skip if current gene name not exists '''
+    if sg_col not in df_1.columns:
+        return None, None
+
     ''' convert list & bitmap dataset into np array '''
     X_init = df_1.iloc[:,2].apply(eval).apply(filter_id_lst)
-    y_init = df_1.iloc[:, 3729:]
+    #y_init = df_1.iloc[:, 3729:]
+    y_init = df_1.loc[:, sg_col]
     X = np.array(list(X_init))
     y = y_init.to_numpy()
 
     ''' get single gene label column of current gene id ''' 
-    y = y[:,sg_col]
+    #y = y[:,sg_col]
 
     return X, y
 

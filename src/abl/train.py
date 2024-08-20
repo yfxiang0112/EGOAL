@@ -56,6 +56,10 @@ def train(id: int):
     rule_path = 'rules/single_genes/' + sg_name + '_sg_rule.csv'
     #rule_path = 'rules/ruleConFree.csv'
 
+    if not os.path.exists(rule_path):
+        ''' skip if ruleset not exists '''
+        return
+
 
     ''' Build Logger '''
     print_log(f"Abductive Learning on single gene {sg_name}.", logger="current")
@@ -64,7 +68,11 @@ def train(id: int):
     ''' Split dataset with current single gene column '''
     print_log("Working with Data.", logger="current")
 
-    X, y = load_and_process_dataset(sg_idx)
+    X, y = load_and_process_dataset(sg_name)
+
+    if X==None:
+        ''' skip if current gene not exists '''
+        return
 
     X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
     label_data = tab_data_to_tuple(X_label, y_label)
