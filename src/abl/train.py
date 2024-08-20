@@ -1,6 +1,7 @@
 import argparse
 import os
 import os.path as osp
+from types import NoneType
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -58,6 +59,7 @@ def train(id: int):
 
     if not os.path.exists(rule_path):
         ''' skip if ruleset not exists '''
+        print_log(f'Skipped train of gene {sg_name}: rule set not found')
         return
 
 
@@ -70,8 +72,9 @@ def train(id: int):
 
     X, y = load_and_process_dataset(sg_name)
 
-    if X==None:
+    if type(X) == NoneType:
         ''' skip if current gene not exists '''
+        print_log(f'Skipped train of gene {sg_name}: not in data column')
         return
 
     X_label, y_label, X_unlabel, y_unlabel, X_test, y_test = split_dataset(X, y, test_size=0.2) 
