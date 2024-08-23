@@ -40,9 +40,18 @@ name_1 = [name for name, pred in result.items() if pred == 1]
 
 # 对比预测结果与实际值
 correct_predictions = [name for name in name_1 if df_subset.get(name, 0) == 1]
-print(correct_predictions)
-
 # 计算准确率
 accuracy = len(correct_predictions) / len(name_1) if name_1 else 0
 
 print(f'Accuracy: {accuracy:.2%}')
+
+# 找出所有在实际值中为0的元素
+actual_zeros = [name for name, actual in df_subset.items() if actual == 0]
+
+# 找出这些元素中被预测为1的元素
+incorrect_predictions = [name for name in actual_zeros if result.get(name, 0) == 1]
+
+# 计算错误率
+error_rate = len(incorrect_predictions) / len(actual_zeros) if actual_zeros else 0
+
+print(f'Error Rate: {error_rate:.2%}')
