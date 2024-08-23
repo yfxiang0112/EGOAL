@@ -3,7 +3,11 @@ import joblib
 import glob
 import re
 from tqdm import tqdm
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, auc
 
+''' Preparation for data '''
 df = pd.read_csv('dataset/one-hot/one_hot_pro_y_allone.csv')
 df_subset = df.iloc[1, 2798:]
 
@@ -17,14 +21,13 @@ model_numbers.sort()
 models = []
 name_list = []
 
-for number in range(1, 4759):
+for number in tqdm(range(1, 4759)):
     model_file = f'models/SO_{number:04d}_model.joblib'
     name_list.append(f'SO_{number:04d}')
     if model_file in model_files:
         model = joblib.load(model_file)
         models.append(model)
     else:
-        print(f'Warning: Model SO_{number:04d}_model.joblib not found.')
         models.append(None)  
 
 predictions = []
@@ -38,20 +41,72 @@ for model in tqdm(models):
 result = {name: pred for name, pred in zip(name_list, predictions)}
 name_1 = [name for name, pred in result.items() if pred == 1]
 
-# 对比预测结果与实际值
-correct_predictions = [name for name in name_1 if df_subset.get(name, 0) == 1]
+''' Analysis '''
+all_names = df_subset.keys()
+
+# 初始化 TP, FN, FP, TN
+TP = []
+FN = []
+FP = []
+TN = []
+
+# 遍历所有样本
+for name in all_names:
+    actual = df_subset.get(name, 0)
+    predicted = result.get(name, None)
+    
+    if predicted == 1:
+        if actual == 1:
+            TP.append(name)
+            print(name)
+        else:
+            FP.append(name)
+            print(name)
+    else:
+        if actual == 1:
+            FN.append(name)
+            print(name)
+        else:
+            TN.append(name)
+            print(name)
+
 # 计算准确率
-accuracy = len(correct_predictions) / len(name_1) if name_1 else 0
-
+accuracy = len(TP) / len(name_1) if name_1 else 0
 print(f'Accuracy: {accuracy:.2%}')
+# 定义文件名
+output_file = 'src/model/classification_results.txt'
+# 写入文件
+with open(output_file, 'w') as f:
+    f.write(f'Accuracy: {accuracy:.2%}\n')
+    f.write(f'True Positives: {TP}\n')
+    f.write(f'False Negatives: {FN}\n')
+    f.write(f'False Positives: {FP}\n')
+    f.write(f'True Negatives: {TN}\n')
 
-# 找出所有在实际值中为0的元素
-actual_zeros = [name for name, actual in df_subset.items() if actual == 0]
+print(f'Results have been saved to {output_file}')
 
-# 找出这些元素中被预测为1的元素
-incorrect_predictions = [name for name in actual_zeros if result.get(name, 0) == 1]
+''' Draw auc pic '''
+actual_values = [df_subset.get(name, 0) for name in all_names]
+predicted_probabilities = [result.get(name, None) for name in all_names]
 
-# 计算错误率
-error_rate = len(incorrect_predictions) / len(actual_zeros) if actual_zeros else 0
+# 确保预测概率不为 None
+predicted_probabilities = [p if p is not None else 0 for p in predicted_probabilities]
 
-print(f'Error Rate: {error_rate:.2%}')
+# 计算 ROC 曲线
+fpr, tpr, thresholds = roc_curve(actual_values, predicted_probabilities)
+
+# 计算 AUC
+roc_auc = auc(fpr, tpr)
+
+# 绘制 ROC 曲线
+plt.figure()
+plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic')
+plt.legend(loc="lower right")
+plt.savefig('src/model/auc.png')
+plt.show()
