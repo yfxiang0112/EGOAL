@@ -13,3 +13,4 @@ rules/go-plus.owl
 
 # tmp
 rules/KG_RDF_filter-large.csv
+src/tmp_nn_version

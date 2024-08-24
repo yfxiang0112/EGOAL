@@ -73,11 +73,15 @@ for name in all_names:
 # 计算准确率
 accuracy = len(TP) / len(name_1) if name_1 else 0
 print(f'Accuracy: {accuracy:.2%}')
+
+accuracy_all_name = len(TP) + len(TN) / len(all_names)
+print(f'accuracy_all_name: {accuracy:.2%}')
 # 定义文件名
-output_file = 'src/model/classification_results.txt'
+output_file = 'src/predict/classification_results.txt'
 # 写入文件
 with open(output_file, 'w') as f:
     f.write(f'Accuracy: {accuracy:.2%}\n')
+    f.write(f'accuracy_all_name: {accuracy:.2%}\n')
     f.write(f'True Positives: {TP}\n')
     f.write(f'False Negatives: {FN}\n')
     f.write(f'False Positives: {FP}\n')
@@ -108,5 +112,5 @@ plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.title('Receiver Operating Characteristic')
 plt.legend(loc="lower right")
-plt.savefig('src/model/auc.png')
+plt.savefig('src/predict/auc.png')
 plt.show()
