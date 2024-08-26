@@ -6,8 +6,8 @@ TOP_CNT = 10
 ''' get 10 most related concepts '''
 
 owl_pth = 'rules/go.owl'
-in_pth = 'src/concept_extract/pred_text.txt'
-out_pth = 'src/concept_extract/result.txt'
+in_pth = 'predict/input.txt'
+out_pth = 'predict/concepts.txt'
 
 
 ''' initialize text embedding converter '''
