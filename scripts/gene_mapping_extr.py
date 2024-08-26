@@ -44,4 +44,6 @@ with open('src/predict/classification_results.txt', 'r') as f:
 with open('predict/pred_gene_with_name.txt', 'w') as f:
     f.write(f'predicted {len(pred_gene)} genes:\n')
     for g in pred_gene:
+        if 'unknown' in gene_mapping[g] or 'uncharacterized' in gene_mapping[g]:
+            continue
         f.write(f'{g} - {gene_mapping[g]}\n')

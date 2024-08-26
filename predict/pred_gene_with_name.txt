@@ -10,112 +10,59 @@ SO_0085 - predicted inner membrane protein
 SO_0088 - predicted periplasmic protein
 SO_0109 - SirA family protein YedF
 SO_0112 - inhibitor of invertebrate-type lysozyme PliI-like family
-SO_0114 - periplasmic protein of unknown function DUF3157
 SO_0145 - endo/excinuclease domain protein
 SO_0147 - predicted periplasmic protein
-SO_0148 - uncharacterized protein
-SO_0159 - protein of unknown function
 SO_0179 - aspartyl/asparaginyl beta-hydroxylase family protein
-SO_0181 - uncharacterized protein
 SO_0184 - microcystin dependent MdpB family protein
 SO_0203 - predicted periplasmic protein
-SO_0273 - lipoprotein of unknown function DUF1439
 SO_0284 - PilQ chaperone PilP
-SO_0290 - protein of unknown function DUF2970
 SO_0291 - predicted periplasmic protein
 SO_0309 - membrane protein MAPEG superfamily
 SO_0316 - phosphatidylethanolamine-binding protein YbcL
-SO_0318 - protein of unknown function DUF1232
-SO_0321 - putative periplasmic protein of unknown function
 SO_0329 - predicted lipoprotein
-SO_0331 - protein of unknown function DUF3630
-SO_0334 - protein of unknown function DUF1107
 SO_0337 - YER057c/Yigf/Uk114 family protein
 SO_0339 - modulator of rho-dependent transcriptional termination RofA
 SO_0353 - TPR domain protein
 SO_0362 - predicted inner membrane protein
-SO_0379 - protein of unknown function DUF45
 SO_0381 - type I RM locus Fic family protein
-SO_0384 - protein of unknown function DUF3296
 SO_0386 - excisionase/response regulator inhibitor-like protein
-SO_0387 - uncharacterized protein
-SO_0391 - uncharacterized protein
 SO_0392 - predicted lipoprotein
 SO_0403 - predicted outer membrane protein
 SO_0409 - thioredoxin family protein
-SO_0430 - putative periplasmic protein of unknown function DUF2845
-SO_0439 - uncharacterized protein
-SO_0454 - protein of unknown function DUF1850
 SO_0459 - putative ATPase DUF853 family
-SO_0461 - uncharacterized protein
 SO_0466 - toxin-antitoxin system antidote
-SO_0474 - protein of unknown function DUF2166
 SO_0480 - sulfurtransferase SirB
-SO_0508 - uncharacterized protein
 SO_0515 - DUF3012 domain-containing lipoprotein
-SO_0516 - uncharacterized protein
-SO_0540 - periplasmic protein of unknown function DUF2927
-SO_0543 - uncharacterized protein
 SO_0547 - putative outer membrane protein TIGR02001 family
-SO_0551 - uncharacterized protein
 SO_0552 - predicted periplasmic protein
 SO_0555 - bifunctional diguanylate cyclase/phosphodiesterase
 SO_0557 - protein GumN
 SO_0559 - MaoC domain protein
 SO_0563 - membrane protein
-SO_0573 - protein of unknown function of DUF3530
 SO_0581 - Zn-binding protein
-SO_0595 - protein of unknown function
 SO_0628 - bifunctional diguanylate cyclase/phosphodiesterase
-SO_0645 - Mu phage uncharacterized protein
 SO_0647 - Mu phage protein Kil
-SO_0649 - Mu phage uncharacterized protein
 SO_0651 - Mu phage host gene modulation protein GemA
-SO_0653 - Mu phage uncharacterized protein
-SO_0654 - Mu phage uncharacterized protein
 SO_0660 - Mu phage conserved phage protein
 SO_0661 - Mu phage mom transcriptional regulator Com
 SO_0668 - Mu phage minor capsid protein GpF
-SO_0673 - Mu phage uncharacterized protein
-SO_0687 - Mu phage uncharacterized protein
-SO_0688 - Mu phage uncharacterized protein
-SO_0699 - putative periplasmic protein of unknown function
 SO_0720 - predicted periplasmic protein
 SO_0732 - thioredoxin-like protein
 SO_0736 - predicted periplasmic protein
-SO_0748 - uncharacterized protein
-SO_0752 - uncharacterized protein
 SO_0757 - TPR domain lipoprotein
 SO_0758 - predicted periplasmic protein
 SO_0764 - putative periplasmic protein
-SO_0782 - uncharacterized protein
-SO_0788 - protein of unknown function DUF3297
 SO_0792 - ribosome recycling factor Rrf
 SO_0797 - periplasmic thioredoxin-family protein
-SO_0804 - uncharacterized protein
 SO_0805 - CBS domain containing protein
-SO_0816 - protein of unknown function
-SO_0844 - uncharacterized protein
 SO_0851 - PilD processed protein
 SO_0852 - PilD processed protein
 SO_0855 - hydroxyneurosporene synthase AttH
-SO_0868 - putative periplasmic protein of unknown function
-SO_0879 - protein of unknown function UPF0270
-SO_0886 - putative metal-binding protein of unknown function DUF2387
-SO_0909 - uncharacterized protein
-SO_0912 - uncharacterized protein
 SO_0914 - beta lactamase family protein
-SO_0923 - lipoprotein of unknown function DUF306
-SO_0924 - uncharacterized protein
 SO_0925 - signalling protein with GGDEF domain
-SO_0927 - uncharacterized protein
-SO_0934 - outer membrane protein of unknown function DUF481
 SO_0938 - predicted lipoprotein
 SO_0941 - predicted transmembrane protein
-SO_0962 - protein of unknown function DUF3332
-SO_0963 - outer membrane lipoprotein of unknown function DUF903 YgdR
 SO_0971 - predicted membrane protein
-SO_0973 - uncharacterized protein
 SO_0974 - putative cytoplasmic protein
 SO_0975 - disulphide interchange protein DsbD family
 SO_1002 - outer membrane morn variant repeat-containing protein
@@ -123,32 +70,17 @@ SO_1003 - outer membrane morn variant repeat-containing protein
 SO_1029 - predicted lipoprotein
 SO_1045 - putative outer membrane protein
 SO_1061 - lipoprotein with a tetratricopeptide repeat
-SO_1063 - functionally uncharacterized protein SlyX
 SO_1064 - WD-40 repeat lipoprotein
 SO_1069 - predicted membrane protein
-SO_1077 - uncharacterized protein
-SO_1081 - uncharacterized protein
 SO_1086 - predicted inner membrane protein
-SO_1175 - protein of unknown function DUF1451
-SO_1187 - uncharacterized protein
-SO_1189 - putative periplasmic protein of unknown function DUF2271
 SO_1190 - putative periplasmic CbiK superfamily protein
 SO_1192 - predicted extracytoplasmic protein
-SO_1247 - inner membrane protein of unknown function DUF998
 SO_1254 - signal transduction superfamily protein with modified HD-GYP domain
-SO_1262 - protein of unknown function DUF2937
-SO_1281 - uncharacterized protein
-SO_1303 - uncharacterized protein
 SO_1305 - membrane protein
 SO_1317 - predicted periplasmic protein
 SO_1318 - NTF2-like superfamily protein
 SO_1337 - predicted periplasmic protein
-SO_1340 - protein of unknown function DUF1434
 SO_1365 - predicted membrane protein
-SO_1372 - protein of unknown function DUF2960
-SO_1376 - integral membrane protein of unknown function DUF1449
-SO_1379 - uncharacterized protein
-SO_1380 - protein of unknown function DUF2913
 SO_1405 - periplasmic transglutaminase family protein
 SO_1411 - predicted outer membrane protein
 SO_1412 - outer membrane beta barrel protein
@@ -156,153 +88,56 @@ SO_1425 - outer membrane morn variant repeat-containing protein
 SO_1428 - extracellular dimethyl sulfoxide/manganese oxide reductase outer membrane translocase DmsF
 SO_1441 - putative cytoplasmic protein
 SO_1444 - toxin module of toxin-antitoxin system RelE/StbE family
-SO_1450 - protein of unknown function DUF2787
 SO_1462 - cytoplasmic protein in type I restriction-modifcation system locus
 SO_1468 - ADP-ribose binding domain-containing protein
-SO_1479 - uncharacterized protein
 SO_1489 - putative cytoplasmic protein
-SO_1504 - membrane protein of unknown function DUF3087
-SO_1512 - uncharacterized protein
 SO_1518 - L-lactate dehydrogenase complex protein LldG
-SO_1543 - uncharacterized protein
-SO_1548 - protein of unknown function DUF3192
 SO_1572 - small highly charged protein
-SO_1588 - uncharacterized protein
-SO_1611 - uncharacterized protein
-SO_1613 - protein of unknown function DUF2789
-SO_1615 - inner membrane protein of unknown function DUF962
 SO_1675 - predicted lipoprotein
-SO_1685 - uncharacterized protein
-SO_1701 - secreted protein of unknown function
 SO_1705 - ABC-type drugE1 family efflux system MFP component
-SO_1711 - uncharacterized protein
 SO_1713 - putative lipoprotein
-SO_1733 - uncharacterized protein
-SO_1739 - protein of unknown function DUF1289
-SO_1741 - uncharacterized protein
-SO_1746 - membrane protein of unknown function DUF3624
-SO_1764 - protein of unknown function DUF1706
-SO_1765 - uncharacterized protein
 SO_1814 - late competence development protein ComFB
-SO_1836 - protein of unknown function DUF1260
-SO_1848 - uncharacterized protein
-SO_1849 - uncharacterized protein
-SO_1864 - uncharacterized protein
-SO_1867 - protein of unknown function DUF480 YceH
 SO_1868 - nucleic acid binding superfamily protein YitL type
 SO_1872 - surface lipoprotein with VCBS repeats
-SO_1888 - uncharacterized protein
-SO_1939 - uncharacterized protein
-SO_1940 - uncharacterized protein
-SO_1955 - uncharacterized protein
 SO_1956 - phosphatidylethanolamine-binding protein
 SO_1957 - predicted periplasmic protein
 SO_1958 - glyoxylase-like domain protein
-SO_1969 - protein of unknown function DUF55
-SO_1970 - uncharacterized protein
-SO_1998 - protein of unknown function DUF3389
-SO_2009 - protein of unknown function DUF2063
-SO_2010 - uncharacterized protein
 SO_2041 - DNA recombination protein RmuC
-SO_2050 - protein of unknown function DUF938
 SO_2061 - predicted lipoprotein
-SO_2079 - uncharacterized protein
-SO_2111 - uncharacterized protein
-SO_2146 - uncharacterized protein
-SO_2176 - protein of unknown function DUF1414 YejL
-SO_2201 - protein of unknown function DUF413
 SO_2219 - predicted membrane protein
 SO_2228 - CBS domain containing protein
-SO_2234 - uncharacterized protein
 SO_2247 - putative lipoprotein
-SO_2254 - periplasmic protein of unknown function DUF2803
-SO_2256 - uncharacterized protein
-SO_2346 - lipoprotein of unknown function DUF2989
 SO_2357 - Cbb3-type cytochrome oxidase assembly protein disulfide bond oxidoreductase DsbD family
 SO_2377 - tRNA 2-thiouridine synthesizing protein C subunit TusC
-SO_2391 - protein of unknown function DUF1904
-SO_2393 - uncharacterized protein
-SO_2396 - protein of unknown function DUF2058
-SO_2422 - protein of unknown function DUF1315
 SO_2439 - serine rich protein
-SO_2457 - protein of unknown function YciI
-SO_2460 - uncharacterized protein
 SO_2470 - glutathione-dependent thiol reductase
-SO_2479 - protein of unknown function DUF2897
 SO_2497 - SEC-C domain protein
-SO_2515 - uncharacterized protein
-SO_2518 - uncharacterized protein
-SO_2533 - periplasmic protein of unknown function DUF3108
 SO_2565 - intracellular proteinase inhibitor domain protein
 SO_2569 - putative cytoplasmic protein
 SO_2573 - UCP006173 family protein
-SO_2575 - protein of unknown function DUF709 YcgL
 SO_2582 - peptidase S33 family
-SO_2585 - uncharacterized protein
-SO_2598 - protein of unknown function DUF2835
 SO_2604 - UV induced SOS regulon protein YebG
-SO_2637 - uncharacterized protein
-SO_2639 - uncharacterized protein
-SO_2642 - protein of unknown function DUF1285
-SO_2658 - Mu phage uncharacterized protein
-SO_2660 - Mu phage protein of unknown function DUF3164
-SO_2664 - Mu phage uncharacterized protein
 SO_2667 - Mu phage host gene modulation protein GemA
-SO_2669 - Mu phage protein of unknown function
-SO_2672 - Mu phage uncharacterized protein E18
-SO_2676 - Mu phage uncharacterized protein Gp26
 SO_2677 - Mu phage small terminase subunit GpD
-SO_2678 - Mu phage uncharacterized protein
-SO_2686 - Mu phage uncharacterized protein
-SO_2691 - Mu phage uncharacterized protein
-SO_2692 - Mu phage uncharacterized protein Gp38
 SO_2694 - Mu phage tail tube protein GpM
 SO_2699 - Mu phage baseplate assembly protein GpP
 SO_2711 - predicted lipoprotein
-SO_2736 - outer membrane protein protein of unknown function DUF3187
 SO_2805 - heme-copper-containing inner membrane protein NnrS
 SO_2808 - protein with CobQ/CobB/MinD/ParA nucleotide binding domain
 SO_2821 - probable metal-binding protein YecH
-SO_2829 - uncharacterized protein
 SO_2830 - predicted outer membrane protein
 SO_2848 - putative periplasmic protein
-SO_2854 - uncharacterized protein
-SO_2863 - membrane protein of unknown protein DUF2919
-SO_2872 - membrane protein of unknown function DUF2069
-SO_2890 - protein of unknown function DUF3478
 SO_2893 - base-induced periplasmic protein YceI
 SO_2917 - predicted lipoprotein
-SO_2918 - uncharacterized protein
 SO_2922 - predicted nucleoside-diphosphate sugar epimerase YfcH
-SO_2929 - protein of unknown function DUF3083
 SO_2930 - bifunctional pectinolytic enzyme/cytochrome c
 SO_2931 - cytochrome c lipoprotein
 SO_2936 - sialidase superfamily protein
-SO_2939 - Lambda phage uncharacterized protein
 SO_2945 - Lambda phage tail fiber protein
 SO_2951 - Lambda phage protein of known function
-SO_2954 - Lambda phage uncharacterized protein
 SO_2955 - Lambda phage minor tail protein G
-SO_2957 - Lambda phage protein of unknown function DUF3168
 SO_2958 - Lambda phage protein HK97-gp10 family
-SO_2966 - Lambda phage uncharacterized protein
-SO_2970 - Lambda phage uncharacterized protein
-SO_2972 - Lambda phage uncharacterized protein
-SO_2979 - Lambda phage uncharacterized protein
-SO_2981 - Lambda phage uncharacterized protein
-SO_2983 - Lambda phage uncharacterized protein
-SO_2986 - Lambda phage uncharacterized protein
 SO_2991 - Lambda phage lipoprotein
-SO_2998 - Lambda phage uncharacterized protein
-SO_2999 - Lambda phage protein of unknown function DUF1317
-SO_3002 - Lambda phage uncharacterized protein
-SO_3003 - Lambda phage uncharacterized protein
-SO_3005 - Lambda phage uncharacterized protein
-SO_3007 - Lambda phage uncharacterized protein
-SO_3010 - Lambda phage uncharacterized protein
-SO_3027 - uncharacterized protein
-SO_3029 - protein of unknown function DUF2798
-SO_3047 - protein of unknown function DUF1097
 SO_3051 - xanthine and CO dehydrogenase family maturation factor XdhC/CoxF family
 SO_3062 - predicted inner membrane protein
 SO_3069 - type IV pilus assembly protein FimV
@@ -310,150 +145,80 @@ SO_3076 - protein YfcL
 SO_3081 - UPF0115 family protein YfcN
 SO_3085 - predicted periplasmic protein
 SO_3087 - predicted membrane protein
-SO_3091 - protein of unknown function DUF58 in aerotolerance operon
-SO_3095 - periplasmic protein of unknown function in aerotolerance operon BatD
-SO_3100 - uncharacterized protein
-SO_3104 - inner membrane protein of unknown function DUF2892
-SO_3107 - protein of unknown function YaeQ
-SO_3119 - uncharacterized protein
-SO_3121 - uncharacterized protein
-SO_3132 - uncharacterized protein
 SO_3157 - polysaccharide biosynthesis lipoprotein WbfD
 SO_3164 - putative histidine degradation protein HutD
 SO_3256 - outer membrane lipoprotein required for flagellar motility FlgP
 SO_3257 - outer membrane lipoprotein required for flagellar motility FlgO
 SO_3258 - flagella assembly protein FlgT
 SO_3259 - motility accessory factor Maf
-SO_3260 - uncharacterized protein
-SO_3274 - protein of unknown function DUF2947
 SO_3303 - cell surface protein
-SO_3325 - periplasmic protein of unknown function NrfJ
 SO_3337 - signal transduction protein with HDOD/GAF domains
 SO_3344 - predicted inner membrane protein
 SO_3357 - outer membrane protein
-SO_3364 - protein of unknown function DUF2884
 SO_3377 - predicted periplasmic protein
-SO_3378 - membrane protein of unknown function DUF2878
-SO_3380 - protein of unknown function DUF1365
-SO_3386 - bifunctional protein of unknown functions DUF523 and DUF1722
-SO_3387 - uncharacterized protein
-SO_3395 - protein of unknown function DUF2375
 SO_3449 - WGR domain protein
 SO_3454 - putative cytoplasmic protein
-SO_3458 - protein of unknown function DUF416
 SO_3474 - metallo-beta-lactamase family protein
 SO_3495 - OsmC-like superfamily protein
-SO_3501 - protein of unknown function DUF861
-SO_3504 - N-acetylglucosamine locus membrane protein of unknown function DUF1624 NagX
 SO_3512 - SapC family protein
 SO_3523 - type IV pilin system protein
 SO_3526 - type IV minor pilin protein PilX
 SO_3550 - anti-sigma factor
 SO_3558 - predicted lipoprotein
-SO_3571 - periplasmic protein of unknown function DUF2057
 SO_3576 - predicted periplasmic protein
 SO_3591 - predicted periplasmic protein
-SO_3593 - protein of unknown function DUF3019
-SO_3596 - protein of unknown function DUF1289
-SO_3617 - uncharacterized protein
 SO_3632 - predicted outer membrane protein
-SO_3645 - protein of unknown function DUF3718
 SO_3668 - heme iron utilization protein HmuX
-SO_3676 - protein of unknown function DUF2956
-SO_3677 - uncharacterized protein
-SO_3679 - protein of unknown function DUF2131
-SO_3693 - uncharacterized protein
-SO_3711 - protein of unknown function DUF2235
-SO_3713 - uncharacterized protein
 SO_3716 - DnaJ domain protein
-SO_3722 - protein of unknown function DUF2806
-SO_3744 - uncharacterized protein
 SO_3758 - sodium-dependent bicarbonate transporter (SBT) family
 SO_3761 - predicted lipoprotein
-SO_3764 - protein of unknown function DUF2170
 SO_3765 - PspA/IM30 family protein
-SO_3770 - phosphate transport accessory protein of unknown function DUF47
 SO_3772 - SH3 domain protein
-SO_3775 - protein of unknown function DUF2971
 SO_3781 - major pilin structural protein V10-like protein
-SO_3786 - protein of unknown function DUF1814
 SO_3790 - sulfur acceptor protein for iron-sulfur cluster assembly SufE
 SO_3794 - morn variant repeat protein
 SO_3810 - outer membrane protein OmpA-like protein
-SO_3813 - uncharacterized protein
 SO_3829 - hypothetical protein
 SO_3841 - anti-sigma factor
 SO_3847 - cell wall assembly/cell proliferation coordinating protein KNR4-like protein
-SO_3856 - protein of unknown function DUF3069
 SO_3857 - phosphoesterase PA-phosphatase related protein
 SO_3860 - periplasmic substrate binding protein family 3
-SO_3888 - protein of unknown function DUF1508
-SO_3900 - enzyme of unknown function UPF0227
 SO_3905 - predicted outer membrane protein
-SO_3906 - protein of unknown function DUF2333
 SO_3909 - predicted membrane protein
 SO_3924 - Fe hydrogenase assembly protein HydX
-SO_3931 - outer membrane protein of unknown function DUF481
-SO_3938 - inner membrane protein of unknown function DUF2065 YjeT
 SO_3950 - ABC-type phospholipid uptake (salvage) system anti-anti-sigma factor MlaB
 SO_3965 - phosphotransferase system (PTS) phosphohisitinoprotein-hexose phosphotransferase comonent PtsO
-SO_3987 - protein of unknown function DUF3293
-SO_3993 - uncharacterized protein
-SO_4006 - uncharacterized protein
 SO_4008 - putative recombination regulator protein DUF3584 family
-SO_4011 - protein of unknown function DUF3581
 SO_4013 - TPR repeat domain protein
 SO_4031 - predicted transmembrane protein
 SO_4035 - predicted membrane protein
 SO_4064 - pentapeptide repeat protein McbG
-SO_4068 - uncharacterized protein
 SO_4093 - TIGR02099 family protein
 SO_4113 - MSHA biogenesis protein MshK
-SO_4134 - protein of unknown function DUF465
 SO_4145 - signalling protein with EAL and C2 domains
-SO_4171 - uncharacterized protein
 SO_4193 - esterase/lipase/thioesterase family protein
 SO_4205 - putative periplasmic protein in twin arginine protein translocase system locus
-SO_4244 - uncharacterized protein
-SO_4261 - uncharacterized protein
 SO_4263 - phage P1-related protein in restrction modification operon RflA
-SO_4270 - uncharacterized protein
 SO_4280 - CBS domain containing protein
-SO_4307 - protein of unknown function DUF484
-SO_4333 - uncharacterized protein
 SO_4342 - predicted lipoprotein
-SO_4354 - protein of unknown function UPF0153
 SO_4359 - outer membrane protein MtrB family
 SO_4361 - extracellular oxidoreductase associated protein
 SO_4362 - extracellular oxidoreductase chaperone protein
-SO_4365 - protein of unknown function DUF3014
-SO_4379 - fatty acid biosynthesis locus lipoprotein of unknown function DUF3261
-SO_4384 - uncharacterized protein
 SO_4385 - von Willebrand factor type A domain protein
-SO_4421 - RK-rich protein of unknown function DUF2986
 SO_4429 - putative periplasmic protein
-SO_4430 - uncharacterized protein
-SO_4461 - uncharacterized protein
-SO_4481 - uncharacterized protein
 SO_4486 - PepSY domain protein
-SO_4492 - protein of unknown function DUF1993
-SO_4505 - formate dehydrogenase associated protein of unknown function DUF3506
 SO_4508 - formate dehydrogenase accessory protein FdhX
 SO_4522 - putative periplasmic protein
 SO_4559 - Sel1 domain-containing protein
 SO_4560 - predicted membrane protein
-SO_4561 - putative extracellular protein of unknown function DUF2780
 SO_4562 - tellurium resistance terB-like protein subgroup 2
 SO_4592 - predicted periplasmic protein
 SO_4600 - glyoxalase/bleomycin resistance protein/dioxygenase superfamily protein
 SO_4627 - glutamine rich protein
 SO_4641 - toxin-antitoxin system toxin RelE family
-SO_4649 - histidine-rich protein of unknown function DUF3300
-SO_4651 - protein of unknown function DUF2292
 SO_4685 - outer membrane protein in capsule/EPS biosynthesis locus
 SO_4700 - outer membrane porin
 SO_4701 - predicted periplasmic protein
 SO_4710 - paraquat-inducible membrane protein PqiA family
 SO_4719 - ABC-type tungstate uptake system substrate-binding component TupA
 SO_4738 - putative cytoplasmic protein
-SO_4740 - predicted membrane protein of unknown function DUF2061
