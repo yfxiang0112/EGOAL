@@ -17,9 +17,9 @@ con_df = pd.DataFrame({'pca0':con_embd[0], 'pca1':con_embd[1]})
 txt_df = pd.DataFrame({'pca0':txt_embd[0], 'pca1':txt_embd[1]})
 
 
-plt.figure(figsize=(10, 7))
-sns.scatterplot(data=con_df, x='pca0', y='pca1')
-sns.scatterplot(data=txt_df, x='pca0', y='pca1', color='red')
+plt.figure(figsize=(20, 15))
+sns.scatterplot(data=con_df, x='pca0', y='pca1', size=0.05)
+sns.scatterplot(data=txt_df, x='pca0', y='pca1', color='red', size=5)
 plt.title('PCA Result of PCA Components')
 plt.xlabel('PCA Component 1')
 plt.ylabel('PCA Component 2')
