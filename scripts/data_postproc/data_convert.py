@@ -21,12 +21,12 @@ df = df.dropna(subset=['CONCEPTS'])
 df = df.rename(columns={df.columns[0]: 'NAME'})
 df = df.fillna(np.nan)
 
-df.to_csv('dataset/pca/processed_dataset.csv', index=False)
+df.to_csv('dataset/raw/proced/processed_dataset.csv', index=False)
 
 
 # Process more
-df_pro = pd.read_csv('dataset/pca/processed_dataset.csv')
-df_find = pd.read_csv('dataset/pca/reduced_dataset.csv')
+df_pro = pd.read_csv('dataset/raw/proced/processed_dataset.csv')
+df_find = pd.read_csv('dataset/raw/proced/reduced_dataset.csv')
 
 processed_concepts = df_pro['CONCEPTS']
 reduced_concepts = df_find['CONCEPTS']
@@ -41,4 +41,4 @@ for i in range(len(processed_concepts)):
         if processed_concepts[i] == reduced_concepts[j]:
             df_pro.iloc[i, 2:102] = df_find.iloc[j, 1:101].values
             
-df_pro.to_csv('dataset/pca/processed_dataset_with_inserted_columns.csv', index=False)
+df_pro.to_csv('dataset/raw/proced/processed_dataset_with_inserted_columns.csv', index=False)

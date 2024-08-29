@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import re
 
-df_1 = pd.read_csv('dataset/one-hot/one_hot.csv')
-df_2 = pd.read_csv('dataset/one-hot/one_hot_pro.csv')
+df_1 = pd.read_csv('scripts/data_onehot/one_hot.csv')
+df_2 = pd.read_csv('scripts/data_onehot/one_hot_pro.csv')
 
 # print(df_1)
 # print(df_2)
@@ -22,4 +22,4 @@ for index, row in df_1_subset.iterrows():
                 df_2.loc[index, key] = weights[i]
                 # print(df_2.loc[index, key])
 
-df_2.to_csv('dataset/one-hot/one_hot_pro_y.csv', index=False)
+df_2.to_csv('scripts/data_onehot/one_hot_pro_y.csv', index=False)

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 
 ''' Preparation for data '''
-df = pd.read_csv('dataset/one-hot/one_hot_pro_y_allone.csv')
+df = pd.read_csv('dataset/importance/dataset_onehot.csv')
 df_subset = df.iloc[1, 2798:]
 
 input_concept = ['GO_0009631', 'GO_0042309', 'GO_0080190', 'GO_0080192', 'GO_0046079', 'GO_0140739', 'GO_0140454', 'GO_0106379', 'GO_0050825', 'GO_0010346']
