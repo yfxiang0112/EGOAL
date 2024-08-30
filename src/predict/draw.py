@@ -2,7 +2,7 @@ import re
 import matplotlib.pyplot as plt
 import numpy as np
 
-text_path = 'src/predict/evaluation_results.txt'
+text_path = 'src/predict/evaluation_results_before.txt'
 with open(text_path, 'r') as file:
     text = file.read()
 
@@ -29,25 +29,26 @@ reasoning_accuracy_set = [float(s) for s in reasoning_accuracy_set]
 mean_character_accuracy = np.mean(character_accuracy_set)
 mean_reasoning_accuracy = np.mean(reasoning_accuracy_set)
 
-plt.figure(figsize=(20, 16))
+print('cha_acc, rea_acc',mean_character_accuracy, mean_reasoning_accuracy)
 
-plt.plot(x_values, reasoning_accuracy_set, marker='o', linestyle='-', color='r', label='Reasoning Accuracy')
-plt.axhline(y=mean_reasoning_accuracy, color='r', linestyle='--', label=f'Mean Reasoning Accuracy: {mean_reasoning_accuracy:.3f}')
+plt.figure(figsize=(20, 16))
+# 调整线条宽度和标记大小
+plt.plot(x_values, reasoning_accuracy_set, marker='o', linestyle='-', color='r', label='Reasoning Accuracy', linewidth=0.5, markersize=3)
+plt.axhline(y=mean_reasoning_accuracy, color='r', linestyle='--', label=f'Mean Reasoning Accuracy: {mean_reasoning_accuracy:.3f}', linewidth=0.5)
 plt.xlabel('SO ID')
 plt.ylabel('Accuracy')
 plt.title('Evaluation Results')
 plt.xticks(x_values, id_set, rotation=45)
 plt.legend()
-plt.savefig('src/predict/reasoning_acc.png')
-
+plt.savefig('src/predict/reasoning_acc_bfe.png')
 
 
 plt.figure(figsize=(20, 16))
-plt.plot(x_values, character_accuracy_set, marker='o', linestyle='-', color='b', label='Character Accuracy')
-plt.axhline(y=mean_character_accuracy, color='b', linestyle='--', label=f'Mean Character Accuracy: {mean_character_accuracy:.3f}')
+plt.plot(x_values, character_accuracy_set, marker='o', linestyle='-', color='b', label='Character Accuracy', linewidth=0.5, markersize=3)
+plt.axhline(y=mean_character_accuracy, color='b', linestyle='--', label=f'Mean Character Accuracy: {mean_character_accuracy:.3f}', linewidth=0.5)
 plt.xlabel('SO ID')
 plt.ylabel('Accuracy')
 plt.title('Evaluation Results')
 plt.xticks(x_values, id_set, rotation=45)
 plt.legend()
-plt.savefig('src/predict/character_acc.png')
+plt.savefig('src/predict/character_acc_bfe.png')
