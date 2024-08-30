@@ -1,8 +1,7 @@
 import re
-from tqdm import tqdm
 
 log_path = 'results/20240820_14_45_44/20240820_14_45_44.log'
-output_path = 'src/predict/evaluation_results_after.txt'
+output_path = 'src/predict/evaluation_results_before.txt'
 
 gene_start_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - ---------------------- Single gene training start --------------------------------')
 gene_id_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - Abductive Learning on single gene (\S+)\.')
@@ -29,14 +28,15 @@ with open(output_path, 'w') as output_file:
         else:
             continue
 
-        evaluation_matches = evaluation_pattern.findall(gene_log)
-        if evaluation_matches:
-            last_eval_match = evaluation_matches[-1]
-            char_accuracy = last_eval_match[1]
-            reasoning_accuracy = last_eval_match[2]
+        evaluation_match = evaluation_pattern.search(gene_log)
+        if evaluation_match:
+            char_accuracy = evaluation_match.group(2)
+            reasoning_accuracy = evaluation_match.group(3)
             result = f"{gene_id}: GO/character_accuracy: {char_accuracy} GO/reasoning_accuracy: {reasoning_accuracy}"
             output_file.write(result + '\n')
+            # Skip further evaluations for this gene
+            continue
         else:
             # result = f"{gene_id}: No evaluation results found"
-            # utput_file.write(result + '\n')
+            # output_file.write(result + '\n')
             continue
