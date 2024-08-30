@@ -45,6 +45,6 @@ num_vectors = len(values)
 column_names = ['CONCEPTS', 'CONCEPT'] + [f'vector{i+1}' for i in range(num_vectors)]
 
 new_df = pd.DataFrame(new_rows, columns=column_names)
-new_df.to_csv('dataset/pca/new_dataset.csv', index=False)
+new_df.to_csv('dataset/raw/proced/new_dataset.csv', index=False)
 
 print('All, not found, found: ', count_all, not_found, count_all - not_found)

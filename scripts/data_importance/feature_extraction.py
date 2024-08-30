@@ -8,7 +8,7 @@ def remove_nan(df_subset):
             df_subset = df_subset.drop(column_name, axis=1)
     return df_subset
 
-df = pd.read_csv('dataset/pca/processed_dataset_with_inserted_columns.csv')
+df = pd.read_csv('dataset/raw/proced/processed_dataset_with_inserted_columns.csv')
 
 packed_data = []
 

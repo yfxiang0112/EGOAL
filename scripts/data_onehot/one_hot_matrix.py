@@ -37,4 +37,4 @@ df_2 = df_2.reindex(columns=new_columns)
 
 print(df_2)
 
-df_2.to_csv('dataset/one-hot/one_hot.csv', index=False)
+df_2.to_csv('scripts/data_onehot/one_hot.csv', index=False)
