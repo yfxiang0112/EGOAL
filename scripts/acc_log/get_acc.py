@@ -2,7 +2,7 @@ import re
 from tqdm import tqdm
 
 log_path = 'results/20240820_14_45_44/20240820_14_45_44.log'
-output_path = 'src/predict/evaluation_results.txt'
+output_path = 'scripts/acc_log/acc.txt'
 
 gene_start_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - ---------------------- Single gene training start --------------------------------')
 gene_id_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - Abductive Learning on single gene (\S+)\.')

@@ -3,7 +3,7 @@ import numpy as np
 import os
 from sentence_transformers import SentenceTransformer
 
-from term_embd import graph_parse
+from concept_extract.term_embd import graph_parse
 
 
 class EmbeddingConverter():
