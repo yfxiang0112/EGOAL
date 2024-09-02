@@ -1,0 +1,87 @@
+import pandas as pd
+import joblib
+import glob
+import re
+from tqdm import tqdm
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, auc
+
+from concept_extract.term_embd import graph_parse
+from concept_extract.txt2con import EmbeddingConverter
+
+in_pth = 'predict/input.txt'
+out_dir = 'predict/results'
+n_inputs = 0
+
+##################################################
+
+''' initialize text embedding converter '''
+owl_pth = 'rules/go.owl'
+embd = EmbeddingConverter(owl_pth, use_vpn=True)
+
+''' initialize concept lists '''
+TOP_CNT = 10
+concepts = []
+#con_descps = [[] for _ in range(TOP_CNT)]
+
+''' read descriptions from input file '''
+descriptions = []
+with open(in_pth, 'r') as f:
+    descriptions = f.readlines()
+    n_inputs = len(descriptions)
+
+''' iterate instances '''
+for d in tqdm(descriptions, 'processing input instance'):
+
+        ''' compute similarity matrix & most similar concept list '''
+        sim = embd.similar_matrix(d)
+        sorted_sim = embd.max_sim(TOP_CNT)
+
+        concepts.append(list(sorted_sim))
+
+
+''' load gene - product mapping '''
+gene_mapping = {}
+with open('predict/gene_mapping.txt', 'r') as f:
+    gene_mapping = eval(f.readline())
+
+
+
+''' load pretrained model for each single gene '''
+models = []
+name_list = []
+model_files = glob.glob('models/SO_*_model.joblib')
+for gene_id in tqdm(range(1, 4759)):
+    model_file = f'models/SO_{gene_id:04d}_model.joblib'
+    name_list.append(f'SO_{gene_id:04d}')
+    if model_file in model_files:
+        model = joblib.load(model_file)
+        models.append(model)
+    else:
+        models.append(None)  
+
+''' predict for each input with pretrained model '''
+for i in tqdm(range(n_inputs), 'processing input'):
+    concept_ids = [int(re.sub(r'GO_0*', '', c)) for c in concepts[i]]
+    
+    predictions = []
+    for model in models:
+        if model is not None:
+            prediction = model.predict_proba([concept_ids])[0]
+            predictions.append(prediction)
+        else:
+            predictions.append([0,0])  
+    
+    ''' zip name & pred prob as lst '''
+    result = [(name, pred[1]) for name, pred in zip(name_list, predictions) if pred[1] > .5]
+    result.sort(key= lambda x: x[1], reverse=True)
+    
+    with open(f'{out_dir}/res_{i}.txt', 'w') as f:
+        f.write('gene id\tconfidence\tproduct\n')
+        for g in result:
+            prod = gene_mapping[g[0]]
+            if 'unknown' in prod or 'uncharacterized' in prod:
+                continue
+
+            f.write(f'{g[0]}\t{g[1]:.2f}\t{gene_mapping[g[0]]}\n')
