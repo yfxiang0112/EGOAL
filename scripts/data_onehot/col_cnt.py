@@ -10,6 +10,8 @@ for c in col_names:
     sum_val = df[c].sum()
     len_val = len(df[c])
     expr_portion.append((c, sum_val/len_val))
+    if sum_val/len_val > 0.7:
+        print(sum_val, len_val)
 
-inv_cols = [col for col in expr_portion if col[1]>.7]
+inv_cols = [col for col in expr_portion if col[1]>.6]
 print(inv_cols)
