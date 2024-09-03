@@ -98,7 +98,7 @@ def main(argv):
         result.sort(key= lambda x: x[1], reverse=True)
         
         with open(f'{out_dir}/res_{i}.txt', 'w') as f:
-            f.write('gene id\tconfidence\tproduct\n')
+            f.write('gene_id\tconf\tproduct\n')
             for g in result:
                 prod = gene_mapping[g[0]]
                 if 'unknown' in prod or 'uncharacterized' in prod:

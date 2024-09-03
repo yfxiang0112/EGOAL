@@ -1,0 +1,42 @@
+gene_id	conf	product
+SO_0306	0.88	outer membrane protein COG4775 family
+SO_4429	0.87	putative periplasmic protein
+SO_0291	0.82	predicted periplasmic protein
+SO_0480	0.77	sulfurtransferase SirB
+SO_0660	0.77	Mu phage conserved phage protein
+SO_0054	0.75	HI0933 family flavoprotein YhiN
+SO_3454	0.74	putative cytoplasmic protein
+SO_1190	0.72	putative periplasmic CbiK superfamily protein
+SO_3344	0.71	predicted inner membrane protein
+SO_0329	0.7	predicted lipoprotein
+SO_4656	0.7	putative cytoplasmic protein
+SO_0203	0.69	predicted periplasmic protein
+SO_1337	0.69	predicted periplasmic protein
+SO_1824	0.69	TonB2 energy transduction system periplasmic component
+SO_4361	0.69	extracellular oxidoreductase associated protein
+SO_0975	0.66	disulphide interchange protein DsbD family
+SO_1441	0.66	putative cytoplasmic protein
+SO_3256	0.66	outer membrane lipoprotein required for flagellar motility FlgP
+SO_0055	0.65	tetratricopeptide repeat-containing protein
+SO_0078	0.64	predicted lipoprotein
+SO_1004	0.64	putative inner membrane lipoprotein
+SO_4013	0.64	TPR repeat domain protein
+SO_0041	0.62	G-protein receptor interacting sweet protein
+SO_1365	0.62	predicted membrane protein
+SO_3502	0.62	TIGR02001 family outer membrane protein
+SO_3857	0.62	phosphoesterase PA-phosphatase related protein
+SO_1534	0.61	alpha/beta-hydrolase superfamily protein
+SO_1428	0.59	extracellular dimethyl sulfoxide/manganese oxide reductase outer membrane translocase DmsF
+SO_1872	0.59	surface lipoprotein with VCBS repeats
+SO_0562	0.58	membrane protein
+SO_3418	0.58	predicted inner membrane protein
+SO_0805	0.57	CBS domain containing protein
+SO_3996	0.57	predicted inner membrane protein
+SO_0974	0.56	putative cytoplasmic protein
+SO_2063	0.55	outer membrane lipoprotein
+SO_0403	0.54	predicted outer membrane protein
+SO_0339	0.53	modulator of rho-dependent transcriptional termination RofA
+SO_0915	0.53	ankyrin domain protein
+SO_1675	0.53	predicted lipoprotein
+SO_4169	0.52	deoxyribodipyrimidine photolyase-related protein
+SO_3794	0.51	morn variant repeat protein
