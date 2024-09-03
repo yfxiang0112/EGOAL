@@ -36,7 +36,7 @@ def load_and_process_dataset(sg_col : str):
 
     ''' Read all datasets '''
     # df_1 = pd.read_csv('dataset/importance/processed_dataset_with_importance.csv')
-    df_1 = pd.read_csv('dataset/one-hot/one_hot_pro_y_allone.csv')
+    df_1 = pd.read_csv('dataset/importance/dataset_onehot.csv')
 
     ''' skip if current gene name not exists '''
     if sg_col not in df_1.columns:

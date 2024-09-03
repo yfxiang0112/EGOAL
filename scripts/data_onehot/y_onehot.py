@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df_1 = pd.read_csv('dataset/one-hot/one_hot.csv')
+df_1 = pd.read_csv('scripts/data_onehot/one_hot.csv')
 df_2 = pd.read_csv('dataset/raw/dataset.csv')
 
 # print(df_1)
@@ -19,4 +19,4 @@ new_columns[start_col:start_col+len(labels)] = labels
 df_1.columns = new_columns
 
 df_1.iloc[:, start_col:start_col+len(labels)] = 0
-df_1.to_csv('dataset/one-hot/one_hot_pro.csv')
+df_1.to_csv('scripts/data_onehot/one_hot_pro.csv')
