@@ -30,13 +30,22 @@ def main():
         break
     
     clear()
-    in_pth = f"'{in_pth}'"
-    out_dir = f"'{out_dir}'"
-    print(in_pth, out_dir)
+    in_pth_qut = f"'{in_pth}'"
+    out_dir_qut = f"'{out_dir}'"
+    # print(in_pth_qut, out_dir_qut)
     put_text("正在预测中，请稍后")
-    predict(in_pth, out_dir)
+    predict(in_pth_qut, out_dir_qut)
     clear()
+    
+    path = out_dir
     put_text("基因表达结果预测如下:")
+    for filename in os.listdir(out_dir):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(out_dir, filename)
+            with open(file_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+                put_text(f"文件名: {filename}")
+                put_text(content)
 
 if __name__ == '__main__':
     main()
