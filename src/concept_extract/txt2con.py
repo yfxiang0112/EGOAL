@@ -1,4 +1,4 @@
-from rdflib import Graph
+from rdflib import Graph, term
 import numpy as np
 import os
 from sentence_transformers import SentenceTransformer
@@ -23,8 +23,17 @@ class EmbeddingConverter():
         self.embd_model = SentenceTransformer("all-MiniLM-L6-v2")
 
         self.term_dict = graph_parse(self.graph)
+
+        with open('dataset/embedding/go_embd_idx.txt', 'w') as f:
+            f.write(str(list(self.term_dict.keys())))
+        assert 0
+
         texts = list(self.term_dict.values())
         self.term_embeddings = self.embd_model.encode(texts)
+        print(self.term_embeddings)
+        print(type(self.term_embeddings))
+        np.save('dataset/embedding/go_txt_embd.npy', self.term_embeddings)
+
 
         self.sim = None
 

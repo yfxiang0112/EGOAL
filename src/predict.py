@@ -1,15 +1,17 @@
+import os
 import sys, getopt
 import pandas as pd
 import joblib
 import glob
 import re
+from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 
-from concept_extract.term_embd import graph_parse
-from concept_extract.txt2con import EmbeddingConverter
+#from concept_extract.term_embd import graph_parse
+#from concept_extract.txt2con import EmbeddingConverter
 
 
 def main(argv):
@@ -35,15 +37,22 @@ def main(argv):
 
     
     ##################################################
+
+    ''' initialize text embedding model '''
+    os.environ["http_proxy"] = "http://127.0.0.1:7890"
+    os.environ["https_proxy"] = "http://127.0.0.1:7890"
+    embd_model = SentenceTransformer("all-MiniLM-L6-v2")
     
-    ''' initialize text embedding converter '''
-    owl_pth = 'rules/go.owl'
-    embd = EmbeddingConverter(owl_pth, use_vpn=True)
+    ''' initialize text embeddings of concepts '''
+    goa_df = pd.read_csv('rules/goa_gene2go_filtered.csv', header=None, index_col=0)
+    con_embd = np.load('dataset/embedding/go_txt_embd.npy')
+    con_embd_idx = []
+    with open('dataset/embedding/go_embd_idx.txt', 'r') as f:
+        con_embd_idx = eval(f.readline())
     
     ''' initialize concept lists '''
     TOP_CNT = 10
     concepts = []
-    #con_descps = [[] for _ in range(TOP_CNT)]
     
     ''' read descriptions from input file '''
     descriptions = []
@@ -55,10 +64,14 @@ def main(argv):
     for d in tqdm(descriptions, 'processing input instance'):
     
             ''' compute similarity matrix & most similar concept list '''
-            sim = embd.similar_matrix(d)
-            sorted_sim = embd.max_sim(TOP_CNT)
+            #sim = embd.similar_matrix(d)
+            text_embd = embd_model.encode([d])
+            sim = embd_model.similarity(con_embd, text_embd)
+            sorted_sim, sorted_term = zip(*sorted(zip(sim, con_embd_idx), reverse=True))
+            #sorted_sim = embd.max_sim(TOP_CNT)
+            sorted_term = sorted_term[:TOP_CNT]
     
-            concepts.append(list(sorted_sim))
+            concepts.append(list(sorted_term))
     
     
     ''' load gene - product mapping '''
@@ -101,10 +114,16 @@ def main(argv):
             f.write('gene id\tconfidence\tproduct\n')
             for g in result:
                 prod = gene_mapping[g[0]]
-                if 'unknown' in prod or 'uncharacterized' in prod:
+                #if 'unknown' in prod or 'uncharacterized' in prod:
+                #    continue
+                if g[0] not in goa_df.index:
+                    print(g)
                     continue
     
                 f.write(f'{g[0]}\t{g[1]:.2f}\t{gene_mapping[g[0]]}\n')
+
+        #tmp
+        break
 
     ##################################################
 

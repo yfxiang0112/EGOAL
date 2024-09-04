@@ -11,6 +11,9 @@ class GO(KBBase):
         super().__init__(pseudo_label_list=[0,1], use_cache=False)
         self.solver = Solver()
 
+        #NOTE: temp
+        rule_path = 'rules/single_genes/SO_0014_sg_rule_test_modify.csv'
+
         ''' Load GO rules and annotations
             Define set of concepts related to current single gene '''
         rule_df = pd.read_csv(rule_path, header=None)
@@ -42,7 +45,7 @@ class GO(KBBase):
         #print(rules)
         #print(len(self.concept_dom))
 
-        self.cwa_constraints = set(eval(c)==False for c in self.concept_dom)
+        self.owa_constraints = set((eval(c)==True) for c in self.concept_dom)
 
 
         ''' Define violated weights '''
@@ -51,6 +54,8 @@ class GO(KBBase):
         self.total_violation_weight = Sum(
             [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
         )
+
+        #self.violated = [If(Not(rule), rule, 0) for rule in self.weights]
 
 
 
@@ -80,13 +85,23 @@ class GO(KBBase):
 
         ''' Convert pseudo label genes to GO concepts
             Set concepts in input and (converted) pseudo label as True '''
-        true_contrains = concept_input if pred_flag==0\
-                        else concept_input.union(self.goa_con_set)
+        #true_contrains = concept_input if pred_flag==0\
+        #                else concept_input.union(self.goa_con_set)
 
-        for c in true_contrains:
+        print(concept_input)
+        for c in concept_input:
             if c not in globals().keys():
                 continue
+            print(c)
             solver.add( eval(c) == True )
+
+        for c in self.goa_con_set:
+            if c not in globals().keys():
+                continue
+            if pred_flag == 1:
+                solver.add( eval(c) == True )
+            else:
+                solver.add( eval(c) == False )
 
         #    for c in self.annotation.loc[g]:
         #        concept_pred.add(c)
@@ -94,15 +109,19 @@ class GO(KBBase):
 
         ''' Set unmentioned concepts as False (CWA)
             Exclude constraints of True from CWA constraints '''
-        false_excluded = set(eval(c)==False for c in true_contrains if c in globals().keys())
-        solver.add(self.cwa_constraints - false_excluded)
+        excluded = set((eval(c)==True)\
+                for c in concept_input.union(self.goa_con_set) if c in globals().keys())
+        solver.add(self.owa_constraints - excluded)
+
+        print(solver)
 
 
         if solver.check() == sat:
             ''' Satisfiable '''
             model = solver.model()
-            total_weight = model.evaluate(total_violation_weight)
-            # print(total_weight.as_long())
+            total_weight = model.evaluate(Sum([If(Not(rule), self.weights[rule], 0) for rule in self.weights]))
+            print(pred_flag, total_weight.as_long())
+            #print(self.violated)
             return total_weight.as_long()
 
         else:

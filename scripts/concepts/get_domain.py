@@ -8,6 +8,7 @@ all_con = list(all_con[0])
 #print(con_df['CONCEPTS'])
 
 con_dom = set()
+con_dom_data = set()
 
 for con_lst in con_df['CONCEPTS']:
     for s in eval(con_lst):
@@ -15,14 +16,19 @@ for con_lst in con_df['CONCEPTS']:
         #NOTE: tmp operation, transfer GO:xxxx to GO_xxxx
         if s in all_con:
             con_dom.add('GO_'+s[3:])
+            con_dom_data.add('GO_'+s[3:])
 
 for con in goa_df[0]:
     con_dom.add(con)
 
-con_dom = list(con_dom)
-con_dom.sort()
+with open('dataset/concepts/concept_dom.txt', 'w') as f:
+    f.write(str(con_dom))
 
-df = pd.DataFrame({'0':con_dom})
-print(df)
-df.to_csv('dataset/concepts/concept_domain.csv', index=False, header=False)
-
+with open('dataset/concepts/data_con_dom.txt', 'w') as f:
+    f.write(str(con_dom_data))
+#con_dom = list(con_dom)
+#con_dom.sort()
+#
+#df = pd.DataFrame({'0':con_dom})
+#print(df)
+#df.to_csv('dataset/concepts/concept_domain.csv', index=False, header=False)
