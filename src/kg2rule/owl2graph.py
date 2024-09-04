@@ -1,4 +1,5 @@
 from operator import index
+from typing import Iterable
 from rdflib import Graph
 import pandas as pd
 import os
@@ -25,7 +26,7 @@ def extrID(s):
 
 class KG2Rule():
 
-    def __init__(self, rdf_pth, con_spec_pth :str, owl_pth = '') -> None:
+    def __init__(self, rdf_pth : str, con_spec: Iterable, owl_pth = '') -> None:
         if not os.path.exists(rdf_pth):
             if owl_pth=='':
                 raise Exception('Need specify path to OWL file when owl is not parsed.')
@@ -39,7 +40,7 @@ class KG2Rule():
         self.rdf['object'] = self.rdf['object'].apply(extrID)
 
         self.rule_set = None
-        self.con_spec = list(pd.read_csv(con_spec_pth, header=None)[0])
+        self.con_spec = con_spec
 
 
 
@@ -87,7 +88,7 @@ class KG2Rule():
         node_succ   = []
         mask = [False]*len(self.rdf)
         for i in range(d):
-            for idx, row in tqdm(self.rdf.iterrows(), 'Round '+str(i+1)):
+            for idx, row in tqdm(self.rdf.iterrows(), 'Round '+str(i+1), total=len(self.rdf)):
                 if mask[idx]:
                     continue
 
@@ -157,7 +158,7 @@ class KG2Rule():
         for t in range(T):
             R_res = []
 
-            for r_new in tqdm(R_new, 'Round '+str(t+1)):
+            for r_new in tqdm(R_new, 'Round '+str(t+1), total=len(R_new)):
                 for r in self.rule_set:
                     res = resolve(r_new, r, self.con_spec)
                     if res != None and res not in self.rule_set:
@@ -188,7 +189,7 @@ class KG2Rule():
         if self.rule_set == None:
             raise Exception('Need to specify rule set')
 
-        for i1, rule_1 in tqdm(enumerate(self.rule_set)):
+        for i1, rule_1 in tqdm(enumerate(self.rule_set), total=len(self.rule_set)):
             for i2, rule_2 in enumerate(self.rule_set):
 
                 if i1 == i2:

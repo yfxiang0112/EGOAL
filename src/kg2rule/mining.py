@@ -27,7 +27,8 @@ def ruleTranslate(s: str, p:str, o:str):
             logic expr: x<->y  =  (~x|y)&(x|~y)
             Definition: Use on obsolete terms, relating the term to another term that can be used as a substitute
             subgraph count: 156 '''
-            flags = [(False, True), (True, False)]
+            #flags = [(False, True), (True, False)]
+            pass
 
         case 'oboInOwl#consider': 
             #TODO
@@ -55,7 +56,8 @@ def ruleTranslate(s: str, p:str, o:str):
             '''
             logic expr: ~x|~y
             subgraph count: 26'''
-            flags = [(False, False)]
+            #flags = [(False, False)]
+            pass
 
         case 'owl#equivalentClass': 
             '''
@@ -82,49 +84,67 @@ def ruleTranslate(s: str, p:str, o:str):
             '''
             subgraph count: 1884 '''
 
-            flags = [(False, True)]
+            #flags = [(False, True)]
 
-            #match o:
+            match o:
 
-            #    case 'BFO_0000050':
-            #        pass
+                case 'BFO_0000050':
+                    '''
+                    part of
+                    counts 8999 in owl '''
+                    flags = [(False, True)]
 
-            #    case 'BFO_0000051':
-            #        pass
+                case 'BFO_0000051':
+                    '''
+                    has part
+                    counts 864 in owl '''
+                    pass
 
-            #    case 'BFO_0000066':
-            #        pass
+                case 'BFO_0000066':
+                    '''
+                    occurs in
+                    counts 387 in owl '''
+                    pass
 
-            #    case 'RO_0002092':
-            #        pass
+                case 'RO_0002092':
+                    '''
+                    happens during
+                    counts 30 in owl '''
+                    pass
 
-            #    case 'RO_0002211':
-            #        pass
+                case 'RO_0002211':
+                    '''
+                    regulates
+                    counts 6623 in owl '''
+                    flags = [(False, True)]
 
-            #    case 'RO_0002212':
-            #        pass
+                case 'RO_0002212':
+                    '''
+                    negatively regulates
+                    counts 5779 in owl '''
+                    #NOTE: will change to false after adding pos/neg expr
+                    flags = [(False, True)]
 
-            #    case 'RO_0002213':
-            #        pass
+                case 'RO_0002213':
+                    '''
+                    positively regulates
+                    counts 5801 in owl '''
+                    flags = [(False, True)]
 
-            #    case _:
-            #        pass
+                case _:
+                    pass
 
         case 'owl#propertyChainAxiom':
             #TODO
             '''
-            counts 2 in extracted subgraph
-            '''
+            counts 2 in extracted subgraph '''
             pass
 
         case 'owl#someValuesFrom':
             #TODO
             '''
-            counts 1884 in extracted subgraph
-            '''
-            #NOTE: temp
+            counts 1884 in extracted subgraph '''
             flags = [(False, True)]
-            pass
 
         case 'rdf-schema#subClassOf':
             '''

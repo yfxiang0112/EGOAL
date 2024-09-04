@@ -45,7 +45,7 @@ class GO(KBBase):
         #print(rules)
         #print(len(self.concept_dom))
 
-        self.owa_constraints = set((eval(c)==True) for c in self.concept_dom)
+        self.owa_constraints = set((eval(c)==True or eval(c)==False) for c in self.concept_dom)
 
 
         ''' Define violated weights '''
@@ -109,7 +109,7 @@ class GO(KBBase):
 
         ''' Set unmentioned concepts as False (CWA)
             Exclude constraints of True from CWA constraints '''
-        excluded = set((eval(c)==True)\
+        excluded = set((eval(c)==True or eval(c)==False)\
                 for c in concept_input.union(self.goa_con_set) if c in globals().keys())
         solver.add(self.owa_constraints - excluded)
 
