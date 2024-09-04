@@ -12,7 +12,7 @@ def find_id(s):
     #else:
     #    print(res)
     #    return np.NaN
-    return res
+    return set(res)
 
 def goid_regu(s):
     return 'GO_' + s[3:]
