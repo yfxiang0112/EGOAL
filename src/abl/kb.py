@@ -3,6 +3,7 @@ from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat, Bool
 from ablkit.reasoning import KBBase
 import pandas as pd
 import time
+import os
 
 class GO(KBBase):
     def __init__(self, single_gene : str, rule_path : str, annotation_path : str):
@@ -12,11 +13,11 @@ class GO(KBBase):
         self.solver = Solver()
 
         #NOTE: temp
-        rule_path = 'rules/single_genes/SO_0014_sg_rule_test_modify.csv'
+        #rule_path = 'rules/single_genes/SO_0014_sg_rule_test_modify.csv'
 
         ''' Load GO rules and annotations
             Define set of concepts related to current single gene '''
-        rule_df = pd.read_csv(rule_path, header=None)
+        self.rule_df = pd.read_csv(rule_path, header=None)
         annotation = pd.read_csv(annotation_path, header=None, index_col=0)
         sg_row = annotation.loc[single_gene]
         self.goa_con_set = eval(sg_row[1])
@@ -27,7 +28,7 @@ class GO(KBBase):
         rules = []
 
         self.concept_dom = set()
-        for idx, row in rule_df.iterrows():
+        for idx, row in self.rule_df.iterrows():
             rule = row
 
             self.concept_dom.add(rule.iloc[1])
@@ -71,16 +72,29 @@ class GO(KBBase):
         NOTE: Truth values are interpreted under CWA (i.e. False if not in pseudo_label).
         '''
 
-        solver = self.solver
-        total_violation_weight = self.total_violation_weight
-        self.solver.reset()
+        #solver = self.solver
+        #total_violation_weight = self.total_violation_weight
+        #self.solver.reset()
 
 
         ''' definie pseudo label and input concept set '''
         #gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
         concept_input = set(f'GO_{st:07}' for st in x[0])
         #concept_pred = set()
-        pred_flag = pseudo_label[0]
+        pred_flag = True if pseudo_label[0]==1 else False
+
+        vio_cnt = 0
+        for i, row in self.rule_df.iterrows():
+            if row[1] in concept_input and row[3] in self.goa_con_set:
+                if row[0] == False and row[2] != pred_flag:
+                    vio_cnt += 1
+
+            if row[3] in concept_input and row[1] in self.goa_con_set:
+                if row[2] == False and row[0] != pred_flag:
+                    vio_cnt += 1
+
+        print(pseudo_label[0], vio_cnt)
+        return vio_cnt
 
 
         ''' Convert pseudo label genes to GO concepts
@@ -88,11 +102,11 @@ class GO(KBBase):
         #true_contrains = concept_input if pred_flag==0\
         #                else concept_input.union(self.goa_con_set)
 
-        print(concept_input)
+        #print(concept_input)
         for c in concept_input:
             if c not in globals().keys():
                 continue
-            print(c)
+            #print(c)
             solver.add( eval(c) == True )
 
         for c in self.goa_con_set:
@@ -113,7 +127,7 @@ class GO(KBBase):
                 for c in concept_input.union(self.goa_con_set) if c in globals().keys())
         solver.add(self.owa_constraints - excluded)
 
-        print(solver)
+        #print(solver)
 
 
         if solver.check() == sat:
