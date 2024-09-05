@@ -25,36 +25,36 @@ class GO(KBBase):
         ''' Define disjunction rules,
             concept domain,
             and z3 constraint variables used in rules '''
-        rules = []
+        #rules = []
 
-        self.concept_dom = set()
-        for idx, row in self.rule_df.iterrows():
-            rule = row
+        #self.concept_dom = set()
+        #for idx, row in self.rule_df.iterrows():
+        #    rule = row
 
-            self.concept_dom.add(rule.iloc[1])
-            self.concept_dom.add(rule.iloc[3])
-            ''' Define concept domain '''
+        #    self.concept_dom.add(rule.iloc[1])
+        #    self.concept_dom.add(rule.iloc[3])
+        #    ''' Define concept domain '''
 
-            globals().update( { rule.iloc[1] : Bool(rule.iloc[1]) } )
-            globals().update( { rule.iloc[3] : Bool(rule.iloc[3]) } )
-            ''' Define z3 variables '''
+        #    globals().update( { rule.iloc[1] : Bool(rule.iloc[1]) } )
+        #    globals().update( { rule.iloc[3] : Bool(rule.iloc[3]) } )
+        #    ''' Define z3 variables '''
 
-            rules.append(Or( eval(rule.iloc[1]) == rule.iloc[0], eval(rule.iloc[3]) == rule.iloc[2] ))
-            ''' Translate disjunction rule '''
+        #    rules.append(Or( eval(rule.iloc[1]) == rule.iloc[0], eval(rule.iloc[3]) == rule.iloc[2] ))
+        #    ''' Translate disjunction rule '''
 
-        #print(self.goa_con_set)
-        #print(rules)
-        #print(len(self.concept_dom))
+        ##print(self.goa_con_set)
+        ##print(rules)
+        ##print(len(self.concept_dom))
 
-        self.owa_constraints = set((eval(c)==True or eval(c)==False) for c in self.concept_dom)
+        #self.owa_constraints = set((eval(c)==True or eval(c)==False) for c in self.concept_dom)
 
 
-        ''' Define violated weights '''
-        self.weights = {rule: 1 for rule in rules} 
+        #''' Define violated weights '''
+        #self.weights = {rule: 1 for rule in rules} 
 
-        self.total_violation_weight = Sum(
-            [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
-        )
+        #self.total_violation_weight = Sum(
+        #    [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
+        #)
 
         #self.violated = [If(Not(rule), rule, 0) for rule in self.weights]
 
@@ -81,19 +81,34 @@ class GO(KBBase):
         #gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
         concept_input = set(f'GO_{st:07}' for st in x[0])
         #concept_pred = set()
-        pred_flag = True if pseudo_label[0]==1 else False
+        pred_expr = pseudo_label[0]
 
         vio_cnt = 0
         for i, row in self.rule_df.iterrows():
-            if row[1] in concept_input and row[3] in self.goa_con_set:
-                if row[0] == False and row[2] != pred_flag:
+            if row[0] in concept_input and row[1] in self.goa_con_set:
+                ''' if current gene regulated by input cond, but not expressed '''
+                if pred_expr == 0:
                     vio_cnt += 1
 
-            if row[3] in concept_input and row[1] in self.goa_con_set:
-                if row[2] == False and row[0] != pred_flag:
+            if row[0] not in concept_input and row[1] in self.goa_con_set:
+                ''' if current gene not regulated by input cond, but expressed '''
+                if pred_expr == 1:
+                    pass
+                    vio_cnt += .01
+                    #NOTE: handle this case?
+
+            if row[0] in self.goa_con_set and row[1] in concept_input:
+                ''' if current gene regulates input cond, but not expressed '''
+                if pred_expr == 0:
+                    pass
+                    vio_cnt += .01
+
+            if row[0] in self.goa_con_set and row[1] not in concept_input:
+                ''' if conditions regulated by current gene not shown in input '''
+                if pred_expr == 1:
                     vio_cnt += 1
 
-        print(pseudo_label[0], vio_cnt)
+        #print(pseudo_label[0], vio_cnt)
         return vio_cnt
 
 
