@@ -10,7 +10,7 @@ rules/go.owl
 rules/go.obo
 rules/go.rdf
 rules/go-plus.owl
-results
+results/*
 
 # tmp
 rules/KG_RDF_filter-large.csv
