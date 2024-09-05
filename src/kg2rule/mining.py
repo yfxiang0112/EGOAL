@@ -92,7 +92,7 @@ def ruleTranslate(s: str, p:str, o:str):
                     '''
                     part of
                     counts 8999 in owl '''
-                    flags = [(False, True)]
+                    flags = [True]
 
                 case 'BFO_0000051':
                     '''
@@ -116,20 +116,20 @@ def ruleTranslate(s: str, p:str, o:str):
                     '''
                     regulates
                     counts 6623 in owl '''
-                    flags = [(False, True)]
+                    flags = [True]
 
                 case 'RO_0002212':
                     '''
                     negatively regulates
                     counts 5779 in owl '''
                     #NOTE: will change to false after adding pos/neg expr
-                    flags = [(False, True)]
+                    flags = [True]
 
                 case 'RO_0002213':
                     '''
                     positively regulates
                     counts 5801 in owl '''
-                    flags = [(False, True)]
+                    flags = [True]
 
                 case _:
                     pass
@@ -144,13 +144,13 @@ def ruleTranslate(s: str, p:str, o:str):
             #TODO
             '''
             counts 1884 in extracted subgraph '''
-            flags = [(False, True)]
+            flags = [True]
 
         case 'rdf-schema#subClassOf':
             '''
             logic expr: ~x|y
             subgraph count: 8345 '''
-            flags = [(False, True)]
+            flags = [True]
     
         case 'rdf-schema#subPropertyOf':
             '''
@@ -160,7 +160,7 @@ def ruleTranslate(s: str, p:str, o:str):
             pass
             #flags = [(False, True)]
 
-    if s < o:
-        return [(f[0], s, f[1], o) for f in flags]
-    else:
-        return [(f[1], o, f[0], s) for f in flags]
+    #if s < o:
+    return [(s, o, f) for f in flags]
+    #else:
+    #    return [(o, s, f) for f in flags]

@@ -152,7 +152,7 @@ class KG2Rule():
 
 
         for r in self.rule_set:
-            if r[1] in self.con_spec or r[3] in self.con_spec:
+            if r[0] in self.con_spec or r[1] in self.con_spec:
                 R_new.append(r)
 
         for t in range(T):
@@ -168,7 +168,7 @@ class KG2Rule():
             for r in R_res:
                 self.rule_set.add(r)
 
-        rule_rem = set(r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec))
+        rule_rem = set(r for r in self.rule_set if (r[0] in self.con_spec and r[1] in self.con_spec))
         self.rule_set = set(rule_rem)
 
         return self.rule_set
@@ -200,14 +200,12 @@ class KG2Rule():
                 #if type(rule_2)==str:
                 #    rule_2 = eval(rule_2)
 
-                if rule_1[1] == rule_2[1] and\
-                        rule_1[3] == rule_2[3]:
+                if rule_1[0] == rule_2[0] and\
+                        rule_1[1] == rule_2[1]:
                     
                     #print('test', i1, i2, rule_1, rule_2)
                     
-                    if not (rule_1[0] == rule_2[0] and\
-                            rule_1[2] == rule_2[2]):
-
+                    if rule_1[2] != rule_2[2]:
                         contra_idx.add(rule_1)
                         contra_idx.add(rule_2)
 
@@ -229,16 +227,15 @@ class KG2Rule():
             assert type(rule_set) == set or list
             for r in rule_set:
                 assert type(r) == tuple or list
-                assert len(r) == 4
+                assert len(r) == 3
         else:
             rule_set = self.rule_set
 
-        pred_flag = [r[0] for r in rule_set]
-        pred = [r[1] for r in rule_set]
-        succ_flag = [r[2] for r in rule_set]
-        succ = [r[3] for r in rule_set]
+        pred = [r[0] for r in rule_set]
+        succ = [r[1] for r in rule_set]
+        flag = [r[2] for r in rule_set]
 
-        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+        return pd.DataFrame({ 'pred':pred, 'succ':succ, 'flag':flag})
     
 
     def get_rule(self) -> set:

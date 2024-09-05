@@ -14,8 +14,8 @@ def sg_con_filter(gene_id : str, rule_set : set, gene2go : pd.DataFrame, dataset
 
     #concept_set = concept_set.union(dataset_con_dom)
 
-    rule_filter = set(r for r in rule_set if (r[1] in concept_set and r[3] in dataset_con_dom))
-    rule_filter_rev = set(r for r in rule_set if (r[1] in dataset_con_dom and r[3] in concept_set))
+    rule_filter = set(r for r in rule_set if (r[0] in concept_set and r[1] in dataset_con_dom))
+    rule_filter_rev = set(r for r in rule_set if (r[0] in dataset_con_dom and r[1] in concept_set))
     return rule_filter.union(rule_filter_rev)
 
 #def sg_iter(rule_set : set, gene2go : pd.DataFrame):
