@@ -116,8 +116,8 @@ for accession in accessions['accession']:
         deg_path = 'dataset/deg/deg_result/'+ grp_name +'.csv'
         deg_df.to_csv(deg_path, index=False)
 
-        #print(deg_df['GENE'][:20])
-        dataset_df.update( {grp_name : deg_df['GENE'][:20]} )
+        print(len(deg_df['GENE'][deg_df['pvalue']<0.05 & deg_df['log2FoldChange']>0]))
+        dataset_df.update( {grp_name : deg_df['GENE'][deg_df['pvalue']<=0.05]} )
 
 
     #break

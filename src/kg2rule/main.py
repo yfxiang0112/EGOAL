@@ -57,4 +57,5 @@ if __name__ == '__main__':
     for g in gene2go.index:
         rule_filtered = sg_con_filter(g, graph.get_rule(), gene2go, conSpecDat)
         pth = sgRulePth + '/' + g + '_sg_rule.csv'
-        graph.rule2df(rule_filtered).to_csv(pth, index=False, header=False)
+        if len(rule_filtered) > 0:
+            graph.rule2df(rule_filtered).to_csv(pth, index=False, header=False)

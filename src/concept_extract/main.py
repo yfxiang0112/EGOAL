@@ -13,7 +13,7 @@ TOP_CNT = 10
 #out_pth = 'dataset/concepts/GSE_concepts.csv'
 #geo_dst = 'dataset/raw/GSE'
 
-acc_pth = 'dataset/unlabel/accessions-all'
+acc_pth = 'dataset/unlabel/accessions'
 owl_pth = 'rules/go.owl'
 out_pth = 'dataset/unlabel/unlabel_concepts.csv'
 geo_dst = 'dataset/unlabel/GSE'

@@ -1,4 +1,3 @@
-      0 rules/single_genes/SO_0001_sg_rule.csv
     118 rules/single_genes/SO_0002_sg_rule.csv
      63 rules/single_genes/SO_0003_sg_rule.csv
      51 rules/single_genes/SO_0004_sg_rule.csv
@@ -29,11 +28,9 @@
      63 rules/single_genes/SO_0030_sg_rule.csv
      57 rules/single_genes/SO_0031_sg_rule.csv
      19 rules/single_genes/SO_0032_sg_rule.csv
-      0 rules/single_genes/SO_0034_sg_rule.csv
      10 rules/single_genes/SO_0036_sg_rule.csv
      43 rules/single_genes/SO_0037_sg_rule.csv
      52 rules/single_genes/SO_0038_sg_rule.csv
-      0 rules/single_genes/SO_0039_sg_rule.csv
      19 rules/single_genes/SO_0040_sg_rule.csv
      14 rules/single_genes/SO_0045_sg_rule.csv
      11 rules/single_genes/SO_0046_sg_rule.csv
@@ -217,9 +214,7 @@
      51 rules/single_genes/SO_0294_sg_rule.csv
      15 rules/single_genes/SO_0295_sg_rule.csv
      30 rules/single_genes/SO_0296_sg_rule.csv
-      0 rules/single_genes/SO_0297_sg_rule.csv
      84 rules/single_genes/SO_0298_sg_rule.csv
-      0 rules/single_genes/SO_0299_sg_rule.csv
       7 rules/single_genes/SO_0300_sg_rule.csv
      48 rules/single_genes/SO_0301_sg_rule.csv
      30 rules/single_genes/SO_0302_sg_rule.csv
@@ -285,7 +280,6 @@
      30 rules/single_genes/SO_0400_sg_rule.csv
      15 rules/single_genes/SO_0401_sg_rule.csv
      15 rules/single_genes/SO_0402_sg_rule.csv
-      0 rules/single_genes/SO_0404_sg_rule.csv
      22 rules/single_genes/SO_0405_sg_rule.csv
      41 rules/single_genes/SO_0406_sg_rule.csv
      60 rules/single_genes/SO_0407_sg_rule.csv
@@ -313,7 +307,6 @@
      43 rules/single_genes/SO_0435_sg_rule.csv
      26 rules/single_genes/SO_0437_sg_rule.csv
      17 rules/single_genes/SO_0438_sg_rule.csv
-      0 rules/single_genes/SO_0440_sg_rule.csv
      31 rules/single_genes/SO_0441_sg_rule.csv
      20 rules/single_genes/SO_0442_sg_rule.csv
      19 rules/single_genes/SO_0443_sg_rule.csv
@@ -358,7 +351,6 @@
      17 rules/single_genes/SO_0510_sg_rule.csv
       5 rules/single_genes/SO_0511_sg_rule.csv
       8 rules/single_genes/SO_0512_sg_rule.csv
-      0 rules/single_genes/SO_0513_sg_rule.csv
      41 rules/single_genes/SO_0518_sg_rule.csv
       1 rules/single_genes/SO_0519_sg_rule.csv
     115 rules/single_genes/SO_0520_sg_rule.csv
@@ -383,13 +375,11 @@
       2 rules/single_genes/SO_0545_sg_rule.csv
      95 rules/single_genes/SO_0546_sg_rule.csv
      13 rules/single_genes/SO_0548_sg_rule.csv
-      0 rules/single_genes/SO_0549_sg_rule.csv
      30 rules/single_genes/SO_0550_sg_rule.csv
      13 rules/single_genes/SO_0558_sg_rule.csv
       5 rules/single_genes/SO_0560_sg_rule.csv
      30 rules/single_genes/SO_0562_sg_rule.csv
      30 rules/single_genes/SO_0563_sg_rule.csv
-      0 rules/single_genes/SO_0564_sg_rule.csv
       4 rules/single_genes/SO_0565_sg_rule.csv
      85 rules/single_genes/SO_0566_sg_rule.csv
      47 rules/single_genes/SO_0567_sg_rule.csv
@@ -399,7 +389,6 @@
      11 rules/single_genes/SO_0572_sg_rule.csv
      30 rules/single_genes/SO_0575_sg_rule.csv
       6 rules/single_genes/SO_0576_sg_rule.csv
-      0 rules/single_genes/SO_0578_sg_rule.csv
       4 rules/single_genes/SO_0579_sg_rule.csv
      43 rules/single_genes/SO_0582_sg_rule.csv
       2 rules/single_genes/SO_0583_sg_rule.csv
@@ -472,12 +461,10 @@
      42 rules/single_genes/SO_0710_sg_rule.csv
       2 rules/single_genes/SO_0714_sg_rule.csv
      23 rules/single_genes/SO_0715_sg_rule.csv
-      0 rules/single_genes/SO_0716_sg_rule.csv
       2 rules/single_genes/SO_0717_sg_rule.csv
      46 rules/single_genes/SO_0719_sg_rule.csv
      15 rules/single_genes/SO_0725_sg_rule.csv
      44 rules/single_genes/SO_0726_sg_rule.csv
-      0 rules/single_genes/SO_0728_sg_rule.csv
      34 rules/single_genes/SO_0731_sg_rule.csv
      48 rules/single_genes/SO_0733_sg_rule.csv
      30 rules/single_genes/SO_0735_sg_rule.csv
@@ -501,7 +488,6 @@
       1 rules/single_genes/SO_0768_sg_rule.csv
      51 rules/single_genes/SO_0769_sg_rule.csv
      51 rules/single_genes/SO_0770_sg_rule.csv
-      0 rules/single_genes/SO_0771_sg_rule.csv
      13 rules/single_genes/SO_0772_sg_rule.csv
      34 rules/single_genes/SO_0773_sg_rule.csv
       7 rules/single_genes/SO_0774_sg_rule.csv
@@ -514,7 +500,6 @@
      19 rules/single_genes/SO_0781_sg_rule.csv
       9 rules/single_genes/SO_0783_sg_rule.csv
      13 rules/single_genes/SO_0789_sg_rule.csv
-      0 rules/single_genes/SO_0795_sg_rule.csv
      21 rules/single_genes/SO_0796_sg_rule.csv
       4 rules/single_genes/SO_0798_sg_rule.csv
      13 rules/single_genes/SO_0801_sg_rule.csv
@@ -556,7 +541,6 @@
      87 rules/single_genes/SO_0857_sg_rule.csv
     105 rules/single_genes/SO_0858_sg_rule.csv
      53 rules/single_genes/SO_0859_sg_rule.csv
-      0 rules/single_genes/SO_0860_sg_rule.csv
       1 rules/single_genes/SO_0861_sg_rule.csv
      21 rules/single_genes/SO_0862_sg_rule.csv
      30 rules/single_genes/SO_0863_sg_rule.csv
@@ -625,7 +609,6 @@
      13 rules/single_genes/SO_0956_sg_rule.csv
      48 rules/single_genes/SO_0958_sg_rule.csv
      41 rules/single_genes/SO_0959_sg_rule.csv
-      0 rules/single_genes/SO_0960_sg_rule.csv
      97 rules/single_genes/SO_0961_sg_rule.csv
      30 rules/single_genes/SO_0962_sg_rule.csv
       4 rules/single_genes/SO_0966_sg_rule.csv
@@ -859,7 +842,6 @@
      84 rules/single_genes/SO_1278_sg_rule.csv
      73 rules/single_genes/SO_1284_sg_rule.csv
      46 rules/single_genes/SO_1286_sg_rule.csv
-      0 rules/single_genes/SO_1287_sg_rule.csv
       9 rules/single_genes/SO_1288_sg_rule.csv
      52 rules/single_genes/SO_1289_sg_rule.csv
      23 rules/single_genes/SO_1290_sg_rule.csv
@@ -869,7 +851,6 @@
       4 rules/single_genes/SO_1295_sg_rule.csv
      41 rules/single_genes/SO_1296_sg_rule.csv
       1 rules/single_genes/SO_1297_sg_rule.csv
-      0 rules/single_genes/SO_1298_sg_rule.csv
      15 rules/single_genes/SO_1301_sg_rule.csv
      81 rules/single_genes/SO_1302_sg_rule.csv
      30 rules/single_genes/SO_1303_sg_rule.csv
@@ -889,7 +870,6 @@
      14 rules/single_genes/SO_1324_sg_rule.csv
      18 rules/single_genes/SO_1325_sg_rule.csv
      22 rules/single_genes/SO_1326_sg_rule.csv
-      0 rules/single_genes/SO_1327_sg_rule.csv
      15 rules/single_genes/SO_1328_sg_rule.csv
      52 rules/single_genes/SO_1329_sg_rule.csv
      46 rules/single_genes/SO_1330_sg_rule.csv
@@ -951,7 +931,6 @@
      30 rules/single_genes/SO_1396_sg_rule.csv
      34 rules/single_genes/SO_1397_sg_rule.csv
      30 rules/single_genes/SO_1400_sg_rule.csv
-      0 rules/single_genes/SO_1403_sg_rule.csv
      17 rules/single_genes/SO_1404_sg_rule.csv
      30 rules/single_genes/SO_1406_sg_rule.csv
       2 rules/single_genes/SO_1407_sg_rule.csv
@@ -976,7 +955,6 @@
       8 rules/single_genes/SO_1445_sg_rule.csv
      41 rules/single_genes/SO_1447_sg_rule.csv
       9 rules/single_genes/SO_1448_sg_rule.csv
-      0 rules/single_genes/SO_1453_sg_rule.csv
       4 rules/single_genes/SO_1455_sg_rule.csv
      11 rules/single_genes/SO_1457_sg_rule.csv
       2 rules/single_genes/SO_1458_sg_rule.csv
@@ -996,7 +974,6 @@
      40 rules/single_genes/SO_1484_sg_rule.csv
      12 rules/single_genes/SO_1486_sg_rule.csv
      15 rules/single_genes/SO_1490_sg_rule.csv
-      0 rules/single_genes/SO_1492_sg_rule.csv
      16 rules/single_genes/SO_1493_sg_rule.csv
      14 rules/single_genes/SO_1495_sg_rule.csv
       4 rules/single_genes/SO_1498_sg_rule.csv
@@ -1075,7 +1052,6 @@
       9 rules/single_genes/SO_1616_sg_rule.csv
       6 rules/single_genes/SO_1619_sg_rule.csv
      31 rules/single_genes/SO_1620_sg_rule.csv
-      0 rules/single_genes/SO_1622_sg_rule.csv
      55 rules/single_genes/SO_1623_sg_rule.csv
      14 rules/single_genes/SO_1624_sg_rule.csv
      16 rules/single_genes/SO_1626_sg_rule.csv
@@ -1088,7 +1064,6 @@
      15 rules/single_genes/SO_1635_sg_rule.csv
      35 rules/single_genes/SO_1636_sg_rule.csv
       4 rules/single_genes/SO_1637_sg_rule.csv
-      0 rules/single_genes/SO_1638_sg_rule.csv
      12 rules/single_genes/SO_1639_sg_rule.csv
      49 rules/single_genes/SO_1640_sg_rule.csv
      47 rules/single_genes/SO_1641_sg_rule.csv
@@ -1175,7 +1150,6 @@
       3 rules/single_genes/SO_1779_sg_rule.csv
      15 rules/single_genes/SO_1780_sg_rule.csv
      13 rules/single_genes/SO_1782_sg_rule.csv
-      0 rules/single_genes/SO_1783_sg_rule.csv
      57 rules/single_genes/SO_1784_sg_rule.csv
      51 rules/single_genes/SO_1786_sg_rule.csv
      30 rules/single_genes/SO_1787_sg_rule.csv
@@ -1223,7 +1197,6 @@
      30 rules/single_genes/SO_1840_sg_rule.csv
      12 rules/single_genes/SO_1844_sg_rule.csv
      67 rules/single_genes/SO_1851_sg_rule.csv
-      0 rules/single_genes/SO_1852_sg_rule.csv
      59 rules/single_genes/SO_1853_sg_rule.csv
      40 rules/single_genes/SO_1855_sg_rule.csv
      49 rules/single_genes/SO_1856_sg_rule.csv
@@ -1303,7 +1276,6 @@
       2 rules/single_genes/SO_1975_sg_rule.csv
      12 rules/single_genes/SO_1976_sg_rule.csv
      14 rules/single_genes/SO_1977_sg_rule.csv
-      0 rules/single_genes/SO_1978_sg_rule.csv
      22 rules/single_genes/SO_1979_sg_rule.csv
      45 rules/single_genes/SO_1980_sg_rule.csv
       7 rules/single_genes/SO_1981_sg_rule.csv
@@ -1312,7 +1284,6 @@
      10 rules/single_genes/SO_1988_sg_rule.csv
       8 rules/single_genes/SO_1989_sg_rule.csv
       5 rules/single_genes/SO_1994_sg_rule.csv
-      0 rules/single_genes/SO_1995_sg_rule.csv
      41 rules/single_genes/SO_1997_sg_rule.csv
      12 rules/single_genes/SO_1999_sg_rule.csv
      28 rules/single_genes/SO_2001_sg_rule.csv
@@ -1371,7 +1342,6 @@
      24 rules/single_genes/SO_2087_sg_rule.csv
      56 rules/single_genes/SO_2088_sg_rule.csv
      23 rules/single_genes/SO_2089_sg_rule.csv
-      0 rules/single_genes/SO_2090_sg_rule.csv
       3 rules/single_genes/SO_2091_sg_rule.csv
       1 rules/single_genes/SO_2092_sg_rule.csv
      15 rules/single_genes/SO_2093_sg_rule.csv
@@ -1393,7 +1363,6 @@
      34 rules/single_genes/SO_2116_sg_rule.csv
      99 rules/single_genes/SO_2117_sg_rule.csv
      12 rules/single_genes/SO_2119_sg_rule.csv
-      0 rules/single_genes/SO_2120_sg_rule.csv
      52 rules/single_genes/SO_2121_sg_rule.csv
      58 rules/single_genes/SO_2122_sg_rule.csv
     113 rules/single_genes/SO_2123_sg_rule.csv
@@ -1404,7 +1373,6 @@
       4 rules/single_genes/SO_2129_sg_rule.csv
      30 rules/single_genes/SO_2136_sg_rule.csv
      44 rules/single_genes/SO_2137_sg_rule.csv
-      0 rules/single_genes/SO_2141_sg_rule.csv
      62 rules/single_genes/SO_2143_sg_rule.csv
       2 rules/single_genes/SO_2144_sg_rule.csv
      57 rules/single_genes/SO_2145_sg_rule.csv
@@ -1453,13 +1421,11 @@
      28 rules/single_genes/SO_2222_sg_rule.csv
      18 rules/single_genes/SO_2223_sg_rule.csv
       7 rules/single_genes/SO_2224_sg_rule.csv
-      0 rules/single_genes/SO_2225_sg_rule.csv
      34 rules/single_genes/SO_2226_sg_rule.csv
      41 rules/single_genes/SO_2229_sg_rule.csv
      48 rules/single_genes/SO_2236_sg_rule.csv
      48 rules/single_genes/SO_2237_sg_rule.csv
      37 rules/single_genes/SO_2238_sg_rule.csv
-      0 rules/single_genes/SO_2239_sg_rule.csv
     113 rules/single_genes/SO_2240_sg_rule.csv
       6 rules/single_genes/SO_2241_sg_rule.csv
      16 rules/single_genes/SO_2244_sg_rule.csv
@@ -1486,7 +1452,6 @@
       9 rules/single_genes/SO_2272_sg_rule.csv
      30 rules/single_genes/SO_2273_sg_rule.csv
      79 rules/single_genes/SO_2274_sg_rule.csv
-      0 rules/single_genes/SO_2275_sg_rule.csv
       9 rules/single_genes/SO_2278_sg_rule.csv
       7 rules/single_genes/SO_2279_sg_rule.csv
      44 rules/single_genes/SO_2280_sg_rule.csv
@@ -1511,7 +1476,6 @@
      45 rules/single_genes/SO_2310_sg_rule.csv
      30 rules/single_genes/SO_2311_sg_rule.csv
       1 rules/single_genes/SO_2312_sg_rule.csv
-      0 rules/single_genes/SO_2318_sg_rule.csv
       9 rules/single_genes/SO_2321_sg_rule.csv
     113 rules/single_genes/SO_2323_sg_rule.csv
      58 rules/single_genes/SO_2324_sg_rule.csv
@@ -1520,7 +1484,6 @@
      55 rules/single_genes/SO_2327_sg_rule.csv
      44 rules/single_genes/SO_2328_sg_rule.csv
       5 rules/single_genes/SO_2329_sg_rule.csv
-      0 rules/single_genes/SO_2330_sg_rule.csv
       8 rules/single_genes/SO_2331_sg_rule.csv
      30 rules/single_genes/SO_2332_sg_rule.csv
      34 rules/single_genes/SO_2333_sg_rule.csv
@@ -1549,7 +1512,6 @@
      43 rules/single_genes/SO_2362_sg_rule.csv
      45 rules/single_genes/SO_2363_sg_rule.csv
      67 rules/single_genes/SO_2364_sg_rule.csv
-      0 rules/single_genes/SO_2366_sg_rule.csv
      75 rules/single_genes/SO_2373_sg_rule.csv
      12 rules/single_genes/SO_2374_sg_rule.csv
      44 rules/single_genes/SO_2375_sg_rule.csv
@@ -1583,7 +1545,6 @@
      30 rules/single_genes/SO_2414_sg_rule.csv
      15 rules/single_genes/SO_2415_sg_rule.csv
      14 rules/single_genes/SO_2416_sg_rule.csv
-      0 rules/single_genes/SO_2417_sg_rule.csv
       9 rules/single_genes/SO_2418_sg_rule.csv
      13 rules/single_genes/SO_2419_sg_rule.csv
      36 rules/single_genes/SO_2420_sg_rule.csv
@@ -1643,7 +1604,6 @@
      32 rules/single_genes/SO_2494_sg_rule.csv
      10 rules/single_genes/SO_2495_sg_rule.csv
       4 rules/single_genes/SO_2499_sg_rule.csv
-      0 rules/single_genes/SO_2500_sg_rule.csv
      32 rules/single_genes/SO_2501_sg_rule.csv
       8 rules/single_genes/SO_2503_sg_rule.csv
      30 rules/single_genes/SO_2504_sg_rule.csv
@@ -1668,19 +1628,13 @@
       5 rules/single_genes/SO_2535_sg_rule.csv
      67 rules/single_genes/SO_2536_sg_rule.csv
      38 rules/single_genes/SO_2537_sg_rule.csv
-      0 rules/single_genes/SO_2538_sg_rule.csv
-      0 rules/single_genes/SO_2539_sg_rule.csv
      29 rules/single_genes/SO_2540_sg_rule.csv
-      0 rules/single_genes/SO_2541_sg_rule.csv
      57 rules/single_genes/SO_2543_sg_rule.csv
      39 rules/single_genes/SO_2544_sg_rule.csv
      57 rules/single_genes/SO_2545_sg_rule.csv
      18 rules/single_genes/SO_2546_sg_rule.csv
-      0 rules/single_genes/SO_2547_sg_rule.csv
-      0 rules/single_genes/SO_2549_sg_rule.csv
      18 rules/single_genes/SO_2550_sg_rule.csv
      18 rules/single_genes/SO_2551_sg_rule.csv
-      0 rules/single_genes/SO_2553_sg_rule.csv
      30 rules/single_genes/SO_2557_sg_rule.csv
      13 rules/single_genes/SO_2559_sg_rule.csv
      43 rules/single_genes/SO_2560_sg_rule.csv
@@ -1709,7 +1663,6 @@
      96 rules/single_genes/SO_2592_sg_rule.csv
      15 rules/single_genes/SO_2593_sg_rule.csv
      44 rules/single_genes/SO_2594_sg_rule.csv
-      0 rules/single_genes/SO_2595_sg_rule.csv
       4 rules/single_genes/SO_2600_sg_rule.csv
      51 rules/single_genes/SO_2601_sg_rule.csv
      45 rules/single_genes/SO_2602_sg_rule.csv
@@ -1774,7 +1727,6 @@
      14 rules/single_genes/SO_2717_sg_rule.csv
      85 rules/single_genes/SO_2718_sg_rule.csv
      15 rules/single_genes/SO_2719_sg_rule.csv
-      0 rules/single_genes/SO_2721_sg_rule.csv
      16 rules/single_genes/SO_2722_sg_rule.csv
      63 rules/single_genes/SO_2723_sg_rule.csv
      12 rules/single_genes/SO_2725_sg_rule.csv
@@ -1810,7 +1762,6 @@
      48 rules/single_genes/SO_2760_sg_rule.csv
      45 rules/single_genes/SO_2761_sg_rule.csv
       2 rules/single_genes/SO_2762_sg_rule.csv
-      0 rules/single_genes/SO_2763_sg_rule.csv
       2 rules/single_genes/SO_2766_sg_rule.csv
       9 rules/single_genes/SO_2767_sg_rule.csv
      13 rules/single_genes/SO_2768_sg_rule.csv
@@ -1868,7 +1819,6 @@
      14 rules/single_genes/SO_2852_sg_rule.csv
      41 rules/single_genes/SO_2853_sg_rule.csv
       6 rules/single_genes/SO_2855_sg_rule.csv
-      0 rules/single_genes/SO_2856_sg_rule.csv
     115 rules/single_genes/SO_2857_sg_rule.csv
      30 rules/single_genes/SO_2858_sg_rule.csv
      18 rules/single_genes/SO_2860_sg_rule.csv
@@ -1881,7 +1831,6 @@
      39 rules/single_genes/SO_2869_sg_rule.csv
      13 rules/single_genes/SO_2871_sg_rule.csv
      30 rules/single_genes/SO_2872_sg_rule.csv
-      0 rules/single_genes/SO_2874_sg_rule.csv
       3 rules/single_genes/SO_2877_sg_rule.csv
     115 rules/single_genes/SO_2879_sg_rule.csv
       2 rules/single_genes/SO_2880_sg_rule.csv
@@ -1945,7 +1894,6 @@
      11 rules/single_genes/SO_3013_sg_rule.csv
      42 rules/single_genes/SO_3014_sg_rule.csv
      43 rules/single_genes/SO_3015_sg_rule.csv
-      0 rules/single_genes/SO_3016_sg_rule.csv
      34 rules/single_genes/SO_3017_sg_rule.csv
      51 rules/single_genes/SO_3019_sg_rule.csv
       7 rules/single_genes/SO_3020_sg_rule.csv
@@ -1962,7 +1910,6 @@
      22 rules/single_genes/SO_3034_sg_rule.csv
      44 rules/single_genes/SO_3035_sg_rule.csv
      23 rules/single_genes/SO_3037_sg_rule.csv
-      0 rules/single_genes/SO_3039_sg_rule.csv
       4 rules/single_genes/SO_3040_sg_rule.csv
       9 rules/single_genes/SO_3044_sg_rule.csv
      30 rules/single_genes/SO_3047_sg_rule.csv
@@ -2039,8 +1986,6 @@
      35 rules/single_genes/SO_3139_sg_rule.csv
      66 rules/single_genes/SO_3140_sg_rule.csv
       9 rules/single_genes/SO_3142_sg_rule.csv
-      0 rules/single_genes/SO_3144_sg_rule.csv
-      0 rules/single_genes/SO_3145_sg_rule.csv
      66 rules/single_genes/SO_3146_sg_rule.csv
       9 rules/single_genes/SO_3148_sg_rule.csv
       3 rules/single_genes/SO_3149_sg_rule.csv
@@ -2084,7 +2029,6 @@
      55 rules/single_genes/SO_3206_sg_rule.csv
      52 rules/single_genes/SO_3207_sg_rule.csv
      74 rules/single_genes/SO_3208_sg_rule.csv
-      0 rules/single_genes/SO_3209_sg_rule.csv
      74 rules/single_genes/SO_3210_sg_rule.csv
      20 rules/single_genes/SO_3211_sg_rule.csv
      36 rules/single_genes/SO_3212_sg_rule.csv
@@ -2118,14 +2062,12 @@
       4 rules/single_genes/SO_3244_sg_rule.csv
       5 rules/single_genes/SO_3245_sg_rule.csv
       4 rules/single_genes/SO_3247_sg_rule.csv
-      0 rules/single_genes/SO_3248_sg_rule.csv
       5 rules/single_genes/SO_3249_sg_rule.csv
       5 rules/single_genes/SO_3250_sg_rule.csv
      10 rules/single_genes/SO_3251_sg_rule.csv
       8 rules/single_genes/SO_3252_sg_rule.csv
       1 rules/single_genes/SO_3253_sg_rule.csv
       5 rules/single_genes/SO_3254_sg_rule.csv
-      0 rules/single_genes/SO_3255_sg_rule.csv
       4 rules/single_genes/SO_3261_sg_rule.csv
      57 rules/single_genes/SO_3262_sg_rule.csv
      21 rules/single_genes/SO_3263_sg_rule.csv
@@ -2138,7 +2080,6 @@
       2 rules/single_genes/SO_3270_sg_rule.csv
       4 rules/single_genes/SO_3271_sg_rule.csv
      34 rules/single_genes/SO_3272_sg_rule.csv
-      0 rules/single_genes/SO_3275_sg_rule.csv
      16 rules/single_genes/SO_3277_sg_rule.csv
     102 rules/single_genes/SO_3278_sg_rule.csv
     115 rules/single_genes/SO_3279_sg_rule.csv
@@ -2187,7 +2128,6 @@
       9 rules/single_genes/SO_3349_sg_rule.csv
       1 rules/single_genes/SO_3350_sg_rule.csv
       2 rules/single_genes/SO_3351_sg_rule.csv
-      0 rules/single_genes/SO_3352_sg_rule.csv
      50 rules/single_genes/SO_3354_sg_rule.csv
      30 rules/single_genes/SO_3355_sg_rule.csv
      37 rules/single_genes/SO_3356_sg_rule.csv
@@ -2225,7 +2165,6 @@
      17 rules/single_genes/SO_3413_sg_rule.csv
      47 rules/single_genes/SO_3414_sg_rule.csv
      23 rules/single_genes/SO_3415_sg_rule.csv
-      0 rules/single_genes/SO_3417_sg_rule.csv
      30 rules/single_genes/SO_3418_sg_rule.csv
      47 rules/single_genes/SO_3419_sg_rule.csv
       4 rules/single_genes/SO_3420_sg_rule.csv
@@ -2308,11 +2247,9 @@
      19 rules/single_genes/SO_3534_sg_rule.csv
      15 rules/single_genes/SO_3537_sg_rule.csv
      10 rules/single_genes/SO_3538_sg_rule.csv
-      0 rules/single_genes/SO_3539_sg_rule.csv
       5 rules/single_genes/SO_3540_sg_rule.csv
     105 rules/single_genes/SO_3541_sg_rule.csv
      19 rules/single_genes/SO_3542_sg_rule.csv
-      0 rules/single_genes/SO_3543_sg_rule.csv
       4 rules/single_genes/SO_3544_sg_rule.csv
      90 rules/single_genes/SO_3545_sg_rule.csv
      54 rules/single_genes/SO_3546_sg_rule.csv
@@ -2366,7 +2303,6 @@
       2 rules/single_genes/SO_3637_sg_rule.csv
      53 rules/single_genes/SO_3638_sg_rule.csv
      54 rules/single_genes/SO_3639_sg_rule.csv
-      0 rules/single_genes/SO_3640_sg_rule.csv
      84 rules/single_genes/SO_3642_sg_rule.csv
      18 rules/single_genes/SO_3646_sg_rule.csv
      44 rules/single_genes/SO_3647_sg_rule.csv
@@ -2383,7 +2319,6 @@
      69 rules/single_genes/SO_3662_sg_rule.csv
      38 rules/single_genes/SO_3664_sg_rule.csv
      84 rules/single_genes/SO_3665_sg_rule.csv
-      0 rules/single_genes/SO_3667_sg_rule.csv
      46 rules/single_genes/SO_3669_sg_rule.csv
      70 rules/single_genes/SO_3670_sg_rule.csv
      50 rules/single_genes/SO_3671_sg_rule.csv
@@ -2504,7 +2439,6 @@
       1 rules/single_genes/SO_3873_sg_rule.csv
      10 rules/single_genes/SO_3874_sg_rule.csv
       9 rules/single_genes/SO_3878_sg_rule.csv
-      0 rules/single_genes/SO_3880_sg_rule.csv
       9 rules/single_genes/SO_3884_sg_rule.csv
       2 rules/single_genes/SO_3885_sg_rule.csv
     101 rules/single_genes/SO_3890_sg_rule.csv
@@ -2578,7 +2512,6 @@
      14 rules/single_genes/SO_3997_sg_rule.csv
      34 rules/single_genes/SO_4000_sg_rule.csv
      34 rules/single_genes/SO_4002_sg_rule.csv
-      0 rules/single_genes/SO_4003_sg_rule.csv
     116 rules/single_genes/SO_4004_sg_rule.csv
      10 rules/single_genes/SO_4005_sg_rule.csv
      30 rules/single_genes/SO_4012_sg_rule.csv
@@ -2619,7 +2552,6 @@
       4 rules/single_genes/SO_4069_sg_rule.csv
       4 rules/single_genes/SO_4070_sg_rule.csv
      47 rules/single_genes/SO_4072_sg_rule.csv
-      0 rules/single_genes/SO_4073_sg_rule.csv
       2 rules/single_genes/SO_4075_sg_rule.csv
       4 rules/single_genes/SO_4077_sg_rule.csv
       6 rules/single_genes/SO_4078_sg_rule.csv
@@ -2672,7 +2604,6 @@
      45 rules/single_genes/SO_4149_sg_rule.csv
      30 rules/single_genes/SO_4150_sg_rule.csv
      14 rules/single_genes/SO_4151_sg_rule.csv
-      0 rules/single_genes/SO_4152_sg_rule.csv
      17 rules/single_genes/SO_4153_sg_rule.csv
      15 rules/single_genes/SO_4154_sg_rule.csv
     101 rules/single_genes/SO_4155_sg_rule.csv
@@ -2908,7 +2839,6 @@
      30 rules/single_genes/SO_4527_sg_rule.csv
      68 rules/single_genes/SO_4529_sg_rule.csv
       4 rules/single_genes/SO_4530_sg_rule.csv
-      0 rules/single_genes/SO_4533_sg_rule.csv
      17 rules/single_genes/SO_4537_sg_rule.csv
       2 rules/single_genes/SO_4538_sg_rule.csv
       3 rules/single_genes/SO_4539_sg_rule.csv
@@ -2932,7 +2862,6 @@
       4 rules/single_genes/SO_4573_sg_rule.csv
      33 rules/single_genes/SO_4575_sg_rule.csv
      26 rules/single_genes/SO_4576_sg_rule.csv
-      0 rules/single_genes/SO_4578_sg_rule.csv
      17 rules/single_genes/SO_4579_sg_rule.csv
       9 rules/single_genes/SO_4582_sg_rule.csv
      73 rules/single_genes/SO_4583_sg_rule.csv
@@ -3020,7 +2949,6 @@
      53 rules/single_genes/SO_4690_sg_rule.csv
      85 rules/single_genes/SO_4692_sg_rule.csv
     116 rules/single_genes/SO_4693_sg_rule.csv
-      0 rules/single_genes/SO_4696_sg_rule.csv
      40 rules/single_genes/SO_4697_sg_rule.csv
       5 rules/single_genes/SO_4699_sg_rule.csv
      26 rules/single_genes/SO_4702_sg_rule.csv
@@ -3066,7 +2994,6 @@
      52 rules/single_genes/SO_4757_sg_rule.csv
      45 rules/single_genes/SO_4758_sg_rule.csv
       4 rules/single_genes/SO_4761_sg_rule.csv
-      0 rules/single_genes/SO_4768_sg_rule.csv
      30 rules/single_genes/SO_4770_sg_rule.csv
      30 rules/single_genes/SO_4773_sg_rule.csv
      30 rules/single_genes/SO_4775_sg_rule.csv
@@ -3126,14 +3053,11 @@
      99 rules/single_genes/SO_A0106_sg_rule.csv
      12 rules/single_genes/SO_A0108_sg_rule.csv
      90 rules/single_genes/SO_A0114_sg_rule.csv
-      0 rules/single_genes/SO_A0119_sg_rule.csv
       9 rules/single_genes/SO_A0130_sg_rule.csv
      42 rules/single_genes/SO_A0132_sg_rule.csv
      34 rules/single_genes/SO_A0136_sg_rule.csv
      30 rules/single_genes/SO_A0139_sg_rule.csv
-      0 rules/single_genes/SO_A0142_sg_rule.csv
       2 rules/single_genes/SO_A0149_sg_rule.csv
-      0 rules/single_genes/SO_A0151_sg_rule.csv
     100 rules/single_genes/SO_A0153_sg_rule.csv
     104 rules/single_genes/SO_A0154_sg_rule.csv
       2 rules/single_genes/SO_A0155_sg_rule.csv
