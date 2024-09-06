@@ -8,9 +8,15 @@ from txt2con import EmbeddingConverter
 TOP_CNT = 10
 ''' get 10 most related concepts '''
 
-acc_pth = 'dataset/raw/accessions'
+#acc_pth = 'dataset/raw/accessions'
+#owl_pth = 'rules/go.owl'
+#out_pth = 'dataset/concepts/GSE_concepts.csv'
+#geo_dst = 'dataset/raw/GSE'
+
+acc_pth = 'dataset/unlabel/accessions-all'
 owl_pth = 'rules/go.owl'
-out_pth = 'dataset/concepts/GSE_concepts.csv'
+out_pth = 'dataset/unlabel/unlabel_concepts.csv'
+geo_dst = 'dataset/unlabel/GSE'
 
 
 ''' initialize accession list and text embedding converter '''
@@ -20,14 +26,15 @@ embd = EmbeddingConverter(owl_pth, use_vpn=True)
 ''' initialize data lists '''
 gsm_names = []
 concepts = []
-gsm_descps = []
-con_descps = [[] for _ in range(TOP_CNT)]
+#gsm_descps = []
+#con_descps = [[] for _ in range(TOP_CNT)]
 
 
 ''' iterate all gsms '''
 for accession in tqdm(accessions['accession'], 'Converting GSE descriptions'):
-    gse = GEOparse.get_GEO(geo=accession, destdir="dataset/raw/GSE", silent=True)
-    gse_path = f"dataset/raw/GSE/{accession}_family.soft.gz"
+    accession = str(accession)
+    gse = GEOparse.get_GEO(geo=accession, destdir=geo_dst, silent=True)
+    gse_path = f"{geo_dst}/{accession}_family.soft.gz"
     gse = GEOparse.get_GEO(filepath=gse_path, silent=True)
 
     for gsm_name, gsm in gse.gsms.items():
@@ -58,21 +65,26 @@ for accession in tqdm(accessions['accession'], 'Converting GSE descriptions'):
         concepts.append(list(sorted_sim))
 
 
-        ''' record descriptions '''
-        gsm_descps.append(description)
+        #NOTE: tmp
+        with open('dataset/unlabel/concepts.txt', 'w') as f:
+            f.write(str(concepts))
 
-        for i,c in enumerate(sorted_sim):
-            d = embd.get_con_desc(c)
-            con_descps[i].append(d)
+
+        ''' record descriptions '''
+        #gsm_descps.append(description)
+
+        #for i,c in enumerate(sorted_sim):
+        #    d = embd.get_con_desc(c)
+        #    con_descps[i].append(d)
 
 ''' save as dataframe '''
 df = {'SAMPLES':gsm_names, 'CONCEPTS':concepts}
 
 df = pd.DataFrame(df)
 df.set_index('SAMPLES', inplace=True)
-df['DESC'] = gsm_descps
-for i in range(TOP_CNT):
-    df[f'CON_DESC{i}'] = con_descps[i]
+#df['DESC'] = gsm_descps
+#for i in range(TOP_CNT):
+#    df[f'CON_DESC{i}'] = con_descps[i]
 
 print(df)
 df.to_csv(out_pth)

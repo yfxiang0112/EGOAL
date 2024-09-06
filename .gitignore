@@ -1,4 +1,5 @@
 dataset/raw/GSE
+dataset/unlabel/GSE
 dataset/misc
 dataset/embedding
 tools/*
