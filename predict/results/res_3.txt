@@ -1,0 +1,6 @@
+gene id	confidence	product
+SO_3960	0.58	ABC-type lipopolysaccharide export system ATPase component LptB
+SO_0313	0.54	
+SO_3904	0.54	global secretion system secretin TolC
+SO_1828	0.52	TonB2 mediated energy transduction system energy transducer component TonB2
+SO_3896	0.50	outer membrane porin Omp35

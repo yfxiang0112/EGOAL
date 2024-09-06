@@ -44,7 +44,7 @@ def main(argv):
     embd_model = SentenceTransformer("all-MiniLM-L6-v2")
     
     ''' initialize text embeddings of concepts '''
-    goa_df = pd.read_csv('rules/goa_gene2go_filtered.csv', header=None, index_col=0)
+    goa_df = pd.read_csv('rules/goa_gene2go.csv', header=None, index_col=0)
     con_embd = np.load('dataset/embedding/go_txt_embd.npy')
     con_embd_idx = []
     with open('dataset/embedding/go_embd_idx.txt', 'r') as f:
@@ -106,6 +106,7 @@ def main(argv):
             else:
                 predictions.append([0,0])  
         
+        print(predictions)
         ''' zip name & pred prob as lst '''
         result = [(name, pred[1]) for name, pred in zip(name_list, predictions) if pred[1] > .5]
         result.sort(key= lambda x: x[1], reverse=True)
@@ -122,8 +123,6 @@ def main(argv):
     
                 f.write(f'{g[0]}\t{g[1]:.2f}\t{gene_mapping[g[0]]}\n')
 
-        #tmp
-        break
 
     ##################################################
 
