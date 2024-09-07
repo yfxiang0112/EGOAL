@@ -1,0 +1,21 @@
+gene_id	conf	product
+SO_3865	0.35	ABC-type molybdate uptake system ATPase component ModC
+SO_2001	0.33	
+SO_0102	0.31	nitrate-inducible formate dehydrogenase iron-sulfur subunit FdnH
+SO_4579	0.30	P pilus subunit FimA
+SO_4607	0.30	aa3 type cytochrome c oxidase subunit I CoxA
+SO_0490	0.29	transmembrane transcriptional regulator CadC family
+SO_4291	0.28	ABC-type phosphate uptake system permease component PstC
+SO_0269	0.28	cytochrome c-type biogenesis thioredoxin
+SO_0847	0.28	periplasmic nitrate reductase ferredoxin component NapG
+SO_3671	0.28	TonB1 energy transduction system for heme uptake inner membrane component ExbB
+SO_3088	0.27	anaerobic fatty oxidation complex alpha subunit FadJ
+SO_2345	0.27	glyceraldehyde-3-phosphate dehydrogenase (NAD+) GapA
+SO_4055	0.27	bifunctional aspartokinase II/homoserine dehydrogenase methionine-sensitive MetL
+SO_3613	0.27	phosphoribosylglycinamide formyltransferase 2 PurT
+SO_1539	0.27	periplasmic peptidase family S9
+SO_4752	0.27	ATP synthase F0 C subunit AtpE
+SO_0103	0.26	nitrate-inducible formate dehydrogenase cytochrome b subunit FdnI
+SO_4720	0.25	ABC-type tungstate uptake system permease component TupB
+SO_3202	0.25	chemotaxis signal transduction system adaptor protein CheW
+SO_2483	0.25	PLP-dependent aminotransferase YfbQ

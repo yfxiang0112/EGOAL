@@ -36,26 +36,32 @@ def load_and_process_dataset(sg_col : str):
 
     ''' Read all datasets '''
     # df_1 = pd.read_csv('dataset/importance/processed_dataset_with_importance.csv')
-    df_1 = pd.read_csv('dataset/importance/dataset_onehot.csv')
+    df_label = pd.read_csv('dataset/importance/dataset_onehot.csv', index_col=0)
+    df_unlabel = pd.read_csv('dataset/unlabel/dataset_unlabel.csv')
 
     ''' skip if current gene name not exists '''
-    if sg_col not in df_1.columns:
-        return None, None
+    if sg_col not in df_label.columns:
+        return None, None, None, None
 
     ''' convert list & bitmap dataset into np array '''
-    X_init = df_1.iloc[:,2].apply(eval).apply(filter_id_lst)
-    #y_init = df_1.iloc[:, 3729:]
-    y_init = df_1.loc[:, sg_col]
-    X = np.array(list(X_init))
-    y = y_init.to_numpy()
+    X_lb_init = df_label.loc[:, 'CONCEPTS'].apply(eval).apply(filter_id_lst)
+    y_lb_init = df_label.loc[:, sg_col]
 
-    ''' get single gene label column of current gene id ''' 
+    X_ul_init = df_unlabel.loc[:, 'CONCEPTS'].apply(eval).apply(filter_id_lst)
+    y_ul_init = [0]*len(X_ul_init)
+
+    X = np.array(list(X_lb_init))
+    y = y_lb_init.to_numpy()
+    X_u = np.array(list(X_ul_init))
+    y_u = np.array(y_ul_init)
+
+    #''' get single gene label column of current gene id ''' 
     #y = y[:,sg_col]
 
-    return X, y
+    return X, y, X_u, y_u
 
 
-def split_dataset(X, y, test_size=0.3):
+def split_dataset(X, y, X_u, y_u, test_size=0.3):
     '''
     Input:
         X: features, numpy array 
@@ -71,21 +77,25 @@ def split_dataset(X, y, test_size=0.3):
         y_test: test labels with label, numpy array 
     '''
     ''' Seperate the dataset into label, unlabel, test dataset '''
-    label_indices, unlabel_indices, test_indices = [], [], []
+    #label_indices, unlabel_indices, test_indices = [], [], []
+    label_indices, test_indices = [], []
     for class_label in np.unique(y):
         idxs = np.where(y == class_label)[0]
         np.random.shuffle(idxs)
-        n_train_unlabel = int((1 - test_size) * (len(idxs) - 1))
-        label_indices.append(idxs[0])
-        unlabel_indices.extend(idxs[1 : 1 + n_train_unlabel])
-        test_indices.extend(idxs[1 + n_train_unlabel :])
+        #n_train_unlabel = int((1 - test_size) * (len(idxs) - 1))
+        n_train_label = int((1 - test_size) * (len(idxs) - 1)) + 1
+        #label_indices.append(idxs[0])
+        #unlabel_indices.extend(idxs[1 : 1 + n_train_unlabel])
+        label_indices.extend(idxs[0 : n_train_label])
+        test_indices.extend(idxs[n_train_label :])
 
     X_label, y_label = X[label_indices], y[label_indices]
-    X_unlabel, y_unlabel = X[unlabel_indices], y[unlabel_indices]
+    X_unlabel, y_unlabel = X_u, y_u
     X_test, y_test = X[test_indices], y[test_indices]
 
     ''' Convert their label into the abl form '''
-    label_to_index = {label: index for index, label in enumerate(y_label)}
+    #label_to_index = {label: index for index, label in enumerate(y_label)}
+    label_to_index = {0:0, 1:1}
 
     for i in range(len(y_unlabel)):
         if y_unlabel[i] in label_to_index:

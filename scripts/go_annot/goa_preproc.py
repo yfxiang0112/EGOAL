@@ -19,5 +19,14 @@ def goid_regu(s):
 
 goa = pd.read_csv('rules/S_oneidensis.goa.csv', header=None, on_bad_lines='skip')
 goa_mapping = pd.concat([goa[4].apply(goid_regu), goa[10].apply(find_id)], axis=1)
+goa_mapping.rename(columns={4:'concepts', 10:'gene_set'}, inplace=True)
+
+
+goa_mapping = goa_mapping.groupby('concepts')['gene_set'].apply(lambda x: set().union(*x)).reset_index()
+
+delta_concepts = ['GO_0008150', 'GO_0003674', 'GO_0005575']
+goa_mapping = goa_mapping[~goa_mapping['concepts'].isin(delta_concepts)]
+    # remove Delta=(bioproc, molfunc, celpos) from assertion
+
 print(goa_mapping)
 goa_mapping.to_csv('rules/goa_mapping.csv', header=False, index=False)

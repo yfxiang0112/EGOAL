@@ -1,0 +1,205 @@
+gene_id	conf	product
+SO_1318	1.00	NTF2-like superfamily protein
+SO_1705	1.00	ABC-type drugE1 family efflux system MFP component
+SO_2694	1.00	Mu phage tail tube protein GpM
+SO_3257	1.00	outer membrane lipoprotein required for flagellar motility FlgO
+SO_3357	1.00	outer membrane protein
+SO_4008	1.00	putative recombination regulator protein DUF3584 family
+SO_1957	0.99	predicted periplasmic protein
+SO_3758	0.99	sodium-dependent bicarbonate transporter (SBT) family
+SO_2497	0.98	SEC-C domain protein
+SO_3259	0.98	motility accessory factor Maf
+SO_4031	0.98	predicted transmembrane protein
+SO_4280	0.97	CBS domain containing protein
+SO_1003	0.96	outer membrane morn variant repeat-containing protein
+SO_1254	0.96	signal transduction superfamily protein with modified HD-GYP domain
+SO_2677	0.96	Mu phage small terminase subunit GpD
+SO_0736	0.95	predicted periplasmic protein
+SO_1462	0.95	cytoplasmic protein in type I restriction-modifcation system locus
+SO_4205	0.95	putative periplasmic protein in twin arginine protein translocase system locus
+SO_0284	0.94	PilQ chaperone PilP
+SO_0557	0.94	protein GumN
+SO_1572	0.94	small highly charged protein
+SO_2955	0.94	Lambda phage minor tail protein G
+SO_2958	0.94	Lambda phage protein HK97-gp10 family
+SO_0855	0.93	hydroxyneurosporene synthase AttH
+SO_2893	0.93	base-induced periplasmic protein YceI
+SO_2951	0.93	Lambda phage protein of known function
+SO_3950	0.93	ABC-type phospholipid uptake (salvage) system anti-anti-sigma factor MlaB
+SO_4064	0.93	pentapeptide repeat protein McbG
+SO_2848	0.92	putative periplasmic protein
+SO_0563	0.91	membrane protein
+SO_4559	0.91	Sel1 domain-containing protein
+SO_3761	0.90	predicted lipoprotein
+SO_1868	0.90	nucleic acid binding superfamily protein YitL type
+SO_0851	0.89	PilD processed protein
+SO_0925	0.89	signalling protein with GGDEF domain
+SO_0306	0.88	outer membrane protein COG4775 family
+SO_3829	0.88	hypothetical protein
+SO_3512	0.88	SapC family protein
+SO_1405	0.87	periplasmic transglutaminase family protein
+SO_3909	0.87	predicted membrane protein
+SO_4429	0.87	putative periplasmic protein
+SO_0085	0.86	predicted inner membrane protein
+SO_3772	0.86	SH3 domain protein
+SO_0109	0.85	SirA family protein YedF
+SO_0112	0.85	inhibitor of invertebrate-type lysozyme PliI-like family
+SO_2922	0.85	predicted nucleoside-diphosphate sugar epimerase YfcH
+SO_3526	0.85	type IV minor pilin protein PilX
+SO_1069	0.84	predicted membrane protein
+SO_1958	0.84	glyoxylase-like domain protein
+SO_2061	0.84	predicted lipoprotein
+SO_2945	0.84	Lambda phage tail fiber protein
+SO_2830	0.83	predicted outer membrane protein
+SO_3076	0.83	protein YfcL
+SO_4710	0.83	paraquat-inducible membrane protein PqiA family
+SO_0013	0.82	metal-dependent phosphohydrolase
+SO_0291	0.82	predicted periplasmic protein
+SO_0459	0.82	putative ATPase DUF853 family
+SO_0552	0.82	predicted periplasmic protein
+SO_3810	0.82	outer membrane protein OmpA-like protein
+SO_3949	0.82	transcriptional regulator BolA family YrbA
+SO_0184	0.81	microcystin dependent MdpB family protein
+SO_0386	0.81	excisionase/response regulator inhibitor-like protein
+SO_1411	0.81	predicted outer membrane protein
+SO_2667	0.81	Mu phage host gene modulation protein GemA
+SO_0088	0.80	predicted periplasmic protein
+SO_0362	0.80	predicted inner membrane protein
+SO_0651	0.80	Mu phage host gene modulation protein GemA
+SO_0732	0.80	thioredoxin-like protein
+SO_2357	0.80	Cbb3-type cytochrome oxidase assembly protein disulfide bond oxidoreductase DsbD family
+SO_3303	0.80	cell surface protein
+SO_3591	0.80	predicted periplasmic protein
+SO_3716	0.80	DnaJ domain protein
+SO_4145	0.80	signalling protein with EAL and C2 domains
+SO_1305	0.79	membrane protein
+SO_2573	0.79	UCP006173 family protein
+SO_4113	0.79	MSHA biogenesis protein MshK
+SO_4560	0.79	predicted membrane protein
+SO_4600	0.79	glyoxalase/bleomycin resistance protein/dioxygenase superfamily protein
+SO_2041	0.78	DNA recombination protein RmuC
+SO_2971	0.78	Lambda phage holin S
+SO_4359	0.78	outer membrane protein MtrB family
+SO_0480	0.77	sulfurtransferase SirB
+SO_0660	0.77	Mu phage conserved phage protein
+SO_0914	0.77	beta lactamase family protein
+SO_2821	0.77	probable metal-binding protein YecH
+SO_2931	0.77	cytochrome c lipoprotein
+SO_4486	0.77	PepSY domain protein
+SO_2247	0.76	putative lipoprotein
+SO_2569	0.76	putative cytoplasmic protein
+SO_0054	0.75	HI0933 family flavoprotein YhiN
+SO_0309	0.75	membrane protein MAPEG superfamily
+SO_0353	0.75	TPR domain protein
+SO_2697	0.75	Mu phage tape measure protein Gp42
+SO_3223	0.75	flagellar hook-length control protein FliK
+SO_3781	0.75	major pilin structural protein V10-like protein
+SO_4700	0.75	outer membrane porin
+SO_3449	0.75	WGR domain protein
+SO_1002	0.74	outer membrane morn variant repeat-containing protein
+SO_3157	0.74	polysaccharide biosynthesis lipoprotein WbfD
+SO_3454	0.74	putative cytoplasmic protein
+SO_3765	0.74	PspA/IM30 family protein
+SO_3841	0.74	anti-sigma factor
+SO_4685	0.74	outer membrane protein in capsule/EPS biosynthesis locus
+SO_0076	0.73	outer membrane morn variant repeat-containing protein
+SO_1061	0.73	lipoprotein with a tetratricopeptide repeat
+SO_3085	0.73	predicted periplasmic protein
+SO_4093	0.73	TIGR02099 family protein
+SO_4641	0.73	toxin-antitoxin system toxin RelE family
+SO_0381	0.72	type I RM locus Fic family protein
+SO_0628	0.72	bifunctional diguanylate cyclase/phosphodiesterase
+SO_1190	0.72	putative periplasmic CbiK superfamily protein
+SO_1412	0.72	outer membrane beta barrel protein
+SO_2858	0.72	
+SO_3377	0.72	predicted periplasmic protein
+SO_3632	0.72	predicted outer membrane protein
+SO_0147	0.71	predicted periplasmic protein
+SO_0764	0.71	putative periplasmic protein
+SO_3344	0.71	predicted inner membrane protein
+SO_2680	0.70	Mu phage portal protein GpH
+SO_0329	0.70	predicted lipoprotein
+SO_1029	0.70	predicted lipoprotein
+SO_4656	0.70	putative cytoplasmic protein
+SO_2439	0.70	serine rich protein
+SO_0203	0.69	predicted periplasmic protein
+SO_1337	0.69	predicted periplasmic protein
+SO_1824	0.69	TonB2 energy transduction system periplasmic component
+SO_2582	0.69	peptidase S33 family
+SO_4361	0.69	extracellular oxidoreductase associated protein
+SO_2962	0.69	Lambda phage helical domain protein
+SO_2789	0.68	oxidoreductase iron/ascorbate family
+SO_0758	0.68	predicted periplasmic protein
+SO_3576	0.67	predicted periplasmic protein
+SO_0975	0.66	disulphide interchange protein DsbD family
+SO_1441	0.66	putative cytoplasmic protein
+SO_1468	0.66	ADP-ribose binding domain-containing protein
+SO_1850	0.66	DnaJ domain protein
+SO_2228	0.66	CBS domain containing protein
+SO_3256	0.66	outer membrane lipoprotein required for flagellar motility FlgP
+SO_0055	0.65	tetratricopeptide repeat-containing protein
+SO_0186	0.65	microcystin dependent MdpB family protein
+SO_2936	0.65	sialidase superfamily protein
+SO_3847	0.65	cell wall assembly/cell proliferation coordinating protein KNR4-like protein
+SO_0078	0.64	predicted lipoprotein
+SO_1004	0.64	putative inner membrane lipoprotein
+SO_2377	0.64	tRNA 2-thiouridine synthesizing protein C subunit TusC
+SO_4013	0.64	TPR repeat domain protein
+SO_1192	0.64	predicted extracytoplasmic protein
+SO_1518	0.63	L-lactate dehydrogenase complex protein LldG
+SO_3409	0.63	OsmC/Ohr family protein
+SO_4018	0.63	putative lipoprotein
+SO_3069	0.63	type IV pilus assembly protein FimV
+SO_0041	0.62	G-protein receptor interacting sweet protein
+SO_0466	0.62	toxin-antitoxin system antidote
+SO_0547	0.62	putative outer membrane protein TIGR02001 family
+SO_0668	0.62	Mu phage minor capsid protein GpF
+SO_1365	0.62	predicted membrane protein
+SO_3502	0.62	TIGR02001 family outer membrane protein
+SO_3857	0.62	phosphoesterase PA-phosphatase related protein
+SO_4193	0.62	esterase/lipase/thioesterase family protein
+SO_4362	0.62	extracellular oxidoreductase chaperone protein
+SO_0720	0.61	predicted periplasmic protein
+SO_0941	0.61	predicted transmembrane protein
+SO_1534	0.61	alpha/beta-hydrolase superfamily protein
+SO_2711	0.61	predicted lipoprotein
+SO_3258	0.61	flagella assembly protein FlgT
+SO_0938	0.60	predicted lipoprotein
+SO_1587	0.60	predicted membrane protein
+SO_2604	0.60	UV induced SOS regulon protein YebG
+SO_0074	0.59	ABC-type efflux system permease component
+SO_0179	0.59	aspartyl/asparaginyl beta-hydroxylase family protein
+SO_0852	0.59	PilD processed protein
+SO_1428	0.59	extracellular dimethyl sulfoxide/manganese oxide reductase outer membrane translocase DmsF
+SO_1872	0.59	surface lipoprotein with VCBS repeats
+SO_4522	0.59	putative periplasmic protein
+SO_4592	0.59	predicted periplasmic protein
+SO_0316	0.58	phosphatidylethanolamine-binding protein YbcL
+SO_0562	0.58	membrane protein
+SO_0881	0.58	predicted TAT leader-containing periplasmic protein
+SO_3418	0.58	predicted inner membrane protein
+SO_3558	0.58	predicted lipoprotein
+SO_0805	0.57	CBS domain containing protein
+SO_2565	0.57	intracellular proteinase inhibitor domain protein
+SO_3234	0.57	flagella biosynthesis chaperone for FliD FliT
+SO_3951	0.57	ABC-type phospholipid uptake (salvage) system periplasmic chaperone MlaC
+SO_3996	0.57	predicted inner membrane protein
+SO_0974	0.56	putative cytoplasmic protein
+SO_2805	0.56	heme-copper-containing inner membrane protein NnrS
+SO_3924	0.56	Fe hydrogenase assembly protein HydX
+SO_1949	0.55	invasin domain protein
+SO_2063	0.55	outer membrane lipoprotein
+SO_4627	0.55	glutamine rich protein
+SO_0403	0.54	predicted outer membrane protein
+SO_0559	0.54	MaoC domain protein
+SO_0339	0.53	modulator of rho-dependent transcriptional termination RofA
+SO_0850	0.53	type IV pilin-associated adhesin
+SO_0915	0.53	ankyrin domain protein
+SO_1675	0.53	predicted lipoprotein
+SO_2917	0.53	predicted lipoprotein
+SO_3337	0.53	signal transduction protein with HDOD/GAF domains
+SO_3790	0.53	sulfur acceptor protein for iron-sulfur cluster assembly SufE
+SO_1086	0.52	predicted inner membrane protein
+SO_2671	0.52	Mu phage endolysin Lys
+SO_4169	0.52	deoxyribodipyrimidine photolyase-related protein
+SO_3794	0.51	morn variant repeat protein
