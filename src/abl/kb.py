@@ -6,10 +6,10 @@ import time
 import os
 
 class GO(KBBase):
-    def __init__(self, single_gene : str, rule_path : str, annotation_path : str):
+    def __init__(self, single_gene : str, rule_path : str, annotation_path : str, logger):
 
         ''' Define pseudo label convertion list & z3 solver '''
-        super().__init__(pseudo_label_list=[0,1], use_cache=False)
+        super().__init__(pseudo_label_list=[0,1], use_cache=False, logger=logger)
         self.solver = Solver()
 
         #NOTE: temp
@@ -47,20 +47,18 @@ class GO(KBBase):
             if row[0] in concept_input and row[1] in self.goa_con_set:
                 ''' if current gene regulated by input cond, but not expressed '''
                 if pred_expr == 0:
-                    vio_cnt += 1
+                    vio_cnt += 5
 
             if row[0] not in concept_input and row[1] in self.goa_con_set:
                 ''' if current gene not regulated by input cond, but expressed '''
                 if pred_expr == 1:
-                    pass
-                    vio_cnt += .01
+                    vio_cnt += 0
                     #NOTE: handle this case?
 
             if row[0] in self.goa_con_set and row[1] in concept_input:
                 ''' if current gene regulates input cond, but not expressed '''
                 if pred_expr == 0:
-                    pass
-                    vio_cnt += .01
+                    vio_cnt += 5
 
             if row[0] in self.goa_con_set and row[1] not in concept_input:
                 ''' if conditions regulated by current gene not shown in input '''

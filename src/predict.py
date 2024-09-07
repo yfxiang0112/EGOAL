@@ -1,15 +1,14 @@
-import os
 import sys, getopt
 import pandas as pd
 import joblib
 import glob
 import re
-from sentence_transformers import SentenceTransformer
+import os
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
-
+from sentence_transformers import SentenceTransformer
 #from concept_extract.term_embd import graph_parse
 #from concept_extract.txt2con import EmbeddingConverter
 
@@ -37,22 +36,20 @@ def main(argv):
 
     
     ##################################################
-
-    ''' initialize text embedding model '''
+    
+    ''' initialize text embedding converter '''
     os.environ["http_proxy"] = "http://127.0.0.1:7890"
     os.environ["https_proxy"] = "http://127.0.0.1:7890"
     embd_model = SentenceTransformer("all-MiniLM-L6-v2")
-    
-    ''' initialize text embeddings of concepts '''
-    goa_df = pd.read_csv('rules/goa_gene2go.csv', header=None, index_col=0)
-    con_embd = np.load('dataset/embedding/go_txt_embd.npy')
-    con_embd_idx = []
+    term_embeddings = np.load('dataset/embedding/go_txt_embd.npy')
     with open('dataset/embedding/go_embd_idx.txt', 'r') as f:
-        con_embd_idx = eval(f.readline())
+        term_idx = eval(f.readline())
+
     
     ''' initialize concept lists '''
     TOP_CNT = 10
     concepts = []
+    #con_descps = [[] for _ in range(TOP_CNT)]
     
     ''' read descriptions from input file '''
     descriptions = []
@@ -65,13 +62,12 @@ def main(argv):
     
             ''' compute similarity matrix & most similar concept list '''
             #sim = embd.similar_matrix(d)
-            text_embd = embd_model.encode([d])
-            sim = embd_model.similarity(con_embd, text_embd)
-            sorted_sim, sorted_term = zip(*sorted(zip(sim, con_embd_idx), reverse=True))
+            text_embeddings = embd_model.encode(d)
+            sim = embd_model.similarity(text_embeddings, term_embeddings)
             #sorted_sim = embd.max_sim(TOP_CNT)
-            sorted_term = sorted_term[:TOP_CNT]
+            _, sorted_term = zip(*sorted(zip(sim[0], term_idx), reverse=True))
     
-            concepts.append(list(sorted_term))
+            concepts.append(list(sorted_term[:TOP_CNT]))
     
     
     ''' load gene - product mapping '''
@@ -106,23 +102,19 @@ def main(argv):
             else:
                 predictions.append([0,0])  
         
-        print(predictions)
         ''' zip name & pred prob as lst '''
-        result = [(name, pred[1]) for name, pred in zip(name_list, predictions) if pred[1] > .5]
+        #result = [(name, pred[1]) for name, pred in zip(name_list, predictions) if pred[1] > .5]
+        result = [(name, pred[1]) for name, pred in zip(name_list, predictions)]
         result.sort(key= lambda x: x[1], reverse=True)
         
         with open(f'{out_dir}/res_{i}.txt', 'w') as f:
-            f.write('gene id\tconfidence\tproduct\n')
-            for g in result:
+            f.write('gene_id\tconf\tproduct\n')
+            for g in result[:20]:
                 prod = gene_mapping[g[0]]
-                #if 'unknown' in prod or 'uncharacterized' in prod:
-                #    continue
-                if g[0] not in goa_df.index:
-                    print(g)
+                if 'unknown' in prod or 'uncharacterized' in prod:
                     continue
     
                 f.write(f'{g[0]}\t{g[1]:.2f}\t{gene_mapping[g[0]]}\n')
-
 
     ##################################################
 

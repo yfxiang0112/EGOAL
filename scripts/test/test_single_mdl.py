@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 dataset = pd.read_csv('dataset/importance/dataset_onehot.csv')
 
-gene = 'SO_0014'
+gene = 'SO_1523'
 model_file = f'models/{gene}_model.joblib'
 model = joblib.load(model_file)
 

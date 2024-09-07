@@ -1,1 +1,19 @@
-gene id	confidence	product
+gene_id	conf	product
+SO_4749	0.45	ATP synthase F1 alpha subunit AtpA
+SO_0544	0.44	two component signal transduction system histidine kinase with CHASE and PAS sensory domains
+SO_4029	0.43	
+SO_1227	0.42	c-di-GMP-binding protein
+SO_1932	0.42	succinyl-CoA synthase beta subunit SucC
+SO_3904	0.42	global secretion system secretin TolC
+SO_2364	0.41	Cbb3-type cytochrome c oxidase subunit I CcoN
+SO_0225	0.41	
+SO_4030	0.40	excinuclease ABC A subunit UvrA
+SO_0742	0.39	ABC-type Fe3+ uptake system ATPase component FbpC
+SO_0946	0.39	RND superfamily efflux pump MFP component
+SO_4576	0.39	O-succinylbenzoic acid CoA ligase MenE
+SO_2615	0.39	aminodeoxychorismate lyase PabC
+SO_3414	0.39	homoserine kinase ThrB
+SO_3503	0.38	N-acetyl glucosamine transporter NagP
+SO_4638	0.38	two component signal transduction system histidine kinase
+SO_4380	0.38	beta-ketoacyl synthase
+SO_0821	0.38	ABC-type macrolide export system bifunctional ATPase and permease component MacB

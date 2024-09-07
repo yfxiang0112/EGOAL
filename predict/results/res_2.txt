@@ -1,1 +1,21 @@
-gene id	confidence	product
+gene_id	conf	product
+SO_0742	0.28	ABC-type Fe3+ uptake system ATPase component FbpC
+SO_0245	0.25	30S ribosomal protein S8 RpsH
+SO_1923	0.25	RND superfamily efflux pump permease component 1
+SO_4648	0.24	two component signal transduction system histidine kinase
+SO_3894	0.23	two component signal transduction system histidine kinase
+SO_4689	0.23	membrane protein COG0398 family
+SO_0237	0.22	30S ribosomal protein S3 RpsC
+SO_0272	0.21	nicotinamide deamidase PncC
+SO_1434	0.21	chemotaxis signal transduction system methyl accepting sensory transducer with 4HB_MCP sensory domain
+SO_2355	0.20	universal stress protein UspE
+SO_0822	0.20	ABC-type macrolide export system secretin component MacC
+SO_1427	0.19	periplasmic decaheme cytochrome c DmsE
+SO_2174	0.19	diguanylate cyclase with PAS sensory domain
+SO_0228	0.19	translation elongation factor G FusA
+SO_1933	0.19	succinyl-CoA synthase alpha subunit SucD
+SO_4750	0.19	ATP synthase F1 delta subunit AtpH
+SO_1827	0.19	TonB2 energy transduction system membrane anchored component ExbD
+SO_0945	0.18	RND superfamily efflux pump permease component
+SO_0251	0.18	preprotein translocase subunit SecY
+SO_3896	0.17	outer membrane porin Omp35

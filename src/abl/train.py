@@ -109,7 +109,7 @@ def train(id: int):
     print_log("Building the Reasoning Part.", logger=sg_logger)
 
     try:
-        kb = GO(sg_name, rule_path, annotation_path)
+        kb = GO(sg_name, rule_path, annotation_path, logger=sg_logger)
     except FileNotFoundError:
         print(f"Rule file not found: {rule_path}. Skipping...")
         return 
@@ -134,7 +134,7 @@ def train(id: int):
     #prob = base_model.predict_proba(X_unlabel)
 
     print_log("------- Test the initial model -----------", logger=sg_logger)
-    bridge.test(test_data)
+    bridge.test(test_data, logger=sg_logger)
 
     ''' Train model with ABL '''
     print_log("------- Use ABL to train the model -----------", logger=sg_logger)
@@ -143,9 +143,10 @@ def train(id: int):
         label_data=label_data,
         loops=args.loops,
         segment_size=len(X_unlabel),
+        logger=sg_logger
     )
     print_log("------- Test the final model -----------", logger=sg_logger)
-    bridge.test(test_data)
+    bridge.test(test_data, logger=sg_logger)
 
 
     print_log("------- Save the final model -----------", logger=sg_logger)
