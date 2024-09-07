@@ -3,13 +3,14 @@ import pandas as pd
 import joblib
 import glob
 import re
+import os
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
-
-from concept_extract.term_embd import graph_parse
-from concept_extract.txt2con import EmbeddingConverter
+from sentence_transformers import SentenceTransformer
+#from concept_extract.term_embd import graph_parse
+#from concept_extract.txt2con import EmbeddingConverter
 
 def predict(in_pth, out_dir):
     ##################################################
@@ -113,8 +114,13 @@ def main(argv):
     ##################################################
     
     ''' initialize text embedding converter '''
-    owl_pth = 'rules/go.owl'
-    embd = EmbeddingConverter(owl_pth, use_vpn=True)
+    os.environ["http_proxy"] = "http://127.0.0.1:7890"
+    os.environ["https_proxy"] = "http://127.0.0.1:7890"
+    embd_model = SentenceTransformer("all-MiniLM-L6-v2")
+    term_embeddings = np.load('dataset/embedding/go_txt_embd.npy')
+    with open('dataset/embedding/go_embd_idx.txt', 'r') as f:
+        term_idx = eval(f.readline())
+
     
     ''' initialize concept lists '''
     TOP_CNT = 10
@@ -131,10 +137,13 @@ def main(argv):
     for d in tqdm(descriptions, 'processing input instance'):
     
             ''' compute similarity matrix & most similar concept list '''
-            sim = embd.similar_matrix(d)
-            sorted_sim = embd.max_sim(TOP_CNT)
+            #sim = embd.similar_matrix(d)
+            text_embeddings = embd_model.encode(d)
+            sim = embd_model.similarity(text_embeddings, term_embeddings)
+            #sorted_sim = embd.max_sim(TOP_CNT)
+            _, sorted_term = zip(*sorted(zip(sim[0], term_idx), reverse=True))
     
-            concepts.append(list(sorted_sim))
+            concepts.append(list(sorted_term[:TOP_CNT]))
     
     
     ''' load gene - product mapping '''
@@ -170,12 +179,13 @@ def main(argv):
                 predictions.append([0,0])  
         
         ''' zip name & pred prob as lst '''
-        result = [(name, pred[1]) for name, pred in zip(name_list, predictions) if pred[1] > .5]
+        #result = [(name, pred[1]) for name, pred in zip(name_list, predictions) if pred[1] > .5]
+        result = [(name, pred[1]) for name, pred in zip(name_list, predictions)]
         result.sort(key= lambda x: x[1], reverse=True)
         
         with open(f'{out_dir}/res_{i}.txt', 'w') as f:
-            f.write('gene id\tconfidence\tproduct\n')
-            for g in result:
+            f.write('gene_id\tconf\tproduct\n')
+            for g in result[:20]:
                 prod = gene_mapping[g[0]]
                 if 'unknown' in prod or 'uncharacterized' in prod:
                     continue
