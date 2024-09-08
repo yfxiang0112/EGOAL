@@ -1,4 +1,5 @@
 from operator import index
+from typing import Iterable
 from rdflib import Graph
 import pandas as pd
 import os
@@ -25,7 +26,7 @@ def extrID(s):
 
 class KG2Rule():
 
-    def __init__(self, rdf_pth, con_spec_pth :str, owl_pth = '') -> None:
+    def __init__(self, rdf_pth : str, con_spec: Iterable, owl_pth = '') -> None:
         if not os.path.exists(rdf_pth):
             if owl_pth=='':
                 raise Exception('Need specify path to OWL file when owl is not parsed.')
@@ -39,7 +40,7 @@ class KG2Rule():
         self.rdf['object'] = self.rdf['object'].apply(extrID)
 
         self.rule_set = None
-        self.con_spec = list(pd.read_csv(con_spec_pth, header=None)[0])
+        self.con_spec = con_spec
 
 
 
@@ -87,7 +88,7 @@ class KG2Rule():
         node_succ   = []
         mask = [False]*len(self.rdf)
         for i in range(d):
-            for idx, row in tqdm(self.rdf.iterrows(), 'Round '+str(i+1)):
+            for idx, row in tqdm(self.rdf.iterrows(), 'Round '+str(i+1), total=len(self.rdf)):
                 if mask[idx]:
                     continue
 
@@ -151,13 +152,13 @@ class KG2Rule():
 
 
         for r in self.rule_set:
-            if r[1] in self.con_spec or r[3] in self.con_spec:
+            if r[0] in self.con_spec or r[1] in self.con_spec:
                 R_new.append(r)
 
         for t in range(T):
             R_res = []
 
-            for r_new in tqdm(R_new, 'Round '+str(t+1)):
+            for r_new in tqdm(R_new, 'Round '+str(t+1), total=len(R_new)):
                 for r in self.rule_set:
                     res = resolve(r_new, r, self.con_spec)
                     if res != None and res not in self.rule_set:
@@ -167,7 +168,7 @@ class KG2Rule():
             for r in R_res:
                 self.rule_set.add(r)
 
-        rule_rem = set(r for r in self.rule_set if (r[1] in self.con_spec and r[3] in self.con_spec))
+        rule_rem = set(r for r in self.rule_set if (r[0] in self.con_spec and r[1] in self.con_spec))
         self.rule_set = set(rule_rem)
 
         return self.rule_set
@@ -188,7 +189,7 @@ class KG2Rule():
         if self.rule_set == None:
             raise Exception('Need to specify rule set')
 
-        for i1, rule_1 in tqdm(enumerate(self.rule_set)):
+        for i1, rule_1 in tqdm(enumerate(self.rule_set), total=len(self.rule_set)):
             for i2, rule_2 in enumerate(self.rule_set):
 
                 if i1 == i2:
@@ -199,14 +200,12 @@ class KG2Rule():
                 #if type(rule_2)==str:
                 #    rule_2 = eval(rule_2)
 
-                if rule_1[1] == rule_2[1] and\
-                        rule_1[3] == rule_2[3]:
+                if rule_1[0] == rule_2[0] and\
+                        rule_1[1] == rule_2[1]:
                     
                     #print('test', i1, i2, rule_1, rule_2)
                     
-                    if not (rule_1[0] == rule_2[0] and\
-                            rule_1[2] == rule_2[2]):
-
+                    if rule_1[2] != rule_2[2]:
                         contra_idx.add(rule_1)
                         contra_idx.add(rule_2)
 
@@ -228,16 +227,15 @@ class KG2Rule():
             assert type(rule_set) == set or list
             for r in rule_set:
                 assert type(r) == tuple or list
-                assert len(r) == 4
+                assert len(r) == 3
         else:
             rule_set = self.rule_set
 
-        pred_flag = [r[0] for r in rule_set]
-        pred = [r[1] for r in rule_set]
-        succ_flag = [r[2] for r in rule_set]
-        succ = [r[3] for r in rule_set]
+        pred = [r[0] for r in rule_set]
+        succ = [r[1] for r in rule_set]
+        flag = [r[2] for r in rule_set]
 
-        return pd.DataFrame({'pred_flag':pred_flag, 'pred':pred, 'succ_flag':succ_flag, 'succ':succ})
+        return pd.DataFrame({ 'pred':pred, 'succ':succ, 'flag':flag})
     
 
     def get_rule(self) -> set:

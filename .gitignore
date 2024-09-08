@@ -1,4 +1,5 @@
 dataset/raw/GSE
+dataset/unlabel/GSE
 dataset/misc
 dataset/embedding
 tools/*
@@ -10,7 +11,8 @@ rules/go.owl
 rules/go.obo
 rules/go.rdf
 rules/go-plus.owl
-results
+results/*
+log/*
 
 # tmp
 rules/KG_RDF_filter-large.csv

@@ -1,0 +1,20 @@
+gene_id	conf	product
+SO_0276	0.15	acetylglutamate kinase ArgB
+SO_4471	0.14	nitrogen-responsive two component signal transduction system histidine kinase with PAS sensory domain GlnL
+SO_2906	0.14	tellurite-resistance/dicarboxylate transporter (TDT) family protein
+SO_4123	0.13	arginyl-tRNA synthetase ArgS
+SO_2491	0.13	pyruvate kinase II PykA
+SO_1230	0.12	TMAO-responsive two component signal transduction system hybrid histidine kinase/response regulator TorS
+SO_1377	0.12	putative negative regulator of univalent cation permeability
+SO_3986	0.12	lysine-sensitive aspartokinase III LysC
+SO_4317	0.12	biofilm-promoting protein BpfA
+SO_3562	0.11	
+SO_2802	0.11	ABC-type lipid A export system bifunctional ATPase and permease components MsbA
+SO_3674	0.11	ABC-type hemin uptake system permease component HmuC
+SO_3837	0.11	ribose-phosphate pyrophosphokinase PrsA
+SO_4371	0.11	AMP-dependent synthetase and ligase family protein
+SO_0522	0.11	large conductance mechanosensitive ion channel protein MscL
+SO_4221	0.11	UDP-N-acetylmuramoyl-L-alanine-D-glutamate ligase MurD
+SO_1866	0.10	ABC-type export system permease component
+SO_0632	0.10	ATP-dependent helicase HrpB
+SO_4730	0.10	coproporphyrinogen III oxidase oxygen-independent HemN

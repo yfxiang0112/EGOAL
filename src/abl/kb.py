@@ -3,55 +3,25 @@ from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat, Bool
 from ablkit.reasoning import KBBase
 import pandas as pd
 import time
+import os
 
 class GO(KBBase):
-    def __init__(self, single_gene : str, rule_path : str, annotation_path : str):
+    def __init__(self, single_gene : str, rule_path : str, annotation_path : str, logger):
 
         ''' Define pseudo label convertion list & z3 solver '''
-        super().__init__(pseudo_label_list=[0,1], use_cache=False)
+        super().__init__(pseudo_label_list=[0,1], use_cache=False, logger=logger)
         self.solver = Solver()
+
+        #NOTE: temp
+        #rule_path = 'rules/single_genes/SO_0014_sg_rule_test_modify.csv'
 
         ''' Load GO rules and annotations
             Define set of concepts related to current single gene '''
-        rule_df = pd.read_csv(rule_path, header=None)
+        print(rule_path)
+        self.rule_df = pd.read_csv(rule_path, header=None)
         annotation = pd.read_csv(annotation_path, header=None, index_col=0)
         sg_row = annotation.loc[single_gene]
         self.goa_con_set = eval(sg_row[1])
-
-        ''' Define disjunction rules,
-            concept domain,
-            and z3 constraint variables used in rules '''
-        rules = []
-
-        self.concept_dom = set()
-        for idx, row in rule_df.iterrows():
-            rule = row
-
-            self.concept_dom.add(rule.iloc[1])
-            self.concept_dom.add(rule.iloc[3])
-            ''' Define concept domain '''
-
-            globals().update( { rule.iloc[1] : Bool(rule.iloc[1]) } )
-            globals().update( { rule.iloc[3] : Bool(rule.iloc[3]) } )
-            ''' Define z3 variables '''
-
-            rules.append(Or( eval(rule.iloc[1]) == rule.iloc[0], eval(rule.iloc[3]) == rule.iloc[2] ))
-            ''' Translate disjunction rule '''
-
-        #print(self.goa_con_set)
-        #print(rules)
-        #print(len(self.concept_dom))
-
-        self.cwa_constraints = set(eval(c)==False for c in self.concept_dom)
-
-
-        ''' Define violated weights '''
-        self.weights = {rule: 1 for rule in rules} 
-
-        self.total_violation_weight = Sum(
-            [If(Not(rule), self.weights[rule], 0) for rule in self.weights]
-        )
-
 
 
     def logic_forward(self, pseudo_label, x):
@@ -66,45 +36,34 @@ class GO(KBBase):
         NOTE: Truth values are interpreted under CWA (i.e. False if not in pseudo_label).
         '''
 
-        solver = self.solver
-        total_violation_weight = self.total_violation_weight
-        self.solver.reset()
-
 
         ''' definie pseudo label and input concept set '''
-        #gene_pred       = [f'SO_{st:04}' for st in pseudo_label]
         concept_input = set(f'GO_{st:07}' for st in x[0])
-        #concept_pred = set()
-        pred_flag = pseudo_label[0]
+        pred_expr = pseudo_label[0]
 
+        ''' check rules in rule dataframe '''
+        vio_cnt = 0
+        for i, row in self.rule_df.iterrows():
+            if row[0] in concept_input and row[1] in self.goa_con_set:
+                ''' if current gene regulated by input cond, but not expressed '''
+                if pred_expr == 0:
+                    vio_cnt += 5
 
-        ''' Convert pseudo label genes to GO concepts
-            Set concepts in input and (converted) pseudo label as True '''
-        true_contrains = concept_input if pred_flag==0\
-                        else concept_input.union(self.goa_con_set)
+            if row[0] not in concept_input and row[1] in self.goa_con_set:
+                ''' if current gene not regulated by input cond, but expressed '''
+                if pred_expr == 1:
+                    vio_cnt += 0
+                    #NOTE: handle this case?
 
-        for c in true_contrains:
-            if c not in globals().keys():
-                continue
-            solver.add( eval(c) == True )
+            if row[0] in self.goa_con_set and row[1] in concept_input:
+                ''' if current gene regulates input cond, but not expressed '''
+                if pred_expr == 0:
+                    vio_cnt += 5
 
-        #    for c in self.annotation.loc[g]:
-        #        concept_pred.add(c)
+            if row[0] in self.goa_con_set and row[1] not in concept_input:
+                ''' if conditions regulated by current gene not shown in input '''
+                if pred_expr == 1:
+                    vio_cnt += 1
 
-
-        ''' Set unmentioned concepts as False (CWA)
-            Exclude constraints of True from CWA constraints '''
-        false_excluded = set(eval(c)==False for c in true_contrains if c in globals().keys())
-        solver.add(self.cwa_constraints - false_excluded)
-
-
-        if solver.check() == sat:
-            ''' Satisfiable '''
-            model = solver.model()
-            total_weight = model.evaluate(total_violation_weight)
-            # print(total_weight.as_long())
-            return total_weight.as_long()
-
-        else:
-            ''' No solutions found '''
-            return 1e10
+        #print(pred_expr, vio_cnt)
+        return vio_cnt

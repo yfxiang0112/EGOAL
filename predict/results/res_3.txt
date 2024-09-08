@@ -1,0 +1,20 @@
+gene_id	conf	product
+SO_3960	0.58	ABC-type lipopolysaccharide export system ATPase component LptB
+SO_0313	0.54	
+SO_3904	0.54	global secretion system secretin TolC
+SO_1828	0.52	TonB2 mediated energy transduction system energy transducer component TonB2
+SO_3896	0.50	outer membrane porin Omp35
+SO_3827	0.50	2-dehydro-3-deoxyphosphooctonate aldolase KdsA
+SO_1359	0.49	tRNA (guanine-N1)-methyltransferase TrmD
+SO_1369	0.49	ABC-type lipopolysaccharide export system permease component 1 LptF
+SO_0228	0.49	translation elongation factor G FusA
+SO_3080	0.48	50S subunit L3 protein glutamine methyltransferase PrmB
+SO_0247	0.48	50S ribosomal protein L18 RplR
+SO_4749	0.48	ATP synthase F1 alpha subunit AtpA
+SO_3689	0.48	two component signal transduction system Sigma54-dependent response regulator Fis family
+SO_1226	0.47	ATP-dependent protease RadA
+SO_2403	0.47	cytidylate kinase Cmk
+SO_3934	0.47	
+SO_0820	0.47	ABC-type macrolide export systemMFP component MacA
+SO_0248	0.47	30S ribosomal protein S5 RpsE
+SO_3340	0.46	small conductance mechanosensitive ion channel protein MscS
