@@ -10,15 +10,16 @@ import seaborn as sns
 
 con_embd_df = pd.read_csv('dataset/embedding/embeddings_preprocess_modified.txt', sep=' ', header=None, index_col=0)
 goa_df = pd.read_csv('rules/goa_gene2go.csv', header=None, index_col=0)
-res_df = pd.read_csv('predict/results/res_NADK.txt', sep='\t', index_col=0)
+res_df = pd.read_csv('predict/results/res_0.txt', sep='\t', index_col=0)
 
 gene_embd_matrix = []
 
 for g, row in tqdm(goa_df.iterrows(), total=len(goa_df)):
     concept_set = eval(row[1])
 
-    embd_subdf = con_embd_df.loc[con_embd_df.index.isin(concept_set)].reset_index()
-    gene_embd = embd_subdf.mean()
+    embd_subdf = con_embd_df.loc[con_embd_df.index.isin(concept_set)]
+    #print(embd_subdf)
+    gene_embd = embd_subdf.mean(axis=0)
     
     gene_embd_matrix.append(list(gene_embd))
 

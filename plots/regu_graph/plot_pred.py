@@ -18,12 +18,12 @@ gene_embd = np.load('plots/regu_graph/gene_embd_pca.npy')
 gene_embd = gene_embd.transpose()
 gene_df = pd.DataFrame({'pca0':gene_embd[0], 'pca1':gene_embd[1]}, index=goa_df.index)
 
-res_df = pd.read_csv('predict/results/res_PPX.txt', sep='\t')
+res_df = pd.read_csv('predict/results/res_3.txt', sep='\t')
 gene_res = set(res_df['gene_id'])
 
 
 
-G = nx.Graph()
+G = nx.DiGraph()
 
 # 添加节点及其坐标
 for gene, pca_pos in tqdm(gene_df.iterrows(), total=len(gene_df)):
