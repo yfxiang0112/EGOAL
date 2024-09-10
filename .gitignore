@@ -7,6 +7,7 @@ refs/*
 dataset/embedding/cache
 dataset/embedding/cache.zip
 dataset/embedding/embeddings_preprocess_modified.txt
+dataset/embedding/go_txt_embd.npy
 dataset/embedding/similarity.csv
 
 
