@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 import os
 from sentence_transformers import SentenceTransformer
-
+from pywebio.input import select, input
+from pywebio.output import *
 from graph_plot import graph_plot
 
 def predict(in_pth, out_dir):
@@ -36,9 +37,11 @@ def predict(in_pth, out_dir):
         descriptions = f.readlines()
         n_inputs = len(descriptions)
     
+    put_text('Read description from input:')
+    put_processbar('description')
     ''' iterate instances '''
-    for d in tqdm(descriptions, 'processing input instance'):
-    
+    for i, d in enumerate(descriptions):
+            set_processbar('description',i/len(descriptions))
             ''' compute similarity matrix & most similar concept list '''
             #sim = embd.similar_matrix(d)
             text_embeddings = embd_model.encode(d)
@@ -47,7 +50,7 @@ def predict(in_pth, out_dir):
             _, sorted_term = zip(*sorted(zip(sim[0], term_idx), reverse=True))
     
             concepts.append(list(sorted_term[:TOP_CNT]))
-    
+    set_processbar('description', 1)
     
     ''' load gene - product mapping '''
     gene_mapping = {}
@@ -60,7 +63,13 @@ def predict(in_pth, out_dir):
     models = []
     name_list = []
     model_files = glob.glob('models/SO_*_model.joblib')
+
+    put_text('Load model for single gene:')
+    put_processbar('loading')
+    i = 1
     for gene_id in tqdm(range(1, 4759), 'loading pretrained models'):
+        set_processbar('loading',i/4759)
+        i += 1
         model_file = f'models/SO_{gene_id:04d}_model.joblib'
         name_list.append(f'SO_{gene_id:04d}')
         if model_file in model_files:
@@ -68,9 +77,13 @@ def predict(in_pth, out_dir):
             models.append(model)
         else:
             models.append(None)  
-    
+    set_processbar('loading',1)
+
     ''' predict for each input with pretrained model '''
+    put_text('Processing input:')
+    put_processbar('processing')
     for i in tqdm(range(n_inputs), 'processing input'):
+        set_processbar('processing',i/n_inputs)
         concept_ids = [int(re.sub(r'GO_0*', '', c)) for c in concepts[i]]
         
         predictions = []
@@ -98,6 +111,7 @@ def predict(in_pth, out_dir):
         ''' plot the regulation graph '''
         pred_res = [g[0] for g in result[:20]]
         graph_plot(pred_res, f'{out_dir}/res_{i}_graph.png', False)
+    set_processbar('processing',1)
 
 
 ################################################################################################

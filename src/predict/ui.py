@@ -54,11 +54,11 @@ def main():
     clear()
     put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
     """)
-    in_pth_qut = f"'{in_pth}'"
-    out_dir_qut = f"'{out_dir}'"
-    # print(in_pth_qut, out_dir_qut)
+    #in_pth_qut = f"'{in_pth}'"
+    #out_dir_qut = f"'{out_dir}'"
+    #print(in_pth_qut, out_dir_qut)
     put_text("正在预测中，请稍后")
-    #predict(in_pth_qut, out_dir_qut)
+    predict(in_pth, out_dir)
 
     clear()
     put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
