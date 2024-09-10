@@ -6,7 +6,7 @@ import pandas as pd
 import seaborn as sns
 from tqdm import tqdm
 
-def graph_plot(pred_res: Iterable, out_pth: str, show_plot = True)
+def graph_plot(pred_res: Iterable, out_pth: str, show_plot = True):
     graph_map_pth ='plots/regu_graph/gene_graph' 
     gene_embd_pth = 'plots/regu_graph/gene_embd_pca.npy'
     goa_pth = 'rules/goa_gene2go.csv'
