@@ -1,10 +1,15 @@
 dataset/raw/GSE
 dataset/unlabel/GSE
 dataset/misc
-dataset/embedding
 tools/*
 refs/*
-dataset/embeddings_preprocess_modified.txt
+
+dataset/embedding/cache
+dataset/embedding/cache.zip
+dataset/embedding/embeddings_preprocess_modified.txt
+dataset/embedding/similarity.csv
+
+
 
 rules/KG_RDF.csv
 rules/go.owl
