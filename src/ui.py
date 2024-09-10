@@ -2,15 +2,37 @@ from pywebio.input import select, input
 from pywebio.output import *
 import pandas as pd
 import os
+import io
 
 import numpy as np
 from predict import predict
+import matplotlib.pyplot as plt
+
+def plot(out_dir):
+    for filename in os.listdir(out_dir):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(out_dir, filename)
+            with open(file_path, 'r', encoding='utf-8') as file:
+                content = file.read()
+                df = pd.read_csv(io.StringIO(content), sep='\t')
+                gene_ids = df['gene_id']
+                confs = df['conf']
+                
+                plt.figure(figsize=(10, 6))
+                plt.bar(gene_ids, confs, color='skyblue')
+                plt.xlabel('Gene ID')
+                plt.ylabel('Confidence')
+                plt.title('Gene Expression Confidence')
+                plt.xticks(rotation=90)  
+                plt.tight_layout()
+                plt.savefig(os.path.join(out_dir, f"{filename.split('.')[0]}_plot.png"))
+                plt.close()
 
 def main():
-    put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
-    """)
     current_directory = os.getcwd()
     while True:
+        put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
+    """)
         put_text("当前工作目录:", current_directory)
         in_pth = input("请正确输入想预测的基因的文件路径:")
         out_dir = input("请正确输入想预测的基因的输出路径:")
@@ -36,9 +58,9 @@ def main():
     out_dir_qut = f"'{out_dir}'"
     # print(in_pth_qut, out_dir_qut)
     put_text("正在预测中，请稍后")
-    #predict(in_pth_qut, out_dir_qut)
+    # predict(in_pth_qut, out_dir_qut)
+
     clear()
-    
     put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
     """)
     path = out_dir
@@ -50,6 +72,15 @@ def main():
                 content = file.read()
                 put_text(f"文件名: {filename}")
                 put_text(content)
+    
+
+    # 调用 plt 函数进行画图
+    plot(out_dir)
+    for filename in os.listdir(out_dir):
+        if filename.endswith("_plot.png"):
+            image_path = os.path.join(out_dir, filename)
+            put_text(f"图表: {filename}")
+            put_image(open(image_path, 'rb').read())
 
 if __name__ == '__main__':
     main()
