@@ -60,7 +60,7 @@ def predict(in_pth, out_dir):
     models = []
     name_list = []
     model_files = glob.glob('models/SO_*_model.joblib')
-    for gene_id in tqdm(range(1, 4759)):
+    for gene_id in tqdm(range(1, 4759), 'loading pretrained models'):
         model_file = f'models/SO_{gene_id:04d}_model.joblib'
         name_list.append(f'SO_{gene_id:04d}')
         if model_file in model_files:

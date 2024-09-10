@@ -27,13 +27,13 @@ def graph_plot(pred_res: Iterable, out_pth: str, show_plot = True):
     G = nx.DiGraph()
     
     ''' add gene embedding positions '''
-    for gene, pca_pos in tqdm(gene_df.iterrows(), total=len(gene_df)):
+    for gene, pca_pos in gene_df.iterrows():
         if gene in pred_res:
             G.add_node(gene)
             G.add_node(gene, pos=(pca_pos['pca0'], pca_pos['pca1']))
     
     ''' add edge mappings '''
-    for gene, neighbors in tqdm(edges.items()):
+    for gene, neighbors in edges.items():
         for neighbor in neighbors:
             if gene in pred_res and neighbor in pred_res:
                 G.add_edge(gene, neighbor)
