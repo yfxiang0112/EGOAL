@@ -3,7 +3,7 @@ from pywebio.output import *
 import pandas as pd
 import os
 import io
-
+import sys
 import numpy as np
 from predict import predict
 import matplotlib.pyplot as plt
@@ -29,6 +29,7 @@ def plot(out_dir):
                 plt.close()
 
 def main():
+    clear()
     current_directory = os.getcwd()
     while True:
         put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
@@ -36,7 +37,6 @@ def main():
         put_text("当前工作目录:", current_directory)
         in_pth = input("请正确输入想预测的基因的文件路径:")
         out_dir = input("请正确输入想预测的基因的输出路径:")
-
         if not os.path.exists(in_pth):
             clear()
             put_error("错误: 输入文件路径不存在。请检查路径是否正确。")
@@ -48,18 +48,13 @@ def main():
                 clear()
                 put_error(f"错误: 无法创建输出目录。请检查路径是否正确。详细错误: {e}")
                 continue
-
         break
     
     clear()
     put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
     """)
-    #in_pth_qut = f"'{in_pth}'"
-    #out_dir_qut = f"'{out_dir}'"
-    #print(in_pth_qut, out_dir_qut)
     put_text("正在预测中，请稍后")
     predict(in_pth, out_dir)
-
     clear()
     put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
     """)
@@ -77,18 +72,18 @@ def main():
                 put_text(f"文件名: {filename}")
                 put_text(content)
                 
-                # 调用 plt 函数进行画图
                 plot(out_dir)
                 image_filename = f"{filename.split('.')[0]}_plot.png"
                 image_path = os.path.join(out_dir, image_filename)
                 put_text(f"图表: {image_filename}")
                 put_image(open(image_path, 'rb').read())
-
                 graph_filename = f"res_{filename.split('.')[0].split('_')[-1]}_graph.png"
                 image_path = os.path.join(out_dir, graph_filename)
                 put_text(f"关系图表: {graph_filename}")
                 put_image(open(image_path, 'rb').read())
                 put_text('------------------------------------------------------------------------------------------------------------------')
+    
+    put_buttons(['退出', '返回'], onclick=[sys.exit, main])
 
 if __name__ == '__main__':
     main()
