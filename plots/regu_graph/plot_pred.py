@@ -1,3 +1,4 @@
+import textwrap
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -7,17 +8,20 @@ from gene_merge import merge, merge_nodes
 from gene_adjust import adjust
 
 edges = {}
-with open('gene_graph', 'r') as f:
+with open('plots/regu_graph/gene_graph', 'r') as f:
     edges = eval(f.readline())
 
-goa_df = pd.read_csv('goa_gene2go.csv', index_col=0, header=None)
+goa_df = pd.read_csv('rules/goa_gene2go.csv', index_col=0, header=None)
 
-gene_embd = np.load('gene_embd_pca.npy')
+gene_embd = np.load('plots/regu_graph/gene_embd_pca.npy')
 gene_embd = gene_embd.transpose()
 gene_df = pd.DataFrame({'pca0': gene_embd[0], 'pca1': gene_embd[1]}, index=goa_df.index)
 
-res_df = pd.read_csv('res_4.txt', sep='\t')
+res_df = pd.read_csv('predict/results/res_NADK.txt', sep='\t')
 gene_res = set(res_df['gene_id'])
+gene_id = list(res_df['gene_id'])
+gene_product = list(res_df['product'])
+gene_labels = {gene_id[i]: gene_product[i] for i in range(len(gene_id))}
 
 G = nx.DiGraph()
 
@@ -52,7 +56,7 @@ G = adjust(G)
 nodes_list = list(G.nodes())
 union_node = set()
 for i in range(len(nodes_list)):
-    for j in range(i+1, len(nodes_list)):
+    for j in range(i + 1, len(nodes_list)):
         node_i = nodes_list[i]
         node_j = nodes_list[j]
         if node_i == node_j:
@@ -85,19 +89,41 @@ color_map = {'class1': 'green', 'class2': 'red', 'class3': 'blue'}
 node_colors = [color_map[node_category[node]] for node in G.nodes()]
 
 # 获取节点位置
-pos = nx.get_node_attributes(G, 'pos')  # pca画法
+pos = nx.get_node_attributes(G, 'pos')
 
-# pos = nx.kamada_kawai_layout(G)
+plt.figure(figsize=(24, 12))
 
-# 绘制图
-plt.figure(figsize=(12, 12))
-nx.draw(G, pos, with_labels=False, node_size=1000, node_color=node_colors, edge_color='gray', alpha=0.6)
+plt.subplot(1, 2, 1)
+
+plt.suptitle('Gene Network Graph', fontsize=30)
+
+nx.draw(G, pos, with_labels=False, node_size=200, node_color=node_colors, edge_color='gray', alpha=0.6)
 
 # 添加标签
 labels = {node: node for node in G.nodes()}
-label_pos = {node: (pos[node][0], pos[node][1] + 0.03) for node in G.nodes()}
+label_pos = {node: (pos[node][0], pos[node][1] + 0.01) for node in G.nodes()}
 nx.draw_networkx_labels(G, pos=label_pos, labels=labels, font_size=10, font_color='black', verticalalignment='bottom')
 
-plt.title('Gene Network Graph')
-plt.savefig('graph_res_4_adjust.png')
-plt.show()
+# 添加图例
+legend_labels = ['Nodes with loop', 'Nodes without loop', 'Overlapping nodes']
+legend_colors = ['green', 'red', 'blue']
+
+# 创建一个透明的散点图用于图例
+for color, label in zip(legend_colors, legend_labels):
+    plt.scatter([], [], color=color, label=label)
+
+plt.legend(loc='upper right')  # 可以根据需要调整位置
+
+plt.subplot(1, 2, 2)
+
+plt.axis('off')
+
+wrapped_text = "\n".join([
+    "\n".join(textwrap.wrap(f"{k}: {v}", width=70))
+    for k, v in gene_labels.items()
+])
+plt.figtext(0.5, 0.25, wrapped_text, ha='left', fontsize=15)
+
+plt.tight_layout()
+plt.savefig('graph_res_4.png')
+# plt.show()
