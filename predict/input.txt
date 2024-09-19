@@ -1,5 +1,5 @@
-Transformed the bacteria with PPK1 gene plasmid (PPK1 converts reversible poly p into Pi and generates ATP). Detected increased electron transfer activity and decreased phosphorus removal efficiency in transformed bacteria.
-Transformed the bacteria with PPX gene plasmid (PPX converts poly p into Pi without generating ATP). Detected increased electron transfer activity and improved phosphorus removal efficiency in transformed bacteria.
-Transformed the bacteria with PPK2 gene plasmid (PPK2 reversibly converts pi into poly p and utilizes ATP). Detected increased electron transfer activity and improved phosphorus removal efficiency in transformed bacteria.
-Transformed the bacteria with PAP gene plasmid (PAP utilizes poly p and AMP to synthesize ATP). Detected decreased electron transfer activity and improved phosphorus removal efficiency in transformed bacteria.
 Transformed the bacteria with NADK gene plasmid (NADK utilizes NAD and poly p to generate NADP). Detected decreased electron transfer activity and decreased phosphorus removal efficiency in transformed bacteria.
+Transformed the bacteria with PAP gene plasmid (PAP utilizes poly p and AMP to synthesize ATP). Detected decreased electron transfer activity and improved phosphorus removal efficiency in transformed bacteria.
+Transformed the bacteria with PPK1 gene plasmid (PPK1 converts reversible poly p into Pi and generates ATP). Detected increased electron transfer activity and decreased phosphorus removal efficiency in transformed bacteria.
+Transformed the bacteria with PPK2 gene plasmid (PPK2 reversibly converts pi into poly p and utilizes ATP). Detected increased electron transfer activity and improved phosphorus removal efficiency in transformed bacteria.
+Transformed the bacteria with PPX gene plasmid (PPX converts poly p into Pi without generating ATP). Detected increased electron transfer activity and improved phosphorus removal efficiency in transformed bacteria.
