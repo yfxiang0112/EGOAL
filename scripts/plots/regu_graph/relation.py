@@ -5,7 +5,7 @@ graph = {}
 
 goa_df = pd.read_csv('rules/goa_gene2go.csv', index_col=0, header=None)
 rule_df = pd.read_csv('rules/ruleRem.csv', index_col=1, header=None)
-goa_rev_df = pd.read_csv('rules/goa_mapping.csv', index_col=0, header=None)
+goa_rev_df = pd.read_csv('rules/raw_goa/goa_mapping.csv', index_col=0, header=None)
 
 for g, row in tqdm(goa_df.iterrows(), total = len(goa_df)):
     con_set = eval(row[1])

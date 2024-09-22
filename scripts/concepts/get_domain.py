@@ -3,7 +3,7 @@ import pandas as pd
 label_df = pd.read_csv('dataset/importance/dataset_onehot.csv')
 unlabel_df = pd.read_csv('dataset/unlabel/dataset_unlabel.csv')
 
-goa_df = pd.read_csv('rules/goa_mapping.csv', header=None)
+goa_df = pd.read_csv('rules/raw_goa/goa_mapping.csv', header=None)
 all_con = pd.read_csv('dataset/concepts/all_concept_name.txt', header=None)
 all_con = list(all_con[0])
 #print(all_con)

@@ -1,25 +1,11 @@
 dataset/raw/GSE
 dataset/unlabel/GSE
-dataset/misc
 tools/*
-refs/*
 
-dataset/embedding/cache
-dataset/embedding/cache.zip
-dataset/embedding/embeddings_preprocess_modified.txt
-dataset/embedding/go_txt_embd.npy
-dataset/embedding/similarity.csv
-
-
+dataset/embedding/*
 
 rules/KG_RDF.csv
 rules/go.owl
-rules/go.obo
-rules/go.rdf
 rules/go-plus.owl
 results/*
 log/*
-
-# tmp
-rules/KG_RDF_filter-large.csv
-src/tmp_nn_version

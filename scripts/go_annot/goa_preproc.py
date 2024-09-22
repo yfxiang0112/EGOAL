@@ -29,4 +29,4 @@ goa_mapping = goa_mapping[~goa_mapping['concepts'].isin(delta_concepts)]
     # remove Delta=(bioproc, molfunc, celpos) from assertion
 
 print(goa_mapping)
-goa_mapping.to_csv('rules/goa_mapping.csv', header=False, index=False)
+goa_mapping.to_csv('rules/raw_goa/goa_mapping.csv', header=False, index=False)

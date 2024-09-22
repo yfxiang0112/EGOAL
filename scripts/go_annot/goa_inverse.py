@@ -1,7 +1,7 @@
 import pandas as pd
 from tqdm import tqdm
 
-goa_df = pd.read_csv('rules/goa_mapping.csv', header=None)
+goa_df = pd.read_csv('rules/raw_goa/goa_mapping.csv', header=None)
 print(goa_df)
 
 gene_ids = set()
