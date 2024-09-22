@@ -1,19 +1,64 @@
 gene_id	conf	product
-SO_4749	0.45	ATP synthase F1 alpha subunit AtpA
-SO_0544	0.44	two component signal transduction system histidine kinase with CHASE and PAS sensory domains
-SO_4029	0.43	
-SO_1227	0.42	c-di-GMP-binding protein
-SO_1932	0.42	succinyl-CoA synthase beta subunit SucC
-SO_3904	0.42	global secretion system secretin TolC
-SO_2364	0.41	Cbb3-type cytochrome c oxidase subunit I CcoN
-SO_0225	0.41	
-SO_4030	0.40	excinuclease ABC A subunit UvrA
-SO_0742	0.39	ABC-type Fe3+ uptake system ATPase component FbpC
-SO_0946	0.39	RND superfamily efflux pump MFP component
-SO_4576	0.39	O-succinylbenzoic acid CoA ligase MenE
-SO_2615	0.39	aminodeoxychorismate lyase PabC
-SO_3414	0.39	homoserine kinase ThrB
-SO_3503	0.38	N-acetyl glucosamine transporter NagP
-SO_4638	0.38	two component signal transduction system histidine kinase
-SO_4380	0.38	beta-ketoacyl synthase
-SO_0821	0.38	ABC-type macrolide export system bifunctional ATPase and permease component MacB
+SO_0104	0.80	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_2912	0.79	pflB - pyruvate formate-lyase PflB
+SO_0107	0.77	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_4364	0.71	recG - ATP-dependent DNA helicase RecG
+SO_1329	0.69	cyaC - adenylate cyclase CyaC
+SO_0125	0.64	periplasmic L-asparaginase family protein
+SO_3866	0.63	site-specific recombinase phage integrase family
+SO_1828	0.62	tonB2 - TonB2 mediated energy transduction system energy transducer component TonB2
+SO_2990	0.61	cI - Lambda phage lytic gene repressor CI
+SO_0742	0.60	fbpC - ABC-type Fe3+ uptake system ATPase component FbpC
+SO_0541	0.58	RNA-metabolizing metallo-beta-lactamase family protein
+SO_0520	0.58	heavy metal efflux pump permease component CzcA family
+SO_0572	0.57	enoyl-CoA hydratase/isomerase family protein
+SO_2255	0.57	mfd - transcription-repair coupling factor Mfd
+SO_2267	0.57	hscB - co-chaperone Hsc20 HscB
+SO_2483	0.55	yfbQ - PLP-dependent aminotransferase YfbQ
+SO_2270	0.55	rimK - ribosomal protein S6 glutaminyl transferase RimK
+SO_0139	0.54	ftn - ferritin Ftn
+SO_3706	0.54	nupX - nucleoside:proton symporter NupX
+SO_4571	0.53	transcriptional regulator LysR family
+SO_3243	0.53	flgH - flagellar L-ring protein FlgH
+SO_0221	0.52	rplA - 50S ribosomal protein L1 RplA
+SO_3432	0.52	rpoS - RNA polymerase sigma-38 factor RpoS
+SO_1813	0.51	comEA - DNA competence protein ComEA
+SO_1390	0.51	fklB - peptidyl-prolyl cis-trans isomerase FklB
+SO_2044	0.50	gloA - lactoylglutathione lyase GloA
+SO_0173	0.50	gspK - T2aSS secretion system pseudopilus protein GspK
+SO_3093	0.50	batA - VWR domain protein in aerotolerance operon BatA
+----------
+SO_0104	0.80	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_2912	0.79	pflB - pyruvate formate-lyase PflB
+SO_0107	0.77	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_1329	0.69	cyaC - adenylate cyclase CyaC
+SO_1776	0.47	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_4591	0.28	cymA - membrane anchored tetraheme cytochrome c CymA
+SO_1779	0.27	omcA - extracellular iron oxide respiratory system surface decaheme cytochrome c component OmcA
+SO_3370	0.27	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
+SO_3469	0.26	ribD - bifunctional diaminohydroxyphosphoribosylaminopyrimidine deaminase/5-amino-6-(5-phosphoribosylamino) uracil reductase RibD
+SO_4509	0.25	fdhA - formate dehydrogenase molybdopterin-binding subunit FdhA
+SO_2831	0.24	ribA - GTP cyclohydrolase II RibA
+SO_0624	0.23	crp - cAMP-responsive regulator of catabolite repression Crp
+SO_3516	0.23	nagR - transcriptional repressor of N-acetylglucosamine utilization NagR
+SO_3077	0.21	ATP-NAD kinase
+SO_1778	0.21	mtrC - extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC
+SO_1780	0.18	mtrF - extracellular respiratory system surface decaheme cytochrome c component MtrF
+SO_1523	0.18	nadF - NAD kinase NadF
+SO_4511	0.17	fdhC - formate dehydrogenase cytochrome b subunit FdhC
+SO_0770	0.17	mdh - NAD dependent malate dehydrogenase Mdh
+SO_4510	0.16	fdhB - formate dehydrogenase FeS subunit FdhB
+SO_3922	0.15	fdh - formate dehydrogenase cytochrome b Fdh
+SO_2185	0.11	ppx - exopolyphosphatase Ppx
+SO_0272	0.08	pncC - nicotinamide deamidase PncC
+SO_2345	0.08	gapA - glyceraldehyde-3-phosphate dehydrogenase (NAD+) GapA
+SO_2296	0.06	ribC - 
+SO_3975	0.06	unknown - membrane protein PAP2 superfamily
+SO_2021	0.04	nadE - NH(3)-dependent NAD(+) synthetase NadE
+SO_1171	0.04	nadD - nicotinate-nucleotide adenylyltransferase NadD
+SO_0142	0.00	ribB - 
+SO_3466	0.00	ribE - riboflavin synthase beta subunit RibE
+SO_3467	0.00	ribBA - bifunctional 34-dihydroxy-2-butanone 4-phosphate synthase/GTP cyclohydrolase II RibBA
+SO_4507	0.00	fdhT - formate dehydrogenase chaperone FdhT
+SO_4508	0.00	fdhX - formate dehydrogenase accessory protein FdhX
+SO_4512	0.00	fdhX - Fnr-inducible formate dehydrogenase accessory protein FdhX

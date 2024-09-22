@@ -1,0 +1,32 @@
+﻿!gaf-version: 2.2
+!Project_name: EBI GO Annotation program (GOA)
+!URL: https://www.ebi.ac.uk/GOA
+!Contact Email: goa@ebi.ac.uk
+!Date downloaded from QuickGO: 2024-09-15
+!http://purl.obolibrary.org/obo/eco/releases/2024-07-19/eco.obo
+!http://purl.obolibrary.org/obo/go/releases/2024-07-27/extensions/go-plus.owl
+!Filtering parameters selected to generate file:
+!https://www.ebi.ac.uk/QuickGO/annotations?downloadLimit=1000&geneProductId=A0A072NQ97
+!date-generated: 2024-09-15
+!generated-by: UniProt
+UniProtKB	A0A072NQ97	nadK	enables	GO:0003951	GO_REF:0000002	IEA	InterPro:IPR002504|InterPro:IPR017437	F			protein	taxon:1348973	20240729	InterPro		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0003951	GO_REF:0000003	IEA	EC:2.7.1.23	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0003951	GO_REF:0000104	IEA	UniRule:UR000034447	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0003951	GO_REF:0000116	IEA	RHEA:18629	F			protein	taxon:1348973	20240729	RHEA		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0003951	GO_REF:0000118	IEA	PANTHER:PTN001838754	F			protein	taxon:1348973	20240729	TreeGrafter		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0005524	GO_REF:0000043	IEA	UniProtKB-KW:KW-0067	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0005524	GO_REF:0000117	IEA	ARBA:ARBA00027027	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0016301	GO_REF:0000043	IEA	UniProtKB-KW:KW-0418	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0016301	GO_REF:0000117	IEA	ARBA:ARBA00026285	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0016773	GO_REF:0000117	IEA	ARBA:ARBA00026265	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0046872	GO_REF:0000104	IEA	UniRule:UR000034447	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	enables	GO:0051287	GO_REF:0000117	IEA	ARBA:ARBA00028799	F			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	involved_in	GO:0006741	GO_REF:0000002	IEA	InterPro:IPR002504	P			protein	taxon:1348973	20240729	InterPro		
+UniProtKB	A0A072NQ97	nadK	involved_in	GO:0006741	GO_REF:0000104	IEA	UniRule:UR000034447	P			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	involved_in	GO:0006741	GO_REF:0000117	IEA	ARBA:ARBA00027807	P			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	involved_in	GO:0006741	GO_REF:0000118	IEA	PANTHER:PTN001838754	P			protein	taxon:1348973	20240729	TreeGrafter		
+UniProtKB	A0A072NQ97	nadK	involved_in	GO:0016310	GO_REF:0000043	IEA	UniProtKB-KW:KW-0418	P			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	involved_in	GO:0019674	GO_REF:0000002	IEA	InterPro:IPR017437	P			protein	taxon:1348973	20240729	InterPro		
+UniProtKB	A0A072NQ97	nadK	located_in	GO:0005737	GO_REF:0000043	IEA	UniProtKB-KW:KW-0963	C			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	located_in	GO:0005737	GO_REF:0000044	IEA	UniProtKB-SubCell:SL-0086	C			protein	taxon:1348973	20240729	UniProt		
+UniProtKB	A0A072NQ97	nadK	located_in	GO:0005737	GO_REF:0000104	IEA	UniRule:UR000034447	C			protein	taxon:1348973	20240729	UniProt		

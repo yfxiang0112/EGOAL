@@ -1,0 +1,63 @@
+gene_id	conf	product
+SO_0107	0.70	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_1523	0.69	nadF - NAD kinase NadF
+SO_3370	0.67	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
+SO_1329	0.67	cyaC - adenylate cyclase CyaC
+SO_1776	0.66	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_2185	0.64	ppx - exopolyphosphatase Ppx
+SO_2912	0.60	pflB - pyruvate formate-lyase PflB
+SO_0104	0.55	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_3077	0.43	ATP-NAD kinase
+SO_0987	0.30	methyl accepting sensory transducer with Cache_2 small molecule binding domain
+SO_4105	0.28	mshA - MSHA major pilin subunit MshA
+SO_0702	0.27	groES - multidrug and toxin efflux protein MATE family
+SO_4519	0.25	sodium-dependent transporter BASS family
+SO_2363	0.21	ccoO - Cbb3-type cytochrome c oxidase subunit II CcoO
+SO_4606	0.20	coxB - aa3-type cytochrome c oxidase subunit II CoxB
+SO_2903	0.20	cysK - cysteine synthase CysK
+SO_4565	0.18	yjeH - L-leucine transporter YjeH
+SO_3985	0.17	dapA - dihydrodipicolinate synthase DapA
+SO_1828	0.17	tonB2 - TonB2 mediated energy transduction system energy transducer component TonB2
+SO_0429	0.17	pepO - cell surface zinc endopeptidase PepO
+SO_2195	0.16	srtA - inter-alpha-trypsin inhibitor family protein
+SO_4751	0.16	atpF - ATP synthase F0 B subunit AtpF
+SO_4021	0.16	mdtL - chloramphenicol resistance protein MdtL
+SO_4201	0.16	ubiB - 2-polyprenylphenol 6-hydroxylase UbiB
+SO_3925	0.15	hydE - Fe hydrogenase maturation rSAM protein HydE
+SO_2067	0.15	hisIE - bifunctional phosphoribosyl-AMP cyclohydrolase/phosphoribosyl-ATP pyrophosphatase HisIE
+SO_1827	0.15	exbD - TonB2 energy transduction system membrane anchored component ExbD
+----------
+SO_3975	0.71	unknown - membrane protein PAP2 superfamily
+SO_0107	0.70	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_1523	0.69	nadF - NAD kinase NadF
+SO_3370	0.67	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
+SO_1329	0.67	cyaC - adenylate cyclase CyaC
+SO_1776	0.66	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_2185	0.64	ppx - exopolyphosphatase Ppx
+SO_2912	0.60	pflB - pyruvate formate-lyase PflB
+SO_0104	0.55	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_3077	0.43	ATP-NAD kinase
+SO_4591	0.09	cymA - membrane anchored tetraheme cytochrome c CymA
+SO_1778	0.08	mtrC - extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC
+SO_1779	0.05	omcA - extracellular iron oxide respiratory system surface decaheme cytochrome c component OmcA
+SO_4509	0.04	fdhA - formate dehydrogenase molybdopterin-binding subunit FdhA
+SO_0272	0.04	pncC - nicotinamide deamidase PncC
+SO_2345	0.04	gapA - glyceraldehyde-3-phosphate dehydrogenase (NAD+) GapA
+SO_0770	0.03	mdh - NAD dependent malate dehydrogenase Mdh
+SO_3922	0.03	fdh - formate dehydrogenase cytochrome b Fdh
+SO_2831	0.03	ribA - GTP cyclohydrolase II RibA
+SO_3516	0.03	nagR - transcriptional repressor of N-acetylglucosamine utilization NagR
+SO_1780	0.02	mtrF - extracellular respiratory system surface decaheme cytochrome c component MtrF
+SO_2296	0.02	ribC - 
+SO_4511	0.01	fdhC - formate dehydrogenase cytochrome b subunit FdhC
+SO_3469	0.01	ribD - bifunctional diaminohydroxyphosphoribosylaminopyrimidine deaminase/5-amino-6-(5-phosphoribosylamino) uracil reductase RibD
+SO_4510	0.01	fdhB - formate dehydrogenase FeS subunit FdhB
+SO_0142	0.00	ribB - 
+SO_0624	0.00	crp - cAMP-responsive regulator of catabolite repression Crp
+SO_1171	0.00	nadD - nicotinate-nucleotide adenylyltransferase NadD
+SO_2021	0.00	nadE - NH(3)-dependent NAD(+) synthetase NadE
+SO_3466	0.00	ribE - riboflavin synthase beta subunit RibE
+SO_3467	0.00	ribBA - bifunctional 34-dihydroxy-2-butanone 4-phosphate synthase/GTP cyclohydrolase II RibBA
+SO_4507	0.00	fdhT - formate dehydrogenase chaperone FdhT
+SO_4508	0.00	fdhX - formate dehydrogenase accessory protein FdhX
+SO_4512	0.00	fdhX - Fnr-inducible formate dehydrogenase accessory protein FdhX

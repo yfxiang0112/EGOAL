@@ -1,0 +1,1 @@
+Relations between phosphorus metabolism and electricity generation in shewanella bacteria. electricity generation increases with environmental phosphorus concentration, when the concentration is low, and suddenly decreases when the phosphorus reaches a certain value. The electron transportation and NADH is supposed to be involved in the process.

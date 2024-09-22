@@ -1,0 +1,18 @@
+﻿!gaf-version: 2.2
+!Project_name: EBI GO Annotation program (GOA)
+!URL: https://www.ebi.ac.uk/GOA
+!Contact Email: goa@ebi.ac.uk
+!Date downloaded from QuickGO: 2024-09-14
+!http://purl.obolibrary.org/obo/eco/releases/2024-07-19/eco.obo
+!http://purl.obolibrary.org/obo/go/releases/2024-07-27/extensions/go-plus.owl
+!Filtering parameters selected to generate file:
+!https://www.ebi.ac.uk/QuickGO/annotations?downloadLimit=1000&geneProductId=A0A192T4L6
+!date-generated: 2024-09-14
+!generated-by: UniProt
+UniProtKB	A0A192T4L6	ppk2	enables	GO:0008976	GO_REF:0000002	IEA	InterPro:IPR016898|InterPro:IPR022486	F			protein	taxon:396	20240729	InterPro		
+UniProtKB	A0A192T4L6	ppk2	enables	GO:0008976	GO_REF:0000003	IEA	EC:2.7.4.1	F			protein	taxon:396	20240729	UniProt		
+UniProtKB	A0A192T4L6	ppk2	enables	GO:0008976	GO_REF:0000104	IEA	UniRule:UR001683764	F			protein	taxon:396	20240729	UniProt		
+UniProtKB	A0A192T4L6	ppk2	enables	GO:0016301	GO_REF:0000043	IEA	UniProtKB-KW:KW-0418	F			protein	taxon:396	20240729	UniProt		
+UniProtKB	A0A192T4L6	ppk2	involved_in	GO:0006793	GO_REF:0000002	IEA	InterPro:IPR022486	P			protein	taxon:396	20240729	InterPro		
+UniProtKB	A0A192T4L6	ppk2	involved_in	GO:0016310	GO_REF:0000043	IEA	UniProtKB-KW:KW-0418	P			protein	taxon:396	20240729	UniProt		
+UniProtKB	A0A192T4L6	ppk2	involved_in	GO:0016310	GO_REF:0000104	IEA	UniRule:UR001683764	P			protein	taxon:396	20240729	UniProt		
