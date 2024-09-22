@@ -1,5 +1,0 @@
-PPK1 converts reversible poly p into Pi and generates ATP
-PPX converts poly p into Pi without generating ATP
-PPK2 reversibly converts pi into poly p and utilizes ATP
-PAP utilizes poly p and AMP to synthesize ATP
-NADK utilizes NAD and poly p to generate NADP
