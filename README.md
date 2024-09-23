@@ -1,4 +1,4 @@
-# GOABL: predict gene expression with Gene Ontology and Abductive Learning
+# EGOAL: gene Expression Prediction based on Abductive Learning and Gene Ontology
 
 This is a project of 2024 AI+ Contest, School of Artificial Intelligence,
 Nanjing University.
