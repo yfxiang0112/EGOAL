@@ -1,65 +1,20 @@
 gene_id	conf	product
-SO_2912	0.81	pflB - pyruvate formate-lyase PflB
-SO_3370	0.75	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
-SO_0104	0.74	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
-SO_1776	0.72	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
-SO_1329	0.66	cyaC - adenylate cyclase CyaC
-SO_0107	0.61	fdhD - formate dehydrogenase assembly/maturation protein FdhD
-SO_0742	0.37	fbpC - ABC-type Fe3+ uptake system ATPase component FbpC
-SO_2196	0.33	srtA - sortase SrtA
-SO_2001	0.31	ushA - bifunctional UDP-sugar hydrolase/5'-nucleotidase UshA
-SO_3896	0.30	omp35 - outer membrane porin Omp35
-SO_0831	0.30	gshB - ATP-dependent glutathione synthetase GshB
-SO_3894	0.29	two component signal transduction system histidine kinase
-SO_4035	0.29	predicted membrane protein
-SO_4488	0.29	two component signal transduction system histidine kinase
-SO_0624	0.28	crp - cAMP-responsive regulator of catabolite repression Crp
-SO_1482	0.28	aceB - TonB-dependent receptor
-SO_2444	0.28	thiDE - bifunctional hydroxy-(phospho)methylpyrimidine kinase/thiamine-phosphate pyrophosphorylase ThiDE
-SO_4211	0.27	secA - preprotein translocase ATPase subunit SecA
-SO_2477	0.27	kdsB - alcohol dehydrogenase iron-containing
-SO_1502	0.27	GTPase involved in metallocenter biosynthesis of metalloproteins COG0523 family
-SO_3252	0.27	cheV - chemotaxis signal transduction system response regulator CheV
-SO_3031	0.26	pubB - N-hydroxyputrescine-succinyl CoA transferase PubB
-SO_0424	0.26	aceE - pyruvate dehydrogenase E1 component AceE
-SO_3884	0.26	site-specific recombinase phage integrase family
-SO_3302	0.26	extracellular peptidase family S8A
-SO_0250	0.26	rplO - 50S ribosomal protein L15 RplO
-SO_4347	0.26	ilvG - acetolactate synthase II large subunit IlvG
-SO_2607	0.26	rsmF - putative nucleoside transporter
-SO_0768	0.26	argR - NAD dependent epimerase/dehydratase family protein
-----------
-SO_2912	0.81	pflB - pyruvate formate-lyase PflB
-SO_3370	0.75	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
-SO_0104	0.74	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
-SO_1776	0.72	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
-SO_1329	0.66	cyaC - adenylate cyclase CyaC
-SO_0107	0.61	fdhD - formate dehydrogenase assembly/maturation protein FdhD
-SO_0624	0.28	crp - cAMP-responsive regulator of catabolite repression Crp
-SO_1523	0.16	nadF - NAD kinase NadF
-SO_1778	0.16	mtrC - extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC
-SO_2185	0.16	ppx - exopolyphosphatase Ppx
-SO_4591	0.14	cymA - membrane anchored tetraheme cytochrome c CymA
-SO_4511	0.14	fdhC - formate dehydrogenase cytochrome b subunit FdhC
-SO_3975	0.13	unknown - membrane protein PAP2 superfamily
-SO_3922	0.11	fdh - formate dehydrogenase cytochrome b Fdh
-SO_4509	0.10	fdhA - formate dehydrogenase molybdopterin-binding subunit FdhA
-SO_0770	0.10	mdh - NAD dependent malate dehydrogenase Mdh
-SO_2345	0.10	gapA - glyceraldehyde-3-phosphate dehydrogenase (NAD+) GapA
-SO_3077	0.10	ATP-NAD kinase
-SO_2296	0.09	ribC - 
-SO_4510	0.09	fdhB - formate dehydrogenase FeS subunit FdhB
-SO_1780	0.08	mtrF - extracellular respiratory system surface decaheme cytochrome c component MtrF
-SO_3516	0.05	nagR - transcriptional repressor of N-acetylglucosamine utilization NagR
-SO_2021	0.05	nadE - NH(3)-dependent NAD(+) synthetase NadE
-SO_2831	0.05	ribA - GTP cyclohydrolase II RibA
-SO_1779	0.04	omcA - extracellular iron oxide respiratory system surface decaheme cytochrome c component OmcA
-SO_3469	0.04	ribD - bifunctional diaminohydroxyphosphoribosylaminopyrimidine deaminase/5-amino-6-(5-phosphoribosylamino) uracil reductase RibD
-SO_0272	0.03	pncC - nicotinamide deamidase PncC
-SO_1171	0.01	nadD - nicotinate-nucleotide adenylyltransferase NadD
-SO_0142	0.00	ribB - 
-SO_3466	0.00	ribE - riboflavin synthase beta subunit RibE
-SO_3467	0.00	ribBA - bifunctional 34-dihydroxy-2-butanone 4-phosphate synthase/GTP cyclohydrolase II RibBA
-SO_4507	0.00	fdhT - formate dehydrogenase chaperone FdhT
-SO_4508	0.00	fdhX - formate dehydrogenase accessory protein FdhX
-SO_4512	0.00	fdhX - Fnr-inducible formate dehydrogenase accessory protein FdhX
+SO_0276	0.15	argB - acetylglutamate kinase ArgB
+SO_4471	0.14	glnL - nitrogen-responsive two component signal transduction system histidine kinase with PAS sensory domain GlnL
+SO_2906	0.14	tellurite-resistance/dicarboxylate transporter (TDT) family protein
+SO_4123	0.13	argS - arginyl-tRNA synthetase ArgS
+SO_2491	0.13	pykA - pyruvate kinase II PykA
+SO_1230	0.12	torS - TMAO-responsive two component signal transduction system hybrid histidine kinase/response regulator TorS
+SO_1377	0.12	putative negative regulator of univalent cation permeability
+SO_3986	0.12	lysC - lysine-sensitive aspartokinase III LysC
+SO_4317	0.12	bpfA - biofilm-promoting protein BpfA
+SO_3562	0.11	proton/sodium:glutamate symporter DAACS family
+SO_2802	0.11	msbA - ABC-type lipid A export system bifunctional ATPase and permease components MsbA
+SO_3674	0.11	hmuC - ABC-type hemin uptake system permease component HmuC
+SO_3837	0.11	prsA - ribose-phosphate pyrophosphokinase PrsA
+SO_4371	0.11	AMP-dependent synthetase and ligase family protein
+SO_0522	0.11	mscL - large conductance mechanosensitive ion channel protein MscL
+SO_4221	0.11	murD - UDP-N-acetylmuramoyl-L-alanine-D-glutamate ligase MurD
+SO_1866	0.10	yceH - ABC-type export system permease component
+SO_0632	0.10	hrpB - ATP-dependent helicase HrpB
+SO_4730	0.10	hemN - coproporphyrinogen III oxidase oxygen-independent HemN

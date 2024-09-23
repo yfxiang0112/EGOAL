@@ -32,21 +32,21 @@ def main():
     clear()
     current_directory = os.getcwd()
     while True:
-        put_markdown(r""" # <center> <font face="楷体"> 基于反绎学习和基因知识库的基因表达预测 </font> </center>
+        put_markdown(r""" # <center> EGOAL: gene Expression prediction based on Abductive Learning and Gene Ontology </font> </center>
     """)
-        put_text("当前工作目录:", current_directory)
-        in_pth = input("请正确输入想预测的基因的文件路径:")
-        out_dir = input("请正确输入想预测的基因的输出路径:")
+        put_text("current working dir:", current_directory)
+        in_pth = input("input file path:")
+        out_dir = input("output directory:")
         if not os.path.exists(in_pth):
             clear()
-            put_error("错误: 输入文件路径不存在。请检查路径是否正确。")
+            put_error("Error: path not exists")
             continue
         if not os.path.exists(out_dir):
             try:
                 os.makedirs(out_dir)
             except Exception as e:
                 clear()
-                put_error(f"错误: 无法创建输出目录。请检查路径是否正确。详细错误: {e}")
+                put_error(f"Error: cannot create directory\n {e}")
                 continue
         break
     

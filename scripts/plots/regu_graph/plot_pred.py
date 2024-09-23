@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
 from tqdm import tqdm
-from gene_merge import merge, merge_nodes
 from gene_adjust import adjust
 
 edges = {}

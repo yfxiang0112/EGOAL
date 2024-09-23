@@ -1,65 +1,21 @@
 gene_id	conf	product
-SO_0107	0.78	fdhD - formate dehydrogenase assembly/maturation protein FdhD
-SO_2912	0.76	pflB - pyruvate formate-lyase PflB
-SO_1329	0.72	cyaC - adenylate cyclase CyaC
-SO_3370	0.69	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
-SO_0104	0.68	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
-SO_1776	0.63	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
-SO_0768	0.43	argR - NAD dependent epimerase/dehydratase family protein
-SO_2274	0.36	ndk - nucleoside diphosphate kinase Ndk
-SO_2491	0.33	pykA - pyruvate kinase II PykA
-SO_0157	0.31	proton:glutamate symporter DAACS family
-SO_4667	0.31	yihA - 50S ribosome assembly GTPase YihA
-SO_1925	0.30	gltA - RND superfamily efflux pump MFP component
-SO_0598	0.29	yjeF - hydroxyethylthiazole kinase-related protein YjeF
-SO_0613	0.29	pabA - para-aminobenzoate synthase glutamine amidotransferase subunit PabA
-SO_3306	0.28	der - two component signal transduction system hybrid histidine kinase
-SO_3562	0.28	proton/sodium:glutamate symporter DAACS family
-SO_1809	0.28	pspC - phage shock protein C PspC
-SO_1209	0.27	pnpA - polyribonucleotide nucleotidyltransferase PnpA
-SO_3714	0.27	nfnB - ABC-type monosaccharide transport system substrate binding component
-SO_1074	0.27	tyrosine transporter TyrP-like protein
-SO_0072	0.27	transcriptional repressor of ABC-type efflux system GntR family
-SO_1315	0.26	tyrS - tyrosyl-tRNA synthetase TyrS
-SO_3484	0.26	emrD3 - HAE1 family efflux pump permease component
-SO_3564	0.26	dcp - dipeptidyl carboxypeptidase Dcp
-SO_0897	0.26	dbpA - ATP-dependent RNA helicase DbpA
-SO_4021	0.25	mdtL - chloramphenicol resistance protein MdtL
-SO_2286	0.25	sulfate transporter SulP family
-SO_3225	0.25	fliI - flagellar protein export ATPase FliI
-SO_0548	0.25	histone-like DNA-binding protein
-----------
-SO_0107	0.78	fdhD - formate dehydrogenase assembly/maturation protein FdhD
-SO_2912	0.76	pflB - pyruvate formate-lyase PflB
-SO_1329	0.72	cyaC - adenylate cyclase CyaC
-SO_3370	0.69	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
-SO_0104	0.68	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
-SO_1776	0.63	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
-SO_2831	0.22	ribA - GTP cyclohydrolase II RibA
-SO_0624	0.18	crp - cAMP-responsive regulator of catabolite repression Crp
-SO_3469	0.16	ribD - bifunctional diaminohydroxyphosphoribosylaminopyrimidine deaminase/5-amino-6-(5-phosphoribosylamino) uracil reductase RibD
-SO_1780	0.12	mtrF - extracellular respiratory system surface decaheme cytochrome c component MtrF
-SO_2345	0.11	gapA - glyceraldehyde-3-phosphate dehydrogenase (NAD+) GapA
-SO_1523	0.11	nadF - NAD kinase NadF
-SO_2185	0.10	ppx - exopolyphosphatase Ppx
-SO_4511	0.10	fdhC - formate dehydrogenase cytochrome b subunit FdhC
-SO_3077	0.08	ATP-NAD kinase
-SO_1779	0.07	omcA - extracellular iron oxide respiratory system surface decaheme cytochrome c component OmcA
-SO_4591	0.06	cymA - membrane anchored tetraheme cytochrome c CymA
-SO_3516	0.05	nagR - transcriptional repressor of N-acetylglucosamine utilization NagR
-SO_4510	0.05	fdhB - formate dehydrogenase FeS subunit FdhB
-SO_0770	0.04	mdh - NAD dependent malate dehydrogenase Mdh
-SO_3922	0.04	fdh - formate dehydrogenase cytochrome b Fdh
-SO_1778	0.03	mtrC - extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC
-SO_1171	0.02	nadD - nicotinate-nucleotide adenylyltransferase NadD
-SO_3975	0.02	unknown - membrane protein PAP2 superfamily
-SO_0272	0.02	pncC - nicotinamide deamidase PncC
-SO_2021	0.01	nadE - NH(3)-dependent NAD(+) synthetase NadE
-SO_0142	0.00	ribB - 
-SO_2296	0.00	ribC - 
-SO_3466	0.00	ribE - riboflavin synthase beta subunit RibE
-SO_3467	0.00	ribBA - bifunctional 34-dihydroxy-2-butanone 4-phosphate synthase/GTP cyclohydrolase II RibBA
-SO_4507	0.00	fdhT - formate dehydrogenase chaperone FdhT
-SO_4508	0.00	fdhX - formate dehydrogenase accessory protein FdhX
-SO_4509	0.00	fdhA - formate dehydrogenase molybdopterin-binding subunit FdhA
-SO_4512	0.00	fdhX - Fnr-inducible formate dehydrogenase accessory protein FdhX
+SO_3865	0.35	modC - ABC-type molybdate uptake system ATPase component ModC
+SO_2001	0.33	ushA - bifunctional UDP-sugar hydrolase/5'-nucleotidase UshA
+SO_0102	0.31	fdnH - nitrate-inducible formate dehydrogenase iron-sulfur subunit FdnH
+SO_4579	0.30	fimA - P pilus subunit FimA
+SO_4607	0.30	coxA - aa3 type cytochrome c oxidase subunit I CoxA
+SO_0490	0.29	transmembrane transcriptional regulator CadC family
+SO_4291	0.28	pstC - ABC-type phosphate uptake system permease component PstC
+SO_0269	0.28	rrsC - cytochrome c-type biogenesis thioredoxin
+SO_0847	0.28	napG - periplasmic nitrate reductase ferredoxin component NapG
+SO_3671	0.28	exbB - TonB1 energy transduction system for heme uptake inner membrane component ExbB
+SO_3088	0.27	fadJ - anaerobic fatty oxidation complex alpha subunit FadJ
+SO_2345	0.27	gapA - glyceraldehyde-3-phosphate dehydrogenase (NAD+) GapA
+SO_4055	0.27	metL - bifunctional aspartokinase II/homoserine dehydrogenase methionine-sensitive MetL
+SO_3613	0.27	purT - phosphoribosylglycinamide formyltransferase 2 PurT
+SO_1539	0.27	tnpA - periplasmic peptidase family S9
+SO_4752	0.27	atpE - ATP synthase F0 C subunit AtpE
+SO_0103	0.26	fdnI - nitrate-inducible formate dehydrogenase cytochrome b subunit FdnI
+SO_1776	0.26	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_4510	0.26	fdhB - formate dehydrogenase FeS subunit FdhB
+SO_4720	0.25	tupB - ABC-type tungstate uptake system permease component TupB

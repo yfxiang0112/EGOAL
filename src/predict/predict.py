@@ -13,44 +13,55 @@ from pywebio.input import select, input
 from pywebio.output import *
 from graph_plot import graph_plot
 
-def predict(in_pth, out_dir):
+def predict(in_pth, out_dir, use_gui=False, use_embd=True):
     ##################################################
     
-    ''' initialize text embedding converter '''
-    os.environ["http_proxy"] = "http://127.0.0.1:7890"
-    os.environ["https_proxy"] = "http://127.0.0.1:7890"
-    embd_model = SentenceTransformer("all-MiniLM-L6-v2")
-    term_embeddings = np.load('dataset/embedding/go_txt_embd.npy')
-    with open('dataset/embedding/go_embd_idx.txt', 'r') as f:
-        term_idx = eval(f.readline())
+    if use_embd:
+        ''' initialize text embedding converter '''
+        os.environ["http_proxy"] = "http://127.0.0.1:7890"
+        os.environ["https_proxy"] = "http://127.0.0.1:7890"
+        embd_model = SentenceTransformer("all-MiniLM-L6-v2")
+        term_embeddings = np.load('dataset/embedding/go_txt_embd.npy')
+        with open('dataset/embedding/go_embd_idx.txt', 'r') as f:
+            term_idx = eval(f.readline())
 
-    
-    ''' initialize concept lists '''
-    TOP_CNT = 10
-    concepts = []
-    #con_descps = [[] for _ in range(TOP_CNT)]
-    
-    ''' read descriptions from input file '''
-    descriptions = []
-    n_inputs = 0
-    with open(in_pth, 'r') as f:
-        descriptions = f.readlines()
-        n_inputs = len(descriptions)
-    
-    put_text('Read description from input:')
-    put_processbar('description')
-    ''' iterate instances '''
-    for i, d in enumerate(descriptions):
-            set_processbar('description',i/len(descriptions))
-            ''' compute similarity matrix & most similar concept list '''
-            #sim = embd.similar_matrix(d)
-            text_embeddings = embd_model.encode(d)
-            sim = embd_model.similarity(text_embeddings, term_embeddings)
-            #sorted_sim = embd.max_sim(TOP_CNT)
-            _, sorted_term = zip(*sorted(zip(sim[0], term_idx), reverse=True))
-    
-            concepts.append(list(sorted_term[:TOP_CNT]))
-    set_processbar('description', 1)
+        
+        ''' initialize concept lists '''
+        TOP_CNT = 10
+        concepts = []
+        #con_descps = [[] for _ in range(TOP_CNT)]
+        
+        ''' read descriptions from input file '''
+        descriptions = []
+        n_inputs = 0
+        with open(in_pth, 'r') as f:
+            descriptions = f.readlines()
+            n_inputs = len(descriptions)
+        
+        if use_gui:
+            put_text('Read description from input:')
+            put_processbar('description')
+        ''' iterate instances '''
+        for i, d in enumerate(descriptions):
+                set_processbar('description',i/len(descriptions))
+                ''' compute similarity matrix & most similar concept list '''
+                #sim = embd.similar_matrix(d)
+                text_embeddings = embd_model.encode(d)
+                sim = embd_model.similarity(text_embeddings, term_embeddings)
+                #sorted_sim = embd.max_sim(TOP_CNT)
+                _, sorted_term = zip(*sorted(zip(sim[0], term_idx), reverse=True))
+        
+                concepts.append(list(sorted_term[:TOP_CNT]))
+    else:
+        ''' input concepts directly '''
+        concepts = [[]]
+        n_inputs = 1
+        with open(in_pth, 'r') as f:
+            for i in range(10):
+                concepts[0].append(f.readline())
+
+    if use_gui:
+        set_processbar('description', 1)
     
     ''' load gene - product mapping '''
     gene_mapping = {}
@@ -64,11 +75,13 @@ def predict(in_pth, out_dir):
     name_list = []
     model_files = glob.glob('models/SO_*_model.joblib')
 
-    put_text('Load model for single gene:')
-    put_processbar('loading')
+    if use_gui:
+        put_text('Load model for single gene:')
+        put_processbar('loading')
     i = 1
     for gene_id in tqdm(range(1, 4759), 'loading pretrained models'):
-        set_processbar('loading',i/4759)
+        if use_gui:
+            set_processbar('loading',i/4759)
         i += 1
         model_file = f'models/SO_{gene_id:04d}_model.joblib'
         name_list.append(f'SO_{gene_id:04d}')
@@ -77,13 +90,16 @@ def predict(in_pth, out_dir):
             models.append(model)
         else:
             models.append(None)  
-    set_processbar('loading',1)
+    if use_gui:
+        set_processbar('loading',1)
 
     ''' predict for each input with pretrained model '''
-    put_text('Processing input:')
-    put_processbar('processing')
+    if use_gui:
+        put_text('Processing input:')
+        put_processbar('processing')
     for i in tqdm(range(n_inputs), 'processing input'):
-        set_processbar('processing',i/n_inputs)
+        if use_gui:
+            set_processbar('processing',i/n_inputs)
         concept_ids = [int(re.sub(r'GO_0*', '', c)) for c in concepts[i]]
         
         predictions = []
@@ -109,9 +125,9 @@ def predict(in_pth, out_dir):
 
 
         ''' plot the regulation graph '''
-        pred_res = [g[0] for g in result[:20]]
-        graph_plot(pred_res, f'{out_dir}/res_{i}_graph.png', False)
-    set_processbar('processing',1)
+        graph_plot(f'{out_dir}/res_{i}.txt', f'{out_dir}/res_{i}_graph.png', False)
+    if use_gui:
+        set_processbar('processing',1)
 
 
 ################################################################################################
@@ -122,22 +138,26 @@ def main(argv):
 
     in_pth = 'predict/input.txt'
     out_dir = 'predict/results'
+    use_embd = True
     try:
-        opts, args = getopt.getopt(argv,"hi:o:",["ifile=","odir="])
+        opts, args = getopt.getopt(argv,"hd:i:o:",["direct_mode=","ifile=","odir="])
     except getopt.GetoptError:
         print ('test.py -i <input_dir> -o <output_dir>')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print ('test.py -i <input_file> -o <output_dir>')
+            print ('test.py -d <optional for direct mode> -i <input_file> -o <output_dir>')
             sys.exit()
         elif opt in ("-i", "--ifile"):
             in_pth = arg
         elif opt in ("-o", "--odir"):
             out_dir = arg
+        elif opt in ("-d", "--direct_mode"):
+            use_embd = not eval(arg)
+            #TODO: remove required input value
 
     
-    predict(in_pth, out_dir)
+    predict(in_pth, out_dir, use_embd=use_embd)
     
 
     ##################################################
