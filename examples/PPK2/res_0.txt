@@ -1,0 +1,21 @@
+gene_id	conf	product
+SO_2912	0.88	pflB - pyruvate formate-lyase PflB
+SO_1329	0.84	cyaC - adenylate cyclase CyaC
+SO_1776	0.81	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_3370	0.78	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
+SO_0104	0.77	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_0107	0.72	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_0768	0.52	argR - NAD dependent epimerase/dehydratase family protein
+SO_1828	0.43	tonB2 - TonB2 mediated energy transduction system energy transducer component TonB2
+SO_0236	0.43	rplV - 50S ribosomal protein L22 RplV
+SO_4214	0.42	lpxC - UDP-3-0-acyl N-acetylglucosamine deacetylase LpxC
+SO_0959	0.41	periplasmic leucyl metal-dependent aminopeptidase
+SO_3896	0.41	omp35 - outer membrane porin Omp35
+SO_2490	0.41	hexR - 2-keto-3-deoxy-6-phosphogluconate-responsive transcriptional regulator of central carbohydrate metabolism HexR
+SO_1126	0.40	dnaK - chaperone protein DnaK
+SO_0830	0.39	phoA - periplasmic alkaline phosphatase PhoA
+SO_3952	0.39	mlaD - ABC-type phospholipid uptake (salvage) system substrate-binding component MlaD
+SO_2913	0.39	pflA - pyruvate formate-lyase 1 activating enzyme PflA
+SO_3630	0.39	hprA - predicted lipoprotein
+SO_0072	0.39	transcriptional repressor of ABC-type efflux system GntR family
+SO_1797	0.39	hupB - histone-like DNA-binding protein HupB

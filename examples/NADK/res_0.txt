@@ -1,0 +1,21 @@
+gene_id	conf	product
+SO_0107	0.78	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_2912	0.76	pflB - pyruvate formate-lyase PflB
+SO_1329	0.72	cyaC - adenylate cyclase CyaC
+SO_3370	0.69	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
+SO_0104	0.68	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_1776	0.63	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_0768	0.43	argR - NAD dependent epimerase/dehydratase family protein
+SO_2274	0.36	ndk - nucleoside diphosphate kinase Ndk
+SO_2491	0.33	pykA - pyruvate kinase II PykA
+SO_0157	0.31	proton:glutamate symporter DAACS family
+SO_4667	0.31	yihA - 50S ribosome assembly GTPase YihA
+SO_1925	0.30	gltA - RND superfamily efflux pump MFP component
+SO_0598	0.29	yjeF - hydroxyethylthiazole kinase-related protein YjeF
+SO_0613	0.29	pabA - para-aminobenzoate synthase glutamine amidotransferase subunit PabA
+SO_3306	0.28	der - two component signal transduction system hybrid histidine kinase
+SO_3562	0.28	proton/sodium:glutamate symporter DAACS family
+SO_1809	0.28	pspC - phage shock protein C PspC
+SO_1209	0.27	pnpA - polyribonucleotide nucleotidyltransferase PnpA
+SO_3714	0.27	nfnB - ABC-type monosaccharide transport system substrate binding component
+SO_1074	0.27	tyrosine transporter TyrP-like protein

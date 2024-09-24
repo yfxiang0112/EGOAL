@@ -1,0 +1,20 @@
+gene_id	conf	product
+SO_0104	0.80	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_2912	0.79	pflB - pyruvate formate-lyase PflB
+SO_0107	0.77	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_4364	0.71	recG - ATP-dependent DNA helicase RecG
+SO_1329	0.69	cyaC - adenylate cyclase CyaC
+SO_0125	0.64	periplasmic L-asparaginase family protein
+SO_3866	0.63	site-specific recombinase phage integrase family
+SO_1828	0.62	tonB2 - TonB2 mediated energy transduction system energy transducer component TonB2
+SO_2990	0.61	cI - Lambda phage lytic gene repressor CI
+SO_0742	0.60	fbpC - ABC-type Fe3+ uptake system ATPase component FbpC
+SO_0541	0.58	RNA-metabolizing metallo-beta-lactamase family protein
+SO_0520	0.58	heavy metal efflux pump permease component CzcA family
+SO_0572	0.57	enoyl-CoA hydratase/isomerase family protein
+SO_2255	0.57	mfd - transcription-repair coupling factor Mfd
+SO_2267	0.57	hscB - co-chaperone Hsc20 HscB
+SO_2483	0.55	yfbQ - PLP-dependent aminotransferase YfbQ
+SO_2270	0.55	rimK - ribosomal protein S6 glutaminyl transferase RimK
+SO_0139	0.54	ftn - ferritin Ftn
+SO_3706	0.54	nupX - nucleoside:proton symporter NupX

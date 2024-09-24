@@ -1,0 +1,21 @@
+gene_id	conf	product
+SO_0104	0.94	fdhE - nitrate-inducible formate dehydrogenase chaperone FdhE
+SO_0107	0.93	fdhD - formate dehydrogenase assembly/maturation protein FdhD
+SO_2912	0.91	pflB - pyruvate formate-lyase PflB
+SO_1329	0.91	cyaC - adenylate cyclase CyaC
+SO_3370	0.88	yceI - UPF0312 family alkali-inducible periplasmic protein YceI
+SO_1776	0.88	mtrB - extracellular iron oxide respiratory system outer membrane component MtrB
+SO_2185	0.74	ppx - exopolyphosphatase Ppx
+SO_1072	0.47	gbpA - N-acetylglucosamine-binding protein A GbpA
+SO_2644	0.47	ppsA - phosphoenolpyruvate synthase PpsA
+SO_3714	0.45	nfnB - ABC-type monosaccharide transport system substrate binding component
+SO_3952	0.45	mlaD - ABC-type phospholipid uptake (salvage) system substrate-binding component MlaD
+SO_3896	0.43	omp35 - outer membrane porin Omp35
+SO_4053	0.43	metF - methyl-accepting chemotaxis protein
+SO_0742	0.43	fbpC - ABC-type Fe3+ uptake system ATPase component FbpC
+SO_0768	0.42	argR - NAD dependent epimerase/dehydratase family protein
+SO_2403	0.40	cmk - cytidylate kinase Cmk
+SO_0236	0.40	rplV - 50S ribosomal protein L22 RplV
+SO_3414	0.40	thrB - homoserine kinase ThrB
+SO_0072	0.39	transcriptional repressor of ABC-type efflux system GntR family
+SO_0897	0.39	dbpA - ATP-dependent RNA helicase DbpA
