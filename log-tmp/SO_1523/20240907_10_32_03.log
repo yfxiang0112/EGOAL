@@ -1,0 +1,10 @@
+2024/09/07 10:32:03 - abl - INFO - ---------------------- Single gene training start --------------------------------
+2024/09/07 10:32:03 - abl - INFO - Abductive Learning on single gene SO_1523.
+2024/09/07 10:32:03 - abl - INFO - Working with Data.
+2024/09/07 10:32:04 - abl - INFO - Building the Learning Part.
+2024/09/07 10:32:04 - abl - INFO - Building the Reasoning Part.
+2024/09/07 10:32:04 - abl - INFO - Building Evaluation Metrics.
+2024/09/07 10:32:04 - abl - INFO - Bridge Learning and Reasoning.
+2024/09/07 10:32:04 - abl - INFO - ------- Use labeled data to pretrain the model -----------
+2024/09/07 10:32:04 - abl - INFO - ------- Test the initial model -----------
+2024/09/07 10:32:04 - abl - INFO - Test start:

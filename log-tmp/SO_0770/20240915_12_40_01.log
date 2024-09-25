@@ -1,0 +1,26 @@
+2024/09/15 12:40:01 - abl - INFO - ---------------------- Single gene training start --------------------------------
+2024/09/15 12:40:01 - abl - INFO - Abductive Learning on single gene SO_0770.
+2024/09/15 12:40:01 - abl - INFO - Working with Data.
+2024/09/15 12:40:01 - abl - INFO - Building the Learning Part.
+2024/09/15 12:40:01 - abl - INFO - Building the Reasoning Part.
+2024/09/15 12:40:01 - abl - INFO - Building Evaluation Metrics.
+2024/09/15 12:40:01 - abl - INFO - Bridge Learning and Reasoning.
+2024/09/15 12:40:01 - abl - INFO - ------- Use labeled data to pretrain the model -----------
+2024/09/15 12:40:01 - abl - INFO - ------- Test the initial model -----------
+2024/09/15 12:40:01 - abl - INFO - Test start:
+2024/09/15 12:40:02 - abl - INFO - Evaluation ended, GO/character_accuracy: 0.743 GO/reasoning_accuracy: 0.381 
+2024/09/15 12:40:02 - abl - INFO - ------- Use ABL to train the model -----------
+2024/09/15 12:40:02 - abl - INFO - loop(train) [1/3] segment(train) [1/1] 
+2024/09/15 12:40:10 - abl - INFO - Eval start: loop(val) [1]
+2024/09/15 12:40:14 - abl - INFO - Evaluation ended, GO/character_accuracy: 1.000 GO/reasoning_accuracy: 0.807 
+2024/09/15 12:40:14 - abl - INFO - loop(train) [2/3] segment(train) [1/1] 
+2024/09/15 12:40:19 - abl - INFO - Eval start: loop(val) [2]
+2024/09/15 12:40:22 - abl - INFO - Evaluation ended, GO/character_accuracy: 1.000 GO/reasoning_accuracy: 0.807 
+2024/09/15 12:40:22 - abl - INFO - loop(train) [3/3] segment(train) [1/1] 
+2024/09/15 12:40:27 - abl - INFO - Eval start: loop(val) [3]
+2024/09/15 12:40:31 - abl - INFO - Evaluation ended, GO/character_accuracy: 1.000 GO/reasoning_accuracy: 0.807 
+2024/09/15 12:40:31 - abl - INFO - ------- Test the final model -----------
+2024/09/15 12:40:31 - abl - INFO - Test start:
+2024/09/15 12:40:31 - abl - INFO - Evaluation ended, GO/character_accuracy: 0.748 GO/reasoning_accuracy: 0.419 
+2024/09/15 12:40:31 - abl - INFO - ------- Save the final model -----------
+2024/09/15 12:40:31 - abl - INFO - ---------------------- Single gene training end --------------------------------

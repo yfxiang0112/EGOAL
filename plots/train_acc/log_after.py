@@ -1,16 +1,22 @@
 import re
+import os
 from tqdm import tqdm
 
-log_path = 'results/20240820_14_45_44/20240820_14_45_44.log'
-output_path = 'src/predict/evaluation_results_after.txt'
+#log_path = 'results/20240820_14_45_44/20240820_14_45_44.log'
+output_path = 'plots/train_acc/evaluation_results_after.txt'
 
 gene_start_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - ---------------------- Single gene training start --------------------------------')
 gene_id_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - Abductive Learning on single gene (\S+)\.')
 evaluation_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - Evaluation ended, GO/character_accuracy: (\d+\.\d+) GO/reasoning_accuracy: (\d+\.\d+)')
 gene_end_pattern = re.compile(r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}) - abl - INFO - ---------------------- Single gene training end --------------------------------')
 
-with open(log_path, 'r') as file:
-    log_content = file.read()
+#with open(log_path, 'r') as file:
+#    log_content = file.read()
+log_content = ''
+for d in os.listdir('log'):
+    for f in os.listdir(os.path.join('log',d)):
+        with open(os.path.join('log',d,f),'r') as f:
+            log_content += f.read()+'\n'
 
 gene_starts = gene_start_pattern.finditer(log_content)
 
