@@ -1,16 +1,11 @@
-from numpy import percentile
-from z3 import If, Implies, Int, Not, Solver, Sum, Or, sat, Bool
 from ablkit.reasoning import KBBase
 import pandas as pd
-import time
-import os
 
 class GO(KBBase):
     def __init__(self, single_gene : str, rule_path : str, annotation_path : str, logger):
 
         ''' Define pseudo label convertion list & z3 solver '''
         super().__init__(pseudo_label_list=[0,1], use_cache=False, logger=logger)
-        self.solver = Solver()
 
         #NOTE: temp
         #rule_path = 'rules/single_genes/SO_0014_sg_rule_test_modify.csv'

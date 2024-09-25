@@ -1,0 +1,11 @@
+ablkit
+GEOparse
+joblib
+matplotlib
+networkx
+numpy
+pandas
+rdflib
+sentence-transformers
+scikit-learn
+tqdm

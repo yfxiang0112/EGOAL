@@ -13,7 +13,7 @@ from pywebio.input import select, input
 from pywebio.output import *
 from graph_plot import graph_plot
 
-def predict(in_pth, out_dir, use_gui=False, use_embd=True):
+def predict(in_pth, out_dir, use_gui=False, use_embd=True, input_str=''):
     ##################################################
     
     if use_embd:
@@ -34,12 +34,18 @@ def predict(in_pth, out_dir, use_gui=False, use_embd=True):
         ''' read descriptions from input file '''
         descriptions = []
         n_inputs = 0
-        with open(in_pth, 'r') as f:
-            descriptions = f.readlines()
+        if not use_gui:
+            with open(in_pth, 'r') as f:
+                descriptions = f.readlines()
+                n_inputs = len(descriptions)
+        else:
+            if input_str=='':
+                raise Exception('should specify input')
+            descriptions = input_str.split('\n')
             n_inputs = len(descriptions)
         
         if use_gui:
-            put_text('Read description from input:')
+            put_text('Reading descriptions from input:')
             put_processbar('description')
         ''' iterate instances '''
         for i, d in enumerate(descriptions):
@@ -65,7 +71,7 @@ def predict(in_pth, out_dir, use_gui=False, use_embd=True):
     
     ''' load gene - product mapping '''
     gene_mapping = {}
-    with open('predict/gene_mapping.txt', 'r') as f:
+    with open('src/predict/gene_mapping.txt', 'r') as f:
         gene_mapping = eval(f.readline())
     
    ################################################## 
@@ -76,7 +82,7 @@ def predict(in_pth, out_dir, use_gui=False, use_embd=True):
     model_files = glob.glob('models/SO_*_model.joblib')
 
     if use_gui:
-        put_text('Load model for single gene:')
+        put_text('Loading models for single gene subtasks:')
         put_processbar('loading')
     i = 1
     for gene_id in tqdm(range(1, 4759), 'loading pretrained models'):
@@ -114,7 +120,16 @@ def predict(in_pth, out_dir, use_gui=False, use_embd=True):
         result = [(name, pred[1]) for name, pred in zip(name_list, predictions)]
         result.sort(key= lambda x: x[1], reverse=True)
         
-        with open(f'{out_dir}/res_{i}.txt', 'w') as f:
+        ''' assign filename for batch / single input '''
+        if n_inputs != 1:
+            res_file= f'{out_dir}/res_{i}.txt'
+            graph_file = f'{out_dir}/res_{i}_graph.png'
+        else:
+            res_file= f'{out_dir}/result.txt'
+            graph_file = f'{out_dir}/regulation_graph.png'
+
+        ''' save result file '''
+        with open(res_file, 'w') as f:
             f.write('gene_id\tconf\tproduct\n')
             for g in result[:20]:
                 prod = gene_mapping[g[0]]
@@ -125,7 +140,7 @@ def predict(in_pth, out_dir, use_gui=False, use_embd=True):
 
 
         ''' plot the regulation graph '''
-        graph_plot(f'{out_dir}/res_{i}.txt', f'{out_dir}/res_{i}_graph.png', False)
+        graph_plot(res_file, graph_file, False)
     if use_gui:
         set_processbar('processing',1)
 

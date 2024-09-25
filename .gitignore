@@ -9,3 +9,6 @@ rules/go.owl
 rules/go-plus.owl
 results/*
 log/*
+
+src/__pycache__/*
+src/*/__pycache__/*

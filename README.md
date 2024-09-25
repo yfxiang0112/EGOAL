@@ -24,16 +24,27 @@ The knowledge base, i.e. Gene Ontology, contains the relations
 of gene regulation in its graph structure, which can be learned by the model.
 Thus we can predict expression of genes on the regulation pathway from the condition and result of the experiment.
 
-## Usage
+## Quick Start
+
+```
+git clone git@github.com:yfxiang0112/EGOAL
+cd EGOAL
+pip install -r requirements.txt
+```
 
 ### Directly Use GO Concepts
 
 ```
-python src/abl/predict -d True -i examples/NADK/input_terms.txt -o examples/NADK
+python src/predict/predict.py -d True -i examples/NADK/input_terms.txt -o examples/NADK
 ```
 
 ### Use Natural Language Descriptions
 
 ```
-python src/abl/predict -i examples/GAPDH/input_terms.txt -o examples/GAPDH
+python src/predict/predict.py -i examples/GAPDH/input.txt -o examples/GAPDH
+```
+
+### Use GUI
+```
+python src/predict/ui.py
 ```
