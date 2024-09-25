@@ -9,24 +9,22 @@ from predict import predict
 import matplotlib.pyplot as plt
 
 def plot(out_dir):
-    for filename in os.listdir(out_dir):
-        if filename.endswith(".txt"):
-            file_path = os.path.join(out_dir, filename)
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
-                df = pd.read_csv(io.StringIO(content), sep='\t')
-                gene_ids = df['gene_id']
-                confs = df['conf']
-                
-                plt.figure(figsize=(10, 6))
-                plt.bar(gene_ids, confs, color='skyblue')
-                plt.xlabel('Gene ID')
-                plt.ylabel('Confidence')
-                plt.title('Gene Expression Confidence')
-                plt.xticks(rotation=90)  
-                plt.tight_layout()
-                plt.savefig(os.path.join(out_dir, "conf_plot.png"))
-                plt.close()
+    file_path = os.path.join(out_dir, 'result.txt')
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+        df = pd.read_csv(io.StringIO(content), sep='\t')
+        gene_ids = df['gene_id']
+        confs = df['conf']
+        
+        plt.figure(figsize=(10, 6))
+        plt.bar(gene_ids, confs, color='skyblue')
+        plt.xlabel('Gene ID')
+        plt.ylabel('Confidence')
+        plt.title('Gene Expression Confidence')
+        plt.xticks(rotation=90)  
+        plt.tight_layout()
+        plt.savefig(os.path.join(out_dir, "conf_plot.png"))
+        plt.close()
 
 def main():
     clear()

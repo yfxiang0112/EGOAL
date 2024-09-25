@@ -40,6 +40,9 @@ python src/predict/predict.py -d True -i examples/NADK/input_terms.txt -o exampl
 
 ### Use Natural Language Descriptions
 
+**NOTE:** files required for natural language embedding `dataset/embedding/go_txt_embd.npy`
+and `dataset/embedding/go_embd_idx.txt` are not in the repository due to excessed size.
+
 ```
 python src/predict/predict.py -i examples/GAPDH/input.txt -o examples/GAPDH
 ```
